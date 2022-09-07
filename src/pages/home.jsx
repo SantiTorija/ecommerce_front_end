@@ -1,12 +1,16 @@
 import "../styles/home.css";
-import HeroVideo from "../components/HeroVideo";
 import NavBar from "../components/Navbar";
+import HeroHome from "../components/HeroHome";
+import FeatureHome from "../components/FeatureHome";
+import AboutHome from "../components/AboutHome";
 
 export const Home = () => {
-  return (
-    <>
-      <NavBar />
-      <HeroVideo />
-    </>
-  );
+	return (
+		<>
+			<NavBar />
+			<HeroHome />
+			<FeatureHome />
+			<AboutHome />
+		</>
+	);
 };
