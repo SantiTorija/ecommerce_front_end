@@ -1,12 +1,12 @@
 .slider {
-	/* 	object-position: center;
+  /* 	object-position: center;
 	background-repeat: no-repeat;
 	background-position: center; */
-	object-fit: contain;
-	width: 100%;
-	overflow: hidden;
+  object-fit: contain;
+  width: 100%;
+  overflow: hidden;
 }
 
 .carousel {
-	height: 80vh;
+  height: 80vh;
 }
