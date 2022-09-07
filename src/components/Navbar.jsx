@@ -2,18 +2,19 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import "../styles/navbar.css";
+import { Link } from "react-router-dom";
 
-function BasicExample() {
+function NavBar() {
   return (
     <Navbar className="navbar" expand="lg">
-      <Container>
+      <Container className="navbar-container">
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Tienda</Nav.Link>
-            <Nav.Link href="#link">Sobre nosotros</Nav.Link>
-            <Nav.Link href="#link">Contact</Nav.Link>
+            <Link to={"/"}>Home</Link>
+            <Link to={""}>Tienda</Link>
+            <Link to={""}>Sobre nosotros</Link>
+            <Link to={""}>Contact</Link>
           </Nav>
         </Navbar.Collapse>
         <Navbar.Brand href="#home">Hackwines</Navbar.Brand>
@@ -22,4 +23,4 @@ function BasicExample() {
   );
 }
 
-export default BasicExample;
+export default NavBar;
