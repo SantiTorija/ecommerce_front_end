@@ -1,4 +1,3 @@
-import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/home.css";
 
 function FeatureHome() {
