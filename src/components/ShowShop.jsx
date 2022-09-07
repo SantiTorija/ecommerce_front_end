@@ -34,7 +34,7 @@ function ShowShop() {
                 <Card.Body>
                   <Card.Title>{wine.name}</Card.Title>
                   <Card.Text></Card.Text>
-                  <Link to={`/wines/${wine.slug}`}>
+                  <Link to={`/product/${wine.slug}`}>
                     <Button variant="success">Comprar</Button>
                   </Link>
                 </Card.Body>

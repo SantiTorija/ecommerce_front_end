@@ -8,7 +8,7 @@ import OffCanvasCart from "./OffCanvasCart";
 
 function NavBar() {
   return (
-    <Navbar className="navbar sticky-top mb-5" expand="lg">
+    <Navbar className="navbar sticky-top" expand="lg">
       <Container
         fluid
         className="navbar-container d-flex justify-content-between py-2"

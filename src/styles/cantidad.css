@@ -6,14 +6,14 @@
 
 .btn__cantidad__plus {
   outline: none;
-  width: 37%;
+  width: 36.65%;
   border-radius: 10px 0px 0px 10px;
   border: none;
 }
 
 .btn__cantidad__minus {
   outline: none;
-  width: 37%;
+  width: 36.65%;
   border-radius: 0px 10px 10px 0px;
   border: none;
 }
@@ -24,11 +24,7 @@
 }
 
 .contador {
-  border-radius: 10px;
   width: 200px;
-  border: solid 1px;
-}
-
-.contador__numero {
-  padding: 10.8%;
+  padding: 20px;
+  height: 50px;
 }

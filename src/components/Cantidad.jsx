@@ -12,15 +12,17 @@ function Cantidad() {
   }
   return (
     <>
-      <p className="title__cantidad">CANTIDAD</p>
-      <div className="contador">
-        <button className="btn__cantidad__plus" onClick={() => add()}>
-          <h2>+</h2>
-        </button>
-        <span className="contador__numero">{cantidad}</span>
-        <button className="btn__cantidad__minus" onClick={() => substract()}>
-          <h2>-</h2>
-        </button>
+      <div className="d-flex justify-content-center">
+        <div className="contador">
+          <input
+            type="number"
+            value={cantidad}
+            onChange={(e) => setCantidad(e.target.value)}
+          />
+        </div>
+        <div className="Wine__cart">
+          <h5>AÑADIR AL CARRITO</h5>
+        </div>
       </div>
     </>
   );

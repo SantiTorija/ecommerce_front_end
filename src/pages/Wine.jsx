@@ -20,49 +20,105 @@ function Wine() {
     dataWine();
   }, []);
 
+  function genRand(min, max, decimalPlaces) {
+    var rand =
+      Math.random() < 0.5
+        ? (1 - Math.random()) * (max - min) + min
+        : Math.random() * (max - min) + min; // could be min or max or anything in between
+    var power = Math.pow(10, decimalPlaces);
+    return Math.floor(rand * power) / power;
+  }
+
   return (
     wine && (
       <>
         <NavBar />
-        <div className="container">
-          <div className="row pt-5">
-            <div className="col-6">
-              <img src={wine.picture} alt="imagen vino" />
-            </div>
-            <div className="col-6 pt-5">
-              <Link to="/tienda" className="wine__link">
-                Vinos del mundo
-              </Link>
+        <div className="row Wine__main">
+          <div className="col-6 Wine__picture">
+            <img
+              src="https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-domaine-barondarques.png"
+              alt="imagen vino"
+            />
+          </div>
+          <div className="col-6 text-white py-3">
+            <div className="Wine__card">
+              {wine.type ? <h5 className="Wine__type">{wine.type}</h5> : null}
               <h3 className="Wine__title">{wine.name}</h3>
+              {wine.description ? (
+                <h5 className="wine__ul">{wine.description}</h5>
+              ) : null}
               <hr></hr>
               {wine.price ? (
-                <h4 className="wine__price">$ {wine.price}</h4>
+                <h4 className="wine__price">
+                  $ {wine.price} <span className="Wine__iva">IVA INCLUIDO</span>
+                </h4>
               ) : null}
               <Cantidad />
-              {wine.variety ? (
-                <h5 className="wine__ul">variedad : {wine.variety}</h5>
-              ) : null}
-              {wine.country ? (
-                <h5 className="wine__ul">Pais : {wine.country}</h5>
-              ) : null}
-              {wine.type ? (
-                <h5 className="wine__ul">Tipo : {wine.type}</h5>
-              ) : null}
-              {wine.region ? (
-                <h5 className="wine__ul">Region : {wine.region}</h5>
-              ) : null}
-              {wine.harvest ? (
-                <h5 className="wine__ul">Cosecha : {wine.harvest}</h5>
-              ) : null}
-              {wine.cellar ? (
-                <h5 className="wine__ul">Bodega : {wine.cellar}</h5>
-              ) : null}
-              {wine.capacity ? (
-                <h5 className="wine__ul">Capacidad : {wine.capacity}</h5>
-              ) : null}
-              {wine.description ? (
-                <h5 className="wine__ul">Descripcion : {wine.description}</h5>
-              ) : null}
+              <div className="product__data">
+                <h4 className="d-flex justify-content-center mb-5 Wine__type">
+                  Product Data
+                </h4>
+                {wine.variety ? (
+                  <>
+                    <div className="d-flex justify-content-between mb-3">
+                      <h5 className="wine__ul">variedad : {wine.variety}</h5>
+                      <h5 className="wine__ul">variedad : {wine.variety}</h5>
+                    </div>
+                    <hr></hr>
+                  </>
+                ) : null}
+                {wine.country ? (
+                  <>
+                    <div className="d-flex justify-content-between mb-3">
+                      <h5 className="wine__ul">Pais</h5>
+                      <h5 className="wine__ul">{wine.country}</h5>
+                    </div>
+                    <hr></hr>
+                  </>
+                ) : null}
+
+                {wine.region ? (
+                  <>
+                    <div className="d-flex justify-content-between mb-3">
+                      <h5 className="wine__ul">Region</h5>
+                      <h5 className="wine__ul">{wine.region}</h5>
+                    </div>
+                    <hr></hr>
+                  </>
+                ) : null}
+                {wine.harvest ? (
+                  <>
+                    <div className="d-flex justify-content-between mb-3">
+                      <h5 className="wine__ul">Cosecha</h5>
+                      <h5 className="wine__ul">{wine.harvest}</h5>
+                    </div>
+                    <hr></hr>
+                  </>
+                ) : null}
+                {wine.cellar ? (
+                  <>
+                    <div className="d-flex justify-content-between mb-3">
+                      <h5 className="wine__ul">Bodega</h5>
+                      <h5 className="wine__ul">{wine.cellar}</h5>
+                    </div>
+                    <hr></hr>
+                  </>
+                ) : null}
+                {wine.capacity ? (
+                  <>
+                    {" "}
+                    <div className="d-flex justify-content-between mb-3">
+                      <h5 className="wine__ul">Capacidad</h5>
+                      <h5 className="wine__ul">{wine.capacity}</h5>
+                    </div>
+                    <hr></hr>
+                  </>
+                ) : null}
+                <div className="d-flex justify-content-between mb-3">
+                  <h5 className="wine__ul">Alcohol</h5>
+                  <h5 className="wine__ul">{genRand(10, 15, 1)}</h5>
+                </div>
+              </div>
             </div>
           </div>
         </div>
