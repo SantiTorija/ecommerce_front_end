@@ -1,0 +1,9 @@
+.off-canvas-navbar-button{
+    background-color: transparent;
+    border: none;
+    color: rgba(240, 240, 240, 0.799);
+}
+
+.cart-icon{
+    color: white !important;
+}
