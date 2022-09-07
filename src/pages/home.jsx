@@ -1,10 +1,14 @@
 import "../styles/home.css";
-import { HeroVideo } from "../components/HeroVideo";
+import HeroHome from "../components/HeroHome";
+import FeatureHome from "../components/FeatureHome";
+import AboutHome from "../components/AboutHome";
 
 export const Home = () => {
 	return (
 		<>
-			<HeroVideo />
+			<HeroHome />
+			<FeatureHome />
+			<AboutHome />
 		</>
 	);
 };
