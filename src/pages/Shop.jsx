@@ -1,10 +1,13 @@
 import Sidebar from "../components/Sidebar";
 import NavBar from "../components/Navbar";
+import ShowShop from "../components/ShowShop";
 function Shop() {
   return (
     <>
       <NavBar />
-      <Sidebar />
+      <ShowShop />
     </>
   );
 }
+
+export default Shop;
