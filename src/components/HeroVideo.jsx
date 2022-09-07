@@ -1,9 +1,9 @@
-/* import "../styles/home.css";
-import ReactPlayer from "react-player";
-import videoForHero from "/videoForHero.mp4";
+import "../styles/home.css";
+/* import ReactPlayer from "react-player";
+import videoForHero from "/videoForHero.mp4"; */
 
 function HeroVideo() {
-	return (
+	/* return (
 		<>
 			<h1>probandodas</h1>
 			<section id="heroVideo">
@@ -18,7 +18,12 @@ function HeroVideo() {
 			</section>
 		</>
 	);
-}
+} */
 
+	return (
+		<>
+			<h1>probandodas</h1>
+		</>
+	);
+}
 export default HeroVideo;
- */

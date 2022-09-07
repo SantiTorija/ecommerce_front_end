@@ -1,0 +1,14 @@
+.sidebar-left{
+    position: fixed;
+    z-index: 600;
+}
+
+.sidebar-container{
+    position: sticky;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;   
+  
+}
