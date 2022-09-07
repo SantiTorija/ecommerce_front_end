@@ -1,0 +1,43 @@
+.wine__link {
+  color: #7b3540;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.wine__link:hover {
+  transition: color 0.1s linear;
+  color: red;
+}
+
+.Wine__title {
+  font-family: Raleway, sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  line-height: 1.5;
+  color: #000;
+  display: block;
+  letter-spacing: 2px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 5px auto 15px;
+  clear: both;
+  font-weight: 400;
+  padding-top: 4px;
+}
+
+.wine__ul {
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  text-transform: none;
+  color: #000;
+  line-height: 1.6em;
+}
+
+.wine__price {
+  font-style: normal;
+  line-height: 1.6em;
+  font-size: 22px;
+  font-weight: 400;
+}
