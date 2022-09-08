@@ -6,21 +6,13 @@ import "../styles/offCanvasNav.css";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
 import axios from "axios";
+import { useSelector } from "react-redux";
 
 function OffCanvasCart({ name, ...props }) {
+  const cartState = useSelector((state) => state.cart);
   const [show, setShow] = useState(false);
   const [user, setUser] = useState({});
-  useEffect(() => {
-    const dataOrders = async () => {
-      const response = await axios({
-        method: "get",
-        url: `http://localhost:8000/users/631a0b04837b7150535af59a`,
-      });
-      setUser(response.data);
-      return response;
-    };
-    dataOrders();
-  }, []);
+  console.table({ cartState });
 
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
@@ -44,15 +36,15 @@ function OffCanvasCart({ name, ...props }) {
           <Offcanvas.Header closeButton>
             <div className="d-flex w-100 justify-content-center">
               <Offcanvas.Title>
-                <LocalMallIcon />
+                <LocalMallIcon className="text-white" />
               </Offcanvas.Title>
             </div>
           </Offcanvas.Header>
           <Offcanvas.Body>
-            <p>
+            <p className="text-white">
               <LocalShippingIcon /> You are 7.8 dollars away from free shipping
             </p>
-            {[1, 2, 3].map((product) => {
+            {cartState.map((product) => {
               return (
                 <>
                   <div className="d-flex mb-4">
@@ -64,7 +56,7 @@ function OffCanvasCart({ name, ...props }) {
                       alt="wine_photo"
                       className="col-3"
                     />
-                    <div className="col-9">
+                    <div className="col-9 text-white">
                       <div>
                         {product.name || "19 CRIMES CABERNET SAUVIGNON"}
                       </div>
@@ -76,21 +68,23 @@ function OffCanvasCart({ name, ...props }) {
                 </>
               );
             })}
-            <h6 className="d-flex justify-content-center">Order Sumary</h6>
-            <div className="d-flex justify-content-between">
-              <p>Merchandise</p>
-              <p>$57.20</p>
+            <h6 className="d-flex justify-content-center text-white">
+              Order Sumary
+            </h6>
+            <div className="d-flex justify-content-between ">
+              <p className="text-white">Merchandise</p>
+              <p className="text-white">$57.20</p>
             </div>
             <div className="d-flex justify-content-between">
-              <p>Tax</p>
-              <p>$0.00</p>
+              <p className="text-white">Tax</p>
+              <p className="text-white">$0.00</p>
             </div>
             <div className="d-flex justify-content-between border-top border-bottom align-items-center">
-              <p>Estimated Order Total</p>
-              <p>$57.20</p>
+              <p className="text-white">Estimated Order Total</p>
+              <p className="text-white">$57.20</p>
             </div>
             <div className="d-flex justify-content-center mt-2">
-              <button className="Cart__button__buy btn rounded-pill">
+              <button className="Cart__button__buy btn rounded-pill text-white">
                 BUY NOW
               </button>
             </div>

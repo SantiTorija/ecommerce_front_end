@@ -1,15 +1,22 @@
 import { useState } from "react";
 import "../styles/Wine.css";
 import { useDispatch, useSelector } from "react-redux";
-import { cart } from "../redux/cartSlice";
+import { addFirstTime, add } from "../redux/cartSlice";
 
 function Cantidad({ wine }) {
   const [cantidad, setCantidad] = useState(1);
   const dispatch = useDispatch();
   const cartState = useSelector((state) => state.cart);
   const handleAddCart = () => {
-    wine.cartQuantity = cantidad;
-    dispatch(cart(wine));
+    const isWine = cartState.find((element) => element._id === wine._id);
+    if (isWine) {
+      console.log("entro primero");
+      dispatch(add({ id: isWine._id, quantity: cantidad }));
+    } else {
+      console.log("entro segundo");
+      wine.cartQuantity = cantidad;
+      dispatch(addFirstTime(wine));
+    }
   };
 
   return (

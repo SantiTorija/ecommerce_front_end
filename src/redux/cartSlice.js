@@ -4,13 +4,19 @@ const cartSlice = createSlice({
   name: "wine",
   initialState: [],
   reducers: {
-    cart(state, action) {
+    addFirstTime(state, action) {
       state.push({ ...action.payload });
+    },
+    add(state, action) {
+      const wine = state.find((element) => element._id === action.payload.id);
+      wine.cartQuantity =
+        parseInt(wine.cartQuantity) + parseInt(action.payload.quantity);
+      state = [...state, wine];
     },
   },
 });
 
 const { actions, reducer } = cartSlice;
-export const { cart } = actions;
+export const { add, addFirstTime } = actions;
 
 export default reducer;

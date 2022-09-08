@@ -23,7 +23,7 @@ function ShowShop() {
   return (
     wines && (
       <>
-        <div className="d-flex justify-content-around row ms-5 me-5">
+        <div className="d-flex justify-content-around row ms-5 me-5 mb-5">
           {wines.map((wine, index) => {
             return (
               <div className="col-12 col-lg-4 mt-5">
@@ -35,7 +35,7 @@ function ShowShop() {
                       style={{
                         width: "20rem",
                         height: "30rem",
-                        backgroundColor: "transparent",
+                        backgroundColor: "rgba(240, 240, 240, 0.095)",
                         border: "none !important",
                       }}
                     >

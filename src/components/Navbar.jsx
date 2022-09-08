@@ -14,9 +14,7 @@ function NavBar() {
         className="navbar-container d-flex justify-content-between py-2"
       >
         <div className="d-flex">
-          <Navbar.Brand className="text-light nav-brand-icon">
-            Hackwines
-          </Navbar.Brand>
+          <Navbar.Brand className="text-light nav-brand-icon"></Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
