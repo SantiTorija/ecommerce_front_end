@@ -1,14 +1,34 @@
 .sidebar-left{
     position: fixed;
     z-index: 600;
+    left: 0;
+    
+    
 }
 
 .sidebar-container{
-    position: sticky;
+  position: sticky;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   justify-content: center; 
-  align-items: center;   
+  align-items: center; 
+  height: 100vh;  
   
+}
+@media(min-with: 1500px){
+  .sidebar-left{
+    width: 20%;
+  }
+}
+
+@media(max-with: 1500px){
+  .sidebar-left{
+    width: 20%;
+  }
+}
+@media(max-with: 900px){
+  .sidebar-left{
+    width: 10%;
+  }
 }

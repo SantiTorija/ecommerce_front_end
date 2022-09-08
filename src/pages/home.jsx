@@ -5,12 +5,11 @@ import FeatureHome from "../components/FeatureHome";
 import AboutHome from "../components/AboutHome";
 
 export const Home = () => {
-	return (
-		<>
-			<NavBar />
-			<HeroHome />
-			<FeatureHome />
-			<AboutHome />
-		</>
-	);
+  return (
+    <>
+      <HeroHome />
+      <FeatureHome />
+      <AboutHome />
+    </>
+  );
 };

@@ -32,7 +32,6 @@ function Wine() {
   return (
     wine && (
       <>
-        <NavBar />
         <div className="row Wine__main">
           <div className="col-6 Wine__picture">
             <img

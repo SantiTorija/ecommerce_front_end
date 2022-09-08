@@ -1,11 +1,19 @@
 import Sidebar from "../components/Sidebar";
-import NavBar from "../components/Navbar";
 import ShowShop from "../components/ShowShop";
+import { Col, Row, Container } from "react-bootstrap";
 function Shop() {
   return (
     <>
-      <NavBar />
-      <ShowShop />
+      <Container fluid style={{ backgroundColor: "rgb(44,44,44)" }}>
+        <Row>
+          <Col className="d-none d-lg-block col-lg-2">
+            <Sidebar />
+          </Col>
+          <Col className="col-lg-10">
+            <ShowShop />
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 }

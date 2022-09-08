@@ -1,0 +1,18 @@
+.shop-single-item-button{
+    border: none;
+    background-color: transparent;
+    margin: none;
+    padding: none;
+    width: 20rem;
+}
+
+.single-item-card{
+    
+    transition: ease-in-out 0.5s 0.5s;
+}
+
+.single-item-card:hover{
+    
+    scale: 1.1;
+  
+}
