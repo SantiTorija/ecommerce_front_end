@@ -4,7 +4,7 @@ import { Col, Row, Container } from "react-bootstrap";
 function Shop() {
   return (
     <>
-      <Container fluid style={{ backgroundColor: "rgb(44,44,44)" }}>
+      <Container fluid style={{ backgroundColor: "rgb(24, 24, 24)" }}>
         <Row>
           <Col className="d-none d-lg-block col-lg-2">
             <Sidebar />
