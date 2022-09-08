@@ -11,6 +11,9 @@
 	opacity: 0.9;
 }
 
+#featureSection {
+	background-color: white;
+}
 .carousel {
 	height: 70vh;
 }

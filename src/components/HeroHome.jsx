@@ -32,10 +32,8 @@ function HeroHome() {
 					}}
 				>
 					<Carousel.Caption>
-						<h3 className="textTitleCarousel">Descubri nuestra tienda</h3>
-						<p className="textBodyCarousel">
-							Estamos seguro tenemos lo que estas buscando
-						</p>
+						<h3 className="textTitleCarousel">Descubrí nuestra tienda</h3>
+						<p className="textBodyCarousel">Tenemos lo que estas buscando</p>
 					</Carousel.Caption>
 				</Carousel.Item>
 				<Carousel.Item

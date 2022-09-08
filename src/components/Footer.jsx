@@ -8,6 +8,7 @@ import {
 	Shop,
 } from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
+import hackWines from "../assets/images/hackWines.png";
 
 function FooterWeb() {
 	return (
@@ -16,10 +17,7 @@ function FooterWeb() {
 				<div className="footer py-5">
 					<div className="row">
 						<div className="col-6 col-md-2 mb-3">
-							<img
-								alt=""
-								src="https://uruguay.wine/uwine/assets/img/HOME/uywine_header.png"
-							/>
+							<img alt="" src={hackWines} />
 							<div className="d-flex flex-row gap-2 mt-3">
 								<Instagram />
 								<Facebook />

@@ -12,7 +12,7 @@ function AboutHome() {
 						Proyecto realizado con fines academicos como trabajo final para el
 						coding Bootcamp de Hack Academy.
 					</h4>
-					<a href="prueba">
+					<a href={"/sobre-este-proyecto"}>
 						<InfoSquare color="white">Saber mas</InfoSquare>
 					</a>
 				</div>
