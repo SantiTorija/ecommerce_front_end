@@ -31,6 +31,15 @@
 	color: white;
 }
 
+.button-cuadrant {
+	width: 100%;
+	background-color: transparent;
+	border: none;
+}
+
+.button-cuadrant:hover {
+	scale: 2;
+}
 .aboutHome {
 	height: 80px;
 	width: 100%;
@@ -38,4 +47,25 @@
 	justify-content: center;
 
 	background-color: #2b2d42;
+}
+
+.textCuadrants {
+	color: white;
+	font-family: "Quattrocento", serif;
+	font-weight: 700;
+	font-size: 20px;
+}
+
+.containerCuadrants {
+	height: 200px;
+}
+.textBodyCarousel {
+	font-family: "Quattrocento", serif;
+	font-size: 20px;
+}
+
+.textTitleCarousel {
+	font-family: "Quattrocento", serif;
+	font-weight: 700;
+	font-size: 40px;
 }
