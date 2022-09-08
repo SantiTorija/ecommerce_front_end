@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { GrCart } from "react-icons/gr";
+import "../styles/offCanvas.css";
 import "../styles/offCanvasNav.css";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
@@ -20,7 +21,6 @@ function OffCanvasCart({ name, ...props }) {
     };
     dataOrders();
   }, []);
-  console.log(user);
 
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
@@ -42,24 +42,48 @@ function OffCanvasCart({ name, ...props }) {
             <p>
               <LocalShippingIcon /> You are 7.8 dollars away from free shipping
             </p>
-            {user?.cartList?.map((product) => {
+            {[1, 2, 3].map((product) => {
               return (
                 <>
                   <div className="d-flex mb-4">
                     <img
-                      src={product.picture}
+                      src={
+                        product.picture ||
+                        "https://cdn.shopify.com/s/files/1/0042/8477/6517/products/19Crimes-CabSauv-VDM_2000x.jpg"
+                      }
                       alt="wine_photo"
                       className="col-3"
                     />
                     <div className="col-9">
-                      <div>{product.name}</div>
-                      <div>{product.type}</div>
-                      <div>USD ${product.price}</div>
+                      <div>
+                        {product.name || "19 CRIMES CABERNET SAUVIGNON"}
+                      </div>
+                      <div>{product.type || "Tinto"}</div>
+                      <div>USD ${product.price || "40"}</div>
                     </div>
                   </div>
+                  <hr></hr>
                 </>
               );
             })}
+            <h6 className="d-flex justify-content-center">Order Sumary</h6>
+            <div className="d-flex justify-content-between">
+              <p>Merchandise</p>
+              <p>$57.20</p>
+            </div>
+            <div className="d-flex justify-content-between">
+              <p>Tax</p>
+              <p>$0.00</p>
+            </div>
+            <div className="d-flex justify-content-between border-top border-bottom align-items-center">
+              <p>Estimated Order Total</p>
+              <p>$57.20</p>
+            </div>
+            <div className="d-flex justify-content-center mt-2">
+              <button className="Cart__button__buy btn rounded-pill">
+                BUY NOW
+              </button>
+            </div>
           </Offcanvas.Body>
         </Offcanvas>
       </>

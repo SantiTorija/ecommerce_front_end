@@ -7,10 +7,3 @@
 .cart-icon {
   color: white !important;
 }
-
-.Offcanvas__header {
-  background-color: black;
-  width: 100%;
-  display: flex;
-  justify-content: between;
-}
