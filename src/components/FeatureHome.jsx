@@ -7,7 +7,7 @@ import { Truck, Box, CreditCard } from "react-bootstrap-icons";
 
 function FeatureHome() {
 	return (
-		<Container>
+		<Container className="bg-white">
 			<Row>
 				<Col className="d-flex flex-column align-items-center featureColumn justify-content-center">
 					<Truck
