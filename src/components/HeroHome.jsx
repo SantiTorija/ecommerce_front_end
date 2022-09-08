@@ -8,36 +8,40 @@ function HeroHome() {
 	return (
 		<div>
 			<Carousel>
-				<Carousel.Item className="carousel">
-					<img
-						className="d-block w-100 slider"
-						src={image1Hero}
-						alt="First slide"
-					/>
+				<Carousel.Item
+					className="carousel"
+					style={{
+						backgroundImage: `linear-gradient(rgba(2,0,36,0.3) 10%, rgba(0,0,0,0.3) 100%),url(${image3Hero})`,
+						backgroundPosition: "center",
+						backgroundSize: "cover",
+					}}
+				>
 					<Carousel.Caption>
 						<h3>First slide label</h3>
 						<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
 					</Carousel.Caption>
 				</Carousel.Item>
-				<Carousel.Item className="carousel">
-					<img
-						className="d-block w-100 slider"
-						src={image2Hero}
-						alt="Second slide"
-					/>
-
+				<Carousel.Item
+					className="carousel"
+					style={{
+						backgroundImage: `linear-gradient(rgba(2,0,36,0.3) 10%, rgba(0,0,0,0.3) 100%),url(${image2Hero})`,
+						backgroundPosition: "center",
+						backgroundSize: "cover",
+					}}
+				>
 					<Carousel.Caption>
 						<h3>Second slide label</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 					</Carousel.Caption>
 				</Carousel.Item>
-				<Carousel.Item className="carousel">
-					<img
-						className="d-block w-100 slider"
-						src={image3Hero}
-						alt="Third slide"
-					/>
-
+				<Carousel.Item
+					className="carousel"
+					style={{
+						backgroundImage: `linear-gradient(rgba(2,0,36,0.3) 10%, rgba(0,0,0,0.3) 100%),url(${image1Hero})`,
+						backgroundPosition: "center",
+						backgroundSize: "cover",
+					}}
+				>
 					<Carousel.Caption>
 						<h3>Third slide label</h3>
 						<p>
