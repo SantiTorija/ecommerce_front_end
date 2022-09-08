@@ -17,8 +17,10 @@ function HeroHome() {
 					}}
 				>
 					<Carousel.Caption>
-						<h3>First slide label</h3>
-						<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+						<h3 className="textTitleCarousel">Hack Wines</h3>
+						<p className="textBodyCarousel">
+							Vinos de calidad para personas con calidad
+						</p>
 					</Carousel.Caption>
 				</Carousel.Item>
 				<Carousel.Item
@@ -30,8 +32,10 @@ function HeroHome() {
 					}}
 				>
 					<Carousel.Caption>
-						<h3>Second slide label</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						<h3 className="textTitleCarousel">Descubri nuestra tienda</h3>
+						<p className="textBodyCarousel">
+							Estamos seguro tenemos lo que estas buscando
+						</p>
 					</Carousel.Caption>
 				</Carousel.Item>
 				<Carousel.Item
@@ -43,9 +47,9 @@ function HeroHome() {
 					}}
 				>
 					<Carousel.Caption>
-						<h3>Third slide label</h3>
-						<p>
-							Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+						<h3 className="textTitleCarousel">Variedad de marcas y tipos</h3>
+						<p className="textBodyCarousel">
+							Tintos, Blancos, Rose, Espumantes, entre otros.
 						</p>
 					</Carousel.Caption>
 				</Carousel.Item>
