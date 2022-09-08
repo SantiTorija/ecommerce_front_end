@@ -1,8 +1,16 @@
 import { useState } from "react";
 import "../styles/Wine.css";
+import { useDispatch, useSelector } from "react-redux";
+import { cart } from "../redux/cartSlice";
 
-function Cantidad() {
+function Cantidad({ wine }) {
   const [cantidad, setCantidad] = useState(1);
+  const dispatch = useDispatch();
+  const cartState = useSelector((state) => state.cart);
+  const handleAddCart = () => {
+    wine.cartQuantity = cantidad;
+    dispatch(cart(wine));
+  };
 
   return (
     <>
@@ -14,7 +22,7 @@ function Cantidad() {
           onChange={(e) => setCantidad(e.target.value)}
         />
         <div className="Wine__cart">
-          <h5>AÑADIR AL CARRITO</h5>
+          <button onClick={handleAddCart}>AÑADIR AL CARRITO</button>
         </div>
       </div>
     </>

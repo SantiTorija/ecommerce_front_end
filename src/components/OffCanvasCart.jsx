@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import { GrCart } from "react-icons/gr";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 import "../styles/offCanvas.css";
 import "../styles/offCanvasNav.css";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
@@ -28,9 +28,19 @@ function OffCanvasCart({ name, ...props }) {
     user && (
       <>
         <button onClick={handleShow} className="me-4 off-canvas-navbar-button">
-          <GrCart style={{ color: "white", fontSize: "1.5rem" }} />
+          <AiOutlineShoppingCart
+            color="white"
+            style={{ color: "white", fontSize: "1.5rem" }}
+          />
         </button>
-        <Offcanvas show={show} onHide={handleClose} {...props}>
+        <Offcanvas
+          style={{
+            backgroundImage: `url("https://www.latiendavinos.es/wp-content/uploads/2022/02/base-madera.webp")`,
+          }}
+          show={show}
+          onHide={handleClose}
+          {...props}
+        >
           <Offcanvas.Header closeButton>
             <div className="d-flex w-100 justify-content-center">
               <Offcanvas.Title>

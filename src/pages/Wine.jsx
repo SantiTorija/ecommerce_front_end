@@ -55,7 +55,7 @@ function Wine() {
                   $ {wine.price} <span className="Wine__iva">IVA INCLUIDO</span>
                 </h4>
               ) : null}
-              <Cantidad />
+              <Cantidad wine={wine} />
               <div className="product__data">
                 <h4 className="d-flex justify-content-center mb-5 Wine__type">
                   Product Data
