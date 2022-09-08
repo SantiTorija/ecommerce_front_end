@@ -5,11 +5,13 @@ import FeatureHome from "../components/FeatureHome";
 import AboutHome from "../components/AboutHome";
 
 export const Home = () => {
-  return (
-    <>
-      <HeroHome />
-      <FeatureHome />
-      <AboutHome />
-    </>
-  );
+	return (
+		<>
+			<HeroHome />
+			<FeatureHome />
+			<AboutHome />
+		</>
+	);
 };
+
+//probando
