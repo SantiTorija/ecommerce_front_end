@@ -1,9 +1,16 @@
-.off-canvas-navbar-button{
-    background-color: transparent;
-    border: none;
-    color: rgba(240, 240, 240, 0.799);
+.off-canvas-navbar-button {
+  background-color: transparent;
+  border: none;
+  color: rgba(240, 240, 240, 0.799);
 }
 
-.cart-icon{
-    color: white !important;
+.cart-icon {
+  color: white !important;
+}
+
+.Offcanvas__header {
+  background-color: black;
+  width: 100%;
+  display: flex;
+  justify-content: between;
 }

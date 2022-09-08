@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 import "../styles/Wine.css";
 import Cantidad from "../components/Cantidad.jsx";
-import NavBar from "../components/Navbar";
 
 function Wine() {
   const [wine, setWine] = useState({});
@@ -33,13 +32,12 @@ function Wine() {
     wine && (
       <>
         <div className="row Wine__main">
-          <div className="col-6 Wine__picture">
-            <img
-              src="https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-domaine-barondarques.png"
-              alt="imagen vino"
-            />
-          </div>
-          <div className="col-6 text-white py-3">
+          <img
+            className="col-5 Wine__picture"
+            src={wine.picture}
+            alt="imagen vino"
+          />
+          <div className="col-7 text-white py-3">
             <div className="Wine__card">
               {wine.type ? <h5 className="Wine__type">{wine.type}</h5> : null}
               <h3 className="Wine__title">{wine.name}</h3>
