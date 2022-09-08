@@ -25,19 +25,17 @@
 	height: 100px;
 }
 
-.aboutHome {
-	background-color: #8d99ae;
-}
-
 .aboutText {
-	font-size: 10px;
+	font-size: 15px;
 	font-family: "Quattrocento", serif;
+	color: white;
 }
 
-.columAbout {
-	background-color: white;
-	height: 60%;
-	width: 50%;
+.aboutHome {
+	height: 80px;
+	width: 100%;
 	align-items: center;
 	justify-content: center;
+
+	background-color: #2b2d42;
 }
