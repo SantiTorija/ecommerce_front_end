@@ -5,14 +5,14 @@ import AboutHome from "../components/AboutHome";
 import CuadrantsHome from "../components/CuadrantsHome";
 
 export const Home = () => {
-	return (
-		<>
-			<HeroHome />
-			<FeatureHome />
-			<CuadrantsHome />
-			<AboutHome />
-		</>
-	);
+  return (
+    <>
+      <HeroHome />
+      <FeatureHome />
+      <CuadrantsHome />
+      <AboutHome />
+    </>
+  );
 };
 
 //probando
