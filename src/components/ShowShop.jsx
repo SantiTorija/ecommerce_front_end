@@ -35,7 +35,8 @@ function ShowShop() {
                       style={{
                         width: "20rem",
                         height: "30rem",
-                        backgroundColor: "gray",
+                        backgroundColor: "rgb(60,60,60)",
+                        border: "none !important",
                       }}
                     >
                       <Card.Img
@@ -44,9 +45,13 @@ function ShowShop() {
                         src={wine.picture}
                       />
                       <Card.Body className="d-flex flex-column justify-content-end">
-                        <Card.Title>{wine.name}</Card.Title>
+                        <Card.Title>
+                          <h2 className="wine-name">{wine.name}</h2>
+                        </Card.Title>
                         <Card.Text></Card.Text>
-                        <Button variant="success">Comprar</Button>
+                        <Button className="d-none" variant="success">
+                          Comprar
+                        </Button>
                       </Card.Body>
                     </Card>
                   </button>
