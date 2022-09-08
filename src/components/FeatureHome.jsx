@@ -1,65 +1,37 @@
 import "../styles/home.css";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+
+import { Truck, Box, CreditCard } from "react-bootstrap-icons";
 
 function FeatureHome() {
 	return (
-		<>
-			<div className="container px-4 py-5" id="icon-grid">
-				<div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
-					<div className="col d-flex align-items-start">
-						<svg
-							className="bi text-muted flex-shrink-0 me-3"
-							width="1.75em"
-							height="1.75em"
-						></svg>
-						<div>
-							<h4 className="fw-bold mb-0">Featured title1</h4>
-							<p>
-								Paragraph of text beneath the heading to explain the heading.
-							</p>
-						</div>
-					</div>
-					<div className="col d-flex align-items-start">
-						<svg
-							className="bi text-muted flex-shrink-0 me-3"
-							width="1.75em"
-							height="1.75em"
-						></svg>
-						<div>
-							<h4 className="fw-bold mb-0">Entregas en 24 hs</h4>
-							<p>
-								Paragraph of text beneath the heading to explain the heading.
-							</p>
-						</div>
-					</div>
-					<div className="col d-flex align-items-start">
-						<svg
-							className="bi text-muted flex-shrink-0 me-3"
-							width="1.75em"
-							height="1.75em"
-						></svg>
-						<div>
-							<h4 className="fw-bold mb-0">Envios gratis</h4>
-							<p>
-								Paragraph of text beneath the heading to explain the heading.
-							</p>
-						</div>
-					</div>
-					<div className="col d-flex align-items-start">
-						<svg
-							className="bi text-muted flex-shrink-0 me-3"
-							width="1.75em"
-							height="1.75em"
-						></svg>
-						<div>
-							<h4 className="fw-bold mb-0">Featured title4</h4>
-							<p>
-								Paragraph of text beneath the heading to explain the heading.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</>
+		<Container>
+			<Row>
+				<Col className="d-flex flex-column align-items-center featureColumn justify-content-center">
+					<Truck
+						color="#D80032
+"
+					/>
+					<h3 className="textFeatures mt-2">Envios en 24 horas</h3>
+				</Col>
+				<Col className="d-flex flex-column align-items-center featureColumn justify-content-center">
+					<Box
+						color="#D80032
+"
+					/>
+					<h3 className="textFeatures mt-2">Vinos del mundo a tu casa</h3>
+				</Col>
+				<Col className="d-flex flex-column align-items-center featureColumn justify-content-center">
+					<CreditCard
+						color="#D80032
+"
+					/>
+					<h3 className="textFeatures mt-2">Hasta 12 cuotas sin recargo</h3>
+				</Col>
+			</Row>
+		</Container>
 	);
 }
 

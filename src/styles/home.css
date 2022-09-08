@@ -1,12 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap");
+
 .slider {
-  /* 	object-position: center;
+	/* 	object-position: center;
 	background-repeat: no-repeat;
 	background-position: center; */
-  object-fit: contain;
-  width: 100%;
-  overflow: hidden;
+	/* object-fit: contain;
+	width: 100%;
+	overflow: hidden; */
+
+	opacity: 0.9;
 }
 
 .carousel {
-  height: 80vh;
+	height: 70vh;
+}
+
+.textFeatures {
+	font-size: 15px;
+	font-family: "Quattrocento", serif;
+	font-weight: bold;
+}
+
+.featureColumn {
+	height: 100px;
+}
+
+.aboutText {
+	font-size: 15px;
+	font-family: "Quattrocento", serif;
+	color: white;
+}
+
+.aboutHome {
+	height: 80px;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+
+	background-color: #2b2d42;
 }
