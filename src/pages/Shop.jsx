@@ -4,7 +4,12 @@ import { Col, Row, Container } from "react-bootstrap";
 function Shop() {
   return (
     <>
-      <Container fluid style={{ backgroundColor: "rgb(24, 24, 24)" }}>
+      <Container
+        style={{
+          backgroundImage: `url("https://www.latiendavinos.es/wp-content/uploads/2022/02/base-madera.webp")`,
+        }}
+        fluid
+      >
         <Row>
           <Col className="d-none d-lg-block col-lg-2">
             <Sidebar />

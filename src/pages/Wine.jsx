@@ -31,7 +31,12 @@ function Wine() {
   return (
     wine && (
       <>
-        <div className="row Wine__main">
+        <div
+          style={{
+            backgroundImage: `url("https://www.latiendavinos.es/wp-content/uploads/2022/02/base-madera.webp")`,
+          }}
+          className="row Wine__main"
+        >
           <img
             className="col-5 Wine__picture"
             src={wine.picture}

@@ -35,7 +35,7 @@ function ShowShop() {
                       style={{
                         width: "20rem",
                         height: "30rem",
-                        backgroundColor: "rgb(60,60,60)",
+                        backgroundColor: "transparent",
                         border: "none !important",
                       }}
                     >

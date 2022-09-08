@@ -2,7 +2,7 @@
     position: fixed;
     z-index: 600;
     left: 0;
-    background-color:rgb(109,31,43);  
+    background-color:rgba(109, 31, 43, 0.572);  
 }
 
 .sidebar-container{
