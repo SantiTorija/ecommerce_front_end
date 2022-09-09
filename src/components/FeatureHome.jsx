@@ -11,22 +11,25 @@ function FeatureHome() {
 			<Row>
 				<Col className="d-flex flex-column align-items-center featureColumn justify-content-center">
 					<Truck
-						color="#D80032
+						color="white
 "
+						size={25}
 					/>
 					<h3 className="textFeatures mt-2">Envios en 24 horas</h3>
 				</Col>
 				<Col className="d-flex flex-column align-items-center featureColumn justify-content-center">
 					<Box
-						color="#D80032
+						color="white
 "
+						size={25}
 					/>
 					<h3 className="textFeatures mt-2">Vinos del mundo a tu casa</h3>
 				</Col>
 				<Col className="d-flex flex-column align-items-center featureColumn justify-content-center">
 					<CreditCard
-						color="#D80032
+						color="white
 "
+						size={25}
 					/>
 					<h3 className="textFeatures mt-2">Hasta 12 cuotas sin recargo</h3>
 				</Col>

@@ -9,7 +9,7 @@ function FooterWeb() {
 	return (
 		<footer>
 			<Container>
-				<div className="footer py-5">
+				<div className="footer  pt-5 pb-3">
 					<div className="row">
 						<div className="col-6 col-md-2 mb-3">
 							<img alt="" src={hackWines} />
@@ -53,7 +53,7 @@ function FooterWeb() {
 						<div className="col-6 col-md-2 mb-3">
 							<h3>LOCAL </h3>
 							{/* <Shop /> */}
-							<p>
+							<p id="footerShops">
 								Avenida Rivera 4321.
 								<br />
 								Montevideo.
