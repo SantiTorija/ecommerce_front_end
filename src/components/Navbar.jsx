@@ -5,6 +5,7 @@ import "../styles/navbar.css";
 import { Link } from "react-router-dom";
 import hackWines from "../assets/images/hackWines.png";
 import OffCanvasCart from "./OffCanvasCart";
+import handleAlert from "./Alert";
 
 function NavBar({ setShowCart, showCart }) {
   return (
@@ -23,10 +24,10 @@ function NavBar({ setShowCart, showCart }) {
               <Link className="navbar-link me-3" to={"/tienda"}>
                 Tienda
               </Link>
-              <Link className="navbar-link me-3" to={"/sobre-este-proyecto"}>
+              <Link className="navbar-link me-3" to="" onClick={handleAlert}>
                 Sobre este proyecto
               </Link>
-              <Link className="navbar-link me-3" to={"/contacto"}>
+              <Link className="navbar-link me-3" to="" onClick={handleAlert}>
                 Contacto
               </Link>
             </Nav>
