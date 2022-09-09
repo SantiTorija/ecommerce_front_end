@@ -43,7 +43,12 @@
   width: 100%;
   align-items: center;
   justify-content: center;
+<<<<<<< HEAD
   background-color: #0d1f2278;
+=======
+
+  background-color: #0d1f2278 ;
+>>>>>>> ad5f1846a71fb2a5000b0542456ec671a81d5116
 }
 
 .textCuadrants {
