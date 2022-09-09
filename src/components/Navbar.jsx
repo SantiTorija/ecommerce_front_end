@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import hackWines from "../assets/images/hackWines.png";
 import OffCanvasCart from "./OffCanvasCart";
 
-function NavBar() {
+function NavBar({ setShowCart, showCart }) {
   return (
     <Navbar className="navbar sticky-top" expand="lg">
       <Container className="navbar-container d-flex justify-content-between py-2">
@@ -32,7 +32,12 @@ function NavBar() {
             </Nav>
           </Navbar.Collapse>
         </div>
-        <OffCanvasCart placement={"end"} name={"end"} />
+        <OffCanvasCart
+          placement={"end"}
+          name={"end"}
+          setShowCart={setShowCart}
+          showCart={showCart}
+        />
       </Container>
     </Navbar>
   );

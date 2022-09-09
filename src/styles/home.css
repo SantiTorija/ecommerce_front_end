@@ -1,74 +1,75 @@
 @import url("https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap");
 
 .slider {
-	/* 	object-position: center;
+  /* 	object-position: center;
 	background-repeat: no-repeat;
 	background-position: center; */
-	/* object-fit: contain;
+  /* object-fit: contain;
 	width: 100%;
 	overflow: hidden; */
 
-	opacity: 0.9;
+  opacity: 0.9;
 }
 
 #featureSection {
-	background-color: white;
+  background-color: white;
 }
 .carousel {
-	height: 70vh;
+  height: 70vh;
 }
 
 .textFeatures {
-	font-size: 15px;
-	font-family: "Quattrocento", serif;
-	font-weight: bold;
+  font-size: 15px;
+  font-family: "Quattrocento", serif;
+  font-weight: bold;
 }
 
 .featureColumn {
-	height: 100px;
+  height: 100px;
 }
 
 .aboutText {
-	font-size: 15px;
-	font-family: "Quattrocento", serif;
-	color: white;
+  font-size: 15px;
+  font-family: "Quattrocento", serif;
+  color: white;
 }
 
 .button-cuadrant {
-	width: 100%;
-	background-color: transparent;
-	border: none;
+  width: 100%;
+  background-color: transparent;
+  border: none;
 }
 
 .button-cuadrant:hover {
-	scale: 2;
+  scale: 2;
+  transition: all 0.5s;
 }
 .aboutHome {
-	height: 80px;
-	width: 100%;
-	align-items: center;
-	justify-content: center;
+  height: 80px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 
-	background-color: #2b2d42;
+  background-color: #2b2d42;
 }
 
 .textCuadrants {
-	color: white;
-	font-family: "Quattrocento", serif;
-	font-weight: 700;
-	font-size: 20px;
+  color: white;
+  font-family: "Quattrocento", serif;
+  font-weight: 700;
+  font-size: 20px;
 }
 
 .containerCuadrants {
-	height: 200px;
+  height: 200px;
 }
 .textBodyCarousel {
-	font-family: "Quattrocento", serif;
-	font-size: 20px;
+  font-family: "Quattrocento", serif;
+  font-size: 20px;
 }
 
 .textTitleCarousel {
-	font-family: "Quattrocento", serif;
-	font-weight: 700;
-	font-size: 40px;
+  font-family: "Quattrocento", serif;
+  font-weight: 700;
+  font-size: 40px;
 }
