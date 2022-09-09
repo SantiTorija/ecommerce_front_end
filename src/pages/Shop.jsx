@@ -1,7 +1,9 @@
 import Sidebar from "../components/Sidebar";
 import ShowShop from "../components/ShowShop";
 import { Col, Row, Container } from "react-bootstrap";
+import { useState } from "react";
 function Shop() {
+  const [type, setType] = useState("todos");
   return (
     <>
       <Container
@@ -12,10 +14,10 @@ function Shop() {
       >
         <Row>
           <Col className="d-none d-lg-block col-lg-2">
-            <Sidebar />
+            <Sidebar setType={setType} />
           </Col>
           <Col className="col-lg-10">
-            <ShowShop />
+            <ShowShop type={type} />
           </Col>
         </Row>
       </Container>

@@ -12,6 +12,11 @@ function OffCanvasFilter({ name, ...props }) {
   const handleClose = () => setShow(false);
   const toggleShow = () => setShow((s) => !s);
 
+  function setTypeWine(type) {
+    props.setType(type);
+    setShow(false);
+  }
+
   return (
     <>
       <button
@@ -37,25 +42,24 @@ function OffCanvasFilter({ name, ...props }) {
         <Offcanvas.Body className="text-white title-letter">
           <h2 className="title-letter fs-4">Filtrar por tipo</h2>
           <div className="mt-3">
-            <Link className="link" to="">
-              {" "}
+            <Link className="link" to="" onClick={() => setTypeWine("tinto")}>
               <FaWineGlass /> <span className="ms-2">Tinto</span>{" "}
             </Link>
           </div>
           <div className="mt-2">
-            <Link className="link" to="">
+            <Link className="link" to="" onClick={() => setTypeWine("blanco")}>
               {" "}
               <FaWineGlass /> <span className="ms-2">Blanco</span>{" "}
             </Link>
           </div>
           <div className="mt-2">
-            <Link className="link" to="">
+            <Link className="link" to="" onClick={() => setTypeWine("rose")}>
               {" "}
               <FaWineGlass /> <span className="ms-2">Rose</span>{" "}
             </Link>
           </div>
           <div className="mt-2">
-            <Link className="link" to="">
+            <Link className="link" to="" onClick={() => setTypeWine("licoroso")}>
               {" "}
               <FaWineGlass /> <span className="ms-2">Espumante</span>{" "}
             </Link>

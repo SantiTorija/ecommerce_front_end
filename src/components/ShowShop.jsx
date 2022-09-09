@@ -5,20 +5,21 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import "../styles/showShop.css";
 
-function ShowShop() {
+function ShowShop(props) {
   const [wines, setWines] = useState(null);
+
   console.log(wines);
   useEffect(() => {
     const dataWine = async () => {
       const response = await axios({
         method: "GET",
-        url: "http://localhost:8000/wines/",
+        url: `http://localhost:8000/wines/filter/${props.type}`,
       });
       setWines(response.data);
       return response;
     };
     dataWine();
-  }, []);
+  }, [props.type]);
   return (
     wines && (
       <>
