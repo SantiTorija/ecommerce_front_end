@@ -21,9 +21,7 @@ function OffCanvasCart({ name, ...props }) {
     let resultado = 0;
     for (let i = 0; i < cartState.length; i++) {
       if (cartState[i]) {
-        resultado +=
-          parseInt(cartState[i].price) *
-          parseInt(cartState[i].cartQuantity || 0);
+        resultado += parseInt(cartState[i].price) * parseInt(cartState[i].cartQuantity || 0);
       }
     }
     return resultado;
@@ -38,8 +36,7 @@ function OffCanvasCart({ name, ...props }) {
     <>
       <button onClick={handleShow} className="me-4 off-canvas-navbar-button">
         <AiOutlineShoppingCart
-          color="white"
-          style={{ color: "white", fontSize: "1.5rem" }}
+          style={{ color: "rgba(240, 240, 240, 0.799)", fontSize: "1.5rem" }}
         />
       </button>
       <Offcanvas
@@ -90,9 +87,7 @@ function OffCanvasCart({ name, ...props }) {
               </>
             );
           })}
-          <h6 className="d-flex justify-content-center text-white">
-            Order Sumary
-          </h6>
+          <h6 className="d-flex justify-content-center text-white">Order Sumary</h6>
           <div className="d-flex justify-content-between mx-3">
             <p className="text-white">Merchandise</p>
             <p className="text-white">${calcularTotal() || 0}</p>

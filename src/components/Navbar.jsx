@@ -13,7 +13,7 @@ function NavBar({ setShowCart, showCart }) {
       <Container className="navbar-container d-flex justify-content-between py-2">
         <div className="d-flex">
           <Navbar.Brand className="text-light nav-brand-icon">
-            <img alt="" src={hackWines} />
+            <img alt="hackWinesLogo" src={hackWines} />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
