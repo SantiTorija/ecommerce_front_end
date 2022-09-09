@@ -19,7 +19,7 @@ function ShowShop() {
     };
     dataWine();
   }, []);
-
+  /* const props  */
   return (
     wines && (
       <>
@@ -46,7 +46,7 @@ function ShowShop() {
                       />
                       <Card.Body className="d-flex flex-column justify-content-end">
                         <Card.Title>
-                          <h2 className="wine-name">{wine.name}</h2>
+                          <h2 className="wine-name wine__title">{wine.name}</h2>
                         </Card.Title>
                         <Card.Text></Card.Text>
                         <Button className="d-none" variant="success">
