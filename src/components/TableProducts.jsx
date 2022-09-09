@@ -45,10 +45,7 @@ function BasicExample() {
           return (
             <tr>
               <td>
-                <button
-                  className="btn text-white btn__delete__wine"
-                  onClick={() => destroyWine(wine)}
-                >
+                <button className="text-white btn__delete__wine" onClick={() => destroyWine(wine)}>
                   <AiFillDelete />
                 </button>
               </td>

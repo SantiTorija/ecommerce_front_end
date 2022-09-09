@@ -152,8 +152,15 @@ input[type="number"] {
 }
 
 .btn__delete__wine,
-.btn__delete__wine:hover,
 .btn__delete__wine:focus {
   border: none;
+  background-color: transparent;
   outline: none;
+}
+
+.btn__delete__wine:hover{
+  color: red !important;
+  background-color: transparent;
+  border: none;
+outline: none;
 }
