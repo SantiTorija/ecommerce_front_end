@@ -14,10 +14,10 @@ function Shop() {
         fluid
       >
         <Row>
-          <Col className="d-none d-lg-block col-lg-2">
+          <Col className="col-lg-2">
             <Sidebar setType={setType} />
           </Col>
-          <Col className="col-lg-10">
+          <Col className="col-sm-12 col-lg-10">
             <ShowShop type={type} />
           </Col>
         </Row>

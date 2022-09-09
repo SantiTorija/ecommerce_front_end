@@ -24,7 +24,10 @@ function OffCanvasFilter({ name, ...props }) {
         onClick={toggleShow}
         className="me-2 title-letter sidebar-offcanv-button"
       >
-        ¿Qué vino estás buscando?
+        <div className="d-inline d-lg-none">
+          <FaWineGlass />
+        </div>
+        <span className="d-none d-lg-inline">¿Qué vino estás buscando?</span>
       </button>
       <Offcanvas
         style={{

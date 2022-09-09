@@ -17,7 +17,7 @@
   opacity: 0.8;
 }
 .image-card {
-  opacity: 0.9;
+  opacity: 1;
   display: block;
   width: 100%;
   height: auto;
@@ -37,11 +37,12 @@
 }
 
 .single-item-card:hover {
+  scale: 1.1;
   border: 1px solid #c8960066 !important;
 }
 
 .single-item-card:hover .image-card {
-  opacity: 1;
+  opacity: 1.2;
 }
 
 .single-item-card:hover .middle {

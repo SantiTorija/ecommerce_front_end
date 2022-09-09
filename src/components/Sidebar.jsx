@@ -15,11 +15,6 @@ function Sidebar({ setType }) {
     <Navbar className="sidebar-left mt-5" expand="lg">
       <Container className="sidebar-container py-2">
         <OffCanvasFilter {...props} />
-
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto"></Nav>
-        </Navbar.Collapse>
       </Container>
     </Navbar>
   );
