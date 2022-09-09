@@ -1,77 +1,69 @@
 @import url("https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap");
 
-.slider {
-	/* 	object-position: center;
-	background-repeat: no-repeat;
-	background-position: center; */
-	/* object-fit: contain;
-	width: 100%;
-	overflow: hidden; */
-
-	opacity: 0.9;
-}
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
 
 #featureSection {
-	background-color: white;
+  background-color: #0d2818;
 }
 .carousel {
-	height: 70vh;
+  height: 70vh;
 }
 
 .textFeatures {
-	font-size: 15px;
-	font-family: "Quattrocento", serif;
-	font-weight: bold;
+  font-size: 15px;
+  font-family: Raleway, sans-serif;
+  font-size: 15px;
+  color: white;
 }
 
 .featureColumn {
-	height: 100px;
+  height: 100px;
 }
 
 .aboutText {
-	font-size: 15px;
-	font-family: "Quattrocento", serif;
-	color: white;
+  color: white;
+  font-family: Raleway, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
 }
 
 .button-cuadrant {
-	width: 100%;
-	background-color: transparent;
-	border: none;
-	transition: ease-in-out 0.5s 0.5s;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  transition: ease-in-out 0.25s 0.25s;
 }
 
 .button-cuadrant:hover {
-	scale: 1.1;
-	border: none;
-	opacity: 0.6;
+  scale: 1.2;
+  border: none;
 }
 .aboutHome {
-	height: 80px;
-	width: 100%;
-	align-items: center;
-	justify-content: center;
+  height: 80px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 
-	background-color: #2b2d42;
+  background-color: #0d2818;
 }
 
 .textCuadrants {
-	color: white;
-	font-family: "Quattrocento", serif;
-	font-weight: 700;
-	font-size: 20px;
+  color: white;
+  font-family: "Quattrocento", serif;
+  font-weight: 700;
+  font-size: 20px;
 }
 
 .containerCuadrants {
-	height: 200px;
+  height: 200px;
 }
 .textBodyCarousel {
-	font-family: "Quattrocento", serif;
-	font-size: 20px;
+  font-family: Raleway, sans-serif;
+  font-size: 20px;
 }
 
 .textTitleCarousel {
-	font-family: "Quattrocento", serif;
-	font-weight: 700;
-	font-size: 40px;
+  font-family: "Quattrocento", serif;
+  font-weight: 700;
+  font-size: 40px;
 }

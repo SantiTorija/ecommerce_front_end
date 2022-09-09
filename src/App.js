@@ -7,8 +7,11 @@ import NavBar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 import "bootstrap/dist/css/bootstrap.min.css";
+import Cart from "./pages/Cart";
+import { useState } from "react";
 
 function App() {
+  const [showCart, setShowCart] = useState(false);
   return (
     <div
       style={{
@@ -16,11 +19,12 @@ function App() {
       }}
       className="App"
     >
-      <NavBar />
+      <NavBar showCart={showCart} setShowCart={setShowCart} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/tienda" element={<Shop />} />
-        <Route path="/product/:slug" element={<Wine />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/product/:slug" element={<Wine setShowCart={setShowCart} />} />
       </Routes>
       <Footer />
     </div>

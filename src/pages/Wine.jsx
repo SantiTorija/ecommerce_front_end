@@ -4,7 +4,7 @@ import axios from "axios";
 import "../styles/Wine.css";
 import Cantidad from "../components/Cantidad.jsx";
 
-function Wine() {
+function Wine(props) {
   const [wine, setWine] = useState({});
   const { slug } = useParams(); // pasar a slug
   useEffect(() => {
@@ -55,7 +55,7 @@ function Wine() {
                   $ {wine.price} <span className="Wine__iva">IVA INCLUIDO</span>
                 </h4>
               ) : null}
-              <Cantidad wine={wine} />
+              <Cantidad wine={wine} setShowCart={props.setShowCart} />
               <div className="product__data">
                 <h4 className="d-flex justify-content-center mb-5 Wine__type">
                   Product Data
