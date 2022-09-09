@@ -50,7 +50,7 @@ function ShowShop(props) {
                       </div>
                       <div className="middle d-flex">
                         <Link to={`/product/${wine.slug}`}>
-                          <Button className="btn btn-warning text-white">ver más</Button>
+                          <Button className="btn btn-warning text-light ">VER DETALLE</Button>
                         </Link>
                       </div>
                     </Card.Body>
