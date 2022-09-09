@@ -16,14 +16,10 @@ footer {
   background-color: #c89500;
 }
 
-#footerShops {
-  line-height: 20px;
-}
-
 p {
   font-size: 15px;
   font-weight: 100;
-  color: white;
+  color: rgba(240, 240, 240, 0.799);
 }
 
 h3 {

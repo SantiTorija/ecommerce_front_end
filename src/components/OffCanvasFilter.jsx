@@ -64,6 +64,12 @@ function OffCanvasFilter({ name, ...props }) {
               <FaWineGlass /> <span className="ms-2">Espumante</span>{" "}
             </Link>
           </div>
+          <div className="mt-2">
+            <Link className="link" to="">
+              {" "}
+              <FaWineGlass /> <span className="ms-2">Licoroso</span>{" "}
+            </Link>
+          </div>
           <h2 className="title-letter fs-4 mt-3">Filtrar por Pais</h2>
           <div className="mt-3">
             <Link className="link" to="">

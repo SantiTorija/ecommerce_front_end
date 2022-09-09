@@ -58,7 +58,7 @@ function FooterWeb() {
               </p>
             </div>
 
-            <div className="col-md-5 offset-md-1 mb-3">
+            <div className="col-md-5 offset-md-1 ">
               <form>
                 <h4>Subscribite a nuestro newsletter</h4>
                 <p>Y recibi promociones y noticias de nuestra tienda.</p>
