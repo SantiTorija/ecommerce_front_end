@@ -9,37 +9,37 @@ function FooterWeb() {
   return (
     <footer>
       <Container>
-        <div className="footer  pt-5 pb-3">
+        <div className="footer  pt-5 pb-1">
           <div className="row">
             <div className="col-6 col-md-2 mb-3">
-              <img alt="" src={hackWines} />
+              <img alt="hackWineslogo" src={hackWines} />
               <div className="d-flex flex-row gap-2 mt-3">
-                <Instagram />
-                <Facebook />
-                <Whatsapp />
-                <Envelope />
+                <Instagram color="rgba(240, 240, 240, 0.799)" />
+                <Facebook color="rgba(240, 240, 240, 0.799)" />
+                <Whatsapp color="rgba(240, 240, 240, 0.799)" />
+                <Envelope color="rgba(240, 240, 240, 0.799)" />
               </div>
             </div>
 
             <div className="col-6 col-md-2">
-              <h3>MENU</h3>
+              <h3 className="titleFooter">MENU</h3>
               <ul className="nav flex-column">
-                <li className="nav-item mb-1">
+                <li className="nav-item">
                   <Link className="navbar-link  " to={"/"}>
                     Home
                   </Link>
                 </li>
-                <li className="nav-item mb-1">
+                <li className="nav-item ">
                   <Link className="navbar-link " to={"/tienda"}>
                     Tienda
                   </Link>
                 </li>
-                <li className="nav-item mb-1">
+                <li className="nav-item ">
                   <Link className="navbar-link " to={"/sobre-este-proyecto"}>
                     Sobre este proyecto
                   </Link>
                 </li>
-                <li className="nav-item mb-1">
+                <li className="nav-item ">
                   <Link className="navbar-link me-3" to={"/contacto"}>
                     Contacto
                   </Link>
@@ -48,20 +48,18 @@ function FooterWeb() {
             </div>
 
             <div className="col-6 col-md-2 ">
-              <h3>LOCAL </h3>
-              {/* <Shop /> */}
-              <p id="footerShops">
-                Avenida Rivera 4321.
-                <br />
-                Montevideo.
-                <br />L a V: 9 a 18 hs.
+              <h3 className="titleFooter">LOCAL </h3>
+
+              <p>
+                Avda Rivera 4321. Montevideo.
+                <br /> L a V: 9 a 18 hs.
               </p>
             </div>
 
             <div className="col-md-5 offset-md-1 ">
               <form>
-                <h4>Subscribite a nuestro newsletter</h4>
-                <p>Y recibi promociones y noticias de nuestra tienda.</p>
+                <h3 className="titleFooter">NEWSLETTER</h3>
+                <p>Suscribite, y recibi antes que nadie nuestras promociones y noticias.</p>
                 <div className="d-flex flex-column flex-sm-row w-100 gap-2">
                   <label for="newsletter1" className="visually-hidden">
                     Email
@@ -85,7 +83,7 @@ function FooterWeb() {
             </div>
           </div>
 
-          <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+          <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top mt-5">
             <p>&copy; 2022 Todos los derechos reservados.</p>
           </div>
         </div>

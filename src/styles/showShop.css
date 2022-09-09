@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
 
+<<<<<<< HEAD
 .shop-single-item-button {
   border: none;
   background-color: transparent;
@@ -19,6 +20,56 @@
 }
 .single-item-card:hover .middle {
   opacity: 1;
+=======
+*{
+    box-sizing: border-box;
+}
+
+.shop-single-item-button{
+    border: none;
+    background-color: transparent;
+    margin: none;
+    padding: none;
+    width: 20rem;
+}
+
+.single-item-card{
+     transition: ease-in-out 0.3s 0.3s;
+    opacity: 0.8; 
+}
+.image-card{
+   opacity: 0.9;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle{
+transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+.single-item-card:hover {    
+    border: 1px solid #c8960066 !important; 
+}
+
+.single-item-card:hover .image-card{
+  opacity: 1; 
+}
+
+.single-item-card:hover .middle{    
+    opacity: 1;
+    
+>>>>>>> d07b67db882da41bc5424fe98f6ef4ce62d4416d
 }
 
 .spinner__wines {
@@ -47,6 +98,7 @@
   padding-top: 4px;
 }
 
+<<<<<<< HEAD
 .image-card {
   opacity: 1;
   display: block;
@@ -70,3 +122,16 @@
 .btn-warning {
   background-color: #c89600bc !important;
 }
+=======
+
+.btn-warning{
+    background-color: #c89600d8 !important;
+    transition: ease-in-out 0.3s;
+    font-family: Raleway, sans-serif;
+    
+}
+.btn-warning:hover{
+    scale: 1.1;
+    background-color: #c89600fd !important;
+}
+>>>>>>> d07b67db882da41bc5424fe98f6ef4ce62d4416d

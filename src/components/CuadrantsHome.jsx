@@ -11,73 +11,73 @@ import { Cart, Cup, Megaphone, Sun } from "react-bootstrap-icons";
 import handleAlert from "./Alert";
 
 function CuadrantsHome() {
-	return (
-		<Container fluid className="m-0 p-0 ">
-			<Row className="d-flex containerCuadrants">
-				<Col
-					className="m-0 p-0 d-flex flex-column align-items-center  justify-content-center "
-					style={{
-						backgroundImage: `linear-gradient(rgba(2,0,36,0.3) 10%, rgba(0,0,0,0.3) 100%),url(${cuadrants1})`,
-						backgroundPosition: "center",
-						backgroundSize: "cover",
-					}}
-				>
-					<Link to={`/tienda`}>
-						<button className="button-cuadrant">
-							<Cart color="white" size={25} />
-							<h2 className="textCuadrants mt-2">Tienda</h2>
-						</button>
-					</Link>
-				</Col>
+  return (
+    <Container fluid className="m-0 p-0 ">
+      <Row className="d-flex containerCuadrants">
+        <Col
+          className="m-0 p-0 d-flex flex-column align-items-center  justify-content-center "
+          style={{
+            backgroundImage: `linear-gradient(rgba(2,0,36,0.3) 10%, rgba(0,0,0,0.3) 100%),url(${cuadrants1})`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
+        >
+          <Link to={`/tienda`}>
+            <button className="button-cuadrant ">
+              <Cart color="white" size={25} />
+              <h2 className="textCuadrants mt-2">Tienda</h2>
+            </button>
+          </Link>
+        </Col>
 
-				<Col
-					className="m-0 p-0 d-flex flex-column align-items-center  justify-content-center "
-					style={{
-						backgroundImage: `linear-gradient(rgba(2,0,36,0.3) 10%, rgba(0,0,0,0.3) 100%),url(${cuadrants2})`,
-						backgroundPosition: "center",
-						backgroundSize: "cover",
-					}}
-				>
-					<Link to="" onClick={handleAlert}>
-						<button className="button-cuadrant">
-							<Cup color="white" size={25} />
-							<h2 className="textCuadrants mt-2">Cristaleria y Accesorios</h2>
-						</button>
-					</Link>
-				</Col>
-				<Col
-					className="m-0 p-0 d-flex flex-column align-items-center  justify-content-center "
-					style={{
-						backgroundImage: `linear-gradient(rgba(2,0,36,0.3) 10%, rgba(0,0,0,0.3) 100%),url(${cuadrants3})`,
-						backgroundPosition: "center",
-						backgroundSize: "cover",
-					}}
-				>
-					<Link to="" onClick={handleAlert}>
-						<button className="button-cuadrant">
-							<Megaphone color="white" size={25} />
-							<h2 className="textCuadrants mt-2">Promociones</h2>
-						</button>
-					</Link>
-				</Col>
-				<Col
-					className="m-0 p-0 d-flex flex-column align-items-center  justify-content-center"
-					style={{
-						backgroundImage: `linear-gradient(rgba(2,0,36,0.3) 10%, rgba(0,0,0,0.3) 100%),url(${cuadrants4})`,
-						backgroundPosition: "center",
-						backgroundSize: "cover",
-					}}
-				>
-					<Link to="" onClick={handleAlert}>
-						<button className="button-cuadrant">
-							<Sun color="white" size={25} />
-							<h2 className="textCuadrants mt-2">Cavas</h2>
-						</button>
-					</Link>
-				</Col>
-			</Row>
-		</Container>
-	);
+        <Col
+          className="m-0 p-0 d-flex flex-column align-items-center  justify-content-center "
+          style={{
+            backgroundImage: `linear-gradient(rgba(2,0,36,0.3) 10%, rgba(0,0,0,0.3) 100%),url(${cuadrants2})`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
+        >
+          <Link to="" onClick={handleAlert}>
+            <button className="button-cuadrant">
+              <Cup color="white" size={25} />
+              <h2 className="textCuadrants mt-2">Cristaleria y Accesorios</h2>
+            </button>
+          </Link>
+        </Col>
+        <Col
+          className="m-0 p-0 d-flex flex-column align-items-center  justify-content-center "
+          style={{
+            backgroundImage: `linear-gradient(rgba(2,0,36,0.3) 10%, rgba(0,0,0,0.3) 100%),url(${cuadrants3})`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
+        >
+          <Link to="" onClick={handleAlert}>
+            <button className="button-cuadrant">
+              <Megaphone color="white" size={25} />
+              <h2 className="textCuadrants mt-2">Promociones</h2>
+            </button>
+          </Link>
+        </Col>
+        <Col
+          className="m-0 p-0 d-flex flex-column align-items-center  justify-content-center"
+          style={{
+            backgroundImage: `linear-gradient(rgba(2,0,36,0.3) 10%, rgba(0,0,0,0.3) 100%),url(${cuadrants4})`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
+        >
+          <Link to="" onClick={handleAlert}>
+            <button className="button-cuadrant">
+              <Sun color="white" size={25} />
+              <h2 className="textCuadrants mt-2">Cavas</h2>
+            </button>
+          </Link>
+        </Col>
+      </Row>
+    </Container>
+  );
 }
 
 export default CuadrantsHome;
