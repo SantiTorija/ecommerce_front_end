@@ -10,8 +10,9 @@ const handleAlert = () =>
 		color: "white",
 		icon: "warning",
 		iconColor: "#c89500",
-
-		showCloseButton: true,
+		focusConfirm: false,
+		focusCancel: true,
+		showCloseButton: false,
 	});
 
 export default handleAlert;
