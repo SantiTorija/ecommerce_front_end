@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "../styles/showShop.css";
+import BounceLoader from "react-spinners/BounceLoader";
 
 function ShowShop(props) {
   const [wines, setWines] = useState(null);
@@ -20,8 +21,8 @@ function ShowShop(props) {
     };
     dataWine();
   }, [props.type]);
-  return (
-    wines && (
+  if (wines) {
+    return (
       <>
         <div className="d-flex justify-content-around row ms-5 me-5 mb-5">
           {wines.map((wine, index) => {
@@ -61,8 +62,14 @@ function ShowShop(props) {
           })}
         </div>
       </>
-    )
-  );
+    );
+  } else {
+    return (
+      <div className="d-flex justify-content-center align-items-center vh-100 spinner__wines">
+        <BounceLoader color="#6d1f2b" loading size={50} />
+      </div>
+    );
+  }
 }
 
 export default ShowShop;

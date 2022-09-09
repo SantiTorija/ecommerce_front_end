@@ -1,6 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
 import { addFirstTime, setNumber } from "../redux/cartSlice";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import BasicExample from "../components/TableProducts";
 import "../styles/Wine.css";
 
 const Cart = () => {
@@ -21,9 +23,7 @@ const Cart = () => {
     let resultado = 0;
     for (let i = 0; i < cartState.length; i++) {
       if (cartState[i]) {
-        resultado +=
-          parseInt(cartState[i].price) *
-          parseInt(cartState[i].cartQuantity || 0);
+        resultado += parseInt(cartState[i].price) * parseInt(cartState[i].cartQuantity || 0);
       }
     }
     return resultado;
@@ -37,8 +37,9 @@ const Cart = () => {
             <LocalMallIcon className="mx-2 " />
           </span>
         </h3>
-        <div className="d-flex justify-content-center align-items-center">
+        <div className="d-flex justify-content-center">
           <div className="col-8">
+            <BasicExample />
             <div className="d-flex ms-4">
               <div className="col-5 text-white pt-5 d-flex justify-content-center ">
                 <h4>PRODUCTO</h4>
@@ -90,33 +91,59 @@ const Cart = () => {
               );
             })}
           </div>
-          <div className="col-4 text-white px-5 py-3 checkout__card">
-            <div className="d-flex justify-content-center py-3">
-              <input type="text" placeholder="Promo Code" />
+          <div className="col-4 text-white px-3 py-3 pt-5">
+            <h3 className="mx-5">SUMMARY</h3>
+            <div className="d-flex justify-content-between">
+              <p className="mx-5">Subtotal ({cartState.length} items)</p>{" "}
+              <p className="mx-5"> ${Math.round(calcularTotal() * 10) / 10}</p>
+            </div>
+            <div className="d-flex justify-content-between">
+              <p className="mx-5">Shipping & Handling:</p>{" "}
+              <p className="mx-5"> ${Math.round(calcularTotal() * 0.22 * 10) / 10}</p>
+            </div>
+            <div className="d-flex justify-content-between">
+              <p className="mx-5">Taxes:</p>{" "}
+              <p className="mx-5"> ${Math.round(calcularTotal() * 0.1 * 10) / 10}</p>
+            </div>
 
-              <button className="px-4 py-2">Submit</button>
-            </div>
             <div className="d-flex justify-content-between">
-              <p>Shipping Cost:</p>{" "}
-              <p> ${Math.round(calcularTotal() * 0.3 * 10) / 10}</p>
+              <p className="mx-5">Estimated Total:</p>{" "}
+              <p className="mx-5"> ${Math.round(calcularTotal() * 1.32 * 100) / 100}</p>
             </div>
-            <div className="d-flex justify-content-between">
-              <p>Discount:</p>{" "}
-              <p> ${Math.round(calcularTotal() * 0.2 * 10) / 10}</p>
+            <h6 className="mx-5">
+              Payment Options <ArrowDropDownIcon />
+            </h6>
+            <div className="mx-5">
+              <img
+                src="https://www.pngall.com/wp-content/uploads/2017/05/Visa-Logo-Free-Download-PNG.png"
+                alt="logo visa"
+                className="foto__payment"
+              />
+              <img
+                src="https://freepngimg.com/save/16049-mastercard-png-clipart/590x360"
+                alt="logo mastercard"
+                className="foto__payment"
+              />
+              <img
+                src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c530.png"
+                alt="logo paypal"
+                className="foto__payment__grande"
+              />
+              <img
+                src="https://assets.stickpng.com/images/5a27cdfd52b1cc0d022e6d5c.png"
+                alt="logo santander"
+                className="foto__payment"
+              />
+              <img
+                src="https://www.thcservers.com/images/Paysafecard_logo.png"
+                alt="logo paysafeCard"
+                className="foto__payment__grande"
+              />
             </div>
-            <div className="d-flex justify-content-between">
-              <p>Tax:</p> <p> ${Math.round(calcularTotal() * 0.1 * 10) / 10}</p>
-            </div>
-            <div className="d-flex justify-content-between">
-              <p>Subtotal:</p> <p> ${Math.round(calcularTotal() * 10) / 10}</p>
-            </div>
-            <div className="d-flex justify-content-between">
-              <p>Estimated Total:</p>{" "}
-              <p> ${Math.round(calcularTotal() * 1.2 * 10) / 10}</p>
-            </div>
+
             <div className="d-flex justify-content-center mt-2">
               <div className="cart__finalizar__compra d-flex justify-content-center ">
-                <h6>FINALIZAR COMPRA</h6>
+                <h6>CHECKOUT</h6>
               </div>
             </div>
           </div>

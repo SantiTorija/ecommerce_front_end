@@ -21,9 +21,7 @@ function OffCanvasCart({ name, ...props }) {
     let resultado = 0;
     for (let i = 0; i < cartState.length; i++) {
       if (cartState[i]) {
-        resultado +=
-          parseInt(cartState[i].price) *
-          parseInt(cartState[i].cartQuantity || 0);
+        resultado += parseInt(cartState[i].price) * parseInt(cartState[i].cartQuantity || 0);
       }
     }
     return resultado;
@@ -37,10 +35,7 @@ function OffCanvasCart({ name, ...props }) {
   return (
     <>
       <button onClick={handleShow} className="me-4 off-canvas-navbar-button">
-        <AiOutlineShoppingCart
-          color="white"
-          style={{ color: "white", fontSize: "1.5rem" }}
-        />
+        <AiOutlineShoppingCart color="white" style={{ color: "white", fontSize: "1.5rem" }} />
       </button>
       <Offcanvas
         style={{
@@ -78,6 +73,7 @@ function OffCanvasCart({ name, ...props }) {
                     alt="wine_photo"
                     className="col-3"
                   />
+
                   <div className="col-9 text-white">
                     <div>{wine.name || "19 CRIMES CABERNET SAUVIGNON"}</div>
                     <div>{wine.type || "Tinto"}</div>
@@ -86,24 +82,25 @@ function OffCanvasCart({ name, ...props }) {
                     </div>
                   </div>
                 </div>
-                <hr></hr>
               </>
             );
           })}
-          <h6 className="d-flex justify-content-center text-white">
-            Order Sumary
-          </h6>
+          <h6 className="d-flex justify-content-center text-white">Order Sumary</h6>
           <div className="d-flex justify-content-between mx-3">
             <p className="text-white">Merchandise</p>
-            <p className="text-white">${calcularTotal() || 0}</p>
+            <p className="text-white">${Math.round((calcularTotal() || 0) * 1.2 * 10) / 10}</p>
           </div>
           <div className="d-flex justify-content-between mx-3">
             <p className="text-white">Tax</p>
-            <p className="text-white">${calcularTotal() * 0.22 || 0}</p>
+            <p className="text-white">
+              ${Math.round((calcularTotal() * 0.22 || 0) * 1.2 * 10) / 10}
+            </p>
           </div>
           <div className="d-flex justify-content-between border-top border-bottom align-items-center pt-3 mx-3">
             <p className="text-white">Estimated Order Total</p>
-            <p className="text-white">${calcularTotal() * 1.22 || 0}</p>
+            <p className="text-white">
+              ${Math.round((calcularTotal() * 1.22 || 0) * 1.2 * 10) / 10}
+            </p>
           </div>
           <div className="d-flex justify-content-center mt-2">
             <button

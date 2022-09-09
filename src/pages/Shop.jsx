@@ -2,6 +2,7 @@ import Sidebar from "../components/Sidebar";
 import ShowShop from "../components/ShowShop";
 import { Col, Row, Container } from "react-bootstrap";
 import { useState } from "react";
+
 function Shop() {
   const [type, setType] = useState("todos");
   return (
