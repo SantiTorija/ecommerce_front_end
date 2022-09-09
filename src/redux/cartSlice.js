@@ -18,10 +18,18 @@ const cartSlice = createSlice({
       wine.cartQuantity = parseInt(action.payload.quantity);
       state = [...state, wine];
     },
+    deleteItem(state, action) {
+      for (let item of state) {
+        console.log(item._id === action.payload.id);
+        console.log(action.payload.id);
+      }
+      return state.filter((element) => element._id !== action.payload.id);
+
+    }
   },
 });
 
 const { actions, reducer } = cartSlice;
-export const { add, addFirstTime, setNumber } = actions;
+export const { add, addFirstTime, setNumber, deleteItem } = actions;
 
 export default reducer;

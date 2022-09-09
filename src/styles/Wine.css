@@ -52,7 +52,7 @@
   color: #c89500;
   margin-bottom: 20px;
 }
-.wine-image-card{
+.wine-image-card {
   background-color: #40404047;
   border-radius: 1rem;
 }
@@ -80,13 +80,10 @@
   padding-top: 3%;
   margin-top: 3%;
   padding-bottom: 4%;
-  
- 
 }
 
-.product-description-table{
+.product-description-table {
   border-bottom: 1px solid gray;
-
 }
 
 .Wine__cart {
@@ -122,10 +119,12 @@ input[type="number"] {
   margin-right: 10px;
   border: none;
   outline: none;
+  background-color: #404040;
+  color: white;
 }
 
 .cart__finalizar__compra {
-  background-color: #6d1f2b;
+  background-color: #6d1f2b; /* cambiar a este color #c89500 */
   border-radius: 30px;
   width: 200px;
   padding-top: 12px;
@@ -135,4 +134,25 @@ input[type="number"] {
 .foto__payment {
   width: 40px;
   height: 30px;
+}
+
+.table__picture {
+  width: 50px;
+}
+
+.cart__card {
+  color: white;
+  padding: 20px;
+  height: 350px;
+  margin-top: 30px;
+  margin-left: 40px;
+  border-radius: 20px;
+  background-color: #404040;
+}
+
+.btn__delete__wine,
+.btn__delete__wine:hover,
+.btn__delete__wine:focus {
+  border: none;
+  outline: none;
 }
