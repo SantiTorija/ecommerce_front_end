@@ -8,6 +8,7 @@ import cuadrants3 from "../assets/images/cuadrants3.jpg";
 import cuadrants4 from "../assets/images/cuadrants4.jpg";
 import { Link } from "react-router-dom";
 import { Cart, Cup, Megaphone, Sun } from "react-bootstrap-icons";
+import handleAlert from "./Alert";
 
 function CuadrantsHome() {
 	return (
@@ -37,7 +38,7 @@ function CuadrantsHome() {
 						backgroundSize: "cover",
 					}}
 				>
-					<Link to={`/`}>
+					<Link to="" onClick={handleAlert}>
 						<button className="button-cuadrant">
 							<Cup color="white" />
 							<h2 className="textCuadrants">Cristaleria y Accesorios</h2>
@@ -52,7 +53,7 @@ function CuadrantsHome() {
 						backgroundSize: "cover",
 					}}
 				>
-					<Link to={`/`}>
+					<Link to="" onClick={handleAlert}>
 						<button className="button-cuadrant">
 							<Megaphone color="white" />
 							<h2 className="textCuadrants">Promociones</h2>
@@ -67,7 +68,7 @@ function CuadrantsHome() {
 						backgroundSize: "cover",
 					}}
 				>
-					<Link to={`/`}>
+					<Link to="" onClick={handleAlert}>
 						<button className="button-cuadrant">
 							<Sun color="white" />
 							<h2 className="textCuadrants">Cavas</h2>

@@ -1,14 +1,9 @@
 import "../styles/footer.css";
-import { Col, Row, Container } from "react-bootstrap";
-import {
-	Instagram,
-	Facebook,
-	Whatsapp,
-	Envelope,
-	Shop,
-} from "react-bootstrap-icons";
+import { Container } from "react-bootstrap";
+import { Instagram, Facebook, Whatsapp, Envelope } from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
 import hackWines from "../assets/images/hackWines.png";
+import handleAlert from "./Alert";
 
 function FooterWeb() {
 	return (
@@ -80,7 +75,12 @@ function FooterWeb() {
 										className="form-control"
 										placeholder="Email"
 									/>
-									<button className="btn goldenButton" type="button">
+									<button
+										className="btn goldenButton"
+										type="button"
+										showCloseButton
+										onClick={handleAlert}
+									>
 										Subscribite
 									</button>
 								</div>
