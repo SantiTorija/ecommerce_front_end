@@ -1,18 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap");
 
-.slider {
-  /* 	object-position: center;
-	background-repeat: no-repeat;
-	background-position: center; */
-  /* object-fit: contain;
-	width: 100%;
-	overflow: hidden; */
-
-  opacity: 0.9;
-}
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
 
 #featureSection {
-  background-color: white;
+  background-color: #0d2818;
 }
 .carousel {
   height: 70vh;
@@ -20,8 +11,9 @@
 
 .textFeatures {
   font-size: 15px;
-  font-family: "Quattrocento", serif;
-  font-weight: bold;
+  font-family: Raleway, sans-serif;
+  font-size: 15px;
+  color: white;
 }
 
 .featureColumn {
@@ -29,20 +21,22 @@
 }
 
 .aboutText {
-  font-size: 15px;
-  font-family: "Quattrocento", serif;
   color: white;
+  font-family: Raleway, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
 }
 
 .button-cuadrant {
   width: 100%;
   background-color: transparent;
   border: none;
+  transition: ease-in-out 0.25s 0.25s;
 }
 
 .button-cuadrant:hover {
-  scale: 2;
-  transition: all 0.5s;
+  scale: 1.2;
+  border: none;
 }
 .aboutHome {
   height: 80px;
@@ -50,7 +44,7 @@
   align-items: center;
   justify-content: center;
 
-  background-color: #2b2d42;
+  background-color: #0d2818;
 }
 
 .textCuadrants {
@@ -64,7 +58,7 @@
   height: 200px;
 }
 .textBodyCarousel {
-  font-family: "Quattrocento", serif;
+  font-family: Raleway, sans-serif;
   font-size: 20px;
 }
 

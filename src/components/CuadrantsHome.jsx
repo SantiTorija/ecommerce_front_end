@@ -8,13 +8,14 @@ import cuadrants3 from "../assets/images/cuadrants3.jpg";
 import cuadrants4 from "../assets/images/cuadrants4.jpg";
 import { Link } from "react-router-dom";
 import { Cart, Cup, Megaphone, Sun } from "react-bootstrap-icons";
+import handleAlert from "./Alert";
 
 function CuadrantsHome() {
 	return (
 		<Container fluid className="m-0 p-0 ">
 			<Row className="d-flex containerCuadrants">
 				<Col
-					className="m-0 p-0 d-flex flex-column align-items-center  justify-content-center gap-2"
+					className="m-0 p-0 d-flex flex-column align-items-center  justify-content-center "
 					style={{
 						backgroundImage: `linear-gradient(rgba(2,0,36,0.3) 10%, rgba(0,0,0,0.3) 100%),url(${cuadrants1})`,
 						backgroundPosition: "center",
@@ -23,54 +24,54 @@ function CuadrantsHome() {
 				>
 					<Link to={`/tienda`}>
 						<button className="button-cuadrant">
-							<Cart color="white" />
-							<h2 className="textCuadrants">Tienda</h2>
+							<Cart color="white" size={25} />
+							<h2 className="textCuadrants mt-2">Tienda</h2>
 						</button>
 					</Link>
 				</Col>
 
 				<Col
-					className="m-0 p-0 d-flex flex-column align-items-center  justify-content-center gap-2"
+					className="m-0 p-0 d-flex flex-column align-items-center  justify-content-center "
 					style={{
 						backgroundImage: `linear-gradient(rgba(2,0,36,0.3) 10%, rgba(0,0,0,0.3) 100%),url(${cuadrants2})`,
 						backgroundPosition: "center",
 						backgroundSize: "cover",
 					}}
 				>
-					<Link to={`/`}>
+					<Link to="" onClick={handleAlert}>
 						<button className="button-cuadrant">
-							<Cup color="white" />
-							<h2 className="textCuadrants">Cristaleria y Accesorios</h2>
+							<Cup color="white" size={25} />
+							<h2 className="textCuadrants mt-2">Cristaleria y Accesorios</h2>
 						</button>
 					</Link>
 				</Col>
 				<Col
-					className="m-0 p-0 d-flex flex-column align-items-center  justify-content-center gap-2"
+					className="m-0 p-0 d-flex flex-column align-items-center  justify-content-center "
 					style={{
 						backgroundImage: `linear-gradient(rgba(2,0,36,0.3) 10%, rgba(0,0,0,0.3) 100%),url(${cuadrants3})`,
 						backgroundPosition: "center",
 						backgroundSize: "cover",
 					}}
 				>
-					<Link to={`/`}>
+					<Link to="" onClick={handleAlert}>
 						<button className="button-cuadrant">
-							<Megaphone color="white" />
-							<h2 className="textCuadrants">Promociones</h2>
+							<Megaphone color="white" size={25} />
+							<h2 className="textCuadrants mt-2">Promociones</h2>
 						</button>
 					</Link>
 				</Col>
 				<Col
-					className="m-0 p-0 d-flex flex-column align-items-center  justify-content-center gap-2"
+					className="m-0 p-0 d-flex flex-column align-items-center  justify-content-center"
 					style={{
 						backgroundImage: `linear-gradient(rgba(2,0,36,0.3) 10%, rgba(0,0,0,0.3) 100%),url(${cuadrants4})`,
 						backgroundPosition: "center",
 						backgroundSize: "cover",
 					}}
 				>
-					<Link to={`/`}>
+					<Link to="" onClick={handleAlert}>
 						<button className="button-cuadrant">
-							<Sun color="white" />
-							<h2 className="textCuadrants">Cavas</h2>
+							<Sun color="white" size={25} />
+							<h2 className="textCuadrants mt-2">Cavas</h2>
 						</button>
 					</Link>
 				</Col>
