@@ -19,7 +19,6 @@ function ShowShop() {
     };
     dataWine();
   }, []);
-  /* const props  */
   return (
     wines && (
       <>
@@ -27,35 +26,35 @@ function ShowShop() {
           {wines.map((wine, index) => {
             return (
               <div className="col-12 col-lg-4 mt-5">
-                <Link to={`/product/${wine.slug}`}>
-                  <button className="shop-single-item-button">
-                    <Card
-                      key={index}
-                      className="me-3 border single-item-card"
-                      style={{
-                        width: "20rem",
-                        height: "30rem",
-                        backgroundColor: "rgba(240, 240, 240, 0.095)",
-                        border: "none !important",
-                      }}
-                    >
-                      <Card.Img
-                        className="mt-3 single-item-card"
-                        variant="top"
-                        src={wine.picture}
-                      />
-                      <Card.Body className="d-flex flex-column justify-content-end">
-                        <Card.Title>
-                          <h2 className="wine-name wine__title">{wine.name}</h2>
-                        </Card.Title>
-                        <Card.Text></Card.Text>
-                        <Button className="d-none" variant="success">
-                          Comprar
-                        </Button>
-                      </Card.Body>
-                    </Card>
-                  </button>
-                </Link>
+                <button className="shop-single-item-button">
+                  <Card
+                    key={index}
+                    className="me-3 border single-item-card"
+                    style={{
+                      width: "20rem",
+                      height: "30rem",
+                      backgroundColor: "rgba(240, 240, 240, 0.095)",
+                      border: "none !important",
+                      position: "relative",
+                    }}
+                  >
+                    <Card.Img className="mt-3 image-card" variant="top" src={wine.picture} />
+                    <Card.Body className="d-flex flex-column justify-content-end">
+                      <div className="text-start">
+                        <p className="wine__title" style={{ color: "#c89600", fontWeight: "650" }}>
+                          US$ {wine.price}
+                        </p>
+
+                        <h2 className="wine-name wine__title">{wine.name}</h2>
+                      </div>
+                      <div className="middle d-flex">
+                        <Link to={`/product/${wine.slug}`}>
+                          <Button className="btn btn-warning text-white">ver más</Button>
+                        </Link>
+                      </div>
+                    </Card.Body>
+                  </Card>
+                </button>
               </div>
             );
           })}
