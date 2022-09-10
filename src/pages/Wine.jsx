@@ -75,14 +75,16 @@ function Wine(props) {
               <Cantidad wine={wine} setShowCart={props.setShowCart} />
             </div>
             <div className="col-2"></div>
-            <div className="mt-4 d-flex justify-content-center">
+            <div className="mt-5 d-flex justify-content-center">
               <div className="arrow__carrousel">
                 <span className="flecha">
                   <ArrowBackIosNewIcon />
                 </span>
               </div>
               {wines.map((reccomended) => (
-                <ProductCard wine={reccomended} />
+                <div className="mx-3">
+                  <ProductCard wine={reccomended} />
+                </div>
               ))}
               <div className="arrow__carrousel">
                 <span className="flecha">

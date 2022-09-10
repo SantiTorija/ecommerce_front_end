@@ -236,12 +236,12 @@ input[type="number"] {
   align-items: center;
   justify-content: center;
   color: 232323;
-
   margin-right: 3%;
+  margin-left: 3%;
 }
 
 .flecha {
-  height: 36px;
+  height: 37px;
   background-color: #fbb701;
   border-radius: 50px;
   padding: 6px;
