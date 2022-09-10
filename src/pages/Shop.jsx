@@ -2,6 +2,7 @@ import Sidebar from "../components/Sidebar";
 import ShowShop from "../components/ShowShop";
 import { Col, Row, Container } from "react-bootstrap";
 import { useState } from "react";
+import texturadoNegro from "../assets/images/fondonegrotexturado.jpg";
 
 function Shop() {
   const [type, setType] = useState("todos");
@@ -9,7 +10,9 @@ function Shop() {
     <>
       <Container
         style={{
-          backgroundImage: `url("https://www.latiendavinos.es/wp-content/uploads/2022/02/base-madera.webp")`,
+          backgroundImage: `linear-gradient(rgba(23,23,23,0.5) 10%, rgba(0,0,0,0.9) 100%),url(${texturadoNegro})`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
         }}
         fluid
       >

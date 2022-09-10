@@ -13,7 +13,7 @@ function ProductCard({ wine }) {
           style={{
             width: "16rem",
             height: "32rem",
-            backgroundColor: "rgba(15, 15, 15)",
+            backgroundColor: "rgba(15, 15, 15, 0.6)",
             border: "none !important",
             position: "relative",
           }}

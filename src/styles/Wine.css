@@ -6,7 +6,6 @@
   padding-top: 3%;
   padding-bottom: 50px;
   letter-spacing: 1.5px;
-  background-color: #232323;
   display: flex;
   justify-content: center;
 }
@@ -90,7 +89,7 @@
   color: #363329;
   border: none;
   outline: none;
-  width: 200px;
+  width: 70%;
   font-weight: 700;
 }
 
@@ -201,10 +200,6 @@ input[type="number"] {
   bottom: 0;
   left: 0;
   border-width: 0 0 0px 0px;
-}
-
-.cart__main {
-  background-color: #232323;
 }
 
 .modal__delete {

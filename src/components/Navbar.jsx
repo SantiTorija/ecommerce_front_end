@@ -1,54 +1,53 @@
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import "../styles/navbar.css";
-import { Link } from "react-router-dom";
-import hackWines from "../assets/images/hackWines.png";
-import OffCanvasCart from "./OffCanvasCart";
 import handleAlert from "./Alert";
+import "../styles/navbar.css";
+import Container from "react-bootstrap/Container";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import newHackWinesLogo from "../assets/images/newHackWinesLogo.png";
+import OffCanvasCart from "./OffCanvasCart";
+import { Link } from "react-router-dom";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import { Search, Person } from "react-bootstrap-icons";
 
-function NavBar({ setShowCart, showCart }) {
+function NavBarV2({ setShowCart, showCart }) {
   return (
-    <Navbar className="navbar sticky-top" expand="lg">
-      <Container className="navbar-container d-flex justify-content-between py-2">
-        <div className="d-flex">
-          <Navbar.Brand className="text-light nav-brand-icon">
-            <img alt="hackWinesLogo" src={hackWines} />
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <Link className="navbar-link me-3 ms-3" to={"/"}>
+    <Navbar className="sticky-top">
+      <Container id="header" className="container">
+        <Row className="d-flex justify-content-between w-100">
+          <Col className="col-2">
+            <img alt="hackWinesLogo" src={newHackWinesLogo} />
+          </Col>
+          <Col className="col-8 d-flex align-items-center  justify-content-center">
+            <Nav className="menu-section align-items-center justify-content-center gap-2">
+              <Link className="navbar-link" to={"/"}>
                 Home
               </Link>
-              <Link className="navbar-link me-3" to={"/tienda"}>
+              <Link className="navbar-link" to={"/tienda"}>
                 Tienda
               </Link>
-              <Link
-                className="navbar-link me-3"
-                to=""
-                onClick={() => handleAlert("This function is out of scope.")}
-              >
-                Sobre este proyecto
+              <Link className="navbar-link" to="" onClick={handleAlert}>
+                Sobre este Proyecto
               </Link>
-              <Link
-                className="navbar-link me-3"
-                to=""
-                onClick={() => handleAlert("This function is out of scope.")}
-              >
+              <Link className="navbar-link" to="" onClick={handleAlert}>
                 Contacto
               </Link>
             </Nav>
-          </Navbar.Collapse>
-        </div>
-        <OffCanvasCart
-          placement={"end"}
-          name={"end"}
-          setShowCart={setShowCart}
-          showCart={showCart}
-        />
+          </Col>
+          <Col className="col-2 d-flex align-items-center  justify-content-around ">
+            <Search color="white" size={20} />
+            <Person color="white" size={20} />
+            <OffCanvasCart
+              placement={"end"}
+              name={"end"}
+              setShowCart={setShowCart}
+              showCart={showCart}
+            />
+          </Col>
+        </Row>
       </Container>
     </Navbar>
   );
 }
-export default NavBar;
+
+export default NavBarV2;

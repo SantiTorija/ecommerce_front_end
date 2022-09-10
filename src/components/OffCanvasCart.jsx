@@ -9,6 +9,7 @@ import { useSelector } from "react-redux";
 import CantidadCart from "./cantidadCart";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import handleAlert from "./Alert";
+import texturadoNegro from "../assets/images/fondonegrotexturado.jpg";
 
 function OffCanvasCart({ name, ...props }) {
   const cartState = useSelector((state) => state.cart);
@@ -49,6 +50,11 @@ function OffCanvasCart({ name, ...props }) {
         onHide={handleClose}
         {...props}
         className="canvas__main__cart"
+        style={{
+          backgroundImage: `linear-gradient(rgba(23,23,23,0.5) 10%, rgba(0,0,0,0.9) 100%),url(${texturadoNegro})`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
       >
         <Offcanvas.Header closeButton>
           <div className="d-flex w-100 justify-content-center">
