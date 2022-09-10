@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import "../styles/offCanvasFilter.css";
 import hackWines from "../assets/images/hackWines.png";
-import FilterAccordion from "./FilterAccordion";
+
 import { FaWineGlass } from "react-icons/fa";
 
 function OffCanvasFilter({ name, ...props }) {

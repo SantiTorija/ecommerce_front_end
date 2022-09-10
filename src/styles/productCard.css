@@ -9,44 +9,30 @@
   background-color: transparent;
   margin: none;
   padding: none;
-  width: 20rem;
+  width: 16rem;
 }
+.cart-button {
+font-weight: 600;
+  width: 6rem;
+  padding: 0.5rem 1rem ;
+  background-color: #fbb701;
+  border: 1px solid #fbb701;
+ }
+ .more-info-button{
+  width: 6rem;
+ padding: 0.5rem 1rem ;
+ background-color: transparent;
+ border: 1px solid #fbb701;
+ color: #fbb701;
+ font-weight: 600;
+ margin-left: 0.3rem;
+ }
+ 
+
+
 
 .single-item-card {
   transition: ease-in-out 0.3s 0.3s;
-  opacity: 0.8;
-}
-.image-card {
-  opacity: 1;
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: 0.5s ease;
-  backface-visibility: hidden;
-}
-
-.middle {
-  transition: 0.5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.single-item-card:hover {
-  scale: 1.1;
-  border: 1px solid #c8960066 !important;
-}
-
-.single-item-card:hover .image-card {
-  opacity: 1.2;
-}
-
-.single-item-card:hover .middle {
-  opacity: 1;
 }
 
 .spinner__wines {
@@ -54,9 +40,6 @@
   padding-right: 20%;
 }
 
-.card {
-  border: none !important;
-}
 
 .wine__title {
   font-family: Raleway, sans-serif;
@@ -69,18 +52,15 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 5px auto 15px;
   clear: both;
   font-weight: 400;
-  padding-top: 4px;
+  
+}
+.card{
+  border: 1px solid rgba(255, 255, 255, 0.596) !important;
 }
 
-.btn-warning {
-  background-color: #c89600d8 !important;
-  transition: ease-in-out 0.3s;
-  font-family: Raleway, sans-serif;
-}
-.btn-warning:hover {
-  scale: 1.1;
-  background-color: #c89600fd !important;
+.card-body{
+  padding-left: 0.8rem !important;
+  padding-right:0.8rem !important ;
 }
