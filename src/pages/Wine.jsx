@@ -37,11 +37,11 @@ function Wine(props) {
           }}
           className="row Wine__main"
         >
-          <div className="col-5 wine-image-card mt-3 mb-3">
+          <div className="d-none d-lg-inline col-lg-5 wine-image-card mt-3 mb-3">
             <img className="Wine__picture" src={wine.picture} alt="imagen vino" />
           </div>
 
-          <div className="col-7 text-white py-3">
+          <div className="col-12 col-lg-7 text-white py-3">
             <div className="Wine__card">
               {wine.type ? <h5 className="Wine__type">{wine.type}</h5> : null}
               <h3 className="Wine__title">{wine.name}</h3>
