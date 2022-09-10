@@ -24,10 +24,18 @@ function NavBar({ setShowCart, showCart }) {
               <Link className="navbar-link me-3" to={"/tienda"}>
                 Tienda
               </Link>
-              <Link className="navbar-link me-3" to="" onClick={handleAlert}>
+              <Link
+                className="navbar-link me-3"
+                to=""
+                onClick={() => handleAlert("This function is out of scope.")}
+              >
                 Sobre este proyecto
               </Link>
-              <Link className="navbar-link me-3" to="" onClick={handleAlert}>
+              <Link
+                className="navbar-link me-3"
+                to=""
+                onClick={() => handleAlert("This function is out of scope.")}
+              >
                 Contacto
               </Link>
             </Nav>

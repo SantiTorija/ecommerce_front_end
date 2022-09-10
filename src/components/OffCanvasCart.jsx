@@ -8,6 +8,7 @@ import LocalMallIcon from "@mui/icons-material/LocalMall";
 import { useSelector } from "react-redux";
 import CantidadCart from "./cantidadCart";
 import { Link, Navigate, useNavigate } from "react-router-dom";
+import handleAlert from "./Alert";
 
 function OffCanvasCart({ name, ...props }) {
   const cartState = useSelector((state) => state.cart);
@@ -28,8 +29,12 @@ function OffCanvasCart({ name, ...props }) {
   }
 
   function goToCart() {
-    props.setShowCart(false);
-    navigate("/cart");
+    if (cartState.length > 0) {
+      props.setShowCart(false);
+      return navigate("/cart");
+    }
+    handleAlert("En este momento no tienes articulos en el carrito");
+    return props.setShowCart(false);
   }
 
   return (

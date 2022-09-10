@@ -9,7 +9,6 @@ import BounceLoader from "react-spinners/BounceLoader";
 function ShowShop(props) {
   const [wines, setWines] = useState(null);
 
-  console.log(wines);
   useEffect(() => {
     const dataWine = async () => {
       const response = await axios({

@@ -6,13 +6,13 @@
   padding-top: 3%;
   padding-bottom: 50px;
   letter-spacing: 1.5px;
-  background-color: #2b2b2b;
+  background-color: #232323;
   display: flex;
   justify-content: center;
 }
 
 .Wine__type {
-  color: #c89500;
+  color: #fbb701;
 }
 
 .Wine__picture {
@@ -80,35 +80,18 @@
   letter-spacing: 2px;
 }
 
-.product__data {
-  background-color: #404040;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-top: 3%;
-  margin-top: 3%;
-  padding-bottom: 4%;
-}
-
 .product-description-table {
   border-bottom: 1px solid gray;
 }
 
 .Wine__cart {
-  background-color: #c89500;
+  background-color: #fbb701;
   padding: 20px;
   color: #363329;
   border: none;
   outline: none;
   width: 200px;
   font-weight: 700;
-}
-.contador {
-  padding: 20px;
-  width: 180px;
-  background-color: #404040;
-  border: none;
-  outline: none;
-  color: white;
 }
 
 input::-webkit-outer-spin-button,
@@ -132,14 +115,14 @@ input[type="number"] {
 }
 
 .cart__finalizar__compra {
-  background-color: #c89500;
+  background-color: #fbb701;
   padding: 20px;
   color: #363329;
   border: none;
   outline: none;
   width: 200px;
-  font-weight: 700;
-  padding-bottom: 13px;
+  font-weight: 700 !important;
+  padding-bottom: 18px;
   margin-top: 10px;
 }
 
@@ -158,8 +141,10 @@ input[type="number"] {
   height: 410px;
   margin-top: 10px;
   margin-left: 40px;
-  background-color: #404040;
+  background-color: #191919;
+  border: solid #434343 0.1px;
   min-width: 440px;
+  border-radius: 3px;
 }
 
 .btn__delete__wine,
@@ -170,7 +155,7 @@ input[type="number"] {
 }
 
 .btn__delete__wine:hover {
-  color: red !important;
+  color: #db524b !important;
   background-color: transparent;
   border: none;
   outline: none;
@@ -219,5 +204,30 @@ input[type="number"] {
 }
 
 .cart__main {
-  background-color: #2b2b2b;
+  background-color: #232323;
+}
+
+.modal__delete {
+  width: 100px;
+  height: 100px;
+  background-color: #191919;
+}
+
+.Wine__cart__small {
+  background-color: #fbb701;
+  padding: 5px;
+  color: #363329;
+  border: none;
+  outline: none;
+  width: 92px;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.Wine__cart__small__confirmar {
+  border: solid 1px #fbb701 !important;
+  font-weight: 700;
+  width: 92px;
+  margin-top: 8px;
+  border-radius: 0px !important;
 }

@@ -38,7 +38,7 @@ function CuadrantsHome() {
             backgroundSize: "cover",
           }}
         >
-          <Link to="" onClick={handleAlert}>
+          <Link to="" onClick={() => handleAlert("This function is out of scope.")}>
             <button className="button-cuadrant">
               <Cup color="white" size={25} />
               <h2 className="textCuadrants mt-2">Cristaleria y Accesorios</h2>
@@ -53,7 +53,7 @@ function CuadrantsHome() {
             backgroundSize: "cover",
           }}
         >
-          <Link to="" onClick={handleAlert}>
+          <Link to="" onClick={() => handleAlert("This function is out of scope.")}>
             <button className="button-cuadrant">
               <Megaphone color="white" size={25} />
               <h2 className="textCuadrants mt-2">Promociones</h2>
@@ -68,7 +68,7 @@ function CuadrantsHome() {
             backgroundSize: "cover",
           }}
         >
-          <Link to="" onClick={handleAlert}>
+          <Link to="" onClick={() => handleAlert("This function is out of scope.")}>
             <button className="button-cuadrant">
               <Sun color="white" size={25} />
               <h2 className="textCuadrants mt-2">Cavas</h2>
