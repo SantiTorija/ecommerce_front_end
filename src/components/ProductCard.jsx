@@ -3,12 +3,12 @@ import { Card } from "react-bootstrap";
 import "../styles/productCard.css";
 import { RiStarSFill } from "react-icons/ri";
 
-function ProductCard({ wine, index }) {
+function ProductCard({ wine }) {
   return (
     <>
       <button className="shop-single-item-button">
         <Card
-          key={index}
+          key={wine._id}
           className="me-3 border single-item-card"
           style={{
             width: "16rem",
