@@ -74,7 +74,7 @@ function FooterWeb() {
                     className="btn goldenButton"
                     type="button"
                     showCloseButton
-                    onClick={handleAlert}
+                    onClick={() => handleAlert("This function is out of scope.")}
                   >
                     Subscribite
                   </button>

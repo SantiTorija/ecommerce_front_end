@@ -2,6 +2,7 @@ import Table from "react-bootstrap/Table";
 import { useDispatch, useSelector } from "react-redux";
 import { addFirstTime, setNumber, deleteItem } from "../redux/cartSlice";
 import { AiFillDelete } from "react-icons/ai";
+import DeleteModal from "./Deletemodal";
 import "../styles/Wine.css";
 
 function BasicExample() {
@@ -45,9 +46,7 @@ function BasicExample() {
           return (
             <tr>
               <td>
-                <button className="text-white btn__delete__wine" onClick={() => destroyWine(wine)}>
-                  <AiFillDelete />
-                </button>
+                <DeleteModal wine={wine} />
               </td>
               <td className=" text-center">
                 <img
