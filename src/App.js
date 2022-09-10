@@ -13,12 +13,7 @@ import { useState } from "react";
 function App() {
   const [showCart, setShowCart] = useState(false);
   return (
-    <div
-      style={{
-        backgroundImage: `url("https://www.latiendavinos.es/wp-content/uploads/2022/02/base-madera.webp")`,
-      }}
-      className="App"
-    >
+    <div className="App">
       <NavBar showCart={showCart} setShowCart={setShowCart} />
       <Routes>
         <Route path="/" element={<Home />} />

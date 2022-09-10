@@ -40,12 +40,10 @@ function OffCanvasCart({ name, ...props }) {
         />
       </button>
       <Offcanvas
-        style={{
-          backgroundImage: `url("https://www.latiendavinos.es/wp-content/uploads/2022/02/base-madera.webp")`,
-        }}
         show={props.showCart}
         onHide={handleClose}
         {...props}
+        className="canvas__main__cart"
       >
         <Offcanvas.Header closeButton>
           <div className="d-flex w-100 justify-content-center">
@@ -90,7 +88,7 @@ function OffCanvasCart({ name, ...props }) {
           <h6 className="d-flex justify-content-center text-white">Order Sumary</h6>
           <div className="d-flex justify-content-between mx-3">
             <p className="text-white">Merchandise</p>
-            <p className="text-white">${Math.round((calcularTotal() || 0) * 1.2 * 10) / 10}</p>
+            <p className="text-white">${Math.round((calcularTotal() || 0) * 10) / 10}</p>
           </div>
           <div className="d-flex justify-content-between mx-3">
             <p className="text-white">Tax</p>
@@ -105,10 +103,7 @@ function OffCanvasCart({ name, ...props }) {
             </p>
           </div>
           <div className="d-flex justify-content-center mt-2">
-            <button
-              className="Cart__button__buy btn rounded-pill text-white"
-              onClick={() => goToCart()}
-            >
+            <button className="Cart__button__buy btn" onClick={() => goToCart()}>
               BUY NOW
             </button>
           </div>

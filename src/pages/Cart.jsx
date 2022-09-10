@@ -16,23 +16,33 @@ const Cart = () => {
     }
     return resultado;
   }
+
+  function calcularItems() {
+    let resultado = 0;
+    for (let i = 0; i < cartState.length; i++) {
+      if (cartState[i]) {
+        resultado += parseInt(cartState[i].cartQuantity);
+      }
+    }
+    return resultado;
+  }
   return (
     <>
-      <div className="  p-4 ">
-        <h3 className="cart__title text-white pt-4 d-flex justify-content-center">
+      <div className="p-4 cart__main">
+        <h3 className="cart__title text-white pt-4 pb-3 d-flex justify-content-center">
           MY CART
           <span>
             <LocalMallIcon className="mx-2 " />
           </span>
         </h3>
         <div className="d-flex justify-content-center mt-4">
-          <div className="col-7">
+          <div className="col-5">
             <BasicExample />
           </div>
           <div className="col-3 cart__card">
             <h3>SUMMARY</h3>
             <div className="d-flex justify-content-between">
-              <p>Sub-Total ({cartState.length} items)</p>{" "}
+              <p>Sub-Total ({calcularItems()} items)</p>{" "}
               <p> ${Math.round(calcularTotal() * 10) / 10}</p>
             </div>
             <div className="d-flex justify-content-between">
@@ -48,31 +58,11 @@ const Cart = () => {
             <h6>
               Payment Options <ArrowDropDownIcon />
             </h6>
-            <div>
+            <div className="d-flex justify-content-center">
               <img
-                src="https://www.pngall.com/wp-content/uploads/2017/05/Visa-Logo-Free-Download-PNG.png"
+                src="https://www.pngkey.com/png/full/398-3987066_payment-methods-transparent-trust-badges-shopify.png"
                 alt="logo visa"
                 className="foto__payment"
-              />
-              <img
-                src="https://freepngimg.com/save/16049-mastercard-png-clipart/590x360"
-                alt="logo mastercard"
-                className="foto__payment"
-              />
-              <img
-                src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c530.png"
-                alt="logo paypal"
-                className="foto__payment__grande"
-              />
-              <img
-                src="https://assets.stickpng.com/images/5a27cdfd52b1cc0d022e6d5c.png"
-                alt="logo santander"
-                className="foto__payment"
-              />
-              <img
-                src="https://www.thcservers.com/images/Paysafecard_logo.png"
-                alt="logo paysafeCard"
-                className="foto__payment__grande"
               />
             </div>
 
