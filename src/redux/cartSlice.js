@@ -9,8 +9,7 @@ const cartSlice = createSlice({
     },
     add(state, action) {
       const wine = state.find((element) => element._id === action.payload.id);
-      wine.cartQuantity =
-        parseInt(wine.cartQuantity) + parseInt(action.payload.quantity);
+      wine.cartQuantity = parseInt(wine.cartQuantity) + parseInt(action.payload.quantity);
       state = [...state, wine];
     },
     setNumber(state, action) {
@@ -19,13 +18,8 @@ const cartSlice = createSlice({
       state = [...state, wine];
     },
     deleteItem(state, action) {
-      for (let item of state) {
-        console.log(item._id === action.payload.id);
-        console.log(action.payload.id);
-      }
       return state.filter((element) => element._id !== action.payload.id);
-
-    }
+    },
   },
 });
 

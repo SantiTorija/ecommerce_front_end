@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 import { Card } from "react-bootstrap";
 import "../styles/productCard.css";
 
-function ProductCard({ wine, index }) {
+function ProductCard({ wine }) {
   return (
     <>
       <Link to={`/product/${wine.slug}`}>
         <button className="shop-single-item-button">
           <Card
-            key={index}
+            key={wine.id}
             className="me-3 border single-item-card"
             style={{
               width: "16rem",
