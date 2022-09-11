@@ -9,6 +9,7 @@ import newHackWinesLogo from "../assets/images/newHackWinesLogo.png";
 import axios from "axios";
 import { login } from "../redux/userSlice";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 function MyVerticallyCenteredModal(props) {
   const [email, setEmail] = useState("");
@@ -90,9 +91,14 @@ function MyVerticallyCenteredModal(props) {
 function LoginModal(props) {
   return (
     <>
-      <button className="btn">
-        <Person color="white" size={20} onClick={() => props.setModalLoginShow(true)} />
-      </button>
+      <Link to={"/"}>
+        <Person
+          color="rgba(240, 240, 240, 0.799)"
+          size={20}
+          onClick={() => props.setModalLoginShow(true)}
+        />
+      </Link>
+
       <MyVerticallyCenteredModal
         modalRegisterShow={props.modalRegisterShow}
         setModalRegisterShow={props.setModalRegisterShow}
