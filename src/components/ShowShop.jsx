@@ -58,7 +58,7 @@ function ShowShop(props) {
           {wines.map((wine, index) => {
             return (
               <div className="text-center col-8 col-md-6 col-xl-3 mt-5">
-                <ProductCard setShowCart={props.setShowCart} wine={wine} index={index} />
+                <ProductCard setShowCart={props.setShowCart} wine={wine} />
               </div>
             );
           })}

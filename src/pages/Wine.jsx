@@ -6,6 +6,7 @@ import Cantidad from "../components/Cantidad.jsx";
 import ProductCard from "../components/ProductCard";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import { AiOutlineLine } from "react-icons/ai";
 
 function Wine(props) {
   const [wine, setWine] = useState({});
@@ -77,7 +78,10 @@ function Wine(props) {
               </div>
               <div className="col-2"></div>
             </div>
-            <h4 className="recommended__title">RECOMENDADOS</h4>
+            <span className="recommended__title">
+              <AiOutlineLine className="text-white me-2" /> RECOMENDADOS{" "}
+              <AiOutlineLine className="text-white ms-2" />
+            </span>
             <div className=" d-flex justify-content-center">
               <div className="arrow__carrousel">
                 <span className="flecha">
@@ -86,7 +90,7 @@ function Wine(props) {
               </div>
               {wines.map((reccomended) => (
                 <div className="mx-3 ">
-                  <ProductCard wine={reccomended} />
+                  <ProductCard wine={reccomended} setShowCart={props.setShowCart} />
                 </div>
               ))}
               <div className="arrow__carrousel">

@@ -9,8 +9,13 @@ import { Link } from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import { Search, Person } from "react-bootstrap-icons";
+import LoginModal from "../components/LoginModal";
+import { useState } from "react";
+import RegisterModal from "./RegisterModal";
 
 function NavBarV2({ setShowCart, showCart }) {
+  const [modalLoginShow, setModalLoginShow] = useState(false);
+  const [modalRegisterShow, setModalRegisterShow] = useState(false);
   return (
     <Navbar className="sticky-top">
       <Container id="header" className="container">
@@ -36,7 +41,17 @@ function NavBarV2({ setShowCart, showCart }) {
           </Col>
           <Col className="col-2 d-flex align-items-center  justify-content-around ">
             <Search color="white" size={20} />
-            <Person color="white" size={20} />
+            <RegisterModal
+              modalRegisterShow={modalRegisterShow}
+              setModalRegisterShow={setModalRegisterShow}
+              setModalLoginShow={setModalLoginShow}
+            />
+            <LoginModal
+              modalLoginShow={modalLoginShow}
+              setModalLoginShow={setModalLoginShow}
+              modalRegisterShow={modalRegisterShow}
+              setModalRegisterShow={setModalRegisterShow}
+            />
             <OffCanvasCart
               placement={"end"}
               name={"end"}

@@ -7,7 +7,7 @@ const userSlice = createSlice({
     login(state, action) {
       delete state.username;
       delete state.token;
-      state.username = action.payload.username;
+      state.email = action.payload.email;
       state.token = action.payload.token;
     },
   },
