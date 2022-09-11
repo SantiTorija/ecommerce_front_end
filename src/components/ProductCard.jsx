@@ -2,8 +2,24 @@ import { Link } from "react-router-dom";
 import { Card } from "react-bootstrap";
 import "../styles/productCard.css";
 import { RiStarSFill } from "react-icons/ri";
+import { AiOutlineShoppingCart } from "react-icons/ai";
+import { FiMoreHorizontal } from "react-icons/fi";
+import { useDispatch, useSelector } from "react-redux";
+import { addFirstTime, add } from "../redux/cartSlice";
 
-function ProductCard({ wine }) {
+function ProductCard({ wine, setShowCart }) {
+  const dispatch = useDispatch();
+  const cartState = useSelector((state) => state.cart);
+  function handleAddCart() {
+    const isWine = cartState.find((element) => element._id === wine._id);
+    if (isWine) {
+      dispatch(add({ id: isWine._id, quantity: 1 }));
+    } else {
+      wine.cartQuantity = 1;
+      dispatch(addFirstTime(wine));
+    }
+    setShowCart(true);
+  }
   return (
     <>
       <button className="shop-single-item-button">
@@ -31,9 +47,13 @@ function ProductCard({ wine }) {
             <span className="wine__title fs-5 mb-3" style={{ color: "#c89600" }}>
               US$ {wine.price}
             </span>
-            <button className="cart-button">carrito</button>
+            <button onClick={handleAddCart} className="cart-button">
+              <AiOutlineShoppingCart size={20} />
+            </button>
             <Link to={`/product/${wine.slug}`}>
-              <button className="more-info-button">ver más</button>
+              <button className="more-info-button">
+                <FiMoreHorizontal size={20} />
+              </button>
             </Link>
           </div>
           <span style={{ position: "absolute", marginLeft: "1rem", marginTop: "0.2rem" }}>

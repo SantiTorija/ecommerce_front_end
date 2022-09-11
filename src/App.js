@@ -24,7 +24,7 @@ function App() {
       <NavBar showCart={showCart} setShowCart={setShowCart} />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/tienda" element={<Shop />} />
+        <Route path="/tienda" element={<Shop setShowCart={setShowCart} />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/product/:slug" element={<Wine setShowCart={setShowCart} />} />
       </Routes>

@@ -1,0 +1,11 @@
+.promo-button-mobile {
+    font-weight: 600;     
+      padding: 0.5rem 1rem ;
+      background-color: #fbb701;
+      border: 1px solid #fbb701;
+      font-weight: 700;
+      margin-top: 1rem;
+      position: absolute;
+      bottom: 0;
+      left: 12rem;
+     }   

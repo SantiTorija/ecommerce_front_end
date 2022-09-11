@@ -7,8 +7,8 @@
 .shop-single-item-button {
   border: none;
   background-color: transparent;
-  margin: none;
-  padding: none;
+  margin: 0;
+  padding: 0;
   width: 16rem;
 }
 .cart-button {
@@ -64,3 +64,4 @@ font-weight: 600;
   padding-left: 0.8rem !important;
   padding-right:0.8rem !important ;
 }
+

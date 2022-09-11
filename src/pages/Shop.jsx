@@ -3,8 +3,11 @@ import ShowShop from "../components/ShowShop";
 import { Col, Row, Container } from "react-bootstrap";
 import { useState } from "react";
 import texturadoNegro from "../assets/images/fondonegrotexturado.jpg";
+import ShopCarousel from "../components/ShopCarousel";
+import ShopHeader from "../components/ShopHeader";
+import ShopHeaderMobile from "../components/ShopHeaderMobile";
 
-function Shop() {
+function Shop({ setShowCart }) {
   const [type, setType] = useState("todos");
   return (
     <>
@@ -14,15 +17,11 @@ function Shop() {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}
-        fluid
       >
+        <ShopHeader className="d-none d-md-block" />
+        <ShopHeaderMobile />
         <Row>
-          <Col className="col-lg-2">
-            <Sidebar setType={setType} />
-          </Col>
-          <Col className="col-sm-12 col-lg-10">
-            <ShowShop type={type} />
-          </Col>
+          <ShowShop setShowCart={setShowCart} type={type} setType={setType} />
         </Row>
       </Container>
     </>
