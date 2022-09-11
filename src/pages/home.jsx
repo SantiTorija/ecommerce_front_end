@@ -10,7 +10,6 @@ export const Home = () => {
       <HeroHome />
       <FeatureHome />
       <CuadrantsHome />
-      <AboutHome />
     </>
   );
 };

@@ -2,17 +2,17 @@ import "../styles/footer.css";
 import { Container } from "react-bootstrap";
 import { Instagram, Facebook, Whatsapp, Envelope } from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
-import hackWines from "../assets/images/hackWines.png";
+import newHackWinesLogo from "../assets/images/newHackWinesLogo.png";
 import handleAlert from "./Alert";
 
 function FooterWeb() {
   return (
     <footer>
-      <Container>
+      <Container className="border-top">
         <div className="footer  pt-5 pb-1">
           <div className="row">
             <div className="col-6 col-md-2 mb-3">
-              <img alt="hackWineslogo" src={hackWines} />
+              <img alt="hackWineslogo" src={newHackWinesLogo} />
               <div className="d-flex flex-row gap-2 mt-3">
                 <Instagram color="rgba(240, 240, 240, 0.799)" />
                 <Facebook color="rgba(240, 240, 240, 0.799)" />
