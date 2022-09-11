@@ -59,30 +59,33 @@ function Wine(props) {
       <>
         <div className=" Wine__main">
           <div className="row">
-            <div className="col-1"></div>
-            <div className="col-5">
-              <img className="Wine__picture" src={wine.picture} alt="imagen vino" />
+            <div className="d-flex  Wine__picture__background">
+              <div className="col-1"></div>
+              <div className="col-5">
+                <img className="Wine__picture" src={wine.picture} alt="imagen vino" />
+              </div>
+              <div className="col-5 mt-3 col__wine__first">
+                <h2 className="Wine__title">{wine.name}</h2>
+                <h5 className="wine__description">{truncateString(wine?.description, 200)}</h5>
+                <h5 className="wine__ul">Tipo: {wine.type}</h5>
+                <h5 className="wine__ul">Pais: {wine.country}</h5>
+                <h5 className="wine__ul">Cosecha: {wine.harvest}</h5>
+                <h5 className="wine__ul">Bodega: {wine.cellar}</h5>
+                <h5 className="wine__ul">Capacidad: {wine.capacity}</h5>
+                <h5 className="wine__price">Precio: ${wine.price}</h5>
+                <Cantidad wine={wine} setShowCart={props.setShowCart} />
+              </div>
+              <div className="col-2"></div>
             </div>
-            <div className="col-5 mt-3 col__wine__first">
-              <h2 className="Wine__title">{wine.name}</h2>
-              <h5 className="wine__ul">{truncateString(wine?.description, 200)}</h5>
-              <h5 className="wine__ul">Tipo: {wine.type}</h5>
-              <h5 className="wine__ul">Pais: {wine.country}</h5>
-              <h5 className="wine__ul">Cosecha: {wine.harvest}</h5>
-              <h5 className="wine__ul">Bodega: {wine.cellar}</h5>
-              <h5 className="wine__ul">Capacidad: {wine.capacity}</h5>
-              <h5 className="wine__price">Precio: ${wine.price}</h5>
-              <Cantidad wine={wine} setShowCart={props.setShowCart} />
-            </div>
-            <div className="col-2"></div>
-            <div className="mt-5 d-flex justify-content-center">
+            <h4 className="recommended__title">RECOMENDADOS</h4>
+            <div className=" d-flex justify-content-center">
               <div className="arrow__carrousel">
                 <span className="flecha">
                   <ArrowBackIosNewIcon />
                 </span>
               </div>
               {wines.map((reccomended) => (
-                <div className="mx-3">
+                <div className="mx-3 ">
                   <ProductCard wine={reccomended} />
                 </div>
               ))}
