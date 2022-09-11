@@ -1,16 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
 
 .Wine__main {
-  padding-left: 4%;
-  padding-right: 4%;
-  padding-top: 3%;
   padding-bottom: 50px;
   letter-spacing: 1.5px;
   display: flex;
   justify-content: center;
+}
+
+.Wine__picture__background {
   background-size: cover;
-  background-image: linear-gradient(rgba(8, 8, 8, 0.9) 10%, rgba(0, 0, 0, 0.3) 100%),
-    url("../assets/images/cellar.jpeg");
+  background-image: linear-gradient(rgba(12, 12, 12, 0.9) 10%, rgba(32, 32, 32, 0.9) 100%),
+    url("../assets/images/cellar3.webp");
+  padding-bottom: 4rem;
 }
 
 .Wine__type {
@@ -47,8 +48,18 @@
   font-weight: 200;
   font-size: 0.9rem;
   text-transform: none;
-  color: rgb(193, 193, 193);
+  color: rgb(230, 230, 230);
   line-height: 1.6rem;
+}
+
+.wine__description {
+  font-family: Roboto, sans-serif;
+  font-weight: 200;
+  font-size: 0.9rem;
+  text-transform: none;
+  color: rgb(230, 230, 230);
+  line-height: 1.6rem;
+  text-align: justify;
 }
 
 .wine__price {
@@ -164,8 +175,7 @@ input[type="number"] {
 }
 
 .col__wine__first {
-  padding-top: 2%;
-  padding-bottom: 2%;
+  padding: 2%;
   position: relative;
   max-width: 500px !important;
   max-height: 630px !important;
@@ -234,13 +244,24 @@ input[type="number"] {
   align-items: center;
   justify-content: center;
   color: 232323;
-  margin-right: 3%;
-  margin-left: 3%;
+  margin-right: 2.5%;
+  margin-left: 2.5%;
 }
 
 .flecha {
   height: 37px;
+  width: 37px;
   background-color: #fbb701;
   border-radius: 50px;
-  padding: 6px;
+  padding-top: 0.28rem;
+  padding-left: 0.4rem;
+  padding-right: 0.2rem;
+}
+
+.recommended__title {
+  color: white;
+  padding-top: 3.5rem;
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: center;
 }
