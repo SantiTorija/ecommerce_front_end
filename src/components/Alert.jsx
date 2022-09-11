@@ -4,7 +4,7 @@ const MySwal = withReactContent(Swal);
 
 const handleAlert = (text) =>
   MySwal.fire({
-    title: <p>{text}</p>,
+    title: <p>Esta funcionalidad esta fuera del alcance del proyecto.</p>,
     background: "#4A151B",
     confirmButtonColor: "#c89500",
     color: "white",

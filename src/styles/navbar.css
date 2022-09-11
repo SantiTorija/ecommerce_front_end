@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
 
-li {
-  font-family: "Raleway", sans-serif;
-  font-weight: 500;
-}
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;400;500&display=swap");
 
-li:hover {
-  color: rgba(240, 240, 240, 0.569);
+h5 {
+  line-height: 1.5rem;
+  font-family: "Urbanist", sans-serif;
+  color: rgba(240, 240, 240, 0.799);
+  font-weight: bold;
 }
 
 #header {
@@ -24,5 +24,12 @@ img {
 .navbar-link {
   color: rgba(240, 240, 240, 0.799);
   text-decoration: none;
+  line-height: 1.5rem;
+  font-family: "Urbanist", sans-serif;
+  text-transform: uppercase;
+}
+
+.navbar-link:hover {
+  color: #fbb701;
   line-height: 1.5rem;
 }

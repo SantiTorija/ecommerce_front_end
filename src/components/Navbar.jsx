@@ -9,8 +9,10 @@ import { Link } from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import { Search, Person } from "react-bootstrap-icons";
+/* import {useState} */
 
 function NavBarV2({ setShowCart, showCart }) {
+  /* const [navar, setNavar] =  */
   return (
     <Navbar className="sticky-top">
       <Container id="header" className="container">
@@ -23,26 +25,35 @@ function NavBarV2({ setShowCart, showCart }) {
               <Link className="navbar-link" to={"/"}>
                 Home
               </Link>
+              <h5>.</h5>
               <Link className="navbar-link" to={"/tienda"}>
                 Tienda
               </Link>
+              <h5>.</h5>
               <Link className="navbar-link" to="" onClick={handleAlert}>
                 Sobre este Proyecto
               </Link>
+              <h5>.</h5>
               <Link className="navbar-link" to="" onClick={handleAlert}>
                 Contacto
               </Link>
             </Nav>
           </Col>
           <Col className="col-2 d-flex align-items-center  justify-content-around ">
-            <Search color="white" size={20} />
-            <Person color="white" size={20} />
-            <OffCanvasCart
-              placement={"end"}
-              name={"end"}
-              setShowCart={setShowCart}
-              showCart={showCart}
-            />
+            <Link to={"/"}>
+              <Search color="rgba(240, 240, 240, 0.799)" size={20} />
+            </Link>
+            <Link to={"/"}>
+              <Person color="rgba(240, 240, 240, 0.799)" size={20} />
+            </Link>
+            <Link to={"/"}>
+              <OffCanvasCart
+                placement={"end"}
+                name={"end"}
+                setShowCart={setShowCart}
+                showCart={showCart}
+              />
+            </Link>
           </Col>
         </Row>
       </Container>
