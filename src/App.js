@@ -9,6 +9,7 @@ import texturadoNegro from "./assets/images/fondonegrotexturado.jpg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Cart from "./pages/Cart";
 import { useState } from "react";
+import { Contact } from "./pages/Contact";
 
 function App() {
   const [showCart, setShowCart] = useState(false);
@@ -26,6 +27,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/tienda" element={<Shop setShowCart={setShowCart} />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/contacto" element={<Contact />} />
         <Route path="/product/:slug" element={<Wine setShowCart={setShowCart} />} />
       </Routes>
       <Footer />
