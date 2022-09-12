@@ -11,13 +11,7 @@ function Shop({ setShowCart }) {
   const [type, setType] = useState("todos");
   return (
     <>
-      <Container
-        style={{
-          backgroundImage: `linear-gradient(rgba(23,23,23,0.5) 10%, rgba(0,0,0,0.9) 100%),url(${texturadoNegro})`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
+      <Container>
         <ShopHeader className="d-none d-md-block" />
         <ShopHeaderMobile />
         <Row>

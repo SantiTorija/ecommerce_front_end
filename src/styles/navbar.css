@@ -9,6 +9,23 @@ h5 {
   font-weight: bold;
 }
 
+@media (max-width: 576px) {
+  .navbar-link {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-link {
+    display: none;
+  }
+}
+
+.nav_black {
+  background-color: #191919;
+  transition: all 0.45s;
+}
+
 #header {
   height: 5rem;
 }

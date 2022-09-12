@@ -10,6 +10,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Cart from "./pages/Cart";
 import { useState } from "react";
 import AboutThisProyect from "./pages/AboutThisProyect";
+import { Contact } from "./pages/Contact";
 
 function App() {
   const [showCart, setShowCart] = useState(false);
@@ -17,7 +18,7 @@ function App() {
     <div
       className="App"
       style={{
-        backgroundImage: `linear-gradient(rgba(23,23,23,0.5) 10%, rgba(0,0,0,0.9) 100%),url(${texturadoNegro})`,
+        backgroundImage: `linear-gradient(rgba(11,11,11,0.9) 10%, rgba(11,11,11,0.9) 100%),url(${texturadoNegro})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
@@ -28,6 +29,7 @@ function App() {
         <Route path="/tienda" element={<Shop setShowCart={setShowCart} />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/aboutUs" element={<AboutThisProyect />} />
+        <Route path="/contacto" element={<Contact />} />
         <Route path="/product/:slug" element={<Wine setShowCart={setShowCart} />} />
       </Routes>
       <Footer />

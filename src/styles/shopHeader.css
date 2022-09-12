@@ -1,60 +1,62 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
 
+.hero-section {
+  padding-top: 7rem;
+}
 
 .wine-title {
-    font-family: Raleway, sans-serif;
-    font-size: 3rem;
-    text-transform: uppercase;
-    line-height: 1.5;
-    color: rgba(255, 255, 255, 0.727);
-    display: block;
-    letter-spacing: 2px;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    margin-top: 13% ;
-    
-    clear: both;
-    font-weight: 400;
-    padding-top: 4px;
-    text-decoration: none;
-    
-  }
+  font-family: Raleway, sans-serif;
+  font-size: 3rem;
+  text-transform: uppercase;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.727);
+  display: block;
+  letter-spacing: 2px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-top: 13%;
 
-  .promo-span{
-    font-family: Raleway, sans-serif;
-    color: rgba(255, 255, 255, 0.727);
-  }
+  clear: both;
+  font-weight: 400;
+  padding-top: 4px;
+  text-decoration: none;
+}
 
-  .shop-header-paragraph{
-    font-family: Raleway, sans-serif;
-    font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.727);
-    font-weight: 100;
-  }
+.promo-span {
+  font-family: Raleway, sans-serif;
+  color: rgba(255, 255, 255, 0.727);
+}
 
-  .promo-button {
-    font-weight: 600;
-     
-      padding: 0.5rem 1rem ;
-      background-color: #fbb701;
-      border: 1px solid #fbb701;
-      font-weight: 700;
-      margin-top: 1rem;
-     }
+.shop-header-paragraph {
+  font-family: Raleway, sans-serif;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.727);
+  font-weight: 100;
+}
+
+.promo-button {
+  font-weight: 600;
+
+  padding: 0.5rem 1rem;
+  background-color: #fbb701;
+  border: 1px solid #fbb701;
+  font-weight: 700;
+  margin-top: 1rem;
+}
 
 .promo-button-2 {
-    font-weight: 600;     
-      padding: 0.5rem 1rem ;
-      background-color: #fbb701;
-      border: 1px solid #fbb701;
-      font-weight: 700;
-      margin-top: 1rem;
-      position: absolute;
-      bottom: -12rem;
-      left: 12rem;
-     }   
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  background-color: #fbb701;
+  border: 1px solid #fbb701;
+  font-weight: 700;
+  margin-top: 1rem;
+  position: absolute;
+  bottom: -12rem;
+  left: 12rem;
+}
 
-     .welcome-store-col{
-        padding-left: 6rem;
-     }
+.welcome-store-col {
+  padding-left: 6rem;
+}
