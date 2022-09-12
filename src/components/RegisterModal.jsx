@@ -22,6 +22,7 @@ function MyVerticallyCenteredModal(props) {
       url: `http://localhost:8000/users`,
       data: { email, password },
     });
+    props.setModalRegisterShow(false);
     return response;
   }
 

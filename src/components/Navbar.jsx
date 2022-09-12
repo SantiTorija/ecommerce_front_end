@@ -57,7 +57,7 @@ function NavBarV2({ setShowCart, showCart }) {
                 Tienda
               </Link>
               <h5 className="m-0 navbar-link">·</h5>
-              <Link className="navbar-link" to="/aboutUs">
+              <Link className="navbar-link" to="/aboutThisProyect">
                 Sobre este Proyecto
               </Link>
               <h5 className="m-0 navbar-link">·</h5>
@@ -90,14 +90,12 @@ function NavBarV2({ setShowCart, showCart }) {
               modalRegisterShow={modalRegisterShow}
               setModalRegisterShow={setModalRegisterShow}
             />
-            <Link to={"#"}>
-              <OffCanvasCart
-                placement={"end"}
-                name={"end"}
-                setShowCart={setShowCart}
-                showCart={showCart}
-              />
-            </Link>
+            <OffCanvasCart
+              placement={"end"}
+              name={"end"}
+              setShowCart={setShowCart}
+              showCart={showCart}
+            />
           </Col>
         </Row>
       </Container>

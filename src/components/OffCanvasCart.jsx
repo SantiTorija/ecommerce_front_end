@@ -30,6 +30,7 @@ function OffCanvasCart({ name, ...props }) {
   }
 
   function goToCart() {
+    console.log("hola");
     if (cartState.length > 0) {
       props.setShowCart(false);
       return navigate("/cart");
