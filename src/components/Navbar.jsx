@@ -57,11 +57,11 @@ function NavBarV2({ setShowCart, showCart }) {
                 Tienda
               </Link>
               <h5 className="m-0 navbar-link">·</h5>
-              <Link className="navbar-link" to="" onClick={handleAlert}>
+              <Link className="navbar-link" to="/aboutUs">
                 Sobre este Proyecto
               </Link>
               <h5 className="m-0 navbar-link">·</h5>
-              <Link className="navbar-link" to="" onClick={handleAlert}>
+              <Link className="navbar-link" to={"/contacto"}>
                 Contacto
               </Link>
               {/* <List id="hamburguerIcon" /> */}
