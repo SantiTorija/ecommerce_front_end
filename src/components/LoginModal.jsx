@@ -12,21 +12,36 @@ import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
 function MyVerticallyCenteredModal(props) {
+  const [error, setError] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
 
   async function getToken() {
-    const response = await axios({
-      method: "post",
-      url: `http://localhost:8000/users/token`,
-      data: { email, password },
-    });
-    if (response?.data !== "Invalid credentials") {
-      dispatch(login({ token: response.data, email: email }));
-      props.setModalLoginShow(false);
-    } else {
-      return response?.data;
+    try {
+      const { response } = await axios({
+        method: "post",
+        url: `http://localhost:8000/users/token`,
+        data: { email, password },
+      });
+      if (response.data.error === "Invalid email") {
+        setError("please enter valid e-mail");
+        console.log("hola");
+      }
+      if (response.data.error === "Invalid password") {
+        setError("please enter valid password");
+      }
+      if (
+        response.data !== { error: "Invalid email" } &&
+        response.data !== { error: "Invalid password" }
+      ) {
+        dispatch(login({ token: response.data, email: email }));
+        props.setModalLoginShow(false);
+      } else {
+        return response.data;
+      }
+    } catch (error) {
+      console.log(error);
     }
   }
 
@@ -72,6 +87,7 @@ function MyVerticallyCenteredModal(props) {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             ></input>
+            <span>{error}</span>
             <button className="btn__login border" onClick={() => getToken()}>
               Login
             </button>
