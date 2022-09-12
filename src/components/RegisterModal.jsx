@@ -17,12 +17,13 @@ function MyVerticallyCenteredModal(props) {
   }
 
   async function storeUser() {
-    /* const response = await axios({
+    const response = await axios({
       method: "post",
       url: `http://localhost:8000/users`,
       data: { email, password },
     });
-    return response; */
+    props.setModalRegisterShow(false);
+    return response;
   }
 
   return (
