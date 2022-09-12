@@ -8,43 +8,76 @@ import OffCanvasCart from "./OffCanvasCart";
 import { Link } from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import { Search, Person } from "react-bootstrap-icons";
+import { Search, List } from "react-bootstrap-icons";
 import LoginModal from "../components/LoginModal";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import RegisterModal from "./RegisterModal";
 
 function NavBarV2({ setShowCart, showCart }) {
   const [modalLoginShow, setModalLoginShow] = useState(false);
   const [modalRegisterShow, setModalRegisterShow] = useState(false);
+  const [show, handleShow] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 100) {
+        handleShow(true);
+      } else {
+        handleShow(false);
+      }
+    });
+    return () => {
+      window.removeEventListener("scroll", null);
+    };
+  }, []);
+
   return (
-    <Navbar className="sticky-top">
+    <Navbar
+      className={`Nav d-flex justify-content-between text-white py-3 ${show && "nav_black"}`}
+      style={{
+        position: "fixed",
+        top: "0px",
+        zIndex: 100,
+        height: "5rem",
+        width: "100%",
+        padding: "30px",
+      }}
+    >
       <Container id="header" className="container">
         <Row className="d-flex justify-content-between w-100">
           <Col className="col-2">
             <img alt="hackWinesLogo" src={newHackWinesLogo} />
           </Col>
           <Col className="col-8 d-flex align-items-center  justify-content-center">
-            <Nav className="menu-section align-items-center justify-content-center gap-2">
+            <Nav className="menu-section align-items-center justify-content-center gap-2 linkSection">
               <Link className="navbar-link" to={"/"}>
                 Home
               </Link>
-              <h5>.</h5>
+              <h5 className="m-0 navbar-link">·</h5>
               <Link className="navbar-link" to={"/tienda"}>
                 Tienda
               </Link>
-              <h5>.</h5>
+              <h5 className="m-0 navbar-link">·</h5>
               <Link className="navbar-link" to="" onClick={handleAlert}>
                 Sobre este Proyecto
               </Link>
-              <h5>.</h5>
+              <h5 className="m-0 navbar-link">·</h5>
               <Link className="navbar-link" to="" onClick={handleAlert}>
                 Contacto
               </Link>
+              {/* <List id="hamburguerIcon" /> */}
             </Nav>
           </Col>
-          <Col className="col-2 d-flex align-items-center  justify-content-around ">
+          <Col className="col-2 d-flex align-items-center  justify-content-between ">
             <Link to={""}>
-              <Search color="rgba(240, 240, 240, 0.799)" size={20} />
+              <Search
+                onClick={handleAlert}
+                color="rgba(240, 240, 240, 0.799)"
+                size={18}
+                style={{
+                  backgroundSize: "cover",
+                  backgroundRepeat: "no-repeat",
+                }}
+              />
             </Link>
             <RegisterModal
               modalRegisterShow={modalRegisterShow}
@@ -57,7 +90,7 @@ function NavBarV2({ setShowCart, showCart }) {
               modalRegisterShow={modalRegisterShow}
               setModalRegisterShow={setModalRegisterShow}
             />
-            <Link to={""}>
+            <Link to={"#"}>
               <OffCanvasCart
                 placement={"end"}
                 name={"end"}

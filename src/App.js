@@ -16,7 +16,7 @@ function App() {
     <div
       className="App"
       style={{
-        backgroundImage: `linear-gradient(rgba(23,23,23,0.5) 10%, rgba(0,0,0,0.9) 100%),url(${texturadoNegro})`,
+        backgroundImage: `linear-gradient(rgba(11,11,11,0.9) 10%, rgba(11,11,11,0.9) 100%),url(${texturadoNegro})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
