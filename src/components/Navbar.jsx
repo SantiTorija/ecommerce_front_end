@@ -33,7 +33,7 @@ function NavBarV2({ setShowCart, showCart }) {
                 Tienda
               </Link>
               <h5>.</h5>
-              <Link className="navbar-link" to="" onClick={handleAlert}>
+              <Link className="navbar-link" to="/aboutUs">
                 Sobre este Proyecto
               </Link>
               <h5>.</h5>
