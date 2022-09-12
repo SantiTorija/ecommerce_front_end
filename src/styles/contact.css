@@ -120,6 +120,10 @@ input:focus {
 }
 
 .formButton {
-  background-color: #fbb701;
+  background-color: #c89500;
   border-radius: 10%;
+}
+
+.formButton:hover {
+  color: white;
 }

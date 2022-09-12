@@ -47,7 +47,9 @@ function ContactAbout() {
           <Form.Group className="" controlId="formBasicEmail">
             <textarea placeholder="Mensaje" className="w-100" id="formControlTextarea1"></textarea>
           </Form.Group>
-          <button className="formButton mt-3">Enviar</button>
+          <button type="button" className="btn formButton mt-3">
+            Enviar
+          </button>
         </Form>
       </Col>
     </Container>
