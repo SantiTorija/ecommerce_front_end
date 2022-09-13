@@ -10,38 +10,29 @@ import axios from "axios";
 import { login } from "../redux/userSlice";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import handleAlert from "./Alert";
 
 function MyVerticallyCenteredModal(props) {
-  const [error, setError] = useState("");
+  const [errorAlert, setErrorAlert] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
 
   async function getToken() {
     try {
-      const { response } = await axios({
+      const response = await axios({
         method: "post",
         url: `http://localhost:8000/users/token`,
         data: { email, password },
       });
-      if (response.data.error === "Invalid email") {
-        setError("please enter valid e-mail");
-        console.log("hola");
-      }
-      if (response.data.error === "Invalid password") {
-        setError("please enter valid password");
-      }
-      if (
-        response.data !== { error: "Invalid email" } &&
-        response.data !== { error: "Invalid password" }
-      ) {
-        dispatch(login({ token: response.data, email: email }));
-        props.setModalLoginShow(false);
-      } else {
-        return response.data;
-      }
+      console.log(response);
+      dispatch(login({ token: response.data, email: email }));
+      props.setModalLoginShow(false);
+      return response.data;
     } catch (error) {
       console.log(error);
+      setErrorAlert("Ingrese credenciales válidas, gracias");
+      handleAlert(errorAlert);
     }
   }
 
@@ -87,13 +78,13 @@ function MyVerticallyCenteredModal(props) {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             ></input>
-            <span>{error}</span>
-            <button className="btn__login border" onClick={() => getToken()}>
+
+            <button className="btn__login border" onClick={getToken}>
               Login
             </button>
             <p>
               No tienes una cuenta aún?{" "}
-              <button className="color-yellow btn__link__modales" onClick={() => goToRegister()}>
+              <button className="color-yellow btn__link__modales" onClick={goToRegister}>
                 Registrate
               </button>
             </p>

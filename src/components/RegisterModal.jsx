@@ -6,10 +6,15 @@ import GoogleIcon from "@mui/icons-material/Google";
 import AppleIcon from "@mui/icons-material/Apple";
 import newHackWinesLogo from "../assets/images/newHackWinesLogo.png";
 import axios from "axios";
+import handleAlert from "./Alert";
 
 function MyVerticallyCenteredModal(props) {
+  const [firstname, setFirstname] = useState("");
+  const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [address, setAddress] = useState("");
+  const [phone, setPhone] = useState("");
 
   function goToLogin() {
     props.setModalRegisterShow(false);
@@ -17,13 +22,18 @@ function MyVerticallyCenteredModal(props) {
   }
 
   async function storeUser() {
-    const response = await axios({
-      method: "post",
-      url: `http://localhost:8000/users`,
-      data: { email, password },
-    });
-    props.setModalRegisterShow(false);
-    return response;
+    try {
+      const response = await axios({
+        method: "post",
+        url: `http://localhost:8000/users`,
+        data: { email, password, firstname, lastname, address, phone },
+      });
+      props.setModalRegisterShow(false);
+      return response;
+    } catch (error) {
+      console.log(error);
+      handleAlert("e-mail ingresado ya está en uso");
+    }
   }
 
   return (
@@ -50,6 +60,20 @@ function MyVerticallyCenteredModal(props) {
             </button>
             <p className="color-yellow">or</p>
             <input
+              type="text"
+              placeholder="Ingrese su nombre"
+              className="input__modal"
+              value={firstname}
+              onChange={(e) => setFirstname(e.target.value)}
+            ></input>
+            <input
+              type="text"
+              placeholder="Ingrese su apellido"
+              className="input__modal"
+              value={lastname}
+              onChange={(e) => setLastname(e.target.value)}
+            ></input>
+            <input
               type="email"
               placeholder="Ingrese su email"
               className="input__modal"
@@ -62,6 +86,20 @@ function MyVerticallyCenteredModal(props) {
               className="input__modal"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+            ></input>
+            <input
+              type="text"
+              placeholder="Ingrese su dirección (ej. 'Av. calle 1122')"
+              className="input__modal"
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+            ></input>
+            <input
+              type="text"
+              placeholder="Ingrese su teléfono"
+              className="input__modal"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
             ></input>
             <button className="btn__login border" onClick={() => storeUser()}>
               Registrate

@@ -21,7 +21,7 @@ function ProductCard({ wine, setShowCart }) {
     setShowCart(true);
   }
   return (
-    <>
+    <div className="col-12 col-md-6 col-xl-3 mt-4">
       <button className="shop-single-item-button">
         <Card
           key={wine._id}
@@ -65,7 +65,7 @@ function ProductCard({ wine, setShowCart }) {
           </span>
         </Card>
       </button>
-    </>
+    </div>
   );
 }
 

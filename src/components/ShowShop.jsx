@@ -5,6 +5,7 @@ import { AiOutlineLine } from "react-icons/ai";
 import BounceLoader from "react-spinners/BounceLoader";
 import ProductCard from "./ProductCard";
 import "../styles/showShop.css";
+import { Container } from "react-bootstrap";
 
 function ShowShop(props) {
   const [wines, setWines] = useState(null);
@@ -54,15 +55,11 @@ function ShowShop(props) {
             licoroso
           </Link>
         </div>
-        <div className="d-flex justify-content-around row mb-5">
+        <Container className="d-flex justify-content-between row mb-5">
           {wines.map((wine, index) => {
-            return (
-              <div className="text-center col-8 col-md-6 col-xl-3 mt-5">
-                <ProductCard setShowCart={props.setShowCart} wine={wine} />
-              </div>
-            );
+            return <ProductCard setShowCart={props.setShowCart} wine={wine} />;
           })}
-        </div>
+        </Container>
       </>
     );
   } else {

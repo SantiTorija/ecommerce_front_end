@@ -12,11 +12,13 @@ import { Search, List } from "react-bootstrap-icons";
 import LoginModal from "../components/LoginModal";
 import { useState, useEffect } from "react";
 import RegisterModal from "./RegisterModal";
+import MenuModal from "../components/MenuModal";
 
 function NavBarV2({ setShowCart, showCart }) {
   const [modalLoginShow, setModalLoginShow] = useState(false);
   const [modalRegisterShow, setModalRegisterShow] = useState(false);
   const [show, handleShow] = useState(false);
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 100) {
@@ -64,7 +66,7 @@ function NavBarV2({ setShowCart, showCart }) {
               <Link className="navbar-link navbar-responsive" to={"/contacto"}>
                 Contacto
               </Link>
-              <List id="hamburguerIcon" />
+              <MenuModal />
             </Nav>
           </Col>
           <Col className="col-2 d-flex align-items-center  justify-content-between headerIcons">
