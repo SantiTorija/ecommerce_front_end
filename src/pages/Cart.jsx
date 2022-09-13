@@ -5,9 +5,14 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import BasicExample from "../components/TableProducts";
 import "../styles/Wine.css";
 import { useNavigate } from "react-router";
+import { useState } from "react";
+import Formulario from "../components/Formulario";
 
 const Cart = () => {
   const cartState = useSelector((state) => state.cart);
+  const userState = useSelector((state) => state.user);
+  const [tokenOk, setTokenOk] = useState(false);
+
   const navigate = useNavigate();
   function calcularTotal() {
     let resultado = 0;
@@ -29,6 +34,12 @@ const Cart = () => {
     return resultado;
   }
 
+  function handleCheckout() {
+    if (userState.token) {
+      return setTokenOk(true);
+    }
+  }
+
   if (cartState.length) {
     return (
       <>
@@ -41,9 +52,14 @@ const Cart = () => {
           </h3>
           <div className="d-flex justify-content-center mt-4">
             <div className="col-5">
-              <BasicExample />
+              <div className={tokenOk ? "d-none" : "d-block"}>
+                <BasicExample />
+              </div>
+              <div className={!tokenOk ? "d-none" : "d-block"}>
+                <Formulario />
+              </div>
             </div>
-            <div className="col-3 cart__card">
+            <div className=" col-4 cart__card">
               <h3>SUMMARY</h3>
               <div className="d-flex justify-content-between">
                 <p>Sub-Total ({calcularItems()} items)</p>{" "}
@@ -71,9 +87,12 @@ const Cart = () => {
               </div>
 
               <div className="d-flex justify-content-center mt-2">
-                <div className="cart__finalizar__compra d-flex justify-content-center ">
+                <button
+                  className="cart__finalizar__compra d-flex justify-content-center"
+                  onClick={handleCheckout}
+                >
                   CHECKOUT
-                </div>
+                </button>
               </div>
             </div>
           </div>

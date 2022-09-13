@@ -107,13 +107,13 @@ function MyVerticallyCenteredModal(props) {
 function LoginModal(props) {
   return (
     <>
-      <Link to={"/"}>
+      <button className="btn button__person">
         <Person
           color="rgba(240, 240, 240, 0.799)"
           size={20}
           onClick={() => props.setModalLoginShow(true)}
         />
-      </Link>
+      </button>
 
       <MyVerticallyCenteredModal
         modalRegisterShow={props.modalRegisterShow}

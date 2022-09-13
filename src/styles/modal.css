@@ -30,6 +30,11 @@
   font-size: 50px;
 }
 
+.button__person {
+  border: none;
+  outline: none;
+}
+
 .input__modal {
   height: 3rem;
   width: 80%;
