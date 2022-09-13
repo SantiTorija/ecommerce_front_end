@@ -48,26 +48,26 @@ function NavBarV2({ setShowCart, showCart }) {
             <img alt="hackWinesLogo" src={newHackWinesLogo} />
           </Col>
           <Col className="col-8 d-flex align-items-center  justify-content-center">
-            <Nav className="menu-section align-items-center justify-content-center gap-2 linkSection">
-              <Link className="navbar-link" to={"/"}>
+            <Nav className="menu-section align-items-center justify-content-center gap-2 linkSection ">
+              <Link className="navbar-link navbar-responsive" to={"/"}>
                 Home
               </Link>
               <h5 className="m-0 navbar-link">·</h5>
-              <Link className="navbar-link" to={"/tienda"}>
+              <Link className="navbar-link navbar-responsive" to={"/tienda"}>
                 Tienda
               </Link>
               <h5 className="m-0 navbar-link">·</h5>
-              <Link className="navbar-link" to="/aboutThisProyect">
+              <Link className="navbar-link navbar-responsive" to="/aboutThisProyect">
                 Sobre este Proyecto
               </Link>
-              <h5 className="m-0 navbar-link">·</h5>
-              <Link className="navbar-link" to={"/contacto"}>
+              <h5 className="m-0 navbar-link ">·</h5>
+              <Link className="navbar-link navbar-responsive" to={"/contacto"}>
                 Contacto
               </Link>
-              {/* <List id="hamburguerIcon" /> */}
+              <List id="hamburguerIcon" />
             </Nav>
           </Col>
-          <Col className="col-2 d-flex align-items-center  justify-content-between ">
+          <Col className="col-2 d-flex align-items-center  justify-content-between headerIcons">
             <Link to={""}>
               <Search
                 onClick={handleAlert}

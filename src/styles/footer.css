@@ -34,3 +34,9 @@ p {
 #newsletter1 {
   background-color: rgba(240, 240, 240, 0.799);
 }
+
+@media (max-width: 576px) {
+  .footerSection {
+    width: 100%;
+  }
+}

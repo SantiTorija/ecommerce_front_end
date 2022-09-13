@@ -79,7 +79,7 @@ h5 {
   height: 10rem;
 }
 
-input {
+.inputContact {
   padding: 5px;
   border: 0;
   border-bottom: 1px solid rgba(240, 240, 240, 0.799);
@@ -96,7 +96,7 @@ input {
   min-height: 40px;
 }
 
-input,
+.inputContact,
 label {
   color: white;
 }
@@ -105,16 +105,14 @@ form {
   width: 50%;
 }
 
-input:focus {
+.inputContact:focus {
   color: rgba(240, 240, 240, 0.799);
-  /*  border-bottom: 3px solid #fbb701; */
   outline: none;
   box-shadow: 0 0 15px 4px rgba(255, 255, 255, 0.06);
 }
 
 #formControlTextarea1:focus {
   color: rgba(240, 240, 240, 0.799);
-  /* border-bottom: 3px solid #fbb701; */
   outline: none;
   box-shadow: 0 0 15px 4px rgba(255, 255, 255, 0.06);
 }
@@ -126,4 +124,32 @@ input:focus {
 
 .formButton:hover {
   color: white;
+}
+
+@media (max-width: 1200px) {
+  .contactLeftColumn {
+    margin-right: 5rem;
+  }
+  h5 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  h5 {
+    font-size: 1.1rem;
+  }
+  .contactLeftColumn {
+    margin-right: 1.5rem;
+    height: 100%;
+  }
+}
+
+@media (min-width: 576px) {
+  h5 {
+    font-size: 0.9rem;
+  }
+  .contactLeftColumn {
+    margin-right: 2rem;
+  }
 }
