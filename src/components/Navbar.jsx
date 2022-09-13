@@ -90,14 +90,13 @@ function NavBarV2({ setShowCart, showCart }) {
               modalRegisterShow={modalRegisterShow}
               setModalRegisterShow={setModalRegisterShow}
             />
-            <Link to={"#"}>
-              <OffCanvasCart
-                placement={"end"}
-                name={"end"}
-                setShowCart={setShowCart}
-                showCart={showCart}
-              />
-            </Link>
+
+            <OffCanvasCart
+              placement={"end"}
+              name={"end"}
+              setShowCart={setShowCart}
+              showCart={showCart}
+            />
           </Col>
         </Row>
       </Container>

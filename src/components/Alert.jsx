@@ -2,9 +2,9 @@ import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 const MySwal = withReactContent(Swal);
 
-const handleAlert = (text) =>
+function handleAlert(text) {
   MySwal.fire({
-    title: <p>Esta funcionalidad esta fuera del alcance del proyecto.</p>,
+    title: <h2>{text}</h2>,
     background: "#4A151B",
     confirmButtonColor: "#c89500",
     color: "white",
@@ -14,5 +14,6 @@ const handleAlert = (text) =>
     focusCancel: true,
     showCloseButton: false,
   });
+}
 
 export default handleAlert;
