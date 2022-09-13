@@ -151,12 +151,12 @@ input[type="number"] {
 .cart__card {
   color: white;
   padding: 20px;
-  height: 410px;
   margin-top: 10px;
   margin-left: 40px;
   background-color: #191919;
   border: solid #434343 0.1px;
   border-radius: 3px;
+  max-width: 350px;
 }
 
 .btn__delete__wine,

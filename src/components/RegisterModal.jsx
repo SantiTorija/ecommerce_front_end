@@ -32,7 +32,7 @@ function MyVerticallyCenteredModal(props) {
       return response;
     } catch (error) {
       console.log(error);
-      handleAlert("e-mail ingresado ya está en uso");
+      handleAlert(error.response.data.error);
     }
   }
 
@@ -65,6 +65,7 @@ function MyVerticallyCenteredModal(props) {
               className="input__modal"
               value={firstname}
               onChange={(e) => setFirstname(e.target.value)}
+              required
             ></input>
             <input
               type="text"
@@ -72,6 +73,7 @@ function MyVerticallyCenteredModal(props) {
               className="input__modal"
               value={lastname}
               onChange={(e) => setLastname(e.target.value)}
+              required
             ></input>
             <input
               type="email"
@@ -79,6 +81,7 @@ function MyVerticallyCenteredModal(props) {
               className="input__modal"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              required
             ></input>
             <input
               type="password"
@@ -86,6 +89,7 @@ function MyVerticallyCenteredModal(props) {
               className="input__modal"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              required
             ></input>
             <input
               type="text"
@@ -93,6 +97,7 @@ function MyVerticallyCenteredModal(props) {
               className="input__modal"
               value={address}
               onChange={(e) => setAddress(e.target.value)}
+              required
             ></input>
             <input
               type="text"
@@ -100,6 +105,7 @@ function MyVerticallyCenteredModal(props) {
               className="input__modal"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
+              required
             ></input>
             <button className="btn__login border" onClick={() => storeUser()}>
               Registrate

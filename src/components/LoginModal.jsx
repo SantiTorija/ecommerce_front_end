@@ -13,7 +13,6 @@ import { Link } from "react-router-dom";
 import handleAlert from "./Alert";
 
 function MyVerticallyCenteredModal(props) {
-  const [errorAlert, setErrorAlert] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
@@ -25,14 +24,22 @@ function MyVerticallyCenteredModal(props) {
         url: `http://localhost:8000/users/token`,
         data: { email, password },
       });
-      console.log(response);
-      dispatch(login({ token: response.data, email: email }));
+      console.log(response.data.token);
+      dispatch(
+        login({
+          token: response.data.token,
+          email: email,
+          firstname: response.data.firstname,
+          lastname: response.data.lastname,
+          id: response.data.id,
+          phone: response.data.phone,
+          address: response.data.address,
+        }),
+      );
       props.setModalLoginShow(false);
       return response.data;
     } catch (error) {
-      console.log(error);
-      setErrorAlert("Ingrese credenciales válidas, gracias");
-      handleAlert(errorAlert);
+      handleAlert(error.response.data.error);
     }
   }
 

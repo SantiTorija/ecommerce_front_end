@@ -4,7 +4,7 @@ const MySwal = withReactContent(Swal);
 
 function handleAlert(text) {
   MySwal.fire({
-    title: <h2>{text}</h2>,
+    title: <h4>{text}</h4>,
     background: "#4A151B",
     confirmButtonColor: "#c89500",
     color: "white",

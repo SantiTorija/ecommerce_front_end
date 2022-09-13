@@ -14,8 +14,7 @@ import { useState, useEffect } from "react";
 import RegisterModal from "./RegisterModal";
 import MenuModal from "../components/MenuModal";
 
-function NavBarV2({ setShowCart, showCart }) {
-  const [modalLoginShow, setModalLoginShow] = useState(false);
+function NavBarV2({ setShowCart, showCart, modalLoginShow, setModalLoginShow }) {
   const [modalRegisterShow, setModalRegisterShow] = useState(false);
   const [show, handleShow] = useState(false);
 

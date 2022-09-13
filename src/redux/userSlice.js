@@ -5,10 +5,17 @@ const userSlice = createSlice({
   initialState: {},
   reducers: {
     login(state, action) {
-      delete state.username;
+      delete state.email;
       delete state.token;
+      delete state.firstname;
+      delete state.lastname;
       state.email = action.payload.email;
       state.token = action.payload.token;
+      state.lastname = action.payload.lastname;
+      state.firstname = action.payload.firstname;
+      state.id = action.payload.id;
+      state.address = action.payload.address;
+      state.phone = action.payload.phone;
     },
   },
 });

@@ -14,20 +14,26 @@ import { Contact } from "./pages/Contact";
 
 function App() {
   const [showCart, setShowCart] = useState(false);
+  const [modalLoginShow, setModalLoginShow] = useState(false);
   return (
     <div
       className="App"
       style={{
-        backgroundImage: `linear-gradient(rgba(11,11,11,0.9) 10%, rgba(11,11,11,0.9) 100%),url(${texturadoNegro})`,
+        backgroundImage: `linear-gradient(rgba(19,19,19,0.9) 10%, rgba(19,19,19,0.9) 100%),url(${texturadoNegro})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
     >
-      <NavBar showCart={showCart} setShowCart={setShowCart} />
+      <NavBar
+        showCart={showCart}
+        setShowCart={setShowCart}
+        modalLoginShow={modalLoginShow}
+        setModalLoginShow={setModalLoginShow}
+      />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/tienda" element={<Shop setShowCart={setShowCart} />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/cart" element={<Cart setModalLoginShow={setModalLoginShow} />} />
         <Route path="/aboutThisProyect" element={<AboutThisProyect />} />
         <Route path="/contacto" element={<Contact />} />
         <Route path="/product/:slug" element={<Wine setShowCart={setShowCart} />} />

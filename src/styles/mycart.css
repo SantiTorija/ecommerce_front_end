@@ -1,0 +1,12 @@
+.card__payment {
+  color: white;
+  padding: 15px;
+  height: 410px;
+  background-color: #191919;
+  border: solid #434343 0.1px;
+  border-radius: 3px;
+  margin-top: 1.5rem;
+  margin-left: 30px;
+  display: flex;
+  height: 100%;
+}
