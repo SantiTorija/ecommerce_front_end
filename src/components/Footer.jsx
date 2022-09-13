@@ -22,7 +22,7 @@ function FooterWeb() {
             </div>
 
             <div className="col-6 col-md-2">
-              <h3 className="titleFooter">MENU</h3>
+              <h3 className="titleFooter navbar-link">MENU</h3>
               <ul className="nav flex-column">
                 <li className="nav-item">
                   <Link className="navbar-link  " to={"/"}>
@@ -47,7 +47,7 @@ function FooterWeb() {
               </ul>
             </div>
 
-            <div className="col-6 col-md-2 ">
+            <div className="col-6 col-md-2 footerSection">
               <h3 className="titleFooter">LOCAL </h3>
 
               <p>
@@ -56,7 +56,7 @@ function FooterWeb() {
               </p>
             </div>
 
-            <div className="col-md-5 offset-md-1 ">
+            <div className="col-md-5 offset-md-1 footerSection">
               <form>
                 <h3 className="titleFooter">NEWSLETTER</h3>
                 <p>Suscribite, y recibi antes que nadie nuestras promociones y noticias.</p>

@@ -28,7 +28,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/tienda" element={<Shop setShowCart={setShowCart} />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/aboutUs" element={<AboutThisProyect />} />
+        <Route path="/aboutThisProyect" element={<AboutThisProyect />} />
         <Route path="/contacto" element={<Contact />} />
         <Route path="/product/:slug" element={<Wine setShowCart={setShowCart} />} />
       </Routes>

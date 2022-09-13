@@ -8,7 +8,7 @@ import Form from "react-bootstrap/Form";
 function ContactAbout() {
   return (
     <Container className="d-flex pt-5 pb-5">
-      <Col className="position-relative">
+      <Col className="position-relative ">
         <Col className="col__wine__first contactLeftColumn">
           <div className="w-100 d-flex">
             <Shop size={20} color="rgba(240, 240, 240, 0.799)" className="me-3" />
@@ -33,15 +33,15 @@ function ContactAbout() {
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <input
               type="text"
-              /* value={this.state.value} onChange={this.handleChange} */ className="w-100"
+              /* value={this.state.value} onChange={this.handleChange} */ className="w-100 inputContact"
               placeholder="Nombre"
             />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Group className="mb-3 " controlId="formBasicEmail">
             <input
               type="email"
               placeholder="Email"
-              className="w-100" /* value={this.state.value} onChange={this.handleChange} */
+              className="w-100 inputContact" /* value={this.state.value} onChange={this.handleChange} */
             />
           </Form.Group>
           <Form.Group className="" controlId="formBasicEmail">

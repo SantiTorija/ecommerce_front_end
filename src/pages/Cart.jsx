@@ -33,7 +33,7 @@ const Cart = () => {
     return (
       <>
         <div className="p-3 cart__main">
-          <h3 className="cart__title text-white pt-4 pb-3 d-flex justify-content-center">
+          <h3 className="cart__title text-white pt-5 pb-3 d-flex justify-content-center">
             MY CART
             <span>
               <LocalMallIcon className="mx-2 " />
