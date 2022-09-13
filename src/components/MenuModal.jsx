@@ -12,7 +12,8 @@ function MyVerticallyCenteredModal(props) {
   return (
     <Modal
       {...props}
-      size="md"
+      size="xl"
+      style={{ backgroundColor: "rgba(19, 19, 19)" }}
       aria-labelledby="contained-modal-title-vcenter"
       centered
       className="difuminado__modal"
@@ -23,19 +24,31 @@ function MyVerticallyCenteredModal(props) {
             <img alt="hackWinesLogo" src={newHackWinesLogo} className="mb-3" />
 
             <Nav className="menu-section align-items-center justify-content-center gap-2 linkSection ">
-              <Link className="navbar-link" to={"/"}>
+              <Link className="navbar-link" to={"/"} onClick={() => props.setShowMenuModal(false)}>
                 Home
               </Link>
 
-              <Link className="navbar-link" to={"/tienda"}>
+              <Link
+                className="navbar-link"
+                to={"/tienda"}
+                onClick={() => props.setShowMenuModal(false)}
+              >
                 Tienda
               </Link>
 
-              <Link className="navbar-link" to="/aboutThisProyect">
+              <Link
+                className="navbar-link"
+                to="/aboutThisProyect"
+                onClick={() => props.setShowMenuModal(false)}
+              >
                 Sobre este Proyecto
               </Link>
 
-              <Link className="navbar-link" to={"/contacto"}>
+              <Link
+                className="navbar-link"
+                to={"/contacto"}
+                onClick={() => props.setShowMenuModal(false)}
+              >
                 Contacto
               </Link>
             </Nav>

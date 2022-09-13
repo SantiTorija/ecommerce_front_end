@@ -73,7 +73,7 @@ function NavBarV2({ setShowCart, showCart, modalLoginShow, setModalLoginShow }) 
               <Search
                 onClick={handleAlert}
                 color="rgba(240, 240, 240, 0.799)"
-                size={18}
+                size={20}
                 style={{
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
