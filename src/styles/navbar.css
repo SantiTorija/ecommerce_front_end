@@ -44,20 +44,28 @@ img {
   }
 }
 
+@media (max-width: 768px) {
+  .navbar-link {
+    display: none;
+  }
+}
 @media (min-width: 768px) {
   .navbar-responsive {
     font-size: 15px;
   }
+  .hamburguerIcon {
+    display: none;
+  }
 }
 
 @media (min-width: 576px) {
-  #hamburguerIcon {
-    display: none;
-  }
 }
 
 @media (max-width: 992px) {
   .headerIcons {
     gap: 10px;
+  }
+  .navbar-responsive {
+    font-size: 12px;
   }
 }

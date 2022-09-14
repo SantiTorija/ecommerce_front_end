@@ -65,7 +65,7 @@ function NavBarV2({ setShowCart, showCart, modalLoginShow, setModalLoginShow }) 
               <Link className="navbar-link navbar-responsive" to={"/contacto"}>
                 Contacto
               </Link>
-              <MenuModal />
+              <MenuModal className="hamburguerIcon" />
             </Nav>
           </Col>
           <Col className="col-2 d-flex align-items-center  justify-content-between headerIcons">
