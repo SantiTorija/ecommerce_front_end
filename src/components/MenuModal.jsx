@@ -63,7 +63,7 @@ function MenuModal() {
   const [showMenuModal, setShowMenuModal] = useState(false);
   return (
     <>
-      <button className="btn" onClick={() => setShowMenuModal(true)}>
+      <button className="btn hamburguerIcon" onClick={() => setShowMenuModal(true)}>
         <List color="rgba(240, 240, 240, 0.799)" size={20} className="hamburguerIcon" />
       </button>
 

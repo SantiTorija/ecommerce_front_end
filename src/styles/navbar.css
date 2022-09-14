@@ -39,13 +39,13 @@ img {
   line-height: 1.5rem;
 }
 @media (max-width: 576px) {
-  .navbar-link {
+  .navbar-responsive {
     display: none;
   }
 }
 
 @media (max-width: 768px) {
-  .navbar-link {
+  .navbar-responsive {
     display: none;
   }
 }
@@ -68,4 +68,9 @@ img {
   .navbar-responsive {
     font-size: 12px;
   }
+}
+
+.hamburguerIcon {
+  border: 0;
+  outline: 0;
 }
