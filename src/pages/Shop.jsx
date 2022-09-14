@@ -8,7 +8,7 @@ import ShopHeader from "../components/ShopHeader";
 import ShopHeaderMobile from "../components/ShopHeaderMobile";
 
 function Shop({ setShowCart }) {
-  const [type, setType] = useState("todos");
+  const [type, setType] = useState(0);
   return (
     <>
       <Container>

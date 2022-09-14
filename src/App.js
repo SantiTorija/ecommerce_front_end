@@ -32,7 +32,7 @@ function App() {
       />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/tienda" element={<Shop setShowCart={setShowCart} />} />
+        <Route path="/tienda/:type" element={<Shop setShowCart={setShowCart} />} />
         <Route path="/cart" element={<Cart setModalLoginShow={setModalLoginShow} />} />
         <Route path="/aboutThisProyect" element={<AboutThisProyect />} />
         <Route path="/contacto" element={<Contact />} />

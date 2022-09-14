@@ -35,23 +35,23 @@ function ShowShop(props) {
             <span className="wine__title">SELECCIONAR TIPO</span>
             <AiOutlineLine className="text-white ms-2" />
           </div>
-          <Link onClick={() => setTypeWine("tinto")} className="link" to={""}>
+          <Link onClick={() => setTypeWine(1)} className="link" to={"/tienda/tinto"}>
             tinto
           </Link>
           -
-          <Link onClick={() => setTypeWine("blanco")} className="link" to={""}>
+          <Link onClick={() => setTypeWine(2)} className="link" to={"/tienda/blanco"}>
             blanco
           </Link>
           -
-          <Link onClick={() => setTypeWine("rose")} className="link" to={""}>
+          <Link onClick={() => setTypeWine(3)} className="link" to={"/tienda/rose"}>
             rose
           </Link>
           -
-          <Link onClick={() => setTypeWine("espumante")} className="link" to={""}>
+          <Link onClick={() => setTypeWine(4)} className="link" to={"/tienda/espumante"}>
             espumante
           </Link>
           -
-          <Link onClick={() => setTypeWine("licoroso")} className="link" to={""}>
+          <Link onClick={() => setTypeWine(5)} className="link" to={"/tienda/licoroso"}>
             licoroso
           </Link>
         </div>

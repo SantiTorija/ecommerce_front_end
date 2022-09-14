@@ -54,7 +54,7 @@ function NavBarV2({ setShowCart, showCart, modalLoginShow, setModalLoginShow }) 
                 Home
               </Link>
               <h5 className="m-0 navbar-link">·</h5>
-              <Link className="navbar-link navbar-responsive" to={"/tienda"}>
+              <Link className="navbar-link navbar-responsive" to={"/tienda/todos"}>
                 Tienda
               </Link>
               <h5 className="m-0 navbar-link">·</h5>
