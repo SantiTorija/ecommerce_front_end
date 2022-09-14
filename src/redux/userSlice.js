@@ -9,6 +9,9 @@ const userSlice = createSlice({
       delete state.token;
       delete state.firstname;
       delete state.lastname;
+      delete state.id;
+      delete state.address;
+      delete state.phone;
       state.email = action.payload.email;
       state.token = action.payload.token;
       state.lastname = action.payload.lastname;
@@ -24,10 +27,19 @@ const userSlice = createSlice({
       state.address = action.payload.address;
       state.phone = action.payload.phone;
     },
+    logout(state, action) {
+      delete state.email;
+      delete state.token;
+      delete state.firstname;
+      delete state.lastname;
+      delete state.id;
+      delete state.address;
+      delete state.phone;
+    },
   },
 });
 
 const { actions, reducer } = userSlice;
-export const { login, updateUser } = actions;
+export const { login, updateUser, logout } = actions;
 
 export default reducer;

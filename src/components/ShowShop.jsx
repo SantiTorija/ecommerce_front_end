@@ -32,27 +32,27 @@ function ShowShop(props) {
             <span className="wine__title">SELECCIONAR TIPO</span>
             <AiOutlineLine className="text-white ms-2" />
           </div>
-          <Link onClick={() => setType("tinto")} className="link" to={"/tienda/tinto"}>
+          <Link onClick={() => setType("tinto")} className="link mx-1" to={"/tienda/tinto"}>
             tinto
           </Link>
-          -
-          <Link onClick={() => setType("blanco")} className="link" to={"/tienda/blanco"}>
+          ·
+          <Link onClick={() => setType("blanco")} className="link mx-1" to={"/tienda/blanco"}>
             blanco
           </Link>
-          -
-          <Link onClick={() => setType("rose")} className="link" to={"/tienda/rose"}>
+          ·
+          <Link onClick={() => setType("rose")} className="link mx-1" to={"/tienda/rose"}>
             rose
           </Link>
-          -
-          <Link onClick={() => setType("espumante")} className="link" to={"/tienda/espumante"}>
+          ·
+          <Link onClick={() => setType("espumante")} className="link mx-1" to={"/tienda/espumante"}>
             espumante
           </Link>
-          -
-          <Link onClick={() => setType("licoroso")} className="link" to={"/tienda/licoroso"}>
+          ·
+          <Link onClick={() => setType("licoroso")} className="link mx-1" to={"/tienda/licoroso"}>
             licoroso
           </Link>
         </div>
-        <Container className="d-flex justify-content-between row mb-5">
+        <Container className="d-flex justify-content-center row mb-5">
           {wines.map((wine, index) => {
             return <ProductCard setShowCart={props.setShowCart} wine={wine} />;
           })}

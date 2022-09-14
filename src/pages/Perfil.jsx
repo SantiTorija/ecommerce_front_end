@@ -5,7 +5,7 @@ import "../styles/miPerfil.css";
 import EditIcon from "@mui/icons-material/Edit";
 import axios from "axios";
 import handleAlert from "../components/Alert";
-import { updateUser } from "../redux/userSlice";
+import { updateUser, logout } from "../redux/userSlice";
 import { useEffect } from "react";
 import Table from "react-bootstrap/Table";
 import WarningAmberIcon from "@mui/icons-material/WarningAmber";
@@ -87,7 +87,7 @@ function Perfil() {
               </Link>
               <hr></hr>
               <Link to="#" className="salir">
-                <h6>SALIR</h6>
+                <h6 onClick={() => dispatch(logout())}>SALIR</h6>
               </Link>
               <hr></hr>
             </div>

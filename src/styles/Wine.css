@@ -123,8 +123,9 @@ input[type="number"] {
   margin-right: 10px;
   border: none;
   outline: none;
-  background-color: #404040;
+  background-color: transparent;
   color: white;
+  text-align: center;
 }
 
 .cart__finalizar__compra {

@@ -47,7 +47,7 @@ const Cart = (props) => {
   if (cartState.length) {
     return (
       <>
-        <div className="p-3 cart__main">
+        <div className="pt-5 cart__main">
           <h3 className="cart__title text-white pt-5 pb-3 d-flex justify-content-center">
             MY CART
             <span>
@@ -56,7 +56,7 @@ const Cart = (props) => {
           </h3>
           <div className={tokenOk ? "d-none" : "d-block"}>
             <div className={"d-flex justify-content-center mt-4"}>
-              <div className="col-5">
+              <div className="col-6">
                 <BasicExample />
               </div>
               <div className=" col-4 cart__card">

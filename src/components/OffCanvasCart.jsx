@@ -88,7 +88,7 @@ function OffCanvasCart({ name, ...props }) {
 
                   <div className="col-9 text-white">
                     <div>{wine.name || "19 CRIMES CABERNET SAUVIGNON"}</div>
-                    <div>{wine.type || "Tinto"}</div>
+                    <div>{wine.type.name || "Tinto"}</div>
                     <div className="mt-2 d-flex justify-content-end">
                       <CantidadCart wine={wine} />
                     </div>
