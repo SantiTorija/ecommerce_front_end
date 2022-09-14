@@ -17,10 +17,17 @@ const userSlice = createSlice({
       state.address = action.payload.address;
       state.phone = action.payload.phone;
     },
+    updateUser(state, action) {
+      state.email = action.payload.email;
+      state.lastname = action.payload.lastname;
+      state.firstname = action.payload.firstname;
+      state.address = action.payload.address;
+      state.phone = action.payload.phone;
+    },
   },
 });
 
 const { actions, reducer } = userSlice;
-export const { login } = actions;
+export const { login, updateUser } = actions;
 
 export default reducer;

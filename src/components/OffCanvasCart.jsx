@@ -52,7 +52,7 @@ function OffCanvasCart({ name, ...props }) {
         {...props}
         className="canvas__main__cart"
         style={{
-          backgroundImage: `linear-gradient(rgba(23,23,23,0.5) 10%, rgba(0,0,0,0.9) 100%),url(${texturadoNegro})`,
+          backgroundImage: `linear-gradient(rgba(23,23,23,0.5) 10%, rgba(10,10,10,0.9) 100%),url(${texturadoNegro})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}

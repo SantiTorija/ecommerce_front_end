@@ -4,7 +4,10 @@
 }
 
 .modal__body {
-  background-color: rgb(36, 36, 36);
+  background-image: linear-gradient(rgba(23, 23, 23, 0.5) 10%, rgba(23, 23, 23, 0.5) 100%),
+    url("../assets/images/fondonegrotexturado.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   min-height: 30rem;
   border-radius: 3px;
   border: solid #484848 1px;

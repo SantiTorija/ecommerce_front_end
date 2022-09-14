@@ -1,5 +1,5 @@
 .about__us__hero {
-  background-image: linear-gradient(rgba(12, 12, 12, 0.8) 10%, rgba(10, 10, 10, 0.9) 100%),
+  background-image: linear-gradient(rgba(20, 20, 20, 0.8) 10%, rgba(20, 20, 20, 0.9) 100%),
     url("https://dieteticdirections.com/wp-content/uploads/2017/08/hands-grapes.jpg");
   background-size: cover;
   background-position: center;
@@ -11,7 +11,7 @@
 
 .text-hero {
   color: white;
-  padding-top: 14rem;
+  padding-top: 16rem;
   padding-left: 6rem;
   max-width: 900px;
   font-family: "Urbanist", sans-serif;

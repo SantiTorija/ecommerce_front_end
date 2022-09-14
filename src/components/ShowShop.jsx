@@ -9,22 +9,19 @@ import { Container } from "react-bootstrap";
 
 function ShowShop(props) {
   const [wines, setWines] = useState(null);
+  const [type, setType] = useState("todos");
 
   useEffect(() => {
     const dataWine = async () => {
       const response = await axios({
         method: "GET",
-        url: `http://localhost:8000/wines/filter/${props.type}`,
+        url: `http://localhost:8000/wines/filter/${type}`,
       });
       setWines(response.data);
       return response;
     };
     dataWine();
-  }, [props.type]);
-
-  function setTypeWine(type) {
-    props.setType(type);
-  }
+  }, [type]);
 
   if (wines) {
     return (
@@ -35,23 +32,23 @@ function ShowShop(props) {
             <span className="wine__title">SELECCIONAR TIPO</span>
             <AiOutlineLine className="text-white ms-2" />
           </div>
-          <Link onClick={() => setTypeWine(1)} className="link" to={"/tienda/tinto"}>
+          <Link onClick={() => setType("tinto")} className="link" to={"/tienda/tinto"}>
             tinto
           </Link>
           -
-          <Link onClick={() => setTypeWine(2)} className="link" to={"/tienda/blanco"}>
+          <Link onClick={() => setType("blanco")} className="link" to={"/tienda/blanco"}>
             blanco
           </Link>
           -
-          <Link onClick={() => setTypeWine(3)} className="link" to={"/tienda/rose"}>
+          <Link onClick={() => setType("rose")} className="link" to={"/tienda/rose"}>
             rose
           </Link>
           -
-          <Link onClick={() => setTypeWine(4)} className="link" to={"/tienda/espumante"}>
+          <Link onClick={() => setType("espumante")} className="link" to={"/tienda/espumante"}>
             espumante
           </Link>
           -
-          <Link onClick={() => setTypeWine(5)} className="link" to={"/tienda/licoroso"}>
+          <Link onClick={() => setType("licoroso")} className="link" to={"/tienda/licoroso"}>
             licoroso
           </Link>
         </div>
@@ -65,7 +62,7 @@ function ShowShop(props) {
   } else {
     return (
       <div className="d-flex justify-content-center align-items-center vh-100 spinner__wines">
-        <BounceLoader color="#6d1f2b" loading size={50} />
+        <BounceLoader color="#fbb701" loading size={50} />
       </div>
     );
   }

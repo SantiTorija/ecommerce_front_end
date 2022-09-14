@@ -8,13 +8,14 @@ import AppleIcon from "@mui/icons-material/Apple";
 import newHackWinesLogo from "../assets/images/newHackWinesLogo.png";
 import axios from "axios";
 import { login } from "../redux/userSlice";
-import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
 import handleAlert from "./Alert";
 
 function MyVerticallyCenteredModal(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
   const dispatch = useDispatch();
 
   async function getToken() {
@@ -103,15 +104,28 @@ function MyVerticallyCenteredModal(props) {
 }
 
 function LoginModal(props) {
+  const userState = useSelector((state) => state.user);
+  const navigate = useNavigate();
+
+  function handleLogin() {
+    navigate("/miPerfil/misDatos");
+  }
+
   return (
     <>
-      <button className="btn button__person">
-        <Person
-          color="rgba(240, 240, 240, 0.799)"
-          size={20}
-          onClick={() => props.setModalLoginShow(true)}
-        />
-      </button>
+      {userState.token ? (
+        <button className="btn button__person">
+          <Person color="rgba(240, 240, 240, 0.799)" size={20} onClick={handleLogin} />
+        </button>
+      ) : (
+        <button className="btn button__person">
+          <Person
+            color="rgba(240, 240, 240, 0.799)"
+            size={20}
+            onClick={() => props.setModalLoginShow(true)}
+          />
+        </button>
+      )}
 
       <MyVerticallyCenteredModal
         modalRegisterShow={props.modalRegisterShow}
