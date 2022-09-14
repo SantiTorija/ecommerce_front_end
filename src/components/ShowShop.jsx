@@ -32,23 +32,48 @@ function ShowShop(props) {
             <span className="wine__title">SELECCIONAR TIPO</span>
             <AiOutlineLine className="text-white ms-2" />
           </div>
-          <Link onClick={() => setType("tinto")} className="link mx-1" to={"/tienda/tinto"}>
+          <Link
+            onClick={() => setType("tinto")}
+            className="link mx-1"
+            to={"/tienda/tinto"}
+            style={{ color: type === "tinto" ? "#fbb701" : "white", transition: "0.15s" }}
+          >
             tinto
           </Link>
           ·
-          <Link onClick={() => setType("blanco")} className="link mx-1" to={"/tienda/blanco"}>
+          <Link
+            onClick={() => setType("blanco")}
+            className="link mx-1"
+            to={"/tienda/blanco"}
+            style={{ color: type === "blanco" ? "#fbb701" : "white", transition: "0.15s" }}
+          >
             blanco
           </Link>
           ·
-          <Link onClick={() => setType("rose")} className="link mx-1" to={"/tienda/rose"}>
+          <Link
+            onClick={() => setType("rose")}
+            className="link mx-1"
+            to={"/tienda/rose"}
+            style={{ color: type === "rose" ? "#fbb701" : "white", transition: "0.15s" }}
+          >
             rose
           </Link>
           ·
-          <Link onClick={() => setType("espumante")} className="link mx-1" to={"/tienda/espumante"}>
+          <Link
+            onClick={() => setType("espumante")}
+            className="link mx-1"
+            to={"/tienda/espumante"}
+            style={{ color: type === "espumante" ? "#fbb701" : "white", transition: "0.15s" }}
+          >
             espumante
           </Link>
           ·
-          <Link onClick={() => setType("licoroso")} className="link mx-1" to={"/tienda/licoroso"}>
+          <Link
+            onClick={() => setType("licoroso")}
+            className="link mx-1"
+            to={"/tienda/licoroso"}
+            style={{ color: type === "licoroso" ? "#fbb701" : "white", transition: "0.15s" }}
+          >
             licoroso
           </Link>
         </div>
