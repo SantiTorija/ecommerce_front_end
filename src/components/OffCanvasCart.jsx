@@ -30,7 +30,6 @@ function OffCanvasCart({ name, ...props }) {
   }
 
   function goToCart() {
-    console.log("hola");
     if (cartState.length > 0) {
       props.setShowCart(false);
       return navigate("/cart");
@@ -38,6 +37,8 @@ function OffCanvasCart({ name, ...props }) {
     handleAlert("En este momento no tienes articulos en el carrito");
     return props.setShowCart(false);
   }
+
+  const { setShowCart, showCart, ...offCanvasProps } = props;
 
   return (
     <>
@@ -49,7 +50,7 @@ function OffCanvasCart({ name, ...props }) {
       <Offcanvas
         show={props.showCart}
         onHide={handleClose}
-        {...props}
+        {...offCanvasProps}
         className="canvas__main__cart"
         style={{
           backgroundImage: `linear-gradient(rgba(23,23,23,0.5) 10%, rgba(10,10,10,0.9) 100%),url(${texturadoNegro})`,
@@ -75,26 +76,24 @@ function OffCanvasCart({ name, ...props }) {
           </div>
           {cartState.map((wine) => {
             return (
-              <>
-                <div className="d-flex mb-4" key={wine.id}>
-                  <img
-                    src={
-                      wine.picture ||
-                      "https://cdn.shopify.com/s/files/1/0042/8477/6517/products/19Crimes-CabSauv-VDM_2000x.jpg"
-                    }
-                    alt="wine_photo"
-                    className="col-3"
-                  />
+              <div className="d-flex mb-4" key={wine._id}>
+                <img
+                  src={
+                    wine.picture ||
+                    "https://cdn.shopify.com/s/files/1/0042/8477/6517/products/19Crimes-CabSauv-VDM_2000x.jpg"
+                  }
+                  alt="wine_photo"
+                  className="col-3"
+                />
 
-                  <div className="col-9 text-white">
-                    <div>{wine.name || "19 CRIMES CABERNET SAUVIGNON"}</div>
-                    <div>{wine.type.name || "Tinto"}</div>
-                    <div className="mt-2 d-flex justify-content-end">
-                      <CantidadCart wine={wine} />
-                    </div>
+                <div className="col-9 text-white">
+                  <div>{wine.name || "19 CRIMES CABERNET SAUVIGNON"}</div>
+                  <div>{wine.type.name || "Tinto"}</div>
+                  <div className="mt-2 d-flex justify-content-end">
+                    <CantidadCart wine={wine} />
                   </div>
                 </div>
-              </>
+              </div>
             );
           })}
           <h6 className="d-flex justify-content-center text-white">Order Sumary</h6>

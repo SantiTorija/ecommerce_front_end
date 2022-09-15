@@ -10,7 +10,7 @@ function BottlesShopHeaderMobile() {
         className="d-block d-lg-none"
         src={bottle}
         alt=""
-        srcset=""
+        srcSet=""
       />
       <img
         className="d-block d-lg-none "
@@ -23,7 +23,7 @@ function BottlesShopHeaderMobile() {
         }}
         src={bottle2}
         alt=""
-        srcset=""
+        srcSet=""
       />
       <img
         className="d-block d-lg-none "
@@ -36,7 +36,7 @@ function BottlesShopHeaderMobile() {
         }}
         src={bottle3}
         alt=""
-        srcset=""
+        srcSet=""
       />
     </>
   );

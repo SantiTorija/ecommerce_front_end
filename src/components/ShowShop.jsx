@@ -79,7 +79,7 @@ function ShowShop(props) {
         </div>
         <Container className="d-flex justify-content-center row mb-5">
           {wines.map((wine, index) => {
-            return <ProductCard setShowCart={props.setShowCart} wine={wine} />;
+            return <ProductCard setShowCart={props.setShowCart} wine={wine} key={wine._id} />;
           })}
         </Container>
       </>

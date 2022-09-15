@@ -61,7 +61,7 @@ function FooterWeb() {
                 <h3 className="titleFooter">NEWSLETTER</h3>
                 <p>Suscribite, y recibi antes que nadie nuestras promociones y noticias.</p>
                 <div className="d-flex flex-column flex-sm-row w-100 gap-2">
-                  <label for="newsletter1" className="visually-hidden">
+                  <label htmlFor="newsletter1" className="visually-hidden">
                     Email
                   </label>
                   <input
@@ -73,7 +73,6 @@ function FooterWeb() {
                   <button
                     className="btn goldenButton"
                     type="button"
-                    showCloseButton
                     onClick={() =>
                       handleAlert("Esta funcionalidad está fuera del alcance del proyecto")
                     }
@@ -85,7 +84,7 @@ function FooterWeb() {
             </div>
           </div>
 
-          <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top mt-5">
+          <div className="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top mt-5">
             <p>&copy; 2022 Todos los derechos reservados.</p>
           </div>
         </div>

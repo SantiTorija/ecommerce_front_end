@@ -181,7 +181,7 @@ function Perfil() {
                       <tbody>
                         {user?.orders?.map((order) => {
                           return (
-                            <tr>
+                            <tr key={order._id}>
                               <td className=" text-center">{order.Date.split("T")[0]}</td>
                               <td className=" text-center">
                                 {order._id || "6321f7c9282a57a72de54a76"}

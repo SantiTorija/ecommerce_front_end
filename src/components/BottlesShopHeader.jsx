@@ -10,7 +10,7 @@ function BottlesShopHeader() {
         className="w-75 d-none d-lg-block"
         src={bottle}
         alt=""
-        srcset=""
+        srcSet=""
       />
       <img
         className="d-none d-lg-block"
@@ -23,7 +23,7 @@ function BottlesShopHeader() {
         }}
         src={bottle2}
         alt=""
-        srcset=""
+        srcSet=""
       />
       <img
         className="d-none d-lg-block"
@@ -36,7 +36,7 @@ function BottlesShopHeader() {
         }}
         src={bottle3}
         alt=""
-        srcset=""
+        srcSet=""
       />
     </>
   );
