@@ -79,7 +79,7 @@ function AboutThisProyect() {
               </a>
               <a href="https://github.com/guillermogalain" target="_blank" rel="noreferrer">
                 <img
-                  src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                  src="https://cdn.icon-icons.com/icons2/2429/PNG/512/github_logo_icon_147285.png"
                   alt="logo_github"
                   className="img_linkedin ms-2"
                 ></img>
@@ -108,7 +108,7 @@ function AboutThisProyect() {
               </a>
               <a href="https://github.com/SantiTorija" target="_blank" rel="noreferrer">
                 <img
-                  src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                  src="https://cdn.icon-icons.com/icons2/2429/PNG/512/github_logo_icon_147285.png"
                   alt="logo_github"
                   className="img_linkedin ms-2"
                 ></img>
@@ -137,8 +137,8 @@ function AboutThisProyect() {
               </a>
               <a href="https://github.com/alankatz3793" target="_blank" rel="noreferrer">
                 <img
-                  src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-                  alt="logo_linkedin"
+                  src="https://cdn.icon-icons.com/icons2/2429/PNG/512/github_logo_icon_147285.png"
+                  alt="logo_github"
                   className="img_linkedin ms-2"
                 ></img>
               </a>
