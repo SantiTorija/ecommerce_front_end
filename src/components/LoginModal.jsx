@@ -22,7 +22,7 @@ function MyVerticallyCenteredModal(props) {
     try {
       const response = await axios({
         method: "post",
-        url: `http://localhost:8000/users/token`,
+        url: `${process.env.REACT_APP_API_URL}users/token`,
         data: { email, password },
       });
       console.log(response.data.token);
@@ -105,20 +105,15 @@ function MyVerticallyCenteredModal(props) {
 
 function LoginModal(props) {
   const userState = useSelector((state) => state.user);
-  const navigate = useNavigate();
-
-  function handleLogin() {
-    navigate("/miPerfil/misDatos");
-  }
 
   return (
     <>
       {userState.token ? (
-        <button className="btn button__person">
-          <Person color="rgba(240, 240, 240, 0.799)" size={20} onClick={handleLogin} />
-        </button>
+        <Link className="button__person" to="/miPerfil/misDatos">
+          <Person color="rgba(240, 240, 240, 0.799)" size={25} />
+        </Link>
       ) : (
-        <button className="btn button__person">
+        <button className=" button__person">
           <Person
             color="rgba(240, 240, 240, 0.799)"
             size={20}

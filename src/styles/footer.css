@@ -29,14 +29,25 @@ p {
   font-size: 20px;
   font-weight: 700;
   font-family: "Quattrocento", serif;
-}
-
-#newsletter1 {
-  background-color: rgba(240, 240, 240, 0.799);
+  color: rgba(240, 240, 240, 0.799);
 }
 
 @media (max-width: 576px) {
   .footerSection {
     width: 100%;
   }
+}
+
+@media (max-width: 768px) {
+  .footerColumn {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  #menuColumn {
+    display: none;
+  }
+}
+
+.footerLinks {
+  line-height: 1.5rem;
 }

@@ -12,12 +12,10 @@ function PaymentCard() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   function calculateTotal() {
-    // cambiar variables a ingles
     let result = 0;
     for (const wine of cartState) {
       result += parseInt(wine.price) * parseInt(wine.cartQuantity || 0);
     }
-    result = result * 1.22;
     return result;
   }
 
@@ -25,7 +23,7 @@ function PaymentCard() {
     try {
       await axios({
         method: "post",
-        url: `http://localhost:8000/orders`, // variables de entorno
+        url: `${process.env.REACT_APP_API_URL}orders`, // variables de entorno
         data: { total: calculateTotal(), products: cartState },
         headers: {
           Authorization: `Bearer ${userState.token}`,
@@ -33,9 +31,7 @@ function PaymentCard() {
         },
       });
       dispatch(deleteAllItems());
-      navigate("/tienda/todos");
     } catch (error) {
-      console.log(error);
       handleAlert(error.response.data.error);
     }
   }
@@ -46,6 +42,7 @@ function PaymentCard() {
       onSubmit={(e) => {
         e.preventDefault();
         storeOrder();
+        navigate("/miPerfil/misCompras");
       }}
     >
       <div className="form-row d-flex">
@@ -93,7 +90,7 @@ function PaymentCard() {
           </label>
         </div>
       </div>
-      <button type="submit" className="btn btn-success mt-3">
+      <button type="submit" className="mt-3 button__pagar__final">
         COMPRAR
       </button>
     </form>

@@ -58,12 +58,23 @@ function ProductCard({ wine, setShowCart }) {
             </button>
           </Link>
         </div>
-        <span style={{ position: "absolute", marginLeft: "1rem", marginTop: "0.2rem" }}>
+        <span style={{ position: "absolute", marginLeft: "1rem", marginTop: "0.3rem" }}>
           <RiStarSFill color="#fbb701" />
           <RiStarSFill color="#fbb701" />
           <RiStarSFill color="#fbb701" />
           <RiStarSFill color="#fbb701" />
           <RiStarSFill color="#fbb701" />
+        </span>
+        <span
+          style={{
+            position: "absolute",
+            right: "1rem",
+            marginTop: "0.3rem",
+            color: "white",
+            textTransform: "capitalize",
+          }}
+        >
+          {wine.type.name}
         </span>
       </Card>
     </div>

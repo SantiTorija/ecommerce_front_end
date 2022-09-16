@@ -17,7 +17,7 @@ function Wine(props) {
     const dataWine = async () => {
       const response = await axios({
         method: "get",
-        url: `http://localhost:8000/wines/${slug}`,
+        url: `${process.env.REACT_APP_API_URL}wines/${slug}`,
       });
       setWine(response.data);
       return response;
@@ -29,7 +29,7 @@ function Wine(props) {
     const dataWine = async () => {
       const response = await axios({
         method: "GET",
-        url: `http://localhost:8000/wines`,
+        url: `${process.env.REACT_APP_API_URL}wines`,
       });
       setWines(response.data.sort((a, b) => 0.5 - Math.random()).slice(0, 3));
       return response;
@@ -58,7 +58,7 @@ function Wine(props) {
               <div className="col-5 col__wine__first">
                 <h2 className="Wine__title">{wine.name}</h2>
                 <h5 className="wine__description">{truncateString(wine?.description, 200)}</h5>
-                <h5 className="wine__ul">Tipo: {wine.type.name}</h5>
+                <h5 className="wine__ul text-capitalize">Tipo: {wine.type.name}</h5>
                 <h5 className="wine__ul">Pais: {wine.country}</h5>
                 <h5 className="wine__ul">Cosecha: {wine.harvest}</h5>
                 <h5 className="wine__ul">Bodega: {wine.cellar}</h5>
@@ -69,7 +69,7 @@ function Wine(props) {
               <div className="col-2"></div>
             </div>
             <span className="recommended__title">
-              <AiOutlineLine className="text-white me-2" /> RECOMENDADOS{" "}
+              <AiOutlineLine className="text-white me-2" /> PRODUCTOS RELACIONADOS
               <AiOutlineLine className="text-white ms-2" />
             </span>
             <div className=" d-flex justify-content-center">

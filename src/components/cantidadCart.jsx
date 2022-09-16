@@ -24,6 +24,7 @@ function CantidadCart({ wine }) {
         <input
           type="number"
           className="cart__cant__input"
+          placeholder="0"
           defaultValue={wine.cartQuantity || 0}
           onChange={(e) => handleAddCart(e.target.value)}
         ></input>

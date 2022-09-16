@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import "../styles/offCanvas.css";
 import "../styles/offCanvasNav.css";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
 import { useSelector } from "react-redux";
-import CantidadCart from "./cantidadCart";
+import CantidadCart from "./CantidadCart";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import handleAlert from "./Alert";
 import texturadoNegro from "../assets/images/fondonegrotexturado.jpg";
@@ -42,7 +41,7 @@ function OffCanvasCart({ name, ...props }) {
 
   return (
     <>
-      <button onClick={handleShow} className="me-4 off-canvas-navbar-button">
+      <button onClick={handleShow} className="off-canvas-navbar-button p-0">
         <AiOutlineShoppingCart
           style={{ color: "rgba(240, 240, 240, 0.799)", fontSize: "1.5rem" }}
         />
@@ -68,10 +67,14 @@ function OffCanvasCart({ name, ...props }) {
         <Offcanvas.Body>
           <div className="d-flex w-100 justify-content-center">
             <p className="text-white">
-              <span className="color__yellow">
+              <span className="color__yellow me-1">
                 <LocalShippingIcon />
               </span>{" "}
-              You are 7.8 dollars away from free shipping
+              {calcularTotal() * 1.32 < 500
+                ? "Estás a " +
+                  (500 - Math.round((calcularTotal() || 0) * 1.32)) +
+                  " dólares del envio gratis"
+                : "Envio incluido"}
             </p>
           </div>
           {cartState.map((wine) => {
@@ -88,7 +91,7 @@ function OffCanvasCart({ name, ...props }) {
 
                 <div className="col-9 text-white">
                   <div>{wine.name || "19 CRIMES CABERNET SAUVIGNON"}</div>
-                  <div>{wine.type.name || "Tinto"}</div>
+                  <div className="text-capitalize">{wine.type.name || "Tinto"}</div>
                   <div className="mt-2 d-flex justify-content-end">
                     <CantidadCart wine={wine} />
                   </div>
@@ -96,26 +99,26 @@ function OffCanvasCart({ name, ...props }) {
               </div>
             );
           })}
-          <h6 className="d-flex justify-content-center text-white">Order Sumary</h6>
+          <h6 className="d-flex justify-content-center text-white">RESUMEN</h6>
           <div className="d-flex justify-content-between mx-3">
-            <p className="text-white">Merchandise</p>
+            <p className="text-white">Mercaderia</p>
             <p className="text-white">${Math.round((calcularTotal() || 0) * 10) / 10}</p>
           </div>
           <div className="d-flex justify-content-between mx-3">
-            <p className="text-white">Tax</p>
-            <p className="text-white">
-              ${Math.round((calcularTotal() * 0.22 || 0) * 1.2 * 10) / 10}
-            </p>
+            <p className="text-white">IVA</p>
+            <p className="text-white">${Math.round((calcularTotal() * 0.22 || 0) * 10) / 10}</p>
+          </div>
+          <div className="d-flex justify-content-between mx-3">
+            <p className="text-white">Envio</p>
+            <p className="text-white">${Math.round((calcularTotal() * 0.1 || 0) * 10) / 10}</p>
           </div>
           <div className="d-flex justify-content-between border-top border-bottom align-items-center pt-3 mx-3">
-            <p className="text-white">Estimated Order Total</p>
-            <p className="text-white">
-              ${Math.round((calcularTotal() * 1.22 || 0) * 1.2 * 10) / 10}
-            </p>
+            <p className="text-white">A pagar</p>
+            <p className="text-white">${Math.round((calcularTotal() || 0) * 1.32 * 10) / 10}</p>
           </div>
           <div className="d-flex justify-content-center mt-2">
             <button className="Cart__button__buy btn" onClick={() => goToCart()}>
-              BUY NOW
+              COMPRAR
             </button>
           </div>
         </Offcanvas.Body>
