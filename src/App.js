@@ -31,6 +31,7 @@ function App() {
         modalLoginShow={modalLoginShow}
         setModalLoginShow={setModalLoginShow}
       />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/tienda/:type" element={<Shop setShowCart={setShowCart} />} />
@@ -40,6 +41,7 @@ function App() {
         <Route path="/miPerfil/:seccion" element={<Perfil />} />
         <Route path="/product/:slug" element={<Wine setShowCart={setShowCart} />} />
       </Routes>
+
       <Footer />
     </div>
   );

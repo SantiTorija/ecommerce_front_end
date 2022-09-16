@@ -34,14 +34,17 @@ function ProductCard({ wine, setShowCart }) {
         }}
       >
         <div style={{ position: "relative" }} className="d-flex flex-column">
-          <Card.Img className="mt-4 image-card" variant="top" src={wine.picture} />
+          <Card.Img className="mt-5 image-card" variant="top" src={wine.picture} />
           <Card.Body>
             <div style={{ position: "relative" }}>
-              <h2 className="wine-name wine__title">{wine.name}</h2>
+              <h2 className="wine-name wine__title text-center">{wine.name}</h2>
             </div>
           </Card.Body>
         </div>
-        <div style={{ position: "absolute", marginLeft: "11%", bottom: "1rem" }} className="mt-2">
+        <div
+          style={{ position: "absolute", marginLeft: "11%", bottom: "1rem" }}
+          className="mt-2 text-center"
+        >
           <span className="wine__title fs-6 fw-bold mb-2">{wine.harvest}</span>
           <span className="wine__title fs-5 mb-3" style={{ color: "#c89600" }}>
             US$ {wine.price}

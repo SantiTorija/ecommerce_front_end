@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;400;500&display=swap");
+
+.title{
+    font-family: "Urbanist", sans-serif;
+    color: rgba(222, 222, 222, 0.743);
+}
+
+.button{
+    font-weight: 600;  
+  padding: 1rem 1.5rem;
+  background-color: #fbb801ac;
+  border: 1px solid #fbb801ac;
+  color: rgb(19, 19, 19);
+}
