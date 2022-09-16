@@ -12,7 +12,7 @@
 .text-hero {
   color: white;
   padding-top: 16rem;
- 
+
   max-width: 900px;
   font-family: "Urbanist", sans-serif;
 }
@@ -67,4 +67,8 @@
   margin-bottom: 13px;
   margin-top: 10px;
   width: 120px;
+}
+
+#hackWines {
+  font-size: 1.5rem;
 }
