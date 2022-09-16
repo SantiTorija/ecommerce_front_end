@@ -28,6 +28,7 @@
   font-size: 19px;
   margin-bottom: 1rem;
   font-weight: 400;
+  color: rgba(240, 240, 240, 0.799);
 }
 
 .image__mern {
@@ -69,6 +70,6 @@
   width: 120px;
 }
 
-#hackWines {
+.hackWines {
   font-size: 1.5rem;
 }
