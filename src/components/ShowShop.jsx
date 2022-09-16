@@ -6,10 +6,16 @@ import BounceLoader from "react-spinners/BounceLoader";
 import ProductCard from "./ProductCard";
 import "../styles/showShop.css";
 import { Container } from "react-bootstrap";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 
 function ShowShop(props) {
   const [wines, setWines] = useState(null);
+  const [allWines, setAllWines] = useState([]);
   const [type, setType] = useState("todos");
+  const [minNum, setMinNum] = useState(0);
+  const [maxNum, setMaxNum] = useState(12);
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
     const dataWine = async () => {
@@ -17,11 +23,33 @@ function ShowShop(props) {
         method: "GET",
         url: `${process.env.REACT_APP_API_URL}wines/filter/${type}`,
       });
-      setWines(response.data);
+      setAllWines(response.data);
+      setWines(
+        response.data.slice(
+          Math.min(minNum, response.data.length),
+          Math.min(maxNum, response.data.length),
+        ),
+      );
       return response;
     };
     dataWine();
-  }, [type]);
+  }, [type, minNum, maxNum]);
+
+  function handlePagePlus() {
+    if (page < allWines.length / 12) {
+      setMinNum(minNum + 12);
+      setMaxNum(maxNum + 12);
+      setPage(page + 1);
+    }
+  }
+
+  function handlePageMinus() {
+    if (page > 1) {
+      setMinNum(minNum - 12);
+      setMaxNum(maxNum - 12);
+      setPage(page - 1);
+    }
+  }
 
   if (wines) {
     return (
@@ -101,6 +129,15 @@ function ShowShop(props) {
           {wines.map((wine, index) => {
             return <ProductCard setShowCart={props.setShowCart} wine={wine} key={wine._id} />;
           })}
+          <div className="d-flex justify-content-center pt-4">
+            <button onClick={handlePageMinus} className="button_flecha">
+              <ArrowBackIosNewIcon />
+            </button>
+            <h4 className="text-white pt-2">{page}</h4>
+            <button onClick={handlePagePlus} className="button_flecha">
+              <ArrowForwardIosIcon />
+            </button>
+          </div>
         </Container>
       </>
     );

@@ -8,9 +8,10 @@ import { List } from "react-bootstrap-icons";
 import "../styles/mobileMenu.css";
 
 function MyVerticallyCenteredModal(props) {
+  const { setShowMenuModal, showMenuModal, ...modalProps } = props;
   return (
     <Modal
-      {...props}
+      {...modalProps}
       size="xl"
       style={{ backgroundColor: "rgba(19, 19, 19)" }}
       aria-labelledby="contained-modal-title-vcenter"

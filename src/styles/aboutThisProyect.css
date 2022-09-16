@@ -12,7 +12,7 @@
 .text-hero {
   color: white;
   padding-top: 16rem;
- 
+
   max-width: 900px;
   font-family: "Urbanist", sans-serif;
 }
@@ -28,6 +28,7 @@
   font-size: 19px;
   margin-bottom: 1rem;
   font-weight: 400;
+  color: rgba(240, 240, 240, 0.799);
 }
 
 .image__mern {
@@ -67,4 +68,8 @@
   margin-bottom: 13px;
   margin-top: 10px;
   width: 120px;
+}
+
+.hackWines {
+  font-size: 1.5rem;
 }

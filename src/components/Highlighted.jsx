@@ -23,7 +23,7 @@ function Highlighted(props) {
     wines && (
       <>
         <span className="recommended__title mt-5">
-          <AiOutlineLine className="text-white me-2" /> PRODUCTOS DESTACADOS
+          <AiOutlineLine className="text-white me-2" /> <h4>PRODUCTOS DESTACADOS</h4>
           <AiOutlineLine className="text-white ms-2" />
         </span>
         <div className=" d-flex justify-content-center ">

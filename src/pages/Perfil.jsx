@@ -9,6 +9,8 @@ import { updateUser, logout } from "../redux/userSlice";
 import { useEffect } from "react";
 import Table from "react-bootstrap/Table";
 import WarningAmberIcon from "@mui/icons-material/WarningAmber";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Perfil() {
   const userState = useSelector((state) => state.user);
@@ -22,6 +24,12 @@ function Perfil() {
   const [user, setUser] = useState({});
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  function showToastMessage() {
+    toast.success("Success Notification !", {
+      position: toast.POSITION.TOP_RIGHT,
+    });
+  }
 
   async function EditarPerfil() {
     try {
@@ -43,7 +51,7 @@ function Perfil() {
           address: response.data.address,
         }),
       );
-      handleAlert("El usuario fue modificado con exito");
+      showToastMessage();
       return response.data;
     } catch (error) {
       handleAlert(error.response.data.error);
@@ -62,9 +70,7 @@ function Perfil() {
         });
         setUser(response.data);
         return response.data;
-      } catch (error) {
-        handleAlert(error.response.data.error);
-      }
+      } catch (error) {}
     }
     InfoUser();
   }, []);

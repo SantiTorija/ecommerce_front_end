@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "../styles/aboutThisProyect.css";
 import { Container } from "react-bootstrap";
+import AboutTitle from "../components/AboutTitle";
 
 function AboutThisProyect() {
   return (
@@ -8,8 +9,8 @@ function AboutThisProyect() {
       <div className="about__us__hero">
         <Container>
           <div className="col-7 text-hero">
-            <h1 className="title__hero">Sobre este proyecto</h1>
-            <h6 className="paragraph__hero">
+            <AboutTitle />
+            <h6 className="paragraph__hero mt-4 mb-5">
               Este proyecto surge como trabajo final del curso intensivo (coding Bootcamp) realizado
               de la mano de Hack Academy. La metodología Bootcamp entrena y prepara a las personas a
               través de un método de aprendizaje intensivo donde el foco principal es desarrollar
@@ -46,8 +47,13 @@ function AboutThisProyect() {
               </div>
             </div>
           </div>
-          <div className=" used__tecnologies col-6">
+          <div className=" used__tecnologies col-6 align-items-center justify-content-center">
             <h4 className="title__used__tecnologies">Video demo</h4>
+            <iframe
+              src="https://embed.lottiefiles.com/animation/8633"
+              title="underConstruction"
+              className="w-100"
+            ></iframe>
           </div>
         </div>
         <div className="row d-flex justify-content-around text-white">
@@ -73,7 +79,7 @@ function AboutThisProyect() {
               </a>
               <a href="https://github.com/guillermogalain" target="_blank" rel="noreferrer">
                 <img
-                  src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                  src="https://cdn.icon-icons.com/icons2/2429/PNG/512/github_logo_icon_147285.png"
                   alt="logo_github"
                   className="img_linkedin ms-2"
                 ></img>
@@ -102,7 +108,7 @@ function AboutThisProyect() {
               </a>
               <a href="https://github.com/SantiTorija" target="_blank" rel="noreferrer">
                 <img
-                  src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                  src="https://cdn.icon-icons.com/icons2/2429/PNG/512/github_logo_icon_147285.png"
                   alt="logo_github"
                   className="img_linkedin ms-2"
                 ></img>
@@ -131,8 +137,8 @@ function AboutThisProyect() {
               </a>
               <a href="https://github.com/alankatz3793" target="_blank" rel="noreferrer">
                 <img
-                  src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-                  alt="logo_linkedin"
+                  src="https://cdn.icon-icons.com/icons2/2429/PNG/512/github_logo_icon_147285.png"
+                  alt="logo_github"
                   className="img_linkedin ms-2"
                 ></img>
               </a>
