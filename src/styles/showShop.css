@@ -1,4 +1,12 @@
-
 .link {
   color: white;
+}
+
+.button_flecha {
+  width: 50px;
+  display: inline;
+  background-color: transparent;
+  color: #b08308;
+  border: none;
+  outline: none;
 }
