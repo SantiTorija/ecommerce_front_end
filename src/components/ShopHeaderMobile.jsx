@@ -10,7 +10,7 @@ function ShopHeaderMobile() {
       >
         Bienvenido a nuestra tienda
       </h2>
-      <div style={{ position: "relative", marginLeft: "50%" }}>
+      <div>
         <BottlesShopHeaderMobile />
       </div>
     </div>

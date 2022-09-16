@@ -1,29 +1,14 @@
 import "../styles/home.css";
-/* import ReactPlayer from "react-player";
-import videoForHero from "/videoForHero.mp4"; */
+import videoForHero from "../assets/videos/videoForHero.mp4";
 
 function HeroVideo() {
-	/* return (
-		<>
-			<h1>probandodas</h1>
-			<section id="heroVideo">
-				<ReactPlayer
-					url={videoForHero}
-					playing
-					loop
-					muted
-					width="100%"
-					height="100%"
-				/>
-			</section>
-		</>
-	);
-} */
-
-	return (
-		<>
-			<h1>probandodas</h1>
-		</>
-	);
+  return (
+    <div className="container-fluid mt-0 p-0">
+      <video autoPlay loop muted playsinline src={videoForHero} id="videoHero" type="video/mp4">
+        Tu navegador no admite el video.
+      </video>
+    </div>
+  );
 }
+
 export default HeroVideo;

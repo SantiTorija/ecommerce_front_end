@@ -1,4 +1,3 @@
-import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Nav from "react-bootstrap/Nav";
 import React, { useState } from "react";
@@ -30,7 +29,7 @@ function MyVerticallyCenteredModal(props) {
 
               <Link
                 className="navbar-link"
-                to={"/tienda"}
+                to={"/tienda/todos"}
                 onClick={() => props.setShowMenuModal(false)}
               >
                 Tienda
