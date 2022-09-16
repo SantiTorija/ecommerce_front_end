@@ -147,7 +147,7 @@ form {
 
 @media (min-width: 576px) {
   .contactText {
-    font-size: 0.9rem;
+    font-size: 0.5rem;
   }
   .contactLeftColumn {
     margin-right: 2rem;

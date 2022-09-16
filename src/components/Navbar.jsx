@@ -33,7 +33,7 @@ function NavBarV2({ setShowCart, showCart, modalLoginShow, setModalLoginShow }) 
 
   return (
     <Navbar
-      className={`Nav d-flex justify-content-between text-white py-3 ${show && "nav_black"}`}
+      className={`Nav text-white py-3 ${show && "nav_black"}`}
       style={{
         position: "fixed",
         top: "0px",
@@ -43,62 +43,58 @@ function NavBarV2({ setShowCart, showCart, modalLoginShow, setModalLoginShow }) 
         padding: "30px",
       }}
     >
-      <Container id="header" className="container">
-        <Row className="d-flex justify-content-between w-100">
-          <Col className="col-2">
-            <img alt="hackWinesLogo" src={newHackWinesLogo} />
-          </Col>
-          <Col className="col-8 d-flex align-items-center  justify-content-center">
-            <Nav className="menu-section align-items-center justify-content-center gap-2 linkSection ">
-              <Link className="navbar-link navbar-responsive" to={"/"}>
-                Home
-              </Link>
-              <h5 className="m-0 navbar-responsive">·</h5>
-              <Link className="navbar-link navbar-responsive" to={"/tienda/todos"}>
-                Tienda
-              </Link>
-              <h5 className="m-0 navbar-responsive">·</h5>
-              <Link className="navbar-link navbar-responsive" to="/aboutThisProyect">
-                Sobre este Proyecto
-              </Link>
-              <h5 className="m-0 navbar-responsive ">·</h5>
-              <Link className="navbar-link navbar-responsive" to={"/contacto"}>
-                Contacto
-              </Link>
-              <MenuModal className="hamburguerIcon" />
-            </Nav>
-          </Col>
-          <Col className="col-2 d-flex align-items-center  justify-content-between headerIcons">
-            <Link to={""}>
-              <Search
-                onClick={handleAlert}
-                color="rgba(240, 240, 240, 0.799)"
-                size={20}
-                style={{
-                  backgroundSize: "cover",
-                  backgroundRepeat: "no-repeat",
-                }}
-              />
-            </Link>
-            <RegisterModal
-              modalRegisterShow={modalRegisterShow}
-              setModalRegisterShow={setModalRegisterShow}
-              setModalLoginShow={setModalLoginShow}
+      <Container id="header" className="container w-100 d-flex justify-content-between">
+        <img alt="hackWinesLogo" src={newHackWinesLogo} />
+
+        <div className="menu-section align-items-center justify-content-center gap-2 linkSection d-flex">
+          <Link className="navbar-link navbar-responsive" to={"/"}>
+            Home
+          </Link>
+          <h5 className="m-0 navbar-responsive">·</h5>
+          <Link className="navbar-link navbar-responsive" to={"/tienda/todos"}>
+            Tienda
+          </Link>
+          <h5 className="m-0 navbar-responsive">·</h5>
+          <Link className="navbar-link navbar-responsive" to="/aboutThisProyect">
+            Sobre este Proyecto
+          </Link>
+          <h5 className="m-0 navbar-responsive ">·</h5>
+          <Link className="navbar-link navbar-responsive" to={"/contacto"}>
+            Contacto
+          </Link>
+          <MenuModal className="hamburguerIcon" />
+        </div>
+
+        <div className=" d-flex align-items-center justify-content-between  headerIcons ">
+          <Link to={""}>
+            <Search
+              onClick={handleAlert("Esta funcionalidad esta fuera del alcance del proyecto")}
+              color="rgba(240, 240, 240, 0.799)"
+              size={19}
+              style={{
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+              }}
             />
-            <LoginModal
-              modalLoginShow={modalLoginShow}
-              setModalLoginShow={setModalLoginShow}
-              modalRegisterShow={modalRegisterShow}
-              setModalRegisterShow={setModalRegisterShow}
-            />
-            <OffCanvasCart
-              placement={"end"}
-              name={"end"}
-              setShowCart={setShowCart}
-              showCart={showCart}
-            />
-          </Col>
-        </Row>
+          </Link>
+          <RegisterModal
+            modalRegisterShow={modalRegisterShow}
+            setModalRegisterShow={setModalRegisterShow}
+            setModalLoginShow={setModalLoginShow}
+          />
+          <LoginModal
+            modalLoginShow={modalLoginShow}
+            setModalLoginShow={setModalLoginShow}
+            modalRegisterShow={modalRegisterShow}
+            setModalRegisterShow={setModalRegisterShow}
+          />
+          <OffCanvasCart
+            placement={"end"}
+            name={"end"}
+            setShowCart={setShowCart}
+            showCart={showCart}
+          />
+        </div>
       </Container>
     </Navbar>
   );

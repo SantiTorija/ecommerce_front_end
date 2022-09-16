@@ -7,11 +7,11 @@ import handleAlert from "./Alert";
 
 function FooterWeb() {
   return (
-    <footer>
-      <Container className="border-top">
+    <Container>
+      <footer className="border-top border-bottom pb-5">
         <div className="footer  pt-5 pb-1">
           <div className="row">
-            <div className="col-6 col-md-2 mb-3">
+            <div className="col-3 footerColumn">
               <img alt="hackWineslogo" src={newHackWinesLogo} />
               <div className="d-flex flex-row gap-2 mt-3">
                 <Instagram color="rgba(240, 240, 240, 0.799)" />
@@ -21,33 +21,33 @@ function FooterWeb() {
               </div>
             </div>
 
-            <div className="col-6 col-md-2">
+            <div className="col-3 footerColumn" id="menuColumn">
               <h3 className="titleFooter navbar-link">MENU</h3>
               <ul className="nav flex-column">
                 <li className="nav-item">
-                  <Link className="navbar-link  " to={"/"}>
+                  <Link className="navbar-link footerLinks " to={"/"}>
                     Home
                   </Link>
                 </li>
                 <li className="nav-item ">
-                  <Link className="navbar-link " to={"/tienda"}>
+                  <Link className="navbar-link footerLinks" to={"/tienda"}>
                     Tienda
                   </Link>
                 </li>
                 <li className="nav-item ">
-                  <Link className="navbar-link " to={"/sobre-este-proyecto"}>
+                  <Link className="navbar-link footerLinks" to={"/sobre-este-proyecto"}>
                     Sobre este proyecto
                   </Link>
                 </li>
                 <li className="nav-item ">
-                  <Link className="navbar-link me-3" to={"/contacto"}>
+                  <Link className="navbar-link footerLinks" to={"/contacto"}>
                     Contacto
                   </Link>
                 </li>
               </ul>
             </div>
 
-            <div className="col-6 col-md-2 footerSection">
+            <div className="col-3 footerSection footerColumn">
               <h3 className="titleFooter">LOCAL </h3>
 
               <p>
@@ -56,20 +56,15 @@ function FooterWeb() {
               </p>
             </div>
 
-            <div className="col-md-5 offset-md-1 footerSection">
-              <form>
+            <div className="col-3 footerSection footerColumn">
+              <form className="w-100">
                 <h3 className="titleFooter">NEWSLETTER</h3>
                 <p>Suscribite, y recibi antes que nadie nuestras promociones y noticias.</p>
-                <div className="d-flex flex-column flex-sm-row w-100 gap-2">
+                <div className="d-flex flex-column flex-sm-row  gap-2">
                   <label for="newsletter1" className="visually-hidden">
                     Email
                   </label>
-                  <input
-                    id="newsletter1"
-                    type="text"
-                    className="form-control"
-                    placeholder="Email"
-                  />
+                  <input type="text" className="form-control" placeholder="Email" />
                   <button
                     className="btn goldenButton"
                     type="button"
@@ -84,13 +79,12 @@ function FooterWeb() {
               </form>
             </div>
           </div>
-
-          <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top mt-5">
-            <p>&copy; 2022 Todos los derechos reservados.</p>
-          </div>
         </div>
-      </Container>
-    </footer>
+      </footer>
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4  mt-5">
+        <p>&copy; 2022 Todos los derechos reservados.</p>
+      </div>
+    </Container>
   );
 }
 

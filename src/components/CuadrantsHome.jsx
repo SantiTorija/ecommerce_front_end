@@ -12,17 +12,17 @@ import handleAlert from "./Alert";
 
 function CuadrantsHome() {
   return (
-    <Container fluid className="m-0 p-0 ">
-      <Row className="d-flex containerCuadrants">
+    <Container fluid className=" p-0" style={{ marginTop: "10rem" }}>
+      <Row className="d-flex containerCuadrants  p-0 m-0">
         <Col
-          className="m-0 p-0 d-flex flex-column align-items-center  justify-content-center "
+          className="mx-0 mt-2 p-0 d-flex flex-column align-items-center  justify-content-center cuadrantColumn"
           style={{
-            backgroundImage: `linear-gradient(rgba(2,0,36,0.3) 10%, rgba(0,0,0,0.3) 100%),url(${cuadrants1})`,
+            backgroundImage: `linear-gradient(rgba(19,19,19,0.3) 10%, rgba(19,19,19,0.3) 100%),url(${cuadrants1})`,
             backgroundPosition: "center",
             backgroundSize: "cover",
           }}
         >
-          <Link to={`/tienda`}>
+          <Link to={`/tienda/todos`}>
             <button className="button-cuadrant ">
               <Cart color="white" size={25} />
               <h2 className="textCuadrants mt-2">Tienda</h2>
@@ -31,9 +31,9 @@ function CuadrantsHome() {
         </Col>
 
         <Col
-          className="m-0 p-0 d-flex flex-column align-items-center  justify-content-center "
+          className="mx-0 mt-2 p-0 d-flex flex-column align-items-center  justify-content-center cuadrantColumn"
           style={{
-            backgroundImage: `linear-gradient(rgba(2,0,36,0.3) 10%, rgba(0,0,0,0.3) 100%),url(${cuadrants2})`,
+            backgroundImage: `linear-gradient(rgba(19,19,19,0.3) 10%, rgba(19,19,19,0.3) 100%),url(${cuadrants2})`,
             backgroundPosition: "center",
             backgroundSize: "cover",
           }}
@@ -46,9 +46,9 @@ function CuadrantsHome() {
           </Link>
         </Col>
         <Col
-          className="m-0 p-0 d-flex flex-column align-items-center  justify-content-center "
+          className="mx-0 mt-2 p-0 d-flex flex-column align-items-center  justify-content-center cuadrantColumn"
           style={{
-            backgroundImage: `linear-gradient(rgba(2,0,36,0.3) 10%, rgba(0,0,0,0.3) 100%),url(${cuadrants3})`,
+            backgroundImage: `linear-gradient(rgba(19,19,19,0.3) 10%, rgba(19,19,19,0.3) 100%),url(${cuadrants3})`,
             backgroundPosition: "center",
             backgroundSize: "cover",
           }}
@@ -61,9 +61,9 @@ function CuadrantsHome() {
           </Link>
         </Col>
         <Col
-          className="m-0 p-0 d-flex flex-column align-items-center  justify-content-center"
+          className="mx-0 mt-2 p-0 d-flex flex-column align-items-center  justify-content-center cuadrantColumn"
           style={{
-            backgroundImage: `linear-gradient(rgba(2,0,36,0.3) 10%, rgba(0,0,0,0.3) 100%),url(${cuadrants4})`,
+            backgroundImage: `linear-gradient(rgba(19,19,19,0.3) 10%, rgba(19,19,19,0.3) 100%),url(${cuadrants4})`,
             backgroundPosition: "center",
             backgroundSize: "cover",
           }}

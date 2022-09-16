@@ -41,7 +41,7 @@ function OffCanvasCart({ name, ...props }) {
 
   return (
     <>
-      <button onClick={handleShow} className="me-4 off-canvas-navbar-button">
+      <button onClick={handleShow} className="off-canvas-navbar-button p-0">
         <AiOutlineShoppingCart
           style={{ color: "rgba(240, 240, 240, 0.799)", fontSize: "1.5rem" }}
         />

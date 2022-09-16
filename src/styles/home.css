@@ -54,8 +54,8 @@
 }
 
 .containerCuadrants {
-  height: 200px;
   max-width: 100%;
+  min-width: 100%;
 }
 
 .textBodyCarousel {
@@ -64,9 +64,45 @@
   color: rgba(240, 240, 240, 0.799);
 }
 
+.cuadrantColumn {
+  height: 20rem;
+  width: 20rem;
+}
+
 .textTitleCarousel {
   font-family: "Quattrocento", serif;
   font-weight: 700;
   font-size: 40px;
   color: white;
+}
+
+#videoHero {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* background-image: linear-gradient(rgba(19, 19, 19, 0.3) 10%, rgba(19, 19, 19, 0.3) 100%); */
+}
+
+@media (max-width: 768px) {
+  .cuadrantColumn {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 962px) {
+  .cuadrantColumn {
+    min-width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .cuadrantColumn {
+    min-width: 100%;
+  }
+}
+
+#newsletter1 {
+  width: 10rem;
 }
