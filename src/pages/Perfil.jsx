@@ -69,7 +69,7 @@ function Perfil() {
     InfoUser();
   }, []);
   return (
-    <>
+    <div style={{ minHeight: "55vh" }}>
       {userState.token ? (
         <>
           <div className="container pt-5">
@@ -211,7 +211,7 @@ function Perfil() {
           </div>
         </>
       ) : (
-        <>
+        <div>
           <div className="d-flex justify-content-center pt-5">
             <h3 className="text-white mt-5">Mi cuenta</h3>
           </div>
@@ -221,9 +221,9 @@ function Perfil() {
               Para acceder a esta sección debes iniciar sesión
             </h5>
           </div>
-        </>
+        </div>
       )}
-    </>
+    </div>
   );
 }
 export default Perfil;
