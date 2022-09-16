@@ -1,19 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
 
-.title{
-    font-family: "Raleway", sans-serif;
-    color: rgba(222, 222, 222, 0.743);
+.title {
+  font-family: "Raleway", sans-serif;
+  color: rgba(222, 222, 222, 0.743);
+  font-size: 1rem;
 }
 
-.button{
-    font-weight: 600;  
+.button {
+  font-weight: 600;
   padding: 1rem 1.5rem;
   background-color: #fbb801ac;
   border: 1px solid #fbb801ac;
   color: rgb(19, 19, 19);
 }
 
-.about-proyect-paraghraph{
+.about-proyect-paraghraph {
   font-family: "Raleway", sans-serif;
-    color: rgba(222, 222, 222, 0.743);
+  color: rgba(222, 222, 222, 0.743);
 }
