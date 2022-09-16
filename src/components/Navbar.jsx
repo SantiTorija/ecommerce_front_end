@@ -68,8 +68,9 @@ function NavBarV2({ setShowCart, showCart, modalLoginShow, setModalLoginShow }) 
         <div className=" d-flex align-items-center justify-content-between  headerIcons ">
           <Link to={""}>
             <Search
-              onClick={handleAlert("Esta funcionalidad esta fuera del alcance del proyecto")}
+              onClick={() => handleAlert("Esta funcionalidad esta fuera del alcance del proyecto")}
               color="rgba(240, 240, 240, 0.799)"
+              className="me-2"
               size={19}
               style={{
                 backgroundSize: "cover",

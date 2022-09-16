@@ -114,7 +114,7 @@ function LoginModal(props) {
   return (
     <>
       {userState.token ? (
-        <button className="btn button__person">
+        <button className="btn button__person me-2">
           <Person color="rgba(240, 240, 240, 0.799)" size={25} onClick={handleLogin} />
         </button>
       ) : (
