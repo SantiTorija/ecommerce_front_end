@@ -44,7 +44,7 @@ function BasicExample() {
       <tbody>
         {cartState.map((wine) => {
           return (
-            <tr>
+            <tr key={wine._id}>
               <td>
                 <DeleteModal wine={wine} />
               </td>
