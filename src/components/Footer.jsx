@@ -80,7 +80,7 @@ function FooterWeb() {
           </div>
         </div>
       </footer>
-      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4  mt-5">
+      <div className="d-flex flex-column flex-sm-row justify-content-between py-4 my-4  mt-5">
         <p>&copy; 2022 Todos los derechos reservados.</p>
       </div>
     </Container>

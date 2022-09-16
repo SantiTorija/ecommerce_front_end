@@ -15,8 +15,8 @@ export const Home = (props) => {
       {/* <FeatureHome /> */}
       <HomeTitle />
       <CuadrantsHome />
-      <AboutThisProyectHome />
       <Highlighted setShowCart={props.setShowCart} />
+      <AboutThisProyectHome />
     </>
   );
 };

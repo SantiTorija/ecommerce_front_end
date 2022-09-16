@@ -37,7 +37,7 @@ function ProductCard({ wine, setShowCart }) {
           <Card.Img className="mt-5 image-card" variant="top" src={wine.picture} />
           <Card.Body>
             <div style={{ position: "relative" }}>
-              <h2 className="wine-name wine__title text-center">{wine.name}</h2>
+              <h2 className="wine-name text-center">{wine.name}</h2>
             </div>
           </Card.Body>
         </div>
@@ -74,7 +74,7 @@ function ProductCard({ wine, setShowCart }) {
             textTransform: "capitalize",
           }}
         >
-          {wine.type.name}
+          {wine.type?.name}
         </span>
       </Card>
     </div>

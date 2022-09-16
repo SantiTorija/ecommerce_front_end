@@ -36,7 +36,11 @@ function ShowShop(props) {
             onClick={() => setType("todos")}
             className="link mx-1"
             to={"/tienda/todos"}
-            style={{ color: type === "todos" ? "#fbb701" : "white", transition: "0.15s" }}
+            style={{
+              color: type === "todos" ? "#fbb701" : "white",
+              transition: "0.15s",
+              fontWeight: type === "todos" ? "600" : "400",
+            }}
           >
             Todos
           </Link>
@@ -45,7 +49,11 @@ function ShowShop(props) {
             onClick={() => setType("tinto")}
             className="link mx-1"
             to={"/tienda/tinto"}
-            style={{ color: type === "tinto" ? "#fbb701" : "white", transition: "0.15s" }}
+            style={{
+              color: type === "tinto" ? "#fbb701" : "white",
+              transition: "0.15s",
+              fontWeight: type === "tinto" ? "600" : "400",
+            }}
           >
             tinto
           </Link>
@@ -54,7 +62,11 @@ function ShowShop(props) {
             onClick={() => setType("blanco")}
             className="link mx-1"
             to={"/tienda/blanco"}
-            style={{ color: type === "blanco" ? "#fbb701" : "white", transition: "0.15s" }}
+            style={{
+              color: type === "blanco" ? "#fbb701" : "white",
+              transition: "0.15s",
+              fontWeight: type === "blanco" ? "600" : "400",
+            }}
           >
             blanco
           </Link>
@@ -63,7 +75,11 @@ function ShowShop(props) {
             onClick={() => setType("rose")}
             className="link mx-1"
             to={"/tienda/rose"}
-            style={{ color: type === "rose" ? "#fbb701" : "white", transition: "0.15s" }}
+            style={{
+              color: type === "rose" ? "#fbb701" : "white",
+              transition: "0.15s",
+              fontWeight: type === "rose" ? "600" : "400",
+            }}
           >
             rose
           </Link>
@@ -72,7 +88,11 @@ function ShowShop(props) {
             onClick={() => setType("espumante")}
             className="link mx-1"
             to={"/tienda/espumante"}
-            style={{ color: type === "espumante" ? "#fbb701" : "white", transition: "0.15s" }}
+            style={{
+              color: type === "espumante" ? "#fbb701" : "white",
+              transition: "0.15s",
+              fontWeight: type === "espumante" ? "600" : "400",
+            }}
           >
             espumante
           </Link>

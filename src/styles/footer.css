@@ -15,7 +15,11 @@ footer {
 }
 
 .goldenButton {
-  background-color: #c89500;
+  background-color: #c89500 !important;
+}
+
+.goldenButton:hover{
+  background-color: transparent !important;
 }
 
 p {

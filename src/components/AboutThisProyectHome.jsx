@@ -10,7 +10,7 @@ function AboutThisProyectHome() {
       <div className="d-flex justify-content-between w-100 mt-5 ">
         <div style={{ marginLeft: "4rem" }}>
           <h2 className="title">
-            <AiOutlineLine /> El proyecto <AiOutlineLine />
+            <AiOutlineLine /> SOBRE EL PROYECTO <AiOutlineLine />
           </h2>
 
           <div style={{ width: "80%" }}>
