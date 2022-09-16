@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "../styles/Wine.css";
 import { useDispatch, useSelector } from "react-redux";
 import { addFirstTime, setNumber } from "../redux/cartSlice";

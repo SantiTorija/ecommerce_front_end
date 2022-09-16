@@ -1,13 +1,11 @@
-import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React from "react";
+import { useDispatch } from "react-redux";
 import Popup from "reactjs-popup";
 import { AiFillDelete } from "react-icons/ai";
 import { deleteItem } from "../redux/cartSlice";
 import "../styles/Wine.css";
-import { useNavigate } from "react-router";
 
 function DeleteModal({ wine }) {
-  const [isOpen, setIsOpen] = useState(false);
   const dispatch = useDispatch();
 
   return (

@@ -1,5 +1,3 @@
-import axios from "axios";
-import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import "../styles/formulario.css";
 

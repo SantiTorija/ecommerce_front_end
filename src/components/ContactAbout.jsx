@@ -1,5 +1,4 @@
 import "../styles/contact.css";
-import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import { Envelope, Telephone, Whatsapp, Shop } from "react-bootstrap-icons";

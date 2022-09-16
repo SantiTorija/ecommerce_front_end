@@ -5,7 +5,6 @@ import "../styles/mycart.css";
 import handleAlert from "./Alert";
 import { deleteAllItems } from "../redux/cartSlice";
 import { useDispatch } from "react-redux";
-import { isFulfilled } from "@reduxjs/toolkit";
 
 function PaymentCard() {
   const cartState = useSelector((state) => state.cart);

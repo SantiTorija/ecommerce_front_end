@@ -1,7 +1,6 @@
 import Table from "react-bootstrap/Table";
 import { useDispatch, useSelector } from "react-redux";
-import { addFirstTime, setNumber, deleteItem } from "../redux/cartSlice";
-import { AiFillDelete } from "react-icons/ai";
+import { addFirstTime, setNumber } from "../redux/cartSlice";
 import DeleteModal from "./Deletemodal";
 import "../styles/Wine.css";
 
@@ -19,15 +18,6 @@ function BasicExample() {
       }
     }
   };
-
-  function destroyWine(wine) {
-    const isWine = cartState.find((element) => element._id === wine._id);
-    console.log(isWine);
-    if (isWine) {
-      dispatch(deleteItem({ id: isWine._id }));
-      console.log("lo borre");
-    }
-  }
 
   return (
     <Table className="text-white align-middle">

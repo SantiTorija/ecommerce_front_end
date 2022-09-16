@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import "../styles/offCanvasNav.css";
@@ -6,13 +6,12 @@ import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
 import { useSelector } from "react-redux";
 import CantidadCart from "./CantidadCart";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import handleAlert from "./Alert";
 import texturadoNegro from "../assets/images/fondonegrotexturado.jpg";
 
 function OffCanvasCart({ name, ...props }) {
   const cartState = useSelector((state) => state.cart);
-  const [show, setShow] = useState(false);
   const navigate = useNavigate();
 
   const handleShow = () => props.setShowCart(true);

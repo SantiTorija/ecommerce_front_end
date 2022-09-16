@@ -1,14 +1,11 @@
 import handleAlert from "./Alert";
 import "../styles/navbar.css";
 import Container from "react-bootstrap/Container";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
 import newHackWinesLogo from "../assets/images/newHackWinesLogo.png";
 import OffCanvasCart from "./OffCanvasCart";
 import { Link } from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
-import { Search, List } from "react-bootstrap-icons";
+import { Search } from "react-bootstrap-icons";
 import LoginModal from "../components/LoginModal";
 import { useState, useEffect } from "react";
 import RegisterModal from "./RegisterModal";

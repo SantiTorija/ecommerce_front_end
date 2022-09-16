@@ -1,4 +1,3 @@
-import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import React, { useState } from "react";
 import { Person } from "react-bootstrap-icons";
@@ -9,7 +8,7 @@ import newHackWinesLogo from "../assets/images/newHackWinesLogo.png";
 import axios from "axios";
 import { login } from "../redux/userSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import handleAlert from "./Alert";
 
 function MyVerticallyCenteredModal(props) {
