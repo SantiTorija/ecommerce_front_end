@@ -17,7 +17,7 @@ function ShowShop(props) {
         method: "GET",
         url: `${process.env.REACT_APP_API_URL}wines/filter/${type}`,
       });
-      setWines(response.data);
+      setWines(response.data.slice(0, 16));
       return response;
     };
     dataWine();

@@ -23,7 +23,7 @@ function PaymentCard() {
     try {
       await axios({
         method: "post",
-        url: `${process.env.REACT_APP_API_URL}orders`, // variables de entorno
+        url: `${process.env.REACT_APP_API_URL}orders`,
         data: { total: calculateTotal(), products: cartState },
         headers: {
           Authorization: `Bearer ${userState.token}`,

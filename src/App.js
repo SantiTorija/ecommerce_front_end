@@ -12,6 +12,7 @@ import { useState } from "react";
 import AboutThisProyect from "./pages/AboutThisProyect";
 import { Contact } from "./pages/Contact";
 import Perfil from "./pages/Perfil";
+import ProtectedRoute from "./components/PrivateRoutes";
 
 function App() {
   const [showCart, setShowCart] = useState(false);
@@ -38,8 +39,11 @@ function App() {
         <Route path="/cart" element={<Cart setModalLoginShow={setModalLoginShow} />} />
         <Route path="/aboutThisProyect" element={<AboutThisProyect />} />
         <Route path="/contacto" element={<Contact />} />
-        <Route path="/miPerfil/:seccion" element={<Perfil />} />
+        <Route element={<ProtectedRoute />}>
+          <Route path="/miPerfil/:seccion" element={<Perfil />} />
+        </Route>
         <Route path="/product/:slug" element={<Wine setShowCart={setShowCart} />} />
+        <Route path="*" element={<Home setShowCart={setShowCart} />} />
       </Routes>
 
       <Footer />
