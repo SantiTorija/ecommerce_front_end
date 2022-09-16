@@ -5,6 +5,7 @@ import "../styles/mycart.css";
 import handleAlert from "./Alert";
 import { deleteAllItems } from "../redux/cartSlice";
 import { useDispatch } from "react-redux";
+import { isFulfilled } from "@reduxjs/toolkit";
 
 function PaymentCard() {
   const cartState = useSelector((state) => state.cart);
@@ -19,20 +20,33 @@ function PaymentCard() {
     return result;
   }
 
+  function validateStock() {
+    for (const wine of cartState) {
+      if (wine.cartQuantity > wine.stock) {
+        return false;
+      }
+    }
+    return true;
+  }
+
   async function storeOrder() {
-    try {
-      await axios({
-        method: "post",
-        url: `${process.env.REACT_APP_API_URL}orders`,
-        data: { total: calculateTotal(), products: cartState },
-        headers: {
-          Authorization: `Bearer ${userState.token}`,
-          "Content-Type": "application/json",
-        },
-      });
-      dispatch(deleteAllItems());
-    } catch (error) {
-      handleAlert(error.response.data.error);
+    if (validateStock()) {
+      try {
+        await axios({
+          method: "post",
+          url: `${process.env.REACT_APP_API_URL}orders`,
+          data: { total: calculateTotal(), products: cartState },
+          headers: {
+            Authorization: `Bearer ${userState.token}`,
+            "Content-Type": "application/json",
+          },
+        });
+        dispatch(deleteAllItems());
+      } catch (error) {
+        handleAlert(error.response.data.error);
+      }
+    } else {
+      handleAlert("La compra no fue realizada por falta de stock");
     }
   }
 
@@ -40,7 +54,6 @@ function PaymentCard() {
     <form
       className="col-3 flex-column card__payment"
       onSubmit={(e) => {
-        e.preventDefault();
         storeOrder();
         navigate("/miPerfil/misCompras");
       }}
