@@ -69,7 +69,7 @@ function Perfil() {
     InfoUser();
   }, []);
   return (
-    <>
+    <div style={{ minHeight: "55vh" }}>
       {userState.token ? (
         <>
           <div className="container pt-5">
@@ -181,7 +181,7 @@ function Perfil() {
                       <tbody>
                         {user?.orders?.map((order) => {
                           return (
-                            <tr>
+                            <tr key={order._id}>
                               <td className=" text-center">{order.Date.split("T")[0]}</td>
                               <td className=" text-center">
                                 {order._id || "6321f7c9282a57a72de54a76"}
@@ -211,7 +211,7 @@ function Perfil() {
           </div>
         </>
       ) : (
-        <>
+        <div>
           <div className="d-flex justify-content-center pt-5">
             <h3 className="text-white mt-5">Mi cuenta</h3>
           </div>
@@ -221,9 +221,9 @@ function Perfil() {
               Para acceder a esta sección debes iniciar sesión
             </h5>
           </div>
-        </>
+        </div>
       )}
-    </>
+    </div>
   );
 }
 export default Perfil;

@@ -48,10 +48,10 @@ function MyVerticallyCenteredModal(props) {
     props.setModalLoginShow(false);
     props.setModalRegisterShow(true);
   }
-
+  const { modalRegisterShow, setModalRegisterShow, setModalLoginShow, ...modalProps } = props;
   return (
     <Modal
-      {...props}
+      {...modalProps}
       size="md"
       aria-labelledby="contained-modal-title-vcenter"
       centered

@@ -60,15 +60,14 @@ function FooterWeb() {
               <form className="w-100">
                 <h3 className="titleFooter">NEWSLETTER</h3>
                 <p>Suscribite, y recibi antes que nadie nuestras promociones y noticias.</p>
-                <div className="d-flex flex-column flex-sm-row  gap-2">
-                  <label for="newsletter1" className="visually-hidden">
+                <div className="d-flex flex-column flex-sm-row w-100 gap-2">
+                  <label htmlFor="newsletter1" className="visually-hidden">
                     Email
                   </label>
                   <input type="text" className="form-control" placeholder="Email" />
                   <button
                     className="btn goldenButton"
                     type="button"
-                    showCloseButton
                     onClick={() =>
                       handleAlert("Esta funcionalidad está fuera del alcance del proyecto")
                     }
