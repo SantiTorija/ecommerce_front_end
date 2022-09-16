@@ -12,7 +12,7 @@ import handleAlert from "./Alert";
 
 function CuadrantsHome() {
   return (
-    <Container fluid className=" p-0" style={{ marginTop: "10rem" }}>
+    <Container fluid className=" p-0">
       <Row className="d-flex containerCuadrants  p-0 m-0">
         <Col
           className="mx-0 mt-2 p-0 d-flex flex-column align-items-center  justify-content-center cuadrantColumn"

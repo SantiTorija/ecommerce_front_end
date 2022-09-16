@@ -106,3 +106,12 @@
 #newsletter1 {
   width: 10rem;
 }
+
+#homeTitle {
+  height: 12rem;
+  font-size: 1.5rem;
+}
+
+.wine__title {
+  font-size: 1.5rem;
+}
