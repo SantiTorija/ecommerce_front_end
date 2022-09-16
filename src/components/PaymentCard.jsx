@@ -11,6 +11,7 @@ function PaymentCard() {
   const userState = useSelector((state) => state.user);
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
   function calculateTotal() {
     let result = 0;
     for (const wine of cartState) {
@@ -24,7 +25,7 @@ function PaymentCard() {
       await axios({
         method: "post",
         url: `${process.env.REACT_APP_API_URL}orders`, // variables de entorno
-        data: { total: calculateTotal(), products: cartState },
+        data: { total: calculateTotal() * 1.22, products: cartState },
         headers: {
           Authorization: `Bearer ${userState.token}`,
           "Content-Type": "application/json",

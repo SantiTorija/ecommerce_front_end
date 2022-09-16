@@ -187,7 +187,8 @@ function Perfil() {
                                 {order._id || "6321f7c9282a57a72de54a76"}
                               </td>
                               <td className=" text-center">{order.state || "recibida"}</td>
-                              <td className=" text-center">{order.total || 34}$ USD</td>
+
+                              <td className=" text-center">{order.total || 34} US$</td>
                             </tr>
                           );
                         })}
