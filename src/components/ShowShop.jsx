@@ -15,7 +15,7 @@ function ShowShop(props) {
     const dataWine = async () => {
       const response = await axios({
         method: "GET",
-        url: `http://localhost:8000/wines/filter/${type}`,
+        url: `${process.env.REACT_APP_API_URL}wines/filter/${type}`,
       });
       setWines(response.data);
       return response;
@@ -32,6 +32,15 @@ function ShowShop(props) {
             <span className="wine__title">SELECCIONAR TIPO</span>
             <AiOutlineLine className="text-white ms-2" />
           </div>
+          <Link
+            onClick={() => setType("todos")}
+            className="link mx-1"
+            to={"/tienda/todos"}
+            style={{ color: type === "todos" ? "#fbb701" : "white", transition: "0.15s" }}
+          >
+            Todos
+          </Link>
+          ·
           <Link
             onClick={() => setType("tinto")}
             className="link mx-1"
@@ -66,15 +75,6 @@ function ShowShop(props) {
             style={{ color: type === "espumante" ? "#fbb701" : "white", transition: "0.15s" }}
           >
             espumante
-          </Link>
-          ·
-          <Link
-            onClick={() => setType("licoroso")}
-            className="link mx-1"
-            to={"/tienda/licoroso"}
-            style={{ color: type === "licoroso" ? "#fbb701" : "white", transition: "0.15s" }}
-          >
-            licoroso
           </Link>
         </div>
         <Container className="d-flex justify-content-center row mb-5">

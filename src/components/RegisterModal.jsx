@@ -25,7 +25,7 @@ function MyVerticallyCenteredModal(props) {
     try {
       const response = await axios({
         method: "post",
-        url: `http://localhost:8000/users`,
+        url: `${process.env.REACT_APP_API_URL}users`,
         data: { email, password, firstname, lastname, address, phone },
       });
       props.setModalRegisterShow(false);

@@ -25,7 +25,7 @@ function Formulario() {
             type="password"
             className="form-control"
             id="inputPassword4"
-            placeholder="Password"
+            placeholder="********"
           />
         </div>
       </div>

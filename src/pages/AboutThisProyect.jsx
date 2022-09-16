@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../styles/aboutThisProyect.css";
 
 function AboutThisProyect() {
@@ -49,65 +50,89 @@ function AboutThisProyect() {
         <div className="row d-flex justify-content-around text-white">
           <div className="col-4 card__linkdin d-flex flex-column align-items-center p-2">
             <img
-              src="https://cdn2.iconfinder.com/data/icons/user-people-4/48/5-512.png"
+              src="https://media-exp1.licdn.com/dms/image/C4E03AQFb0YlGuLybsg/profile-displayphoto-shrink_200_200/0/1567624582077?e=1668643200&v=beta&t=KW1PoGDIZtciWrajdnP07eYSgRi_tqx3uy0xYJ1vz0w"
               alt="profile_logo"
               className="profile_logo_linkedin"
             ></img>
             <h5>Guillermo Galain</h5>
             <h5>Full Stack Developer</h5>
             <div className="d-flex">
-              <img
-                src="https://assets.stickpng.com/images/58e91afdeb97430e81906504.png"
-                alt="logo_linkedin"
-                className="img_linkedin me-2"
-              ></img>
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-                alt="logo_linkedin"
-                className="img_linkedin ms-2"
-              ></img>
+              <a
+                href="https://www.linkedin.com/in/guillermogalain/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/640px-LinkedIn_logo_initials.png"
+                  alt="logo_linkedin"
+                  className="img_linkedin me-2"
+                ></img>
+              </a>
+              <a href="https://github.com/guillermogalain" target="_blank" rel="noreferrer">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                  alt="logo_github"
+                  className="img_linkedin ms-2"
+                ></img>
+              </a>
             </div>
           </div>
           <div className="col-4 card__linkdin d-flex flex-column align-items-center p-2">
             <img
-              src="https://cdn2.iconfinder.com/data/icons/user-people-4/48/5-512.png"
+              src="https://media-exp1.licdn.com/dms/image/C4D03AQFX8ZJxJKbv3A/profile-displayphoto-shrink_200_200/0/1627398847167?e=1668643200&v=beta&t=9ZrTQX5KWZmj7iVSHG0uvKrjHcMn4W8cEvpyws4aEEM"
               alt="profile_logo"
               className="profile_logo_linkedin"
             ></img>
             <h5>Santiago Torija</h5>
             <h5>Full Stack Developer</h5>
             <div className="d-flex">
-              <img
-                src="https://assets.stickpng.com/images/58e91afdeb97430e81906504.png"
-                alt="logo_linkedin"
-                className="img_linkedin me-2"
-              ></img>
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-                alt="logo_linkedin"
-                className="img_linkedin ms-2"
-              ></img>
+              <a
+                href="https://www.linkedin.com/in/santiago-torija-31951113b/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/640px-LinkedIn_logo_initials.png"
+                  alt="logo_linkedin"
+                  className="img_linkedin me-2"
+                ></img>
+              </a>
+              <a href="https://github.com/SantiTorija" target="_blank" rel="noreferrer">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                  alt="logo_github"
+                  className="img_linkedin ms-2"
+                ></img>
+              </a>
             </div>
           </div>
           <div className="col-4 card__linkdin d-flex flex-column align-items-center p-2 ">
             <img
-              src="https://cdn2.iconfinder.com/data/icons/user-people-4/48/5-512.png"
+              src="https://media-exp1.licdn.com/dms/image/C4D03AQF6giCFp2NWXg/profile-displayphoto-shrink_200_200/0/1648464031374?e=1668643200&v=beta&t=PkN39jeL0QYJjlIfqqLPksHJpa0lcx-mb5QexekQ2ck"
               alt="profile_logo"
               className="profile_logo_linkedin"
             ></img>
             <h5>Alan Katz</h5>
             <h5>Full Stack Developer</h5>
             <div className="d-flex">
-              <img
-                src="https://assets.stickpng.com/images/58e91afdeb97430e81906504.png"
-                alt="logo_linkedin"
-                className="img_linkedin me-2"
-              ></img>
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-                alt="logo_linkedin"
-                className="img_linkedin ms-2"
-              ></img>
+              <a
+                href="https://www.linkedin.com/in/alan-katz-401468101/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/640px-LinkedIn_logo_initials.png"
+                  alt="logo_linkedin"
+                  className="img_linkedin me-2"
+                ></img>
+              </a>
+              <a href="https://github.com/alankatz3793" target="_blank" rel="noreferrer">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                  alt="logo_linkedin"
+                  className="img_linkedin ms-2"
+                ></img>
+              </a>
             </div>
           </div>
         </div>

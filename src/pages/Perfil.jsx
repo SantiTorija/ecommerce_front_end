@@ -27,7 +27,7 @@ function Perfil() {
     try {
       const response = await axios({
         method: "patch",
-        url: `http://localhost:8000/users/${userState.id}`,
+        url: `${process.env.REACT_APP_API_URL}users/${userState.id}`,
         data: { email, password, firstname, lastname, phone, address },
         headers: {
           Authorization: `Bearer ${userState.token}`,
@@ -54,7 +54,7 @@ function Perfil() {
       try {
         const response = await axios({
           method: "get",
-          url: `http://localhost:8000/users/${userState.id}`,
+          url: `${process.env.REACT_APP_API_URL}users/${userState.id}`,
           headers: {
             Authorization: `Bearer ${userState.token}`,
             "Content-Type": "application/json",

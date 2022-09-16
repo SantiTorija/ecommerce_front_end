@@ -49,7 +49,7 @@ const Cart = (props) => {
       <>
         <div className="pt-5 cart__main">
           <h3 className="cart__title text-white pt-5 pb-3 d-flex justify-content-center">
-            MY CART
+            MI CARRITO
             <span>
               <LocalMallIcon className="mx-2 " />
             </span>
@@ -60,28 +60,28 @@ const Cart = (props) => {
                 <BasicExample />
               </div>
               <div className=" col-4 cart__card">
-                <h3>SUMMARY</h3>
+                <h3>RESUMEN</h3>
                 <div className="d-flex justify-content-between">
-                  <p>Sub-Total ({calcularItems()} items)</p>{" "}
+                  <p>Sub-Total ({calcularItems() || 0} items)</p>{" "}
                   <p> ${Math.round(calcularTotal() * 10) / 10}</p>
                 </div>
                 <div className="d-flex justify-content-between">
-                  <p>Envio:</p> <p> ${Math.round(calcularTotal() * 0.22 * 10) / 10}</p>
+                  <p>Envio:</p> <p> ${Math.round(calcularTotal() * 0.1 * 10) / 10}</p>
                 </div>
                 <div className="d-flex justify-content-between">
-                  <p>IVA:</p> <p> ${Math.round(calcularTotal() * 0.1 * 10) / 10}</p>
+                  <p>IVA:</p> <p> ${Math.round(calcularTotal() * 0.22 * 10) / 10}</p>
                 </div>
 
                 <div className="d-flex justify-content-between">
                   <p>Total Estimado:</p> <p> ${Math.round(calcularTotal() * 1.32 * 100) / 100}</p>
                 </div>
 
-                <div className="d-flex justify-content-center mt-2">
+                <div className=" mt-2 d-flex justify-content-center w-100">
                   <button
                     className="cart__finalizar__compra d-flex justify-content-center"
                     onClick={handleCheckout}
                   >
-                    CHECKOUT
+                    A PAGAR
                   </button>
                 </div>
               </div>
