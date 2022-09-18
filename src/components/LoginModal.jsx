@@ -108,14 +108,14 @@ function LoginModal(props) {
   return (
     <>
       {userState.token ? (
-        <Link className="button__person me-2" to="/miPerfil/misDatos">
+        <Link className="button__person me-4" to="/miPerfil/misDatos">
           <Person color="rgba(240, 240, 240, 0.799)" size={25} />
         </Link>
       ) : (
-        <button className=" button__person ">
+        <button className=" button__person me-4">
           <Person
             color="rgba(240, 240, 240, 0.799)"
-            size={20}
+            size={25}
             onClick={() => props.setModalLoginShow(true)}
           />
         </button>
