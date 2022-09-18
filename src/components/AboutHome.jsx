@@ -10,7 +10,10 @@ function AboutHome() {
     <div className="aboutHome d-flex flex-column align-items-center justify-content-center">
       <Container>
         <div className="d-flex flex-column align-items-center justify-content-center gap-2">
-          <Link to="" onClick={() => handleAlert("This function is out of scope.")}>
+          <Link
+            to=""
+            onClick={() => handleAlert("Esta función esta fuera del alcance del proyecto.")}
+          >
             <InfoSquare color="white" size={25}>
               Saber mas
             </InfoSquare>
