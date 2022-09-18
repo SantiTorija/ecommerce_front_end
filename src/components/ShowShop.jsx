@@ -51,6 +51,13 @@ function ShowShop(props) {
     }
   }
 
+  function setWineType(value) {
+    setType(value);
+    setPage(1);
+    setMinNum(0);
+    setMaxNum(12);
+  }
+
   if (wines) {
     return (
       <>
@@ -61,65 +68,65 @@ function ShowShop(props) {
             <AiOutlineLine className="text-white ms-2" />
           </div>
           <Link
-            onClick={() => setType("todos")}
+            onClick={() => setWineType("todos")}
             className="link mx-1"
             to={"/tienda/todos"}
             style={{
               color: type === "todos" ? "#fbb701" : "white",
               transition: "0.15s",
-              fontWeight: type === "todos" ? "600" : "400",
+              fontWeight: type === "todos" ? "500" : "400",
             }}
           >
             Todos
           </Link>
           ·
           <Link
-            onClick={() => setType("tinto")}
+            onClick={() => setWineType("tinto")}
             className="link mx-1"
             to={"/tienda/tinto"}
             style={{
               color: type === "tinto" ? "#fbb701" : "white",
               transition: "0.15s",
-              fontWeight: type === "tinto" ? "600" : "400",
+              fontWeight: type === "tinto" ? "500" : "400",
             }}
           >
             tinto
           </Link>
           ·
           <Link
-            onClick={() => setType("blanco")}
+            onClick={() => setWineType("blanco")}
             className="link mx-1"
             to={"/tienda/blanco"}
             style={{
               color: type === "blanco" ? "#fbb701" : "white",
               transition: "0.15s",
-              fontWeight: type === "blanco" ? "600" : "400",
+              fontWeight: type === "blanco" ? "500" : "400",
             }}
           >
             blanco
           </Link>
           ·
           <Link
-            onClick={() => setType("rose")}
+            onClick={() => setWineType("rose")}
             className="link mx-1"
             to={"/tienda/rose"}
             style={{
               color: type === "rose" ? "#fbb701" : "white",
               transition: "0.15s",
-              fontWeight: type === "rose" ? "600" : "400",
+              fontWeight: type === "rose" ? "500" : "400",
             }}
           >
             rose
           </Link>
           ·
           <Link
-            onClick={() => setType("espumante")}
+            onClick={() => setWineType("espumante")}
             className="link mx-1"
             to={"/tienda/espumante"}
             style={{
               color: type === "espumante" ? "#fbb701" : "white",
               transition: "0.15s",
-              fontWeight: type === "espumante" ? "600" : "400",
+              fontWeight: type === "espumante" ? "500" : "400",
             }}
           >
             espumante

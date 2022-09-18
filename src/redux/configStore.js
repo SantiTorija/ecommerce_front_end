@@ -13,13 +13,13 @@ import {
   PURGE,
   REGISTER,
 } from "redux-persist";
-import storage from "redux-persist/lib/storage";
+import sessionStorage from 'redux-persist/es/storage/session';
 
 const rootReducer = combineReducers({ user: userSlice, cart: cartSlice });
 
 const persistConfig = {
   key: "root",
-  storage,
+  storage:sessionStorage,
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

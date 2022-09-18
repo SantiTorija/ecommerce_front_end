@@ -271,3 +271,20 @@ input[type="number"] {
   justify-content: center;
   align-items: center;
 }
+
+.button_flecha_cantidad{
+  color:#fbb701;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.contador__offcanvas{
+  height: 25px;
+  width: 70px;
+}
+
+.precio__subproducto{
+  width: 50px;
+  text-align: end;
+}

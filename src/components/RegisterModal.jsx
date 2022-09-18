@@ -60,10 +60,10 @@ function MyVerticallyCenteredModal(props) {
               Registrate con Apple
             </button>
             <p className="color-yellow">or</p>
-            <input
+            <div className="d-flex"><input
               type="text"
               placeholder="Ingrese su nombre"
-              className="input__modal"
+              className="input__modal input__name"
               value={firstname}
               onChange={(e) => setFirstname(e.target.value)}
               required
@@ -71,11 +71,12 @@ function MyVerticallyCenteredModal(props) {
             <input
               type="text"
               placeholder="Ingrese su apellido"
-              className="input__modal"
+              className="input__modal input__lastname"
               value={lastname}
               onChange={(e) => setLastname(e.target.value)}
               required
-            ></input>
+            ></input></div>
+            
             <input
               type="email"
               placeholder="Ingrese su email"
