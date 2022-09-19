@@ -10,19 +10,34 @@ function ContactAbout() {
       <Col className="position-relative ">
         <Col className="col__wine__first contactLeftColumn">
           <div className="w-100 d-flex">
-            <Shop size={20} color="rgba(240, 240, 240, 0.799)" className="me-3" />
+            <Shop size={20} color="#F0F0F0" className="me-3" />
             <h5 className="contactText">Avda Rivera 4321. Montevideo.</h5>
           </div>
           <div className="w-100 d-flex">
-            <Whatsapp size={20} color="rgba(240, 240, 240, 0.799)" className="me-3" />
+            <Whatsapp
+              size={20}
+              color="#F0F0F0
+"
+              className="me-3"
+            />
             <h5 className="contactText">+598 98 508 452.</h5>
           </div>
           <div className="w-100 d-flex">
-            <Telephone size={20} color="rgba(240, 240, 240, 0.799)" className="me-3" />
+            <Telephone
+              size={20}
+              color="#F0F0F0
+"
+              className="me-3"
+            />
             <h5 className="contactText">2709 54 34.</h5>
           </div>
           <div className="w-100 d-flex">
-            <Envelope size={20} color="rgba(240, 240, 240, 0.799)" className="me-3" />
+            <Envelope
+              size={20}
+              color="#F0F0F0
+"
+              className="me-3"
+            />
             <h5 className="contactText">contacto@hack-wines.com.</h5>
           </div>
         </Col>

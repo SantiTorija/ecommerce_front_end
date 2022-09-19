@@ -41,9 +41,7 @@ function OffCanvasCart({ name, ...props }) {
   return (
     <>
       <button onClick={handleShow} className="off-canvas-navbar-button p-0">
-        <AiOutlineShoppingCart
-          style={{ color: "rgba(240, 240, 240, 0.799)", fontSize: "1.5rem" }}
-        />
+        <AiOutlineShoppingCart style={{ color: "#F0F0F0", fontSize: "1.5rem" }} />
       </button>
       <Offcanvas
         show={props.showCart}
@@ -51,7 +49,7 @@ function OffCanvasCart({ name, ...props }) {
         {...offCanvasProps}
         className="canvas__main__cart"
         style={{
-          backgroundImage: `linear-gradient(rgba(23,23,23,0.5) 10%, rgba(10,10,10,0.9) 100%),url(${texturadoNegro})`,
+          backgroundImage: `linear-gradient(rgba(19,19,19,0.5) 10%, rgba(19,19,19,0.9) 100%),url(${texturadoNegro})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}
@@ -66,7 +64,7 @@ function OffCanvasCart({ name, ...props }) {
         <Offcanvas.Body>
           <div className="d-flex w-100 justify-content-center">
             <p className="text-white">
-              <span className="color__yellow me-1">
+              <span className="#F0A202">
                 <LocalShippingIcon />
               </span>{" "}
               {calcularTotal() * 1.32 < 500

@@ -14,10 +14,10 @@ function FooterWeb() {
             <div className="col-3 footerColumn">
               <img alt="hackWineslogo" src={newHackWinesLogo} />
               <div className="d-flex flex-row gap-2 mt-3">
-                <Instagram color="rgba(240, 240, 240, 0.799)" />
-                <Facebook color="rgba(240, 240, 240, 0.799)" />
-                <Whatsapp color="rgba(240, 240, 240, 0.799)" />
-                <Envelope color="rgba(240, 240, 240, 0.799)" />
+                <Instagram color="#F0F0F0" />
+                <Facebook color="#F0F0F0" />
+                <Whatsapp color="#F0F0F0" />
+                <Envelope color="#F0F0F0" />
               </div>
             </div>
 
@@ -68,9 +68,7 @@ function FooterWeb() {
                   <button
                     className="btn goldenButton"
                     type="button"
-                    onClick={() =>
-                      handleAlert("Esta funcionalidad está fuera del alcance del proyecto")
-                    }
+                    onClick={() => handleAlert("Esta función esta fuera del alcance del proyecto.")}
                   >
                     Subscribite
                   </button>

@@ -1,5 +1,5 @@
 .card__payment {
-  color: white;
+  color: #f0f0f0;
   padding: 15px;
   height: 410px;
   background-color: #191919;
@@ -12,7 +12,7 @@
 }
 
 .button__pagar__final {
-  background-color: #fbb701;
+  background-color: #f0a202;
   padding: 20px;
   color: #363329;
   border: none;

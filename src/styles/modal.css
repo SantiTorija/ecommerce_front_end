@@ -11,7 +11,7 @@
   min-height: 30rem;
   border-radius: 3px;
   border: solid #484848 1px;
-  color: white;
+  color: #f0f0f0;
   display: flex;
   justify-items: center;
 }
@@ -29,7 +29,7 @@
   display: flex;
   justify-content: space-around;
   margin-bottom: 1.5rem;
-  color: #fbb701;
+  color: #f0a202;
   font-size: 50px;
 }
 
@@ -59,13 +59,13 @@
   margin-top: 10px;
   border: solid 1px rgb(19, 19, 19) !important;
   outline: none;
-  background-color: #fbb701;
+  background-color: #f0a202;
   color: rgb(19, 19, 19);
-  font-weight: 650;
+  font-weight: 700;
 }
 
 .color-yellow {
-  color: #fbb701;
+  color: #f0a202;
 }
 
 .btn__link__modales {

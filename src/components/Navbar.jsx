@@ -70,7 +70,7 @@ function NavBarV2({ setShowCart, showCart, modalLoginShow, setModalLoginShow }) 
           <Link to={""}>
             <Search
               onClick={() => handleAlert("Esta funcionalidad esta fuera del alcance del proyecto")}
-              color="rgba(240, 240, 240, 0.799)"
+              color="#F0F0F0"
               className="me-4"
               size={19}
               style={{

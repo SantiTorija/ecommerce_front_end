@@ -19,7 +19,7 @@ function AboutThisProyectHome() {
               integrador del web developer bootcamp, dictado por Hack Academy, un instituto
               especializado en forjar talentos para el rubro tecnológico.
             </p>
-            <hr style={{ color: "#fbb701" }} />
+            <hr style={{ color: "#F0A202" }} />
             <Link to={"/aboutThisProyect"}>
               {" "}
               <button className="mt-5 button">Ver más información</button>

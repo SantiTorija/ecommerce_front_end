@@ -13,7 +13,7 @@
   font-size: 15px;
   font-family: Raleway, sans-serif;
   font-size: 15px;
-  color: rgba(240, 240, 240, 0.799);
+  color: #f0f0f0;
 }
 
 .featureColumn {
@@ -21,10 +21,10 @@
 }
 
 .aboutText {
-  color: rgba(240, 240, 240, 0.799);
+  color: #f0f0f0;
   font-family: Raleway, sans-serif;
   font-size: 15px;
-  font-weight: 300;
+  font-weight: 200;
 }
 
 .button-cuadrant {
@@ -46,10 +46,10 @@
 }
 
 .textCuadrants {
-  color: white;
+  color: #f0f0f0;
   opacity: 0.9;
   font-family: "Quattrocento", serif;
-  font-weight: 700;
+  font-weight: bold;
   font-size: 20px;
 }
 
@@ -61,7 +61,7 @@
 .textBodyCarousel {
   font-family: Raleway, sans-serif;
   font-size: 20px;
-  color: rgba(240, 240, 240, 0.799);
+  color: #f0f0f0;
 }
 
 .cuadrantColumn {
@@ -73,7 +73,7 @@
   font-family: "Quattrocento", serif;
   font-weight: 700;
   font-size: 40px;
-  color: white;
+  color: #f0f0f0;
 }
 
 #videoHero {

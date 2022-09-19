@@ -59,7 +59,7 @@ function MyVerticallyCenteredModal(props) {
               <AppleIcon className="me-2" />
               Registrate con Apple
             </button>
-            <p className="color-yellow">or</p>
+            <p style={{ color: "F0A20" }}>or</p>
             <input
               type="text"
               placeholder="Ingrese su nombre"

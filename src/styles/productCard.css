@@ -12,19 +12,19 @@
   width: 16rem;
 }
 .cart-button {
-  font-weight: 600;
+  font-weight: 700;
   width: 6rem;
   padding: 0.5rem 1rem;
-  background-color: #fbb801ac;
-  border: 1px solid #fbb801ac;
+  background-color: #f0a202;
+  border: 1px solid #f0a202;
 }
 .more-info-button {
   width: 6rem;
   padding: 0.5rem 1rem;
   background-color: transparent;
-  border: 1px solid #fbb701;
-  color: #fbb701;
-  font-weight: 600;
+  border: 1px solid #f0a202;
+  color: #f0a202;
+  font-weight: 700;
   margin-left: 0.3rem;
 }
 
@@ -42,7 +42,7 @@
   font-size: 1rem;
   text-transform: uppercase;
   line-height: 1.5;
-  color: white;
+  color: #f0f0f0;
   display: block;
   letter-spacing: 2px;
   text-rendering: optimizeLegibility;
@@ -57,13 +57,12 @@
 
 .card-body {
   padding-left: 0.8rem !important;
-  padding-right:0.8rem !important ;
+  padding-right: 0.8rem !important ;
 }
 
-.wine-name{
+.wine-name {
   font-family: Raleway, sans-serif;
   font-size: 1rem;
-  color: rgba(240, 240, 240, 0.799);
+  color: #f0f0f0;
   margin-top: 0.8rem;
 }
-

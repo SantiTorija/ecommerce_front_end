@@ -2,19 +2,19 @@
 
 .title {
   font-family: "Raleway", sans-serif;
-  color: rgba(222, 222, 222, 0.743);
+  color: #f0f0f0;
   font-size: 1rem;
 }
 
 .button {
-  font-weight: 600;
+  font-weight: 400;
   padding: 1rem 1.5rem;
-  background-color: #fbb801ac;
-  border: 1px solid #fbb801ac;
-  color: rgb(19, 19, 19);
+  background-color: #f0a202;
+  border: 1px solid #f0a202;
+  color: #191919;
 }
 
 .about-proyect-paraghraph {
   font-family: "Raleway", sans-serif;
-  color: rgba(222, 222, 222, 0.743);
+  color: #f0f0f0;
 }

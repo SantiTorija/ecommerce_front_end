@@ -15,8 +15,8 @@
     url("../assets/images/heroContact.jpg");
 
   font-family: "Urbanist", sans-serif;
-  color: rgba(240, 240, 240, 0.799);
-  font-weight: bold;
+  color: #f0f0f0;
+  font-weight: 400;
 }
 
 .col__wine__first {
@@ -34,7 +34,7 @@
   content: " ";
   width: 80px;
   height: 80px;
-  border-color: white;
+  border-color: #f0f0f0;
   opacity: 0.6;
   border-style: solid;
 }
@@ -61,18 +61,18 @@
 
 .contactLeftColumn {
   height: 10rem;
-  background-color: #232323;
-  background: rgba(35, 35, 35, 0.5);
+  background-color: #191919;
+  background: rgba(19, 19, 19, 0.5);
 }
 
 h3 {
-  color: white;
+  color: #f0f0f0;
   font-family: "Urbanist", sans-serif;
 }
 
 .contactText {
-  color: rgba(240, 240, 240, 0.799);
-  font-weight: 300;
+  color: #f0f0f0;
+  font-weight: 200;
 }
 
 .contactRightColumn {
@@ -82,23 +82,23 @@ h3 {
 .inputContact {
   padding: 5px;
   border: 0;
-  border-bottom: 1px solid rgba(240, 240, 240, 0.799);
+  border-bottom: 1px solid #f0f0f0;
   background-color: transparent;
   border-radius: 0;
 }
 
 #formControlTextarea1 {
   border: 0;
-  border-bottom: 1px solid rgba(240, 240, 240, 0.799);
+  border-bottom: 1px solid #f0f0f0;
   background-color: transparent;
   border-radius: 0;
-  color: rgba(240, 240, 240, 0.799);
+  color: #f0f0f0;
   min-height: 40px;
 }
 
 .inputContact,
 label {
-  color: white;
+  color: #f0f0f0;
 }
 
 form {
@@ -106,24 +106,24 @@ form {
 }
 
 .inputContact:focus {
-  color: rgba(240, 240, 240, 0.799);
+  color: #f0f0f0;
   outline: none;
   box-shadow: 0 0 15px 4px rgba(255, 255, 255, 0.06);
 }
 
 #formControlTextarea1:focus {
-  color: rgba(240, 240, 240, 0.799);
+  color: #f0f0f0;
   outline: none;
   box-shadow: 0 0 15px 4px rgba(255, 255, 255, 0.06);
 }
 
 .formButton {
-  background-color: #c89500;
+  background-color: #f0a202;
   border-radius: 10%;
 }
 
 .formButton:hover {
-  color: white;
+  color: #f0f0f0;
 }
 
 @media (max-width: 1200px) {

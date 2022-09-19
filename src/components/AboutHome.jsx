@@ -14,7 +14,7 @@ function AboutHome() {
             to=""
             onClick={() => handleAlert("Esta función esta fuera del alcance del proyecto.")}
           >
-            <InfoSquare color="white" size={25}>
+            <InfoSquare color="#F0F0F0" size={25}>
               Saber mas
             </InfoSquare>
           </Link>
