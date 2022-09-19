@@ -22,7 +22,7 @@ function CuadrantsHome() {
             backgroundSize: "cover",
           }}
         >
-          <Link to={`/tienda/todos`}>
+          <Link to={`/tienda/todos`} className="d-flex w-100 h-100">
             <button className="button-cuadrant ">
               <Cart color="#F0F0F0" size={25} />
               <h2 className="textCuadrants mt-2">Tienda</h2>
@@ -39,6 +39,7 @@ function CuadrantsHome() {
           }}
         >
           <Link
+            className="d-flex w-100 h-100"
             to=""
             onClick={() => handleAlert("Esta función esta fuera del alcance del proyecto.")}
           >
@@ -57,6 +58,7 @@ function CuadrantsHome() {
           }}
         >
           <Link
+            className="d-flex w-100 h-100"
             to=""
             onClick={() => handleAlert("Esta función esta fuera del alcance del proyecto.")}
           >
@@ -75,6 +77,7 @@ function CuadrantsHome() {
           }}
         >
           <Link
+            className="d-flex w-100 h-100"
             to=""
             onClick={() => handleAlert("Esta función esta fuera del alcance del proyecto.")}
           >
