@@ -67,6 +67,11 @@
 .cuadrantColumn {
   height: 20rem;
   width: 20rem;
+  filter: grayscale(75%);
+}
+
+.cuadrantColumn:hover {
+  filter: grayscale(0%);
 }
 
 .textTitleCarousel {
