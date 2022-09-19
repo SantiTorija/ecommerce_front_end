@@ -9,13 +9,26 @@ import axios from "axios";
 import { login } from "../redux/userSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import handleAlert from "./Alert";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function MyVerticallyCenteredModal(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const dispatch = useDispatch();
+
+  function notify(text) {
+    toast.warn(text, {
+      position: "top-right",
+      autoClose: 4000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  }
 
   async function getToken() {
     try {
@@ -39,7 +52,7 @@ function MyVerticallyCenteredModal(props) {
       props.setModalLoginShow(false);
       return response.data;
     } catch (error) {
-      handleAlert(error.response.data.error);
+      notify(error.response.data.error);
     }
   }
 
@@ -49,56 +62,59 @@ function MyVerticallyCenteredModal(props) {
   }
   const { modalRegisterShow, setModalRegisterShow, setModalLoginShow, ...modalProps } = props;
   return (
-    <Modal
-      {...modalProps}
-      size="md"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-      className="difuminado__modal"
-    >
-      <div className="modal__body">
-        <Modal.Body>
-          <div className="d-flex flex-column align-items-center">
-            <div className="modal__header">
-              <img alt="hackWinesLogo" src={newHackWinesLogo} />
-            </div>
-            <button className="btn__modal">
-              <GoogleIcon className="me-2" />
-              Login con Google
-            </button>
-            <button className="btn__modal">
-              <AppleIcon className="me-2" />
-              Login con Apple
-            </button>
-            <p style={{ color: "#F0A202", fontWeight: "400" }}>or</p>
-            <input
-              type="email"
-              placeholder="Ingrese su email"
-              className="input__modal"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            ></input>
-            <input
-              type="password"
-              placeholder="Ingrese su contraseña"
-              className="input__modal"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            ></input>
-
-            <button className="btn__login border" onClick={getToken}>
-              Login
-            </button>
-            <p>
-              No tienes una cuenta aún?{" "}
-              <button className="color-yellow btn__link__modales" onClick={goToRegister}>
-                Registrate
+    <>
+      <ToastContainer />
+      <Modal
+        {...modalProps}
+        size="md"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+        className="difuminado__modal"
+      >
+        <div className="modal__body">
+          <Modal.Body>
+            <div className="d-flex flex-column align-items-center">
+              <div className="modal__header">
+                <img alt="hackWinesLogo" src={newHackWinesLogo} />
+              </div>
+              <button className="btn__modal">
+                <GoogleIcon className="me-2" />
+                Login con Google
               </button>
-            </p>
-          </div>
-        </Modal.Body>
-      </div>
-    </Modal>
+              <button className="btn__modal">
+                <AppleIcon className="me-2" />
+                Login con Apple
+              </button>
+              <p style={{ color: "#F0A202", fontWeight: "400" }}>or</p>
+              <input
+                type="email"
+                placeholder="Ingrese su email"
+                className="input__modal"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              ></input>
+              <input
+                type="password"
+                placeholder="Ingrese su contraseña"
+                className="input__modal"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              ></input>
+
+              <button className="btn__login border" onClick={getToken}>
+                Login
+              </button>
+              <p>
+                No tienes una cuenta aún?{" "}
+                <button className="color-yellow btn__link__modales" onClick={goToRegister}>
+                  Registrate
+                </button>
+              </p>
+            </div>
+          </Modal.Body>
+        </div>
+      </Modal>
+    </>
   );
 }
 

@@ -7,12 +7,24 @@ import "../styles/Wine.css";
 import { useNavigate } from "react-router";
 import { useState } from "react";
 import Formulario from "../components/Formulario";
-import handleAlert from "../components/Alert";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Cart = (props) => {
   const cartState = useSelector((state) => state.cart);
   const userState = useSelector((state) => state.user);
   const [tokenOk, setTokenOk] = useState(false);
+  function notify() {
+    toast.warn("Deber estar logeado", {
+      position: "top-right",
+      autoClose: 4000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  }
 
   const navigate = useNavigate();
   function calcularTotal() {
@@ -39,7 +51,7 @@ const Cart = (props) => {
     if (userState.token) {
       return setTokenOk("none");
     } else {
-      handleAlert("Debes registrarte");
+      notify();
       props.setModalLoginShow(true);
     }
   }
@@ -47,6 +59,7 @@ const Cart = (props) => {
   if (cartState.length) {
     return (
       <>
+        <ToastContainer />
         <div className="pt-5 cart__main">
           <h3 className="cart__title text-white pt-5 pb-3 d-flex justify-content-center">
             MI CARRITO

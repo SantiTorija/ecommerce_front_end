@@ -4,7 +4,6 @@ import { Link, useNavigate } from "react-router-dom";
 import "../styles/miPerfil.css";
 import EditIcon from "@mui/icons-material/Edit";
 import axios from "axios";
-import handleAlert from "../components/Alert";
 import { updateUser, logout } from "../redux/userSlice";
 import { useEffect } from "react";
 import Table from "react-bootstrap/Table";
@@ -25,9 +24,15 @@ function Perfil() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  function showToastMessage() {
-    toast.success("Success Notification !", {
-      position: toast.POSITION.TOP_RIGHT,
+  function notify() {
+    toast.warn("Deber estar logeado", {
+      position: "top-right",
+      autoClose: 4000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
     });
   }
 
@@ -51,10 +56,18 @@ function Perfil() {
           address: response.data.address,
         }),
       );
-      showToastMessage();
+      toast.success("Sus datos fueron actualizados con éxito", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
       return response.data;
     } catch (error) {
-      handleAlert(error.response.data.error);
+      notify(error.response.data.error);
     }
   }
   useEffect(() => {

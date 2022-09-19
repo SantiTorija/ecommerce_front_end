@@ -5,7 +5,8 @@ import GoogleIcon from "@mui/icons-material/Google";
 import AppleIcon from "@mui/icons-material/Apple";
 import newHackWinesLogo from "../assets/images/newHackWinesLogo.png";
 import axios from "axios";
-import handleAlert from "./Alert";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function MyVerticallyCenteredModal(props) {
   const [firstname, setFirstname] = useState("");
@@ -20,6 +21,18 @@ function MyVerticallyCenteredModal(props) {
     props.setModalLoginShow(true);
   }
 
+  function notify() {
+    toast.warn("Deber estar logeado", {
+      position: "top-right",
+      autoClose: 4000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  }
+
   async function storeUser() {
     try {
       const response = await axios({
@@ -30,103 +43,102 @@ function MyVerticallyCenteredModal(props) {
       props.setModalRegisterShow(false);
       return response;
     } catch (error) {
-      console.log(error);
-      handleAlert(error.response.data.error);
+      notify(error.response.data.error);
     }
   }
 
   const { setModalRegisterShow, setModalLoginShow, ...modalProps } = props;
 
   return (
-    <Modal
-      {...modalProps}
-      size="md"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-      className="difuminado__modal"
-    >
-      <div className="modal__body">
-        <Modal.Body>
-          <div className="d-flex flex-column align-items-center">
-            <div className="modal__header">
-              <img alt="hackWinesLogo" src={newHackWinesLogo} />
-            </div>
-            <button className="btn__modal">
-              <GoogleIcon className="me-2" />
-              Registrate con Google
-            </button>
-            <button className="btn__modal">
-              <AppleIcon className="me-2" />
-              Registrate con Apple
-            </button>
-<<<<<<< HEAD
-            <p className="color-yellow">or</p>
-            <div className="d-flex"><input
-=======
-            <p style={{ color: "F0A20" }}>or</p>
-            <input
->>>>>>> 6c5ed1e2f9435a890f0c7220c273ba843d448ebd
-              type="text"
-              placeholder="Ingrese su nombre"
-              className="input__modal input__name"
-              value={firstname}
-              onChange={(e) => setFirstname(e.target.value)}
-              required
-            ></input>
-            <input
-              type="text"
-              placeholder="Ingrese su apellido"
-              className="input__modal input__lastname"
-              value={lastname}
-              onChange={(e) => setLastname(e.target.value)}
-              required
-            ></input></div>
-            
-            <input
-              type="email"
-              placeholder="Ingrese su email"
-              className="input__modal"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            ></input>
-            <input
-              type="password"
-              placeholder="Ingrese su contraseña"
-              className="input__modal"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            ></input>
-            <input
-              type="text"
-              placeholder="Ingrese su dirección (ej. 'Av. calle 1122')"
-              className="input__modal"
-              value={address}
-              onChange={(e) => setAddress(e.target.value)}
-              required
-            ></input>
-            <input
-              type="text"
-              placeholder="Ingrese su teléfono"
-              className="input__modal"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              required
-            ></input>
-            <button className="btn__login border" onClick={() => storeUser()}>
-              Registrate
-            </button>
-            <p>
-              Ya tienes una cuenta?{" "}
-              <button className="color-yellow btn__link__modales" onClick={() => goToLogin()}>
-                Login
+    <>
+      <ToastContainer />
+      <Modal
+        {...modalProps}
+        size="md"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+        className="difuminado__modal"
+      >
+        <div className="modal__body">
+          <Modal.Body>
+            <div className="d-flex flex-column align-items-center">
+              <div className="modal__header">
+                <img alt="hackWinesLogo" src={newHackWinesLogo} />
+              </div>
+              <button className="btn__modal">
+                <GoogleIcon className="me-2" />
+                Registrate con Google
               </button>
-            </p>
-          </div>
-        </Modal.Body>
-      </div>
-    </Modal>
+              <button className="btn__modal">
+                <AppleIcon className="me-2" />
+                Registrate con Apple
+              </button>
+              <p style={{ color: "F0A20" }}>or</p>
+              <div className="d-flex">
+                <input
+                  type="text"
+                  placeholder="Ingrese su nombre"
+                  className="input__modal input__name"
+                  value={firstname}
+                  onChange={(e) => setFirstname(e.target.value)}
+                  required
+                ></input>
+                <input
+                  type="text"
+                  placeholder="Ingrese su apellido"
+                  className="input__modal input__lastname"
+                  value={lastname}
+                  onChange={(e) => setLastname(e.target.value)}
+                  required
+                ></input>
+              </div>
+
+              <input
+                type="email"
+                placeholder="Ingrese su email"
+                className="input__modal"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              ></input>
+              <input
+                type="password"
+                placeholder="Ingrese su contraseña"
+                className="input__modal"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              ></input>
+              <input
+                type="text"
+                placeholder="Ingrese su dirección (ej. 'Av. calle 1122')"
+                className="input__modal"
+                value={address}
+                onChange={(e) => setAddress(e.target.value)}
+                required
+              ></input>
+              <input
+                type="text"
+                placeholder="Ingrese su teléfono"
+                className="input__modal"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                required
+              ></input>
+              <button className="btn__login border" onClick={() => storeUser()}>
+                Registrate
+              </button>
+              <p>
+                Ya tienes una cuenta?{" "}
+                <button className="color-yellow btn__link__modales" onClick={() => goToLogin()}>
+                  Login
+                </button>
+              </p>
+            </div>
+          </Modal.Body>
+        </div>
+      </Modal>
+    </>
   );
 }
 

@@ -7,7 +7,8 @@ import LocalMallIcon from "@mui/icons-material/LocalMall";
 import { useSelector } from "react-redux";
 import CantidadCart from "./CantidadCart";
 import { useNavigate } from "react-router-dom";
-import handleAlert from "./Alert";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import texturadoNegro from "../assets/images/fondonegrotexturado.jpg";
 
 function OffCanvasCart({ name, ...props }) {
@@ -16,6 +17,18 @@ function OffCanvasCart({ name, ...props }) {
 
   const handleShow = () => props.setShowCart(true);
   const handleClose = () => props.setShowCart(false);
+
+  function notify(text) {
+    toast.warn(text, {
+      position: "top-right",
+      autoClose: 4000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  }
 
   function calcularTotal() {
     let resultado = 0;
@@ -32,7 +45,7 @@ function OffCanvasCart({ name, ...props }) {
       props.setShowCart(false);
       return navigate("/cart");
     }
-    handleAlert("En este momento no tienes articulos en el carrito");
+    notify("En este momento no tienes articulos en el carrito");
     return props.setShowCart(false);
   }
 
@@ -40,6 +53,7 @@ function OffCanvasCart({ name, ...props }) {
 
   return (
     <>
+      <ToastContainer />
       <button onClick={handleShow} className="off-canvas-navbar-button p-0">
         <AiOutlineShoppingCart style={{ color: "#F0F0F0", fontSize: "1.5rem" }} />
       </button>
