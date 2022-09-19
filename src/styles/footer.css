@@ -16,10 +16,13 @@ footer {
 
 .goldenButton {
   background-color: #f0a202 !important;
+  border: none;
 }
 
 .goldenButton:hover {
   background-color: transparent !important;
+  color: #f0f0f0;
+  border: 1px solid #f0f0f0;
 }
 
 p {

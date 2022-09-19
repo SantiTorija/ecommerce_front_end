@@ -66,7 +66,7 @@ function FooterWeb() {
                   </label>
                   <input type="text" className="form-control" placeholder="Email" />
                   <button
-                    className="btn goldenButton"
+                    className=" goldenButton"
                     type="button"
                     onClick={() => handleAlert("Esta función esta fuera del alcance del proyecto.")}
                   >
