@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { addFirstTime, setNumber } from "../redux/cartSlice";
 import DeleteModal from "./Deletemodal";
 import "../styles/Wine.css";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 
 function BasicExample() {
   const dispatch = useDispatch();
@@ -18,6 +20,27 @@ function BasicExample() {
       }
     }
   };
+
+  function addCart(wine) {
+    if (wine.cartQuantity >= 0 && wine.cartQuantity < 100) {
+      const isWine = cartState.find((element) => element._id === wine._id);
+      if (isWine) {
+        dispatch(setNumber({ id: isWine._id, quantity: isWine.cartQuantity + 1 }));
+      } else {
+        wine.cartQuantity = 1;
+        dispatch(addFirstTime(wine));
+      }
+    }
+  }
+
+  function removeCart(wine) {
+    if (wine.cartQuantity > 0 && wine.cartQuantity <= 100) {
+      const isWine = cartState.find((element) => element._id === wine._id);
+      if (isWine) {
+        dispatch(setNumber({ id: isWine._id, quantity: isWine.cartQuantity - 1 }));
+      }
+    }
+  }
 
   return (
     <Table className="text-white align-middle">
@@ -50,14 +73,21 @@ function BasicExample() {
               </td>
               <td>{wine.name}</td>
               <td className=" text-center">{wine.price}</td>
-              <td className=" text-center">
-                <input
-                  type="number"
-                  className="cart__cant__input"
-                  placeholder="0"
-                  defaultValue={wine.cartQuantity || 0}
-                  onChange={(e) => handleAddCart(e.target.value, wine)}
-                ></input>
+              <td className="text-center w-25">
+                <button className="button_flecha_cantidad" onClick={() => removeCart(wine)}>
+                  <ArrowBackIosNewIcon />
+                </button>
+                <span
+                  style={{
+                    marginRight: wine.cartQuantity < 10 ? "3px" : "0px",
+                    marginLeft: wine.cartQuantity < 10 ? "3px" : "0px",
+                  }}
+                >
+                  {wine.cartQuantity || 0}
+                </span>
+                <button className="button_flecha_cantidad" onClick={() => addCart(wine)}>
+                  <ArrowForwardIosIcon />
+                </button>
               </td>
               <td className=" text-center">{wine.price * (wine.cartQuantity || 0)}</td>
             </tr>

@@ -55,7 +55,7 @@ const Cart = (props) => {
             </span>
           </h3>
           <div className={tokenOk ? "d-none" : "d-block"}>
-            <div className={"d-flex justify-content-center mt-4"}>
+            <div className="d-flex justify-content-center mt-4">
               <div className="col-6">
                 <BasicExample />
               </div>

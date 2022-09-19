@@ -73,3 +73,15 @@
   border: none;
   outline: none;
 }
+
+.input__name{
+  margin-left: 5%;
+  margin-right: -5%;
+}
+
+.input__lastname{
+  margin-right: 5%;
+  margin-left: 7%;
+}
+
+
