@@ -21,10 +21,10 @@ function ProductCard({ wine, setShowCart }) {
     setShowCart(true);
   }
   return (
-    <div className="col-12 col-md-6 col-xl-3 mt-4">
+    <div className="col-md-6 col-12 col-xl-3 mt-4">
       <Card
         key={wine._id}
-        className="me-3 border single-item-card"
+        className=" border single-item-card mx-auto "
         style={{
           width: "16rem",
           height: "32rem",
