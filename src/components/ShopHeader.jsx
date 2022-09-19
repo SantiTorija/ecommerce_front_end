@@ -10,6 +10,7 @@ function ShopHeader() {
         <p className="mt-4 d-none d-lg-block shop-header-paragraph pb-3">
           Lo invitamos a descubrir los mejores vinos de alta gama, del mundo a su mesa.
         </p>
+        <hr style={{ color: "#F0F0F0", marginTop: "2rem" }} />
       </Col>
       <Col style={{ position: "relative" }} className="col-6 d-flex">
         <BottlesShopHeader />

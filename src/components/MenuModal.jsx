@@ -13,7 +13,7 @@ function MyVerticallyCenteredModal(props) {
     <Modal
       {...modalProps}
       size="xl"
-      style={{ backgroundColor: "rgba(19, 19, 19)" }}
+      style={{ backgroundColor: "#191919" }}
       aria-labelledby="contained-modal-title-vcenter"
       centered
       className="difuminado__modal"
@@ -64,7 +64,7 @@ function MenuModal() {
   return (
     <>
       <button className="btn hamburguerIcon" onClick={() => setShowMenuModal(true)}>
-        <List color="rgba(240, 240, 240, 0.799)" size={20} className="hamburguerIcon" />
+        <List color="#F0F0F0" size={20} className="hamburguerIcon" />
       </button>
 
       <MyVerticallyCenteredModal

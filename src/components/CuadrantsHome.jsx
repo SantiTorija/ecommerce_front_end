@@ -4,7 +4,7 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import cuadrants1 from "../assets/images/cuadrants1.jpg";
 import cuadrants2 from "../assets/images/cuadrants2.jpg";
-import cuadrants3 from "../assets/images/cuadrants3.jpg";
+import cuadrants3 from "../assets/images/cuadrants3.jpeg";
 import cuadrants4 from "../assets/images/cuadrants4.jpg";
 import { Link } from "react-router-dom";
 import { Cart, Cup, Megaphone, Sun } from "react-bootstrap-icons";
@@ -24,7 +24,7 @@ function CuadrantsHome() {
         >
           <Link to={`/tienda/todos`}>
             <button className="button-cuadrant ">
-              <Cart color="white" size={25} />
+              <Cart color="#F0F0F0" size={25} />
               <h2 className="textCuadrants mt-2">Tienda</h2>
             </button>
           </Link>
@@ -38,9 +38,12 @@ function CuadrantsHome() {
             backgroundSize: "cover",
           }}
         >
-          <Link to="" onClick={() => handleAlert("This function is out of scope.")}>
+          <Link
+            to=""
+            onClick={() => handleAlert("Esta función esta fuera del alcance del proyecto.")}
+          >
             <button className="button-cuadrant">
-              <Cup color="white" size={25} />
+              <Cup color="#F0F0F0" size={25} />
               <h2 className="textCuadrants mt-2">Cristaleria y Accesorios</h2>
             </button>
           </Link>
@@ -53,9 +56,12 @@ function CuadrantsHome() {
             backgroundSize: "cover",
           }}
         >
-          <Link to="" onClick={() => handleAlert("This function is out of scope.")}>
+          <Link
+            to=""
+            onClick={() => handleAlert("Esta función esta fuera del alcance del proyecto.")}
+          >
             <button className="button-cuadrant">
-              <Megaphone color="white" size={25} />
+              <Megaphone color="#F0F0F0" size={25} />
               <h2 className="textCuadrants mt-2">Promociones</h2>
             </button>
           </Link>
@@ -68,9 +74,12 @@ function CuadrantsHome() {
             backgroundSize: "cover",
           }}
         >
-          <Link to="" onClick={() => handleAlert("This function is out of scope.")}>
+          <Link
+            to=""
+            onClick={() => handleAlert("Esta función esta fuera del alcance del proyecto.")}
+          >
             <button className="button-cuadrant">
-              <Sun color="white" size={25} />
+              <Sun color="#F0F0F0" size={25} />
               <h2 className="textCuadrants mt-2">Cavas</h2>
             </button>
           </Link>

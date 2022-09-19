@@ -1,5 +1,5 @@
 .about__us__hero {
-  background-image: linear-gradient(rgba(20, 20, 20, 0.8) 10%, rgba(20, 20, 20, 0.9) 100%),
+  background-image: linear-gradient(rgba(19, 19, 19, 0.8) 10%, rgba(19, 19, 19, 0.9) 100%),
     url("https://dieteticdirections.com/wp-content/uploads/2017/08/hands-grapes.jpg");
   background-size: cover;
   background-position: center;
@@ -10,9 +10,8 @@
 }
 
 .text-hero {
-  color: white;
+  color: #f0f0f0;
   padding-top: 16rem;
-
   max-width: 900px;
   font-family: "Urbanist", sans-serif;
 }
@@ -27,8 +26,8 @@
   line-height: 1.8rem;
   font-size: 19px;
   margin-bottom: 1rem;
-  font-weight: 400;
-  color: rgba(240, 240, 240, 0.799);
+  font-weight: 200;
+  color: #f0f0f0;
 }
 
 .image__mern {
@@ -38,7 +37,7 @@
 
 .used__tecnologies {
   padding-top: 4rem;
-  color: white;
+  color: #f0f0f0;
   max-width: 600px;
 }
 
@@ -56,8 +55,8 @@
 }
 .card__linkdin {
   width: 250px;
-  background-color: rgb(19, 19, 19);
-  border: solid white 1px; /* #fbb701 */
+  background-color: #191919;
+  border: solid #f0f0f0 1px;
   height: 280px;
   border-radius: 5px;
 }

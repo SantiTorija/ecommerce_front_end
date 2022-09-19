@@ -10,7 +10,7 @@
   font-size: 3rem;
   text-transform: uppercase;
   line-height: 1.5;
-  color: rgba(255, 255, 255, 0.727);
+  color: #f0f0f0;
   display: block;
   letter-spacing: 2px;
   text-rendering: optimizeLegibility;
@@ -26,32 +26,31 @@
 
 .promo-span {
   font-family: Raleway, sans-serif;
-  color: rgba(255, 255, 255, 0.727);
+  color: #f0f0f0;
 }
 
 .shop-header-paragraph {
   font-family: Raleway, sans-serif;
   font-size: 1.5rem;
-  color: rgba(255, 255, 255, 0.727);
-  font-weight: 100;
- 
+  color: #f0f0f0;
+  font-weight: 200;
 }
 
 .promo-button {
-  font-weight: 600;
+  font-weight: 700;
 
   padding: 0.5rem 1rem;
-  background-color: #fbb701;
-  border: 1px solid #fbb701;
+  background-color: #f0a202;
+  border: 1px solid #f0a202;
   font-weight: 700;
   margin-top: 1rem;
 }
 
 .promo-button-2 {
-  font-weight: 600;
+  font-weight: 700;
   padding: 0.5rem 1rem;
-  background-color: #fbb701;
-  border: 1px solid #fbb701;
+  background-color: #f0a202;
+  border: 1px solid #f0a202;
   font-weight: 700;
   margin-top: 1rem;
   position: absolute;

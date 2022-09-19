@@ -1,19 +1,19 @@
 .hr__micuenta {
-  color: white;
+  color: #f0f0f0;
 }
 
 .text__iniciar__sesion {
   font-size: 18px;
-  color: white;
+  color: #f0f0f0;
   font-weight: 400;
 }
 
 .text__yellow {
-  color: #fbb701;
+  color: #f0a202;
 }
 
 .salir {
-  color: white;
+  color: #f0f0f0;
 }
 
 a {
@@ -22,12 +22,12 @@ a {
 
 a:hover,
 .texto-white:hover {
-  color: #fbb701;
+  color: #f0a202;
   transition: 0.15s;
 }
 
 .texto-white {
-  color: white;
+  color: #f0f0f0;
 }
 
 .hr__misDatos {
@@ -36,13 +36,13 @@ a:hover,
 }
 
 .btn__editar {
-  background-color: #fbb701;
-  color: white;
+  background-color: #f0a202;
+  color: #191919;
   border: none;
   outline: none;
   border-radius: 5px;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 400;
   padding: 5px;
   padding-left: 10px;
   padding-right: 10px;
@@ -59,12 +59,12 @@ a:hover,
   background-color: transparent;
   border: none;
   outline: none;
-  color: white;
+  color: #f0f0f0;
   margin-top: -3px;
 }
 
 .input__editar__perfil::placeholder {
-  color: white;
+  color: #f0f0f0;
 }
 
 .icon__Warning {

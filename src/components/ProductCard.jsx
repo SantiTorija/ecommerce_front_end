@@ -28,7 +28,7 @@ function ProductCard({ wine, setShowCart }) {
         style={{
           width: "16rem",
           height: "32rem",
-          backgroundColor: "rgba(15, 15, 15, 0.6)",
+          backgroundColor: "rgba(19, 19, 19, 0.6)",
           border: "none !important",
           position: "relative",
         }}
@@ -46,7 +46,7 @@ function ProductCard({ wine, setShowCart }) {
           className="mt-2 text-center"
         >
           <span className="wine__title fs-6 fw-bold mb-2">{wine.harvest}</span>
-          <span className="wine__title fs-5 mb-3" style={{ color: "#c89600" }}>
+          <span className="wine__title fs-5 mb-3" style={{ color: "#F0A202" }}>
             US$ {wine.price}
           </span>
           <button onClick={handleAddCart} className="cart-button">
@@ -59,18 +59,27 @@ function ProductCard({ wine, setShowCart }) {
           </Link>
         </div>
         <span style={{ position: "absolute", marginLeft: "1rem", marginTop: "0.3rem" }}>
-          <RiStarSFill color="#fbb701" />
-          <RiStarSFill color="#fbb701" />
-          <RiStarSFill color="#fbb701" />
-          <RiStarSFill color="#fbb701" />
-          <RiStarSFill color="#fbb701" />
+          <RiStarSFill color="#F0A202" />
+          <RiStarSFill color="#F0A202" />
+          <RiStarSFill
+            color="#F0A202
+"
+          />
+          <RiStarSFill
+            color="#F0A202
+"
+          />
+          <RiStarSFill
+            color="#F0A202
+"
+          />
         </span>
         <span
           style={{
             position: "absolute",
             right: "1rem",
             marginTop: "0.3rem",
-            color: "white",
+            color: "#F0F0F0",
             textTransform: "capitalize",
           }}
         >

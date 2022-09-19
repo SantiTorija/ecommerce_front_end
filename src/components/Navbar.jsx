@@ -56,7 +56,11 @@ function NavBarV2({ setShowCart, showCart, modalLoginShow, setModalLoginShow }) 
             Sobre este Proyecto
           </Link>
           <h5 className="m-0 navbar-responsive ">·</h5>
-          <Link className="navbar-link navbar-responsive" to={"/contacto"}>
+          <Link
+            className="navbar-link navbar-responsive"
+            to={""}
+            onClick={() => handleAlert("Estamos trabajando en esta página, gracias por entender ")}
+          >
             Contacto
           </Link>
           <MenuModal className="hamburguerIcon" />
@@ -66,8 +70,8 @@ function NavBarV2({ setShowCart, showCart, modalLoginShow, setModalLoginShow }) 
           <Link to={""}>
             <Search
               onClick={() => handleAlert("Esta funcionalidad esta fuera del alcance del proyecto")}
-              color="rgba(240, 240, 240, 0.799)"
-              className="me-2"
+              color="#F0F0F0"
+              className="me-4"
               size={19}
               style={{
                 backgroundSize: "cover",

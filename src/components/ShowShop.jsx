@@ -72,7 +72,7 @@ function ShowShop(props) {
             className="link mx-1"
             to={"/tienda/todos"}
             style={{
-              color: type === "todos" ? "#fbb701" : "white",
+              color: type === "todos" ? "#F0A202" : "white",
               transition: "0.15s",
               fontWeight: type === "todos" ? "500" : "400",
             }}
@@ -85,7 +85,7 @@ function ShowShop(props) {
             className="link mx-1"
             to={"/tienda/tinto"}
             style={{
-              color: type === "tinto" ? "#fbb701" : "white",
+              color: type === "tinto" ? "#F0A202" : "white",
               transition: "0.15s",
               fontWeight: type === "tinto" ? "500" : "400",
             }}
@@ -98,7 +98,7 @@ function ShowShop(props) {
             className="link mx-1"
             to={"/tienda/blanco"}
             style={{
-              color: type === "blanco" ? "#fbb701" : "white",
+              color: type === "blanco" ? "#F0A202" : "white",
               transition: "0.15s",
               fontWeight: type === "blanco" ? "500" : "400",
             }}
@@ -111,7 +111,7 @@ function ShowShop(props) {
             className="link mx-1"
             to={"/tienda/rose"}
             style={{
-              color: type === "rose" ? "#fbb701" : "white",
+              color: type === "rose" ? "#F0A202" : "white",
               transition: "0.15s",
               fontWeight: type === "rose" ? "500" : "400",
             }}
@@ -124,7 +124,7 @@ function ShowShop(props) {
             className="link mx-1"
             to={"/tienda/espumante"}
             style={{
-              color: type === "espumante" ? "#fbb701" : "white",
+              color: type === "espumante" ? "#F0A202" : "white",
               transition: "0.15s",
               fontWeight: type === "espumante" ? "500" : "400",
             }}
@@ -151,7 +151,7 @@ function ShowShop(props) {
   } else {
     return (
       <div className="d-flex justify-content-center align-items-center vh-100 spinner__wines">
-        <BounceLoader color="#fbb701" loading size={50} />
+        <BounceLoader color="#F0A202" loading size={50} />
       </div>
     );
   }

@@ -70,7 +70,7 @@ function MyVerticallyCenteredModal(props) {
               <AppleIcon className="me-2" />
               Login con Apple
             </button>
-            <p className="color-yellow">or</p>
+            <p style={{ color: "#F0A202", fontWeight: "400" }}>or</p>
             <input
               type="email"
               placeholder="Ingrese su email"
@@ -108,16 +108,12 @@ function LoginModal(props) {
   return (
     <>
       {userState.token ? (
-        <Link className="button__person me-2" to="/miPerfil/misDatos">
-          <Person color="rgba(240, 240, 240, 0.799)" size={25} />
+        <Link className="button__person me-4" to="/miPerfil/misDatos">
+          <Person color="#F0F0F0" size={25} />
         </Link>
       ) : (
-        <button className=" button__person ">
-          <Person
-            color="rgba(240, 240, 240, 0.799)"
-            size={20}
-            onClick={() => props.setModalLoginShow(true)}
-          />
+        <button className=" button__person me-4">
+          <Person color="#F0F0F0" size={25} onClick={() => props.setModalLoginShow(true)} />
         </button>
       )}
 

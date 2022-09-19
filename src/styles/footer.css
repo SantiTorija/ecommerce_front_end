@@ -3,8 +3,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap");
 
 footer {
-  background-color: rgba(19, 19, 19, 0);
-  color: white;
+  background-color: transparent;
+  color: #f0f0f0;
   font-family: "Raleway", sans-serif;
   font-size: 15px;
   margin-top: 5rem;
@@ -15,25 +15,25 @@ footer {
 }
 
 .goldenButton {
-  background-color: #c89500 !important;
+  background-color: #f0a202 !important;
 }
 
-.goldenButton:hover{
+.goldenButton:hover {
   background-color: transparent !important;
 }
 
 p {
   font-size: 15px;
-  font-weight: 100;
-  color: rgba(240, 240, 240, 0.799);
+  font-weight: 200;
+  color: #f0f0f0;
   line-height: 1.5rem;
 }
 
 .titleFooter {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 400;
   font-family: "Quattrocento", serif;
-  color: rgba(240, 240, 240, 0.799);
+  color: #f0f0f0;
 }
 
 @media (max-width: 576px) {

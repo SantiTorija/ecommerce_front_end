@@ -1,22 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;400;500&display=swap");
-.title{
+.title {
   font-family: "Urbanist", sans-serif;
-  color: rgba(255, 255, 255, 0.793);
+  color: #f0f0f0;
   font-size: 2rem;
   margin-top: 3rem;
   margin-bottom: 1rem;
 }
 
 .promo-button-mobile {
-    font-weight: 600;     
-      padding: 0.5rem 1rem ;
-      background-color: #fbb701;
-      border: 1px solid #fbb701;
-      font-weight: 700;
-      margin-top: 1rem;
-      position: absolute;
-      bottom: 0;
-      left: 12rem;
-     }   
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  background-color: #f0a202;
+  border: 1px solid #f0a202;
+  font-weight: 700;
+  margin-top: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 12rem;
+}

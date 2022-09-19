@@ -1,24 +1,22 @@
-
 .wine-title {
-    font-family: Raleway, sans-serif;
-    font-size: 3rem;
-    text-transform: uppercase;
-    line-height: 1.5;
-    color: rgba(255, 255, 255, 0.727);
-    display: block;
-    letter-spacing: 2px;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    margin-top: 13% ;
-    
-    clear: both;
-    font-weight: 400;
-    padding-top: 4px;
-    text-decoration: none;
-    
-  }
+  font-family: Raleway, sans-serif;
+  font-size: 3rem;
+  text-transform: uppercase;
+  line-height: 1.5;
+  color: #f0f0f0;
+  display: block;
+  letter-spacing: 2px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-top: 13%;
 
-  .App{
-    min-height: 100vh;
-  }
+  clear: both;
+  font-weight: 400;
+  padding-top: 4px;
+  text-decoration: none;
+}
+
+.App {
+  min-height: 100vh;
+}

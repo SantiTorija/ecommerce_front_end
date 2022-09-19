@@ -1,34 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
 
 .title-letter {
-	font-family: Raleway, sans-serif;
-	font-size: 0.8rem;
-	text-transform: uppercase;
-	line-height: 1.5;
-	color: white;
-	display: block;
-	letter-spacing: 2px;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-margin-top: 1.5rem;
-	clear: both;
-	font-weight: 400;
-	padding-top: 4px;
-    transition: ease-in-out 0.5s;
+  font-family: Raleway, sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  line-height: 1.5;
+  color: #f0f0f0;
+  display: block;
+  letter-spacing: 2px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-top: 1.5rem;
+  clear: both;
+  font-weight: 400;
+  padding-top: 4px;
+  transition: ease-in-out 0.5s;
 }
 
-.sidebar-offcanv-button:hover{    
-    scale: 1.1;
-    
+.sidebar-offcanv-button:hover {
+  scale: 1.1;
 }
 
-.link{
-    text-decoration: none;
-    color: rgb(230, 230, 230);
+.link {
+  text-decoration: none;
+  color: #f0f0f0;
 }
 
-.link:hover{
-    color: white;
-    text-decoration: underline;
+.link:hover {
+  color: #f0f0f0;
+  text-decoration: underline;
 }
