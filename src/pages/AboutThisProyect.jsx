@@ -88,7 +88,7 @@ function AboutThisProyect() {
           </div>
           <div className="col-4 card__linkdin d-flex flex-column align-items-center p-2">
             <img
-              src="https://media-exp1.licdn.com/dms/image/C4D03AQFX8ZJxJKbv3A/profile-displayphoto-shrink_200_200/0/1627398847167?e=1668643200&v=beta&t=9ZrTQX5KWZmj7iVSHG0uvKrjHcMn4W8cEvpyws4aEEM"
+              src="https://media-exp1.licdn.com/dms/image/D4D03AQFGLoalI1pb3Q/profile-displayphoto-shrink_800_800/0/1663447702462?e=1669248000&v=beta&t=s5jRq9n0Mv-tDgCSayO0Zs2AXTSMasnUWSm4VB9ovwc"
               alt="profile_logo"
               className="profile_logo_linkedin"
             ></img>

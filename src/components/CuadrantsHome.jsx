@@ -4,7 +4,7 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import cuadrants1 from "../assets/images/cuadrants1.jpg";
 import cuadrants2 from "../assets/images/cuadrants2.jpg";
-import cuadrants3 from "../assets/images/cuadrants3.jpg";
+import cuadrants3 from "../assets/images/cuadrants3.jpeg";
 import cuadrants4 from "../assets/images/cuadrants4.jpg";
 import { Link } from "react-router-dom";
 import { Cart, Cup, Megaphone, Sun } from "react-bootstrap-icons";
