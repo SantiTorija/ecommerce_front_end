@@ -10,8 +10,8 @@ function FooterWeb() {
     <Container>
       <footer className="border-top border-bottom pb-5">
         <div className="footer  pt-5 pb-1">
-          <div className="row">
-            <div className="col-3 footerColumn">
+          <div className="row justify-content-between">
+            <div className="footerColumn col">
               <img alt="hackWineslogo" src={newHackWinesLogo} />
               <div className="d-flex flex-row gap-2 mt-3">
                 <Instagram color="#F0F0F0" />
@@ -21,7 +21,7 @@ function FooterWeb() {
               </div>
             </div>
 
-            <div className="col-3 footerColumn" id="menuColumn">
+            <div className=" footerColumn col" id="menuColumn">
               <h3 className="titleFooter navbar-link">MENU</h3>
               <ul className="nav flex-column">
                 <li className="nav-item">
@@ -47,7 +47,7 @@ function FooterWeb() {
               </ul>
             </div>
 
-            <div className="col-3 footerSection footerColumn">
+            <div className="footerSection footerColumn col">
               <h3 className="titleFooter">LOCAL </h3>
 
               <p>
@@ -56,7 +56,7 @@ function FooterWeb() {
               </p>
             </div>
 
-            <div className="col-3 footerSection footerColumn">
+            <div className="footerSection footerColumn col d-none d-md-block">
               <form className="w-100">
                 <h3 className="titleFooter">NEWSLETTER</h3>
                 <p>Suscribite, y recibi antes que nadie nuestras promociones y noticias.</p>

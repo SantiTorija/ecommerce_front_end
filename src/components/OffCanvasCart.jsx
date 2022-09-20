@@ -69,7 +69,7 @@ function OffCanvasCart({ name, ...props }) {
           minWidth: "25%",
         }}
       >
-        <Offcanvas.Header closeButton>
+        <Offcanvas.Header closeButton closeVariant="white">
           <div className="d-flex w-100 justify-content-center">
             <Offcanvas.Title>
               <LocalMallIcon className="text-white" />

@@ -1,10 +1,12 @@
 import { AiOutlineLine } from "react-icons/ai";
 import "../styles/home.css";
 
-function AboutTitle() {
+function AboutTitle({ title }) {
   return (
     <h2 className="title hackWines d-flex justify-content-center m-5">
-      <AiOutlineLine className="me-2" /> Sobre este proyecto <AiOutlineLine className="ms-2" />
+      <AiOutlineLine className="me-2" />
+      {title}
+      <AiOutlineLine className="ms-2" />
     </h2>
   );
 }

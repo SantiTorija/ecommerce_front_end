@@ -15,7 +15,7 @@ function AboutThisProyect() {
       <div className="about__us__hero">
         <Container>
           <div className=" text-hero">
-            <AboutTitle />
+            <AboutTitle title={"sobre este proyecto"} />
             <h6 className="paragraph__hero mt-4 mb-5">
               Este proyecto surge como trabajo final del curso intensivo (coding Bootcamp) realizado
               de la mano de Hack Academy. La metodología Bootcamp entrena y prepara a las personas a
