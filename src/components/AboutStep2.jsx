@@ -4,7 +4,7 @@ import { Row, Col } from "react-bootstrap";
 function AboutStep2() {
   return (
     <Row className="mt-5 align-items-center">
-      <Col>
+      <Col className="left">
         <div className="d-flex align-items-center gap-3 mt-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +26,7 @@ function AboutStep2() {
           del sitio.
         </p>
       </Col>
-      <Col className="stepColumn">
+      <Col className="stepColumn right">
         <img src={moodboard} alt="imagen mer " className="col-6 w-100" />
       </Col>
     </Row>

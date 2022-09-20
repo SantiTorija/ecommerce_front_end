@@ -3,11 +3,11 @@ import { Row, Col } from "react-bootstrap";
 
 function AboutStep1() {
   return (
-    <Row className="mt-5 align-items-center">
-      <Col className="stepColumn">
+    <Row className="mt-5 align-items-center reverse">
+      <Col className="stepColumn left ">
         <img src={mer} alt="imagen mer " className="col-6 w-100" />
       </Col>
-      <Col>
+      <Col className="right ">
         <div className="d-flex align-items-center gap-3 mt-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
