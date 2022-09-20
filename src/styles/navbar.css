@@ -74,3 +74,8 @@ img {
   border: 0;
   outline: 0;
 }
+
+.hamburguerIcon:hover, .hamburguerIcon:focus, .hamburguerIcon:active, .hamburguerIcon:visited{
+  border: none !important;
+  outline: none !important;
+}    

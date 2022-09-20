@@ -6,14 +6,17 @@ import OffCanvasCart from "./OffCanvasCart";
 import { Link } from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar";
 import { Search } from "react-bootstrap-icons";
-import LoginModal from "../components/LoginModal";
+import LoginModal from "./LoginModal";
 import { useState, useEffect } from "react";
 import RegisterModal from "./RegisterModal";
 import MenuModal from "../components/MenuModal";
+import { useSelector } from "react-redux";
+import { Person } from "react-bootstrap-icons";
 
 function NavBarV2({ setShowCart, showCart, modalLoginShow, setModalLoginShow }) {
   const [modalRegisterShow, setModalRegisterShow] = useState(false);
   const [show, handleShow] = useState(false);
+  const userState = useSelector((state) => state.user);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -63,11 +66,28 @@ function NavBarV2({ setShowCart, showCart, modalLoginShow, setModalLoginShow }) 
           >
             Contacto
           </Link>
-          <MenuModal className="hamburguerIcon" />
+          <div className="d-flex align-items-center d-md-none  ">
+            <MenuModal className="hamburguerIcon" />
+            {userState.token ? (
+              <Link className="button__person me-4 " to="/miPerfil/misDatos">
+                <Person color="#F0F0F0" size={25} />
+              </Link>
+            ) : (
+              <button className=" button__person me-4 d-block d-md-none">
+                <Person color="#F0F0F0" size={25} onClick={() => setModalLoginShow(true)} />
+              </button>
+            )}
+            <OffCanvasCart
+              placement={"end"}
+              name={"end"}
+              setShowCart={setShowCart}
+              showCart={showCart}
+            />
+          </div>
         </div>
 
-        <div className=" d-flex align-items-center justify-content-between  headerIcons ">
-          <Link to={""}>
+        <div className="d-none d-md-flex align-items-center justify-content-between  headerIcons ">
+          {/* <Link to={""}>
             <Search
               onClick={() => handleAlert("Esta funcionalidad esta fuera del alcance del proyecto")}
               color="#F0F0F0"
@@ -78,18 +98,29 @@ function NavBarV2({ setShowCart, showCart, modalLoginShow, setModalLoginShow }) 
                 backgroundRepeat: "no-repeat",
               }}
             />
-          </Link>
+          </Link> */}
           <RegisterModal
             modalRegisterShow={modalRegisterShow}
             setModalRegisterShow={setModalRegisterShow}
             setModalLoginShow={setModalLoginShow}
           />
+          {userState.token ? (
+            <Link className="button__person me-4" to="/miPerfil/misDatos">
+              <Person color="#F0F0F0" size={25} />
+            </Link>
+          ) : (
+            <button className=" button__person me-4">
+              <Person color="#F0F0F0" size={25} onClick={() => setModalLoginShow(true)} />
+            </button>
+          )}
           <LoginModal
-            modalLoginShow={modalLoginShow}
-            setModalLoginShow={setModalLoginShow}
             modalRegisterShow={modalRegisterShow}
             setModalRegisterShow={setModalRegisterShow}
+            setModalLoginShow={setModalLoginShow}
+            show={modalLoginShow}
+            onHide={() => setModalLoginShow(false)}
           />
+
           <OffCanvasCart
             placement={"end"}
             name={"end"}
