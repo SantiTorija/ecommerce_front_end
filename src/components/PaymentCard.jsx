@@ -77,7 +77,7 @@ function PaymentCard() {
     <>
       <ToastContainer />
       <form
-        className="col-3 flex-column card__payment"
+        className="col-10 col-md-8 col-lg-4 col-xxl-3 flex-column card__payment "
         onSubmit={(e) => {
           storeOrder();
           navigate("/miPerfil/misCompras");
@@ -130,9 +130,11 @@ function PaymentCard() {
             </label>
           </div>
         </div>
-        <button type="submit" className="mt-3 button__pagar__final">
-          COMPRAR
-        </button>
+        <div className="d-flex justify-content-center">
+          <button type="submit" className="mt-3 button__pagar__final ">
+            COMPRAR
+          </button>
+        </div>
       </form>
     </>
   );

@@ -4,9 +4,19 @@ import ProductCard from "./ProductCard";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { AiOutlineLine } from "react-icons/ai";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Navigation, Pagination } from "swiper";
+import "swiper/css";
+import "swiper/css/bundle";
+import "swiper/css/pagination";
+import React from "react";
+import "../styles/highlighted.css";
+
+SwiperCore.use([Pagination, Navigation]);
 
 function Highlighted(props) {
-  const [wines, setWines] = useState(null);
+  const [wines, setWines] = useState([]);
+
   useEffect(() => {
     const dataWines = async () => {
       const response = await axios({
@@ -14,34 +24,72 @@ function Highlighted(props) {
         url: `${process.env.REACT_APP_API_URL}wines`,
       });
       const winesFiltered = response.data.filter((wine) => wine.highlighted);
-      setWines(winesFiltered.sort((a, b) => 0.5 - Math.random()).slice(0, 3));
+      setWines(winesFiltered.sort((a, b) => 0.5 - Math.random()));
       return response;
     };
     dataWines();
   }, []);
+
+  const slides = [];
+  for (const wine of wines) {
+    slides.push(
+      <SwiperSlide
+        key={`slide-${wine._id}`}
+        className=" d-flex justify-content-center slider__class"
+      >
+        <ProductCard wine={wine} setShowCart={props.setShowCart} />
+      </SwiperSlide>,
+    );
+  }
   return (
     wines && (
       <>
-        <span className="recommended__title mt-5">
-          <AiOutlineLine className="text-white me-2" /> <h4>PRODUCTOS DESTACADOS</h4>
-          <AiOutlineLine className="text-white ms-2" />
-        </span>
-        <div className=" d-flex justify-content-center ">
-          <div className="arrow__carrousel">
-            <span className="flecha">
-              <ArrowBackIosNewIcon />
-            </span>
-          </div>
-          {wines.map((reccomended) => (
-            <div className="mx-3 " key={reccomended._id}>
-              <ProductCard wine={reccomended} setShowCart={props.setShowCart} />
-            </div>
-          ))}
-          <div className="arrow__carrousel">
-            <span className="flecha">
-              <ArrowForwardIosIcon />
-            </span>
-          </div>
+        <div className="d-none d-lg-block container">
+          <span className="recommended__title mt-5">
+            <AiOutlineLine className="text-white me-2" /> <h4>PRODUCTOS DESTACADOS</h4>
+            <AiOutlineLine className="text-white ms-2" />
+          </span>
+          <Swiper
+            modules={[Navigation, Pagination]}
+            spaceBetween={0}
+            slidesPerView={3}
+            className="contenedor_style"
+            pagination={{ clickable: true, className: "pagination" }}
+            navigation
+          >
+            {slides}
+          </Swiper>
+        </div>
+        <div className="d-none d-md-block d-lg-none container">
+          <span className="recommended__title mt-5">
+            <AiOutlineLine className="text-white me-2" /> <h4>PRODUCTOS DESTACADOS</h4>
+            <AiOutlineLine className="text-white ms-2" />
+          </span>
+          <Swiper
+            modules={[Navigation, Pagination]}
+            spaceBetween={0}
+            slidesPerView={2}
+            className="contenedor_style"
+            pagination={{ clickable: true, className: "pagination" }}
+            navigation
+          >
+            {slides}
+          </Swiper>
+        </div>
+        <div className="d-block d-md-none container">
+          <span className="recommended__title mt-5">
+            <AiOutlineLine className="text-white me-2" /> <h4>PRODUCTOS DESTACADOS</h4>
+            <AiOutlineLine className="text-white ms-2" />
+          </span>
+          <Swiper
+            modules={[Navigation, Pagination]}
+            spaceBetween={0}
+            slidesPerView={1}
+            className="contenedor_style"
+            navigation
+          >
+            {slides}
+          </Swiper>
         </div>
       </>
     )

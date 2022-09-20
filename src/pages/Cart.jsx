@@ -68,11 +68,11 @@ const Cart = (props) => {
             </span>
           </h3>
           <div className={tokenOk ? "d-none" : "d-block"}>
-            <div className="d-flex justify-content-center mt-4">
-              <div className="col-6">
+            <div className="d-flex justify-content-center mt-4 flex-wrap">
+              <div className="d-none col-sm-11 d-sm-block col-lg-6 col-xl-5 me-5 ms-5">
                 <BasicExample />
               </div>
-              <div className=" col-4 cart__card">
+              <div className="col-8 col-lg-4 cart__card">
                 <h3>RESUMEN</h3>
                 <div className="d-flex justify-content-between">
                   <p>Sub-Total ({calcularItems() || 0} items)</p>{" "}
@@ -101,7 +101,7 @@ const Cart = (props) => {
             </div>
           </div>
           <div style={{ display: `${tokenOk ? "block" : "none"}` }}>
-            <div className="d-flex justify-content-center mt-4">
+            <div className="d-flex justify-content-center mt-4 flex-wrap">
               <Formulario />
               <PaymentCard />
             </div>
