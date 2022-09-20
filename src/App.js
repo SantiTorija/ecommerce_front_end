@@ -13,6 +13,7 @@ import AboutThisProyect from "./pages/AboutThisProyect";
 import { Contact } from "./pages/Contact";
 import Perfil from "./pages/Perfil";
 import ProtectedRoute from "./components/PrivateRoutes";
+import OffCanvasAboutUs from "./components/OffCanvasAboutUs";
 
 function App() {
   const [showCart, setShowCart] = useState(false);
@@ -32,7 +33,7 @@ function App() {
         modalLoginShow={modalLoginShow}
         setModalLoginShow={setModalLoginShow}
       />
-
+      <OffCanvasAboutUs placement={"end"} setModalLoginShow={setModalLoginShow} />
       <Routes>
         <Route path="/" element={<Home setShowCart={setShowCart} />} />
         <Route path="/tienda/:type" element={<Shop setShowCart={setShowCart} />} />
@@ -45,7 +46,6 @@ function App() {
         <Route path="/product/:slug" element={<Wine setShowCart={setShowCart} />} />
         <Route path="*" element={<Home setShowCart={setShowCart} />} />
       </Routes>
-
       <Footer />
     </div>
   );

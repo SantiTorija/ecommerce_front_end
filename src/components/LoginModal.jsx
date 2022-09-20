@@ -13,8 +13,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function MyVerticallyCenteredModal(props) {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("username@gmail.com");
+  const [password, setPassword] = useState("password");
 
   const dispatch = useDispatch();
 
@@ -37,7 +37,6 @@ function MyVerticallyCenteredModal(props) {
         url: `${process.env.REACT_APP_API_URL}users/token`,
         data: { email, password },
       });
-      console.log(response.data.token);
       dispatch(
         login({
           token: response.data.token,

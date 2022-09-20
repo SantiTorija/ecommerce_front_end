@@ -20,7 +20,7 @@
     justify-content: center;
     padding-left: 10px;
     padding-right: 10px;
-    transition: 1s;
+    transition: 2s;
 }
 
 .swiper-pagination {
@@ -30,22 +30,25 @@
 
 .swiper-pagination-bullet{
     background-color: #f0a202;
-    width: 14px;
-    height: 14px;
+    width: 10px;
+    height: 10px;
 }
 
 .swiper-navigation {
     background-color: #f0a202;
+    transition: 5s;
 }
 
 .swiper-button-next{
     color: #f0a202;
     margin-bottom: 2px;
     padding-left: 25px;
+    transition: 2s;
 }
 
 .swiper-button-prev{
     color: #f0a202;
     padding-right: 20px;
     margin-bottom: 2px;
+    transition: 2s;
 }

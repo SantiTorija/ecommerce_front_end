@@ -5,14 +5,14 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { AiOutlineLine } from "react-icons/ai";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation, Pagination } from "swiper";
+import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/bundle";
 import "swiper/css/pagination";
 import React from "react";
 import "../styles/highlighted.css";
 
-SwiperCore.use([Pagination, Navigation]);
+SwiperCore.use([Pagination, Navigation, Autoplay]);
 
 function Highlighted(props) {
   const [wines, setWines] = useState([]);
@@ -50,13 +50,17 @@ function Highlighted(props) {
             <AiOutlineLine className="text-white ms-2" />
           </span>
           <Swiper
-            modules={[Navigation, Pagination]}
+            modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={0}
             slidesPerView={3}
             className="contenedor_style"
             pagination={{ clickable: true, className: "pagination" }}
             navigation
             loop={true}
+            autoplay={{
+              delay: 1500,
+              disableOnInteraction: false,
+            }}
           >
             {slides}
           </Swiper>
@@ -67,13 +71,17 @@ function Highlighted(props) {
             <AiOutlineLine className="text-white ms-2" />
           </span>
           <Swiper
-            modules={[Navigation, Pagination]}
+            modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={0}
             slidesPerView={2}
             className="contenedor_style"
             pagination={{ clickable: true, className: "pagination" }}
             navigation
             loop={true}
+            autoplay={{
+              delay: 1500,
+              disableOnInteraction: false,
+            }}
           >
             {slides}
           </Swiper>
@@ -84,12 +92,16 @@ function Highlighted(props) {
             <AiOutlineLine className="text-white ms-2" />
           </span>
           <Swiper
-            modules={[Navigation, Pagination]}
+            modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={0}
             slidesPerView={1}
             className="contenedor_style"
             navigation
             loop={true}
+            autoplay={{
+              delay: 1500,
+              disableOnInteraction: false,
+            }}
           >
             {slides}
           </Swiper>
