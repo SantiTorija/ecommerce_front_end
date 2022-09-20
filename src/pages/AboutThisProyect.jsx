@@ -8,27 +8,17 @@ import AboutStep2 from "../components/AboutStep2";
 import AboutStep3 from "../components/AboutStep3";
 import AboutStep4 from "../components/AboutStep4";
 import AboutTeam from "../components/AboutTeam";
+import AboutHero from "../components/AboutHero";
 import AboutTechnologies from "../components/AboutTechnologies";
+import { useEffect } from "react";
 
 function AboutThisProyect() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
-      <div className="about__us__hero">
-        <Container>
-          <div className=" text-hero">
-            <AboutTitle title={"Sobre este proyecto"} />
-            <h6 className="paragraph__hero mt-4 mb-5">
-              Este proyecto surge como trabajo final del curso intensivo (coding Bootcamp) realizado
-              de la mano de Hack Academy. La metodología Bootcamp entrena y prepara a las personas a
-              través de un método de aprendizaje intensivo donde el foco principal es desarrollar
-              las habilidades necesarias para el desempeño exitoso en el mercado laboral. Empleando
-              más de 600 horas de trabajo en ejercicios prácticos y compartiendo varias instancias
-              de trabajo en equipo, nos preparamos de acuerdo a las necesidades del mercado para
-              poder insertarnos y formar parte de la industria.
-            </h6>
-          </div>
-        </Container>
-      </div>
+      <AboutHero />
       <div className="container">
         <AboutTeam />
       </div>
