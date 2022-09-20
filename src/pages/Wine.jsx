@@ -7,6 +7,15 @@ import ProductCard from "../components/ProductCard";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import { AiOutlineLine } from "react-icons/ai";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Navigation, Pagination } from "swiper";
+import "swiper/css";
+import "swiper/css/bundle";
+import "swiper/css/pagination";
+import React from "react";
+import "../styles/highlighted.css";
+
+SwiperCore.use([Pagination, Navigation]);
 
 function Wine(props) {
   const [wine, setWine] = useState(null);
@@ -31,7 +40,7 @@ function Wine(props) {
         method: "GET",
         url: `${process.env.REACT_APP_API_URL}wines`,
       });
-      setWines(response.data.sort((a, b) => 0.5 - Math.random()).slice(0, 3));
+      setWines(response.data.sort((a, b) => 0.5 - Math.random()));
       return response;
     };
     dataWine();
@@ -43,6 +52,18 @@ function Wine(props) {
     } else {
       return str;
     }
+  }
+
+  const slides = [];
+  for (const wine of wines) {
+    slides.push(
+      <SwiperSlide
+        key={`slide-${wine._id}`}
+        className=" d-flex justify-content-center slider__class"
+      >
+        <ProductCard wine={wine} setShowCart={props.setShowCart} />
+      </SwiperSlide>,
+    );
   }
 
   return (
@@ -68,26 +89,21 @@ function Wine(props) {
               </div>
               <div className="col-2"></div>
             </div>
-            <span className="recommended__title">
-              <AiOutlineLine className="text-white me-2" /> PRODUCTOS RELACIONADOS
-              <AiOutlineLine className="text-white ms-2" />
-            </span>
-            <div className=" d-flex justify-content-center">
-              <div className="arrow__carrousel">
-                <span className="flecha">
-                  <ArrowBackIosNewIcon />
-                </span>
-              </div>
-              {wines.map((reccomended) => (
-                <div className="mx-3 ">
-                  <ProductCard wine={reccomended} setShowCart={props.setShowCart} />
-                </div>
-              ))}
-              <div className="arrow__carrousel">
-                <span className="flecha">
-                  <ArrowForwardIosIcon />
-                </span>
-              </div>
+            <div>
+              <span className="recommended__title">
+                <AiOutlineLine className="text-white me-2" /> PRODUCTOS RELACIONADOS
+                <AiOutlineLine className="text-white ms-2" />
+              </span>
+              <Swiper
+                modules={[Navigation, Pagination]}
+                spaceBetween={0}
+                slidesPerView={3}
+                loop={true}
+                className="contenedor_style"
+                navigation
+              >
+                {slides}
+              </Swiper>
             </div>
           </div>
         </div>

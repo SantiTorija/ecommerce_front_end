@@ -11,9 +11,7 @@ import AboutThisProyectHome from "../components/AboutThisProyectHome";
 export const Home = (props) => {
   return (
     <>
-      {/* <HeroHome /> */}
       <HeroVideo />
-      {/* <FeatureHome /> */}
       <HomeTitle />
       <CuadrantsHome />
       <Highlighted setShowCart={props.setShowCart} />

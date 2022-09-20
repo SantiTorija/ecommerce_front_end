@@ -56,6 +56,7 @@ function Highlighted(props) {
             className="contenedor_style"
             pagination={{ clickable: true, className: "pagination" }}
             navigation
+            loop={true}
           >
             {slides}
           </Swiper>
@@ -72,6 +73,7 @@ function Highlighted(props) {
             className="contenedor_style"
             pagination={{ clickable: true, className: "pagination" }}
             navigation
+            loop={true}
           >
             {slides}
           </Swiper>
@@ -87,6 +89,7 @@ function Highlighted(props) {
             slidesPerView={1}
             className="contenedor_style"
             navigation
+            loop={true}
           >
             {slides}
           </Swiper>

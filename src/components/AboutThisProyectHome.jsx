@@ -7,7 +7,7 @@ import { Container } from "react-bootstrap";
 function AboutThisProyectHome() {
   return (
     <Container>
-      <div className="d-flex justify-content-between w-100 mt-5 pb-5 align-items-center">
+      <div className="d-flex justify-content-between w-100 pb-5 align-items-center">
         <div>
           <h2 className="title" id="hackWines">
             <AiOutlineLine /> Hack Wines <AiOutlineLine />
@@ -22,7 +22,7 @@ function AboutThisProyectHome() {
             <hr style={{ color: "#F0A202" }} />
             <Link to={"/aboutThisProyect"}>
               {" "}
-              <button className="mt-5 button">Ver más información</button>
+              <button className="mt-4 button">Ver más información</button>
             </Link>
           </div>
         </div>
