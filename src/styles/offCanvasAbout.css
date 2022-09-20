@@ -84,3 +84,7 @@ p {
     margin-top: 10px;
     margin-bottom: -25px;
 }
+
+.offcanvas_header{
+    margin-bottom: -1.5rem;
+}

@@ -56,8 +56,12 @@ function OffCanvasAboutUs({ ...props }) {
           minWidth: "25%",
         }}
       >
-        <Offcanvas.Header closeButton className="text-white">
-          <h5 className="title__offcanvasaboutus">About this proyect</h5>
+        <Offcanvas.Header
+          closeButton
+          closeVariant="white"
+          className="text-white mt-3 offcanvas_header"
+        >
+          <Offcanvas.Title className="title__offcanvasaboutus">About this proyect</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body className="text-white">
           <hr></hr>
