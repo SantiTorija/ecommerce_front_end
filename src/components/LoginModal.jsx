@@ -1,6 +1,6 @@
 import Modal from "react-bootstrap/Modal";
 import React, { useState } from "react";
-import { Person } from "react-bootstrap-icons";
+
 import "../styles/modal.css";
 import GoogleIcon from "@mui/icons-material/Google";
 import AppleIcon from "@mui/icons-material/Apple";
@@ -12,9 +12,9 @@ import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-function MyVerticallyCenteredModal(props) {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+function LoginModal(props) {
+  const [email, setEmail] = useState("username@gmail.com");
+  const [password, setPassword] = useState("password");
 
   const dispatch = useDispatch();
 
@@ -37,7 +37,6 @@ function MyVerticallyCenteredModal(props) {
         url: `${process.env.REACT_APP_API_URL}users/token`,
         data: { email, password },
       });
-      console.log(response.data.token);
       dispatch(
         login({
           token: response.data.token,
@@ -114,32 +113,6 @@ function MyVerticallyCenteredModal(props) {
           </Modal.Body>
         </div>
       </Modal>
-    </>
-  );
-}
-
-function LoginModal(props) {
-  const userState = useSelector((state) => state.user);
-
-  return (
-    <>
-      {userState.token ? (
-        <Link className="button__person me-4" to="/miPerfil/misDatos">
-          <Person color="#F0F0F0" size={25} />
-        </Link>
-      ) : (
-        <button className=" button__person me-4">
-          <Person color="#F0F0F0" size={25} onClick={() => props.setModalLoginShow(true)} />
-        </button>
-      )}
-
-      <MyVerticallyCenteredModal
-        modalRegisterShow={props.modalRegisterShow}
-        setModalRegisterShow={props.setModalRegisterShow}
-        setModalLoginShow={props.setModalLoginShow}
-        show={props.modalLoginShow}
-        onHide={() => props.setModalLoginShow(false)}
-      />
     </>
   );
 }

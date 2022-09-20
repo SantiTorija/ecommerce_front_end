@@ -1,0 +1,86 @@
+.button__about__this__proyect{
+    background-color: #f0a202;
+    border: none;
+    outline: none;
+    position: absolute;
+    right: 0;
+    bottom: 65%;
+    position: fixed;
+    z-index: 10;
+    -moz-transform:rotate(-90deg);
+    -ms-transform:rotate(-90deg);
+    -o-transform:rotate(-90deg);
+    -webkit-transform:rotate(-90deg);
+    transform:rotate(-90deg);
+    transform-origin: bottom right;
+    padding: 5px 15px;
+    border-radius: 5px;
+    color:#191919
+}
+
+.button__about__this__proyect:hover{
+    background-color: #191919;
+    color: #f0a202;
+    transition: 0.3s;
+    border: #f0a202 1px solid;
+}
+
+.button__aboutUS{
+    color:#191919;
+    background-color: #f0a202;
+    border: none;
+    outline: none;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    width: 140px;
+    border-radius: 5px;
+}
+
+.button__aboutUS:hover{
+    color:#191919;
+    background-color: #f0a202;
+    border: none;
+    outline: none;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    width: 140px;
+    border-radius: 5px;
+}
+
+.button__redet{
+    color:#f0a202;
+    background-color: #191919;
+    border: #f0a202 1px solid;
+    outline: none;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    min-width: 140px;
+    border-radius: 5px; 
+}
+
+.button__login{
+    color:#f0a202;
+    background-color: #191919;
+    border: #f0a202 1px solid;
+    outline: none;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px; 
+    height: 30%;
+    margin-top: 7px;
+    margin-right: 6px;
+    min-width: 70px;
+}
+
+p {
+    margin-right: 5px;
+}
+
+.title__offcanvasaboutus{
+    margin-top: 10px;
+    margin-bottom: -25px;
+}

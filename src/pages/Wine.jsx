@@ -4,18 +4,16 @@ import axios from "axios";
 import "../styles/Wine.css";
 import Cantidad from "../components/Cantidad.jsx";
 import ProductCard from "../components/ProductCard";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import { AiOutlineLine } from "react-icons/ai";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation, Pagination } from "swiper";
+import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/bundle";
 import "swiper/css/pagination";
 import React from "react";
 import "../styles/highlighted.css";
 
-SwiperCore.use([Pagination, Navigation]);
+SwiperCore.use([Pagination, Navigation, Autoplay]);
 
 function Wine(props) {
   const [wine, setWine] = useState(null);
@@ -32,7 +30,7 @@ function Wine(props) {
       return response;
     };
     dataWine();
-  }, []);
+  }, [slug]);
 
   useEffect(() => {
     const dataWine = async () => {
@@ -87,20 +85,65 @@ function Wine(props) {
                 <h5 className="wine__price">Precio: ${wine.price}</h5>
                 <Cantidad wine={wine} setShowCart={props.setShowCart} />
               </div>
-              <div className="col-2"></div>
             </div>
-            <div>
+            <div className="d-none d-lg-block">
               <span className="recommended__title">
                 <AiOutlineLine className="text-white me-2" /> PRODUCTOS RELACIONADOS
                 <AiOutlineLine className="text-white ms-2" />
               </span>
               <Swiper
-                modules={[Navigation, Pagination]}
+                modules={[Navigation, Pagination, Autoplay]}
                 spaceBetween={0}
                 slidesPerView={3}
                 loop={true}
                 className="contenedor_style"
                 navigation
+                autoplay={{
+                  delay: 1500,
+                  disableOnInteraction: false,
+                }}
+              >
+                {slides}
+              </Swiper>
+            </div>
+            <div className="d-none d-md-block d-lg-none">
+              <span className="recommended__title">
+                <AiOutlineLine className="text-white me-2" /> PRODUCTOS RELACIONADOS
+                <AiOutlineLine className="text-white ms-2" />
+              </span>
+              <div className="container">
+                <Swiper
+                  modules={[Navigation, Pagination, Autoplay]}
+                  spaceBetween={0}
+                  slidesPerView={2}
+                  className="contenedor_style"
+                  navigation
+                  loop={true}
+                  autoplay={{
+                    delay: 1500,
+                    disableOnInteraction: false,
+                  }}
+                >
+                  {slides}
+                </Swiper>
+              </div>
+            </div>
+            <div className="d-block d-md-none container">
+              <span className="recommended__title">
+                <AiOutlineLine className="text-white me-2" /> PRODUCTOS RELACIONADOS
+                <AiOutlineLine className="text-white ms-2" />
+              </span>
+              <Swiper
+                modules={[Navigation, Pagination, Autoplay]}
+                spaceBetween={0}
+                slidesPerView={1}
+                className="contenedor_style"
+                navigation
+                loop={true}
+                autoplay={{
+                  delay: 1500,
+                  disableOnInteraction: false,
+                }}
               >
                 {slides}
               </Swiper>
