@@ -1,11 +1,11 @@
-import mer from "../assets/images/MER.png";
+import mer2 from "../assets/images/MER2.png";
 import { Row, Col } from "react-bootstrap";
 
 function AboutStep3() {
   return (
-    <Row className="mt-5 align-items-center">
+    <Row className="mt-5 mb-5 align-items-center">
       <Col className="stepColumn">
-        <img src={mer} alt="imagen mer " className="col-6 w-100" />
+        <img src={mer2} alt="imagen mer " className="col-6 w-100" />
       </Col>
       <Col>
         <div className="d-flex align-items-center gap-3 mt-3">
@@ -23,9 +23,11 @@ function AboutStep3() {
           <h4 className="aboutTitle ">Metodología de Trabajo</h4>
         </div>
         <p className="mt-4 aboutTextBody">
-          Una vez decidido el rubro y el ecommerce a desarrollar, definimos el MER, modelo entidad
-          relación.En este paso, puntualizamos y establecemos las principales relaciones entre las
-          entidades del proyecto: Variedad, Vino, Usuario, Pedido y Administrador.
+          Utilizamos metodologías ágiles para organizar y dividir nuestro trabajo. Fueron tres
+          sprints diferentes, donde cada sprint tenía determinadas tareas o funcionalidades para
+          desarrollar, de forma individual o grupal. Usamos como herramientas: Github (para subir y
+          alojar el código), Trello (para la planificación y división de de tareas) y Discord (para
+          la comunicación entre los miembros del equipo).
         </p>
       </Col>
     </Row>

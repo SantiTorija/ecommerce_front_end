@@ -97,3 +97,14 @@
   border: 1px solid white;
   background-color: rgba(19, 19, 19, 0.4);
 }
+
+#technologiesSection {
+  background-image: linear-gradient(rgba(19, 19, 19, 0.8) 10%, rgba(19, 19, 19, 0.9) 100%),
+    url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1872f9fb-fc39-4d11-ace9-c9a5b03b4df1/d6x724f-6ecbf90a-f94f-4be9-8760-6e2b33b54dbb.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzE4NzJmOWZiLWZjMzktNGQxMS1hY2U5LWM5YTViMDNiNGRmMVwvZDZ4NzI0Zi02ZWNiZjkwYS1mOTRmLTRiZTktODc2MC02ZTJiMzNiNTRkYmIuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.0mhJBbyX1hrAZ9z34vCxKK8L9GzM4r-DFYL8kHUPUf8");
+  background-size: cover;
+  background-position: center;
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-blend-mode: darken;
+}
