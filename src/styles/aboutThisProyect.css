@@ -75,9 +75,25 @@
   font-size: 1.5rem;
 }
 
-
-.image__technologies{
+.image__technologies {
   object-fit: contain;
   width: 7em;
   height: 7em;
+}
+
+.aboutTitle {
+  color: #f0f0f0;
+  height: 20px;
+}
+
+.aboutTextBody {
+  font-weight: 200;
+  color: #f0f0f0;
+  font-size: 1.15rem;
+  line-height: 1.8rem;
+}
+
+.stepColumn {
+  border: 1px solid white;
+  background-color: rgba(19, 19, 19, 0.4);
 }

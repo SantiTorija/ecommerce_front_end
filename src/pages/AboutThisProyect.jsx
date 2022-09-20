@@ -2,7 +2,11 @@ import { Link } from "react-router-dom";
 import "../styles/aboutThisProyect.css";
 import { Container } from "react-bootstrap";
 import AboutTitle from "../components/AboutTitle";
-import mer from "../assets/images/mer-byn.jpg";
+import AboutTitle2 from "../components/AboutTitle2";
+import AboutStep1 from "../components/AboutStep1";
+import AboutStep2 from "../components/AboutStep2";
+import AboutStep3 from "../components/AboutStep3";
+import mer from "../assets/images/MER.png";
 import mer2 from "../assets/images/mer2byn.jpg";
 
 function AboutThisProyect() {
@@ -25,55 +29,13 @@ function AboutThisProyect() {
         </Container>
       </div>
       <div className="container">
-        <div className="row mb-5">
-          {/*           <div className=" used__tecnologies col-6">
-            <h4 className="title__used__tecnologies">Tecnologías usadas</h4>
-            <div className="d-flex justify-content-around">
-              <div className="col-5 ps-5">
-                <h5>Front-end React</h5> <li>Redux</li>
-                <li>React-router-dom</li> <li>Bootstrap</li>
-                <li>Github</li> <li>Font Awesomes</li>
-              </div>
-              <div className="col-3">
-                <h5>Back-end</h5>
-                <li>MongoDB</li>
-                <li>Express</li> <li>JWT</li>
-                <li>Formidable</li> <li>Bcryptjs</li>
-                <li>Vercel</li>
-                <li>MongoDB</li> <li>Atlas</li>
-              </div>
-            </div>
-          </div>
-          <div className=" used__tecnologies col-6 align-items-center justify-content-center">
-            <h4 className="title__used__tecnologies">Video demo</h4>
-            <iframe
-              src="https://embed.lottiefiles.com/animation/8633"
-              title="underConstruction"
-              className="w-100"
-            ></iframe>
-          </div> */}
+        <div className="row mb-5 mt-5">
+          <AboutTitle2 />
 
-          <h2 className="text-white d-flex justify-content-center my-5 ">Planeación</h2>
-          <img src={mer} alt="imagen mer " className="col-6"></img>
+          <AboutStep1 />
+          <AboutStep2 />
+          <AboutStep3 />
 
-          <div className="col-6 text-white ps-4 d-flex align-items-center flex-column justify-content-center">
-            <div>
-              <h4>1 - Concepción del proyecto & ERD</h4>
-              <p className="pb-4">
-                Uno de nuestros primeros pasos fue pensar muy detalladamente el
-                Modelo-Entidad-Relación Aqui definimos las principales relaciones entre las
-                siguientes entidades: User, Admin, Category, Order, Product and Address.
-              </p>
-            </div>
-            <div>
-              <h4>2 - Diseño e Inspiracón</h4>
-              <p>
-                Inspiramos nuestro proyecto en Vinos del Sur, un ecommerce especializado en vinos de
-                alto nivel Llenamos nuestra base de datos usando imagenes, descripciones, nombres y
-                precios con productos de Vinos del Mundo, otra prestigiosa retailer.
-              </p>
-            </div>
-          </div>
           <div className="d-flex mt-5">
             <div className="col-6 text-white pe-4 d-flex align-items-center flex-column justify-content-center">
               <div>
