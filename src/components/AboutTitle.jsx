@@ -3,7 +3,7 @@ import "../styles/home.css";
 
 function AboutTitle() {
   return (
-    <h2 className="title hackWines d-flex justify-content-center">
+    <h2 className="title hackWines d-flex justify-content-center m-5">
       <AiOutlineLine className="me-2" /> Sobre este proyecto <AiOutlineLine className="ms-2" />
     </h2>
   );
