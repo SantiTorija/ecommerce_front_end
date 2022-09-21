@@ -99,7 +99,7 @@ function Wine(props) {
                 className="contenedor_style"
                 navigation
                 autoplay={{
-                  delay: 1500,
+                  delay: 3000,
                   disableOnInteraction: false,
                 }}
               >
@@ -120,7 +120,7 @@ function Wine(props) {
                   navigation
                   loop={true}
                   autoplay={{
-                    delay: 1500,
+                    delay: 3000,
                     disableOnInteraction: false,
                   }}
                 >
@@ -141,7 +141,7 @@ function Wine(props) {
                 navigation
                 loop={true}
                 autoplay={{
-                  delay: 1500,
+                  delay: 3000,
                   disableOnInteraction: false,
                 }}
               >
