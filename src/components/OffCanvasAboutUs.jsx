@@ -45,7 +45,7 @@ function OffCanvasAboutUs({ ...props }) {
         method: "get",
         url: `${process.env.REACT_APP_API_URL}reset`,
       });
-      notify("Las base de datos ha sido reseteada con éxito");
+      notify("La base de datos ha sido reseteada con éxito");
       return response.data;
     } catch (error) {
       notify(error.response.data.error);
@@ -121,7 +121,14 @@ function OffCanvasAboutUs({ ...props }) {
               <p className="d-inline">Email: admin@gmail.com</p>
               <p>Contraseña: password</p>
             </div>
-            <button className="button__login">Admin</button>
+            <a
+              href="https://hack-wines-admin.vercel.app/login"
+              target="_blank"
+              rel="noreferrer"
+              className="button__login"
+            >
+              Admin
+            </a>
           </div>
         </Offcanvas.Body>
       </Offcanvas>
