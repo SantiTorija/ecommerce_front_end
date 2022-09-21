@@ -19,6 +19,13 @@ function ShowShop(props) {
   const [page, setPage] = useState(1);
   const [search, setSearch] = useState("");
 
+  function setWineType(value) {
+    setType(value);
+    setPage(1);
+    setMinNum(0);
+    setMaxNum(12);
+  }
+
   useEffect(() => {
     const dataWine = async () => {
       const response = await axios({
@@ -69,7 +76,7 @@ function ShowShop(props) {
     };
     setWineType("todos");
     dataWine();
-  }, [minNum, maxNum, search]);
+  }, [search]);
 
   function handlePagePlus() {
     if (page < allWines.length / 12) {
@@ -85,13 +92,6 @@ function ShowShop(props) {
       setMaxNum(maxNum - 12);
       setPage(page - 1);
     }
-  }
-
-  function setWineType(value) {
-    setType(value);
-    setPage(1);
-    setMinNum(0);
-    setMaxNum(12);
   }
 
   if (wines) {

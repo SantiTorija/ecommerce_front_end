@@ -58,22 +58,19 @@ function ProductCard({ wine, setShowCart }) {
             </button>
           </Link>
         </div>
-        <span style={{ position: "absolute", marginLeft: "1rem", marginTop: "0.3rem" }}>
-          <RiStarSFill color="#F0A202" />
-          <RiStarSFill color="#F0A202" />
-          <RiStarSFill
-            color="#F0A202
-"
-          />
-          <RiStarSFill
-            color="#F0A202
-"
-          />
-          <RiStarSFill
-            color="#F0A202
-"
-          />
-        </span>
+        {wine.highlighted ? (
+          <span style={{ position: "absolute", marginLeft: "1rem", marginTop: "0.3rem" }}>
+            {Array.from(Array(5)).map((star) => (
+              <RiStarSFill color="#F0A202" />
+            ))}
+          </span>
+        ) : (
+          <span style={{ position: "absolute", marginLeft: "1rem", marginTop: "0.3rem" }}>
+            {Array.from(Array(3 + Math.floor(Math.random() * 2))).map((star) => (
+              <RiStarSFill color="#F0A202" />
+            ))}
+          </span>
+        )}
         <span
           style={{
             position: "absolute",
