@@ -68,7 +68,7 @@
   font-weight: 400;
   margin-bottom: 20px;
   margin-top: 15px;
-  color: #f0f0f0;
+  color: #f0a102cf;
 }
 .wine-image-card {
   background-color: #40404047;
@@ -286,4 +286,8 @@ input[type="number"] {
 .precio__subproducto{
   width: 50px;
   text-align: end;
+}
+
+.card{
+  border: none !important;
 }

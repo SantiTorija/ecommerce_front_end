@@ -5,7 +5,7 @@ import "../styles/offCanvasNav.css";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
 import { useSelector } from "react-redux";
-import CantidadCart from "./CantidadCart";
+import CantidadCart from "./QuantityCart";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
