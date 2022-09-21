@@ -13,6 +13,13 @@
     }
 }
 
+#card-image-solo{
+    border: none !important;
+}
+
+#card-description{
+    border: 1px solid white !important;
+}
 
 .contenedor_style{
     max-width: 950px;

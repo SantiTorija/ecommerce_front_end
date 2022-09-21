@@ -19,7 +19,7 @@ function Cantidad({ wine, setShowCart }) {
   return (
     <>
       <div className="mt-4">
-        <button className="Wine__cart" onClick={handleAddCart}>
+        <button className="Wine__cart w-100 mb-5" onClick={handleAddCart}>
           AÑADIR AL CARRITO
         </button>
       </div>

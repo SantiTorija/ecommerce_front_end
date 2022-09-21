@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import "../styles/Wine.css";
-import Cantidad from "../components/Cantidad.jsx";
+import Quantity from "../components/Quantity.jsx";
 import ProductCard from "../components/ProductCard";
 import { AiOutlineLine } from "react-icons/ai";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -12,6 +12,8 @@ import "swiper/css/bundle";
 import "swiper/css/pagination";
 import React from "react";
 import "../styles/highlighted.css";
+import { Container, Card, Row, Col } from "react-bootstrap";
+import backImage from "../assets/images/cellar3.webp";
 
 SwiperCore.use([Pagination, Navigation, Autoplay]);
 
@@ -19,6 +21,10 @@ function Wine(props) {
   const [wine, setWine] = useState(null);
   const { slug } = useParams();
   const [wines, setWines] = useState([]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     const dataWine = async () => {
@@ -44,14 +50,6 @@ function Wine(props) {
     dataWine();
   }, []);
 
-  function truncateString(str, num) {
-    if (str?.length > num) {
-      return str?.slice(0, num) + "...";
-    } else {
-      return str;
-    }
-  }
-
   const slides = [];
   for (const wine of wines) {
     slides.push(
@@ -67,76 +65,98 @@ function Wine(props) {
   return (
     wine && (
       <>
-        <div className=" Wine__main">
-          <div className="row">
-            <div className="d-flex  Wine__picture__background">
-              <div className="col-1"></div>
-              <div className="col-5  pt-5">
-                <img className="Wine__picture" src={wine.picture} alt="imagen vino" />
-              </div>
-              <div className="col-5 col__wine__first">
-                <h2 className="Wine__title">{wine.name}</h2>
-                <h5 className="wine__description">{truncateString(wine?.description, 200)}</h5>
-                <h5 className="wine__ul text-capitalize">Tipo: {wine.type.name}</h5>
-                <h5 className="wine__ul">Pais: {wine.country}</h5>
-                <h5 className="wine__ul">Cosecha: {wine.harvest}</h5>
-                <h5 className="wine__ul">Bodega: {wine.cellar}</h5>
-                <h5 className="wine__ul">Capacidad: {wine.capacity}</h5>
-                <h5 className="wine__price">Precio: ${wine.price}</h5>
-                <Cantidad wine={wine} setShowCart={props.setShowCart} />
-              </div>
-            </div>
-            <div className="d-none d-lg-block">
-              <span className="recommended__title">
-                <AiOutlineLine className="text-white me-2" /> PRODUCTOS RELACIONADOS
-                <AiOutlineLine className="text-white ms-2" />
-              </span>
-              <Swiper
-                modules={[Navigation, Pagination, Autoplay]}
-                spaceBetween={0}
-                slidesPerView={3}
-                loop={true}
-                className="contenedor_style"
-                navigation
-                autoplay={{
-                  delay: 1500,
-                  disableOnInteraction: false,
-                }}
-              >
-                {slides}
-              </Swiper>
-            </div>
-            <div className="d-none d-md-block d-lg-none">
-              <span className="recommended__title">
-                <AiOutlineLine className="text-white me-2" /> PRODUCTOS RELACIONADOS
-                <AiOutlineLine className="text-white ms-2" />
-              </span>
-              <div className="container">
-                <Swiper
-                  modules={[Navigation, Pagination, Autoplay]}
-                  spaceBetween={0}
-                  slidesPerView={2}
-                  className="contenedor_style"
-                  navigation
-                  loop={true}
-                  autoplay={{
-                    delay: 1500,
-                    disableOnInteraction: false,
+        <div
+          style={{
+            backgroundImage: `linear-gradient(rgba(19,19,19,0.7) 10%, rgba(19,19,19,0.7) 100%), url(${backImage})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            paddingTop: "7rem",
+            paddingBottom: "5rem",
+          }}
+        >
+          <Container>
+            <Row className="justify-content-between">
+              <Col className="d-none d-md-block">
+                <Card
+                  id="card-image-solo"
+                  style={{
+                    width: "100%",
+                    marginRight: "3rem",
+                    backgroundColor: "transparent",
                   }}
                 >
-                  {slides}
-                </Swiper>
-              </div>
-            </div>
-            <div className="d-block d-md-none container">
-              <span className="recommended__title">
-                <AiOutlineLine className="text-white me-2" /> PRODUCTOS RELACIONADOS
-                <AiOutlineLine className="text-white ms-2" />
-              </span>
+                  <Card.Img variant="top" src={wine.picture} alt="imagen vino" />
+                </Card>
+              </Col>
+              <Col>
+                <Card
+                  id="card-description"
+                  style={{
+                    width: "100%",
+                    height: "98%",
+                    backgroundColor: "rgb(19, 19, 19, 0.5)",
+                    padding: "1.5rem",
+                  }}
+                >
+                  <Card.Img
+                    className="d-block d-md-none"
+                    variant="top"
+                    src={wine.picture}
+                    alt="imagen vino"
+                  />
+                  <Card.Body>
+                    <Card.Title className="Wine__title fs-4 mb-3 text-center">
+                      {wine.name}
+                    </Card.Title>
+                    <Card.Text>
+                      <h5 className="wine__description d-none d-md-block">{wine.description}</h5>
+                      <h5 className="wine__ul text-capitalize fs-5">Tipo: {wine.type.name}</h5>
+                      <h5 className="wine__ul fs-5">Pais: {wine.country}</h5>
+                      <h5 className="wine__ul fs-5">Cosecha: {wine.harvest}</h5>
+                      <h5 className="wine__ul fs-5">Bodega: {wine.cellar}</h5>
+                      <h5 className="wine__ul fs-5">Capacidad: {wine.capacity}</h5>
+                      <h5 className="wine__price">Precio: ${wine.price}</h5>
+                      <div className="text-center w-100">
+                        <Quantity wine={wine} setShowCart={props.setShowCart} />
+                      </div>
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Col>
+            </Row>
+          </Container>
+        </div>
+        <Container>
+          <div className="d-none d-lg-block">
+            <span className="recommended__title">
+              <AiOutlineLine className="text-white me-2" /> PRODUCTOS RELACIONADOS
+              <AiOutlineLine className="text-white ms-2" />
+            </span>
+            <Swiper
+              modules={[Navigation, Pagination, Autoplay]}
+              spaceBetween={0}
+              slidesPerView={3}
+              loop={true}
+              className="contenedor_style"
+              navigation
+              autoplay={{
+                delay: 1500,
+                disableOnInteraction: false,
+              }}
+            >
+              {slides}
+            </Swiper>
+          </div>
+          <div className="d-none d-md-block d-lg-none">
+            <span className="recommended__title">
+              <AiOutlineLine className="text-white me-2" /> PRODUCTOS RELACIONADOS
+              <AiOutlineLine className="text-white ms-2" />
+            </span>
+            <div className="container">
               <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
                 spaceBetween={0}
-                slidesPerView={1}
+                slidesPerView={2}
                 className="contenedor_style"
                 navigation
                 loop={true}
@@ -149,7 +169,27 @@ function Wine(props) {
               </Swiper>
             </div>
           </div>
-        </div>
+          <div className="d-block d-md-none container">
+            <span className="recommended__title">
+              <AiOutlineLine className="text-white me-2" /> PRODUCTOS RELACIONADOS
+              <AiOutlineLine className="text-white ms-2" />
+            </span>
+            <Swiper
+              modules={[Navigation, Pagination, Autoplay]}
+              spaceBetween={0}
+              slidesPerView={1}
+              className="contenedor_style"
+              navigation
+              loop={true}
+              autoplay={{
+                delay: 1500,
+                disableOnInteraction: false,
+              }}
+            >
+              {slides}
+            </Swiper>
+          </div>
+        </Container>
       </>
     )
   );

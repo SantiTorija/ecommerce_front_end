@@ -4,13 +4,13 @@ import BottlesShopHeader from "./BottlesShopHeader";
 
 function ShopHeader() {
   return (
-    <Row className="hero-section">
+    <Row sty className="hero-section">
       <Col className="col-6 welcome-store-col">
         <h2 className="d-none d-lg-block wine-title">Bienvenido a nuestra tienda</h2>
         <p className="mt-4 d-none d-lg-block shop-header-paragraph pb-3">
           Lo invitamos a descubrir los mejores vinos de alta gama, del mundo a su mesa.
         </p>
-        <hr style={{ color: "#F0F0F0", marginTop: "2rem" }} />
+        <hr className="d-none d-lg-block" style={{ color: "#F0F0F0", marginTop: "2rem" }} />
       </Col>
       <Col style={{ position: "relative" }} className="col-6 d-flex">
         <BottlesShopHeader />
