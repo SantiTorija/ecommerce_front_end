@@ -7,8 +7,7 @@ import AppleIcon from "@mui/icons-material/Apple";
 import newHackWinesLogo from "../assets/images/newHackWinesLogo.png";
 import axios from "axios";
 import { login } from "../redux/userSlice";
-import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -49,6 +48,15 @@ function LoginModal(props) {
         }),
       );
       props.setModalLoginShow(false);
+      toast.success(`Bienvenido a HackWines`, {
+        position: "top-right",
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
       return response.data;
     } catch (error) {
       notify(error.response.data.error);

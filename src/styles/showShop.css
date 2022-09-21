@@ -10,3 +10,21 @@
   border: none;
   outline: none;
 }
+
+.input__search{
+  border-radius: 20px;
+  border:none;
+  outline: none;
+  padding-left: 30px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+
+}
+
+.searchicon{
+  color:black;
+  margin-right: -28px;
+  margin-top: 9px;
+  z-index: 2;
+
+}

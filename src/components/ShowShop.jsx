@@ -8,6 +8,7 @@ import "../styles/showShop.css";
 import { Container, Row } from "react-bootstrap";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import SearchIcon from "@mui/icons-material/Search";
 
 function ShowShop(props) {
   const [wines, setWines] = useState(null);
@@ -16,6 +17,14 @@ function ShowShop(props) {
   const [minNum, setMinNum] = useState(0);
   const [maxNum, setMaxNum] = useState(12);
   const [page, setPage] = useState(1);
+  const [search, setSearch] = useState("");
+
+  function setWineType(value) {
+    setType(value);
+    setPage(1);
+    setMinNum(0);
+    setMaxNum(12);
+  }
 
   useEffect(() => {
     const dataWine = async () => {
@@ -35,6 +44,40 @@ function ShowShop(props) {
     dataWine();
   }, [type, minNum, maxNum]);
 
+  useEffect(() => {
+    const dataWine = async () => {
+      if (search) {
+        const response = await axios({
+          method: "GET",
+          url: `${process.env.REACT_APP_API_URL}wines/search/${search}`,
+        });
+        setAllWines(response.data);
+        setWines(
+          response.data.slice(
+            Math.min(minNum, response.data.length),
+            Math.min(maxNum, response.data.length),
+          ),
+        );
+        return response;
+      } else {
+        const response = await axios({
+          method: "GET",
+          url: `${process.env.REACT_APP_API_URL}wines/filter/todos`,
+        });
+        setAllWines(response.data);
+        setWines(
+          response.data.slice(
+            Math.min(minNum, response.data.length),
+            Math.min(maxNum, response.data.length),
+          ),
+        );
+        return response;
+      }
+    };
+    setWineType("todos");
+    dataWine();
+  }, [search]);
+
   function handlePagePlus() {
     if (page < allWines.length / 12) {
       setMinNum(minNum + 12);
@@ -51,17 +94,10 @@ function ShowShop(props) {
     }
   }
 
-  function setWineType(value) {
-    setType(value);
-    setPage(1);
-    setMinNum(0);
-    setMaxNum(12);
-  }
-
   if (wines) {
     return (
       <>
-        <div className="text-white w-100 text-center mb-5 wine__title ">
+        <div className="text-white w-100 text-center mb-4 wine__title ">
           <div className="d-flex align-items-center justify-content-center w-100 mb-3">
             <AiOutlineLine className="text-white me-2" />
             <span className="wine__title">SELECCIONAR TIPO</span>
@@ -135,9 +171,24 @@ function ShowShop(props) {
               espumante
             </Link>
           </div>
+          <div className="d-flex justify-content-center mt-3">
+            <SearchIcon className="searchicon" />
+            <input
+              type="text"
+              className="input__search"
+              placeholder="Search"
+              value={search ? search : ""}
+              onChange={(e) => (e.target.value ? setSearch(e.target.value) : setSearch(""))}
+            />
+          </div>
+          {wines.length === 0 ? (
+            <div className="mt-5">
+              <h6 className="text-white">No hay resultados para su busuqeda</h6>
+            </div>
+          ) : null}
         </div>
         <Container className="mb-5 ">
-          <Row className="justify-content-between gx-4">
+          <Row className="justify-content-start gx-4">
             {wines.map((wine, index) => {
               return <ProductCard setShowCart={props.setShowCart} wine={wine} key={wine._id} />;
             })}
