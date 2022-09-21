@@ -58,9 +58,22 @@
 .card__linkdin {
   width: 250px;
   background-color: #191919;
-  border: solid #f0f0f0 1px;
+  border: 1px solid #f0a202;
   height: 280px;
   border-radius: 5px;
+}
+
+.iconHover {
+  color: #f0f0f0;
+}
+
+.iconHover:hover {
+  color: #f0a202;
+}
+
+.jobPosition {
+  font-weight: 200;
+  font-size: 1rem;
 }
 
 .profile_logo_linkedin {
