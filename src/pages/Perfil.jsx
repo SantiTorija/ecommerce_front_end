@@ -10,9 +10,11 @@ import Table from "react-bootstrap/Table";
 import WarningAmberIcon from "@mui/icons-material/WarningAmber";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import EditProfileModal from "../components/EditProfileModal";
 
 function Perfil() {
   const userState = useSelector((state) => state.user);
+  const [modalShow, setModalShow] = useState(false);
   const [selected, setSelected] = useState(true);
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
@@ -115,71 +117,41 @@ function Perfil() {
                 <>
                   <div className="d-flex justify-content-between">
                     <h6 className="text__yellow">MIS DATOS</h6>
-                    <button className="btn__editar" onClick={EditarPerfil}>
+                    <button
+                      className="btn__editar"
+                      onClick={() => setModalShow(true)} /* onClick={EditarPerfil} */
+                    >
                       <EditIcon className="me-1 edit__icon" />
                       EDITAR
                     </button>
+                    <EditProfileModal show={modalShow} onHide={() => setModalShow(false)} />
                   </div>
                   <hr className="hr__misDatos"></hr>
-                  <div className="d-flex">
-                    <h6 className="w-25">Nombre</h6>
-                    <input
-                      type="text"
-                      className="input__editar__perfil"
-                      defaultValue={userState.firstname}
-                      onChange={(e) => setFirstname(e.target.value)}
-                    ></input>
+                  <div>
+                    <h6 className="w-25 d-block d-md-inline">Nombre: </h6>
+                    <span>{userState.firstname}</span>
                   </div>
 
                   <hr className="hr__misDatos"></hr>
-                  <div className="d-flex">
-                    <h6 className="w-25">Apellido</h6>
-                    <input
-                      type="text"
-                      className="input__editar__perfil"
-                      defaultValue={userState.lastname}
-                      onChange={(e) => setLastname(e.target.value)}
-                    ></input>
+                  <div>
+                    <h6 className="w-25 d-block d-md-inline">Apellido: </h6>
+                    <span>{userState.lastname}</span>
                   </div>
                   <hr className="hr__misDatos"></hr>
-                  <div className="d-flex">
-                    <h6 className="w-25">E-mail</h6>
-                    <input
-                      type="text"
-                      className="input__editar__perfil"
-                      defaultValue={userState.email}
-                      onChange={(e) => setEmail(e.target.value)}
-                    ></input>
+                  <div>
+                    <h6 className="w-25 d-block d-md-inline">E-mail: </h6>
+                    <span>{userState.email}</span>
                   </div>
                   <hr className="hr__misDatos"></hr>
-                  <div className="d-flex">
-                    <h6 className="w-25">Contraseña</h6>
-                    <input
-                      type="password"
-                      className="input__editar__perfil"
-                      placeholder="*********"
-                      onChange={(e) => setPassword(e.target.value)}
-                    ></input>
+
+                  <div>
+                    <h6 className="w-25 d-block d-md-inline">Teléfono: </h6>
+                    <span>{userState.phone}</span>
                   </div>
                   <hr className="hr__misDatos"></hr>
-                  <div className="d-flex">
-                    <h6 className="w-25">Telefono</h6>
-                    <input
-                      type="number"
-                      className="input__editar__perfil"
-                      defaultValue={userState.phone}
-                      onChange={(e) => setPhone(e.target.value)}
-                    ></input>
-                  </div>
-                  <hr className="hr__misDatos"></hr>
-                  <div className="d-flex">
-                    <h6 className="w-25">Dirección</h6>
-                    <input
-                      type="text"
-                      className="input__editar__perfil"
-                      defaultValue={userState.address}
-                      onChange={(e) => setAddress(e.target.value)}
-                    ></input>
+                  <div>
+                    <h6 className="w-25 d-block d-md-inline">Dirección: </h6>
+                    <span>{userState.address}</span>
                   </div>
                   <hr className="hr__misDatos"></hr>
                 </>
