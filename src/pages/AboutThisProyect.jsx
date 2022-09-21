@@ -11,6 +11,8 @@ import AboutTeam from "../components/AboutTeam";
 import AboutHero from "../components/AboutHero";
 import AboutTechnologies from "../components/AboutTechnologies";
 import { useEffect } from "react";
+import ScrollToTop from "react-scroll-to-top";
+import { ReactComponent as ScrollSVG } from "./scroll.svg";
 
 function AboutThisProyect() {
   useEffect(() => {
@@ -32,6 +34,7 @@ function AboutThisProyect() {
           {/*    <AboutStep4 /> */}
         </div>
       </div>
+      <ScrollToTop smooth component={<ScrollSVG />} className="scrollIcon" />
     </>
   );
 }
