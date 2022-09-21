@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
 
 function OffCanvasAboutUs({ ...props }) {
   const userState = useSelector((state) => state.user);
@@ -36,6 +37,19 @@ function OffCanvasAboutUs({ ...props }) {
       return setShow(false);
     }
     notify("Ya estás logeado");
+  }
+
+  async function reset() {
+    try {
+      const response = await axios({
+        method: "get",
+        url: `${process.env.REACT_APP_API_URL}reset`,
+      });
+      notify("Las base de datos ha sido reseteada con éxito");
+      return response.data;
+    } catch (error) {
+      notify(error.response.data.error);
+    }
   }
 
   return (
@@ -79,7 +93,9 @@ function OffCanvasAboutUs({ ...props }) {
             Alguien pudo haber agregado, editado o borrado algún contenido de la página. Considere
             resetear la base de datos para una mejor experiencia
           </p>
-          <button className="button__redet">Resetear</button>
+          <button className="button__redet" onClick={reset}>
+            Resetear
+          </button>
           <hr className="my-4" />
           <h5>Guía de Navegación</h5>
           <p>
