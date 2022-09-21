@@ -138,6 +138,10 @@
   .reverse {
     flex-direction: column-reverse;
   }
+
+  #alanCard {
+    margin-top: 2rem;
+  }
 }
 
 @media (max-width: 600px) {
@@ -153,5 +157,42 @@
     min-width: 100%;
     padding-left: 1rem;
     padding-right: 1 rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #teamRow {
+    gap: 0rem;
+  }
+
+  #guilleCard {
+    margin-right: 1rem;
+  }
+  #alanCard {
+    margin-top: 0rem;
+  }
+
+  .image__technologies {
+    width: 5rem;
+  }
+}
+
+@media (max-width: 468px) {
+  #guilleCard {
+    margin-right: 0rem;
+  }
+}
+
+@media (max-width: 546px) {
+  #guilleCard {
+    margin-right: 0rem;
+  }
+
+  #alanCard {
+    margin-top: 1rem;
+  }
+
+  .image__technologies {
+    width: 4rem;
   }
 }
