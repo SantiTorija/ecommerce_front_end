@@ -2,88 +2,72 @@ import "../styles/home.css";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
-import cuadrants1 from "../assets/images/cuadrants1.jpg";
-import cuadrants2 from "../assets/images/cuadrants2.jpeg";
-import cuadrants3 from "../assets/images/cuadrants3.jpeg";
-import cuadrants4 from "../assets/images/cuadrants4.jpeg";
+import cuadrants1 from "../assets/images/foto1.jpg";
+import cuadrants2 from "../assets/images/white1.jpg";
+import cuadrants3 from "../assets/images/rose.jpg";
+import cuadrants4 from "../assets/images/foto4.jpg";
 import { Link } from "react-router-dom";
-import { Cart, Cup, Megaphone, Sun } from "react-bootstrap-icons";
-import handleAlert from "./Alert";
 
 function CuadrantsHome() {
   return (
-    <Container fluid className=" p-0">
-      <Row className="d-flex containerCuadrants  p-0 m-0">
+    <Container fluid className="p-0">
+      <Row className="d-flex containerCuadrants p-0 m-0 bg-black">
         <Col
-          className="mx-0 mt-2 p-0 d-flex flex-column align-items-center  justify-content-center cuadrantColumn"
+          className="mx-0 p-0 d-flex flex-column align-items-center  justify-content-center cuadrantColumn"
           style={{
             backgroundImage: `linear-gradient(rgba(19,19,19,0.3) 10%, rgba(19,19,19,0.3) 100%),url(${cuadrants1})`,
             backgroundPosition: "center",
             backgroundSize: "cover",
           }}
         >
-          <Link to={`/tienda/todos`} className="d-flex w-100 h-100">
+          <Link to={`/tienda/tinto`} className="d-flex w-100 h-100">
             <button className="button-cuadrant ">
-              <Cart color="#F0F0F0" size={25} />
-              <h2 className="textCuadrants mt-2">Tienda</h2>
+              <h2 className="textCuadrants">TINTO</h2>
             </button>
           </Link>
         </Col>
 
         <Col
-          className="mx-0 mt-2 p-0 d-flex flex-column align-items-center  justify-content-center cuadrantColumn"
+          className="mx-0  p-0 d-flex flex-column align-items-center  justify-content-center cuadrantColumn"
           style={{
             backgroundImage: `linear-gradient(rgba(19,19,19,0.3) 10%, rgba(19,19,19,0.3) 100%),url(${cuadrants2})`,
             backgroundPosition: "center",
-            backgroundSize: "cover",
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
           }}
         >
-          <Link
-            className="d-flex w-100 h-100"
-            to=""
-            onClick={() => handleAlert("Esta función esta fuera del alcance del proyecto.")}
-          >
-            <button className="button-cuadrant">
-              <Cup color="#F0F0F0" size={25} />
-              <h2 className="textCuadrants mt-2">Cristaleria y Accesorios</h2>
+          <Link to={`/tienda/blanco`} className="d-flex w-100 h-100">
+            <button className="button-cuadrant ">
+              <h2 className="textCuadrants">BLANCO</h2>
             </button>
           </Link>
         </Col>
         <Col
-          className="mx-0 mt-2 p-0 d-flex flex-column align-items-center  justify-content-center cuadrantColumn"
+          className="mx-0  p-0 d-flex flex-column align-items-center  justify-content-center cuadrantColumn"
           style={{
             backgroundImage: `linear-gradient(rgba(19,19,19,0.3) 10%, rgba(19,19,19,0.3) 100%),url(${cuadrants3})`,
             backgroundPosition: "center",
-            backgroundSize: "cover",
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
           }}
         >
-          <Link
-            className="d-flex w-100 h-100"
-            to=""
-            onClick={() => handleAlert("Esta función esta fuera del alcance del proyecto.")}
-          >
-            <button className="button-cuadrant">
-              <Megaphone color="#F0F0F0" size={25} />
-              <h2 className="textCuadrants mt-2">Promociones</h2>
+          <Link to={`/tienda/rose`} className="d-flex w-100 h-100">
+            <button className="button-cuadrant ">
+              <h2 className="textCuadrants">ROSE</h2>
             </button>
           </Link>
         </Col>
         <Col
-          className="mx-0 mt-2 p-0 d-flex flex-column align-items-center  justify-content-center cuadrantColumn"
+          className="mx-0  p-0 d-flex flex-column align-items-center  justify-content-center cuadrantColumn"
           style={{
             backgroundImage: `linear-gradient(rgba(19,19,19,0.3) 10%, rgba(19,19,19,0.3) 100%),url(${cuadrants4})`,
-            backgroundPosition: "center",
+            backgroundPosition: "top",
             backgroundSize: "cover",
           }}
         >
-          <Link
-            className="d-flex w-100 h-100"
-            to=""
-            onClick={() => handleAlert("Esta función esta fuera del alcance del proyecto.")}
-          >
-            <button className="button-cuadrant">
-              <Sun color="#F0F0F0" size={25} />
-              <h2 className="textCuadrants mt-2">Cavas</h2>
+          <Link to={`/tienda/espumante`} className="d-flex w-100 h-100">
+            <button className="button-cuadrant ">
+              <h2 className="textCuadrants">ESPUMANTE</h2>
             </button>
           </Link>
         </Col>

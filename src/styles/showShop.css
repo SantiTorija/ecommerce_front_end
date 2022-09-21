@@ -13,18 +13,25 @@
 
 .input__search{
   border-radius: 20px;
-  border:none;
+  border: 1px solid white;
   outline: none;
-  padding-left: 30px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-
+  padding-left: 35px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-width: 250px;
+  background-color: #19191963;
+  font-size: 15px;
+  color: white;
 }
 
 .searchicon{
-  color:black;
-  margin-right: -28px;
-  margin-top: 9px;
+  color:white;
+  margin-right: -30px;
+  margin-top: 10px;
   z-index: 2;
-
 }
+
+.input__search::placeholder{
+  color:white;
+}
+

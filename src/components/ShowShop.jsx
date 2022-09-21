@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { AiOutlineLine } from "react-icons/ai";
 import BounceLoader from "react-spinners/BounceLoader";
 import ProductCard from "./ProductCard";
@@ -13,24 +13,72 @@ import SearchIcon from "@mui/icons-material/Search";
 function ShowShop(props) {
   const [wines, setWines] = useState(null);
   const [allWines, setAllWines] = useState([]);
-  const [type, setType] = useState("todos");
   const [minNum, setMinNum] = useState(0);
   const [maxNum, setMaxNum] = useState(12);
   const [page, setPage] = useState(1);
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState(null);
+  const params = useParams();
+  const navigate = useNavigate();
 
   function setWineType(value) {
-    setType(value);
     setPage(1);
     setMinNum(0);
     setMaxNum(12);
+    navigate(`/tienda/${value}`);
   }
+
+  const searchWines = async () => {
+    if (search) {
+      if (params.type !== "todos") {
+        setWineType("todos");
+      }
+      const response = await axios({
+        method: "GET",
+        url: `${process.env.REACT_APP_API_URL}wines/search/${search}`,
+      });
+      setAllWines(response.data);
+      setWines(
+        response.data.slice(
+          Math.min(minNum, response.data.length),
+          Math.min(maxNum, response.data.length),
+        ),
+      );
+      return response;
+    } else {
+      if (search === "") {
+        return setWineType("todos");
+      }
+      const response = await axios({
+        method: "GET",
+        url: `${process.env.REACT_APP_API_URL}wines/filter/todos`,
+      });
+      setAllWines(response.data);
+      setWines(
+        response.data.slice(
+          Math.min(minNum, response.data.length),
+          Math.min(maxNum, response.data.length),
+        ),
+      );
+      return response;
+    }
+  };
+
+  function useDidMountEffect(func) {
+    const didMount = useRef(false);
+
+    useEffect(() => {
+      if (didMount.current) func();
+      else didMount.current = true;
+    }, [search]);
+  }
+
+  useDidMountEffect(searchWines);
 
   useEffect(() => {
     const dataWine = async () => {
       const response = await axios({
         method: "GET",
-        url: `${process.env.REACT_APP_API_URL}wines/filter/${type}`,
+        url: `${process.env.REACT_APP_API_URL}wines/filter/${params.type}`,
       });
       setAllWines(response.data);
       setWines(
@@ -42,41 +90,7 @@ function ShowShop(props) {
       return response;
     };
     dataWine();
-  }, [type, minNum, maxNum]);
-
-  useEffect(() => {
-    const dataWine = async () => {
-      if (search) {
-        const response = await axios({
-          method: "GET",
-          url: `${process.env.REACT_APP_API_URL}wines/search/${search}`,
-        });
-        setAllWines(response.data);
-        setWines(
-          response.data.slice(
-            Math.min(minNum, response.data.length),
-            Math.min(maxNum, response.data.length),
-          ),
-        );
-        return response;
-      } else {
-        const response = await axios({
-          method: "GET",
-          url: `${process.env.REACT_APP_API_URL}wines/filter/todos`,
-        });
-        setAllWines(response.data);
-        setWines(
-          response.data.slice(
-            Math.min(minNum, response.data.length),
-            Math.min(maxNum, response.data.length),
-          ),
-        );
-        return response;
-      }
-    };
-    setWineType("todos");
-    dataWine();
-  }, [search]);
+  }, [params, minNum, maxNum]);
 
   function handlePagePlus() {
     if (page < allWines.length / 12) {
@@ -109,9 +123,9 @@ function ShowShop(props) {
               className="link mx-1"
               to={"/tienda/todos"}
               style={{
-                color: type === "todos" ? "#F0A202" : "white",
+                color: params.type === "todos" ? "#F0A202" : "white",
                 transition: "0.15s",
-                fontWeight: type === "todos" ? "500" : "400",
+                fontWeight: params.type === "todos" ? "500" : "400",
               }}
             >
               Todos
@@ -122,9 +136,9 @@ function ShowShop(props) {
               className="link mx-1"
               to={"/tienda/tinto"}
               style={{
-                color: type === "tinto" ? "#F0A202" : "white",
+                color: params.type === "tinto" ? "#F0A202" : "white",
                 transition: "0.15s",
-                fontWeight: type === "tinto" ? "500" : "400",
+                fontWeight: params.type === "tinto" ? "500" : "400",
               }}
             >
               tinto
@@ -135,9 +149,9 @@ function ShowShop(props) {
               className="link mx-1"
               to={"/tienda/blanco"}
               style={{
-                color: type === "blanco" ? "#F0A202" : "white",
+                color: params.type === "blanco" ? "#F0A202" : "white",
                 transition: "0.15s",
-                fontWeight: type === "blanco" ? "500" : "400",
+                fontWeight: params.type === "blanco" ? "500" : "400",
               }}
             >
               blanco
@@ -150,9 +164,9 @@ function ShowShop(props) {
               className="link mx-1"
               to={"/tienda/rose"}
               style={{
-                color: type === "rose" ? "#F0A202" : "white",
+                color: params.type === "rose" ? "#F0A202" : "white",
                 transition: "0.15s",
-                fontWeight: type === "rose" ? "500" : "400",
+                fontWeight: params.type === "rose" ? "500" : "400",
               }}
             >
               rose
@@ -163,9 +177,9 @@ function ShowShop(props) {
               className="link mx-1"
               to={"/tienda/espumante"}
               style={{
-                color: type === "espumante" ? "#F0A202" : "white",
+                color: params.type === "espumante" ? "#F0A202" : "white",
                 transition: "0.15s",
-                fontWeight: type === "espumante" ? "500" : "400",
+                fontWeight: params.type === "espumante" ? "500" : "400",
               }}
             >
               espumante

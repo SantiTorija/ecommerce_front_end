@@ -69,10 +69,12 @@
   width: 20rem;
   filter: grayscale(75%);
   transition: ease-in-out 0.3s;
+  overflow: hidden;
 }
 
 .cuadrantColumn:hover {
   filter: grayscale(0%);
+  overflow: hidden;
 }
 
 .textTitleCarousel {
@@ -89,6 +91,10 @@
   background-repeat: no-repeat;
   background-position: center center;
   /* background-image: linear-gradient(rgba(19, 19, 19, 0.3) 10%, rgba(19, 19, 19, 0.3) 100%); */
+}
+
+.cuadrant__container{
+  height: 100%;
 }
 
 @media (max-width: 768px) {
