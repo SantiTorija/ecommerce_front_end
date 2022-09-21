@@ -196,3 +196,9 @@
     width: 4rem;
   }
 }
+
+@media (max-width: 1268px) {
+  .scroll-downs {
+    display: none;
+  }
+}
