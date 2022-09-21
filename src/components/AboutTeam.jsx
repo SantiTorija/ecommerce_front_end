@@ -6,9 +6,12 @@ import { AiFillLinkedin, AiOutlineGithub } from "react-icons/ai";
 function AboutTeam() {
   return (
     <Container>
-      <div className="row d-flex justify-content-around text-white mb-5">
+      <div className="row d-flex justify-content-around text-white mb-5" id="teamRow">
         <AboutTitle title={"El Equipo"} />
-        <div className="col-4 card__linkdin d-flex flex-column align-items-center p-2 mb-3">
+        <div
+          className="col-4 card__linkdin d-flex flex-column align-items-center p-2 mb-3"
+          id="guilleCard"
+        >
           <img
             src="https://media-exp1.licdn.com/dms/image/C4E03AQFb0YlGuLybsg/profile-displayphoto-shrink_200_200/0/1567624582077?e=1668643200&v=beta&t=KW1PoGDIZtciWrajdnP07eYSgRi_tqx3uy0xYJ1vz0w"
             alt="profile_logo"
@@ -46,7 +49,10 @@ function AboutTeam() {
             </a>
           </div>
         </div>
-        <div className="col-4 card__linkdin d-flex flex-column align-items-center p-2 ">
+        <div
+          className="col-4 card__linkdin d-flex flex-column align-items-center p-2 "
+          id="alanCard"
+        >
           <img
             src="https://media-exp1.licdn.com/dms/image/C4D03AQF6giCFp2NWXg/profile-displayphoto-shrink_200_200/0/1648464031374?e=1668643200&v=beta&t=PkN39jeL0QYJjlIfqqLPksHJpa0lcx-mb5QexekQ2ck"
             alt="profile_logo"
