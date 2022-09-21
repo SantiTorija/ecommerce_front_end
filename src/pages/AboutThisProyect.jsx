@@ -6,7 +6,7 @@ import AboutTitle2 from "../components/AboutTitle2";
 import AboutStep1 from "../components/AboutStep1";
 import AboutStep2 from "../components/AboutStep2";
 import AboutStep3 from "../components/AboutStep3";
-import AboutStep4 from "../components/AboutStep4";
+
 import AboutTeam from "../components/AboutTeam";
 import AboutHero from "../components/AboutHero";
 import AboutTechnologies from "../components/AboutTechnologies";
@@ -31,7 +31,6 @@ function AboutThisProyect() {
           <AboutStep1 />
           <AboutStep2 />
           <AboutStep3 />
-          {/*    <AboutStep4 /> */}
         </div>
       </div>
       <ScrollToTop smooth component={<ScrollSVG />} className="scrollIcon" />
