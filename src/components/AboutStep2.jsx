@@ -4,7 +4,7 @@ import { Row, Col } from "react-bootstrap";
 function AboutStep2() {
   return (
     <Row className="mt-5 align-items-center">
-      <Col className="left">
+      <Col className="left pe-5">
         <div className="d-flex align-items-center gap-3 mt-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"

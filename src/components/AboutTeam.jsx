@@ -4,7 +4,7 @@ function AboutTeam() {
   return (
     <Container>
       <div className="row d-flex justify-content-around text-white mb-5">
-        <AboutTitle title={"Equipo"} />
+        <AboutTitle title={"El Equipo"} />
         <div className="col-4 card__linkdin d-flex flex-column align-items-center p-2 mb-3">
           <img
             src="https://media-exp1.licdn.com/dms/image/C4E03AQFb0YlGuLybsg/profile-displayphoto-shrink_200_200/0/1567624582077?e=1668643200&v=beta&t=KW1PoGDIZtciWrajdnP07eYSgRi_tqx3uy0xYJ1vz0w"
