@@ -17,6 +17,7 @@ footer {
 .goldenButton {
   background-color: #f0a202 !important;
   border: none;
+  font-weight: 500;
 }
 
 .goldenButton:hover {
