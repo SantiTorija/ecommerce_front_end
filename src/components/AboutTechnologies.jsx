@@ -4,7 +4,7 @@ import AboutTitle from "../components/AboutTitle";
 function AboutTechnologies() {
   return (
     <Container fluid id="technologiesSection" className="p-4">
-      <AboutTitle title={"Tecnologias Utilizadas"} />
+      <AboutTitle title={"TECNOLOGÍAS UTILIZADAS"} />
       <div className="d-flex mt-4">
         <div className="text-white col-4 text-center">
           <img

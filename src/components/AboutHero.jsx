@@ -7,7 +7,7 @@ function AboutHero() {
     <div className="about__us__hero">
       <Container>
         <div className="text-hero">
-          <AboutTitle title={"Sobre este proyecto"} />
+          <AboutTitle title={"SOBRE ESTE PROYECTO"} />
           <p className="paragraph__hero mt-4 mb-4 ">
             Este proyecto surge como trabajo final del curso intensivo (coding Bootcamp) realizado
             de la mano de Hack Academy. <br />

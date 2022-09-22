@@ -23,7 +23,7 @@ function AboutThisProyect() {
       <AboutTechnologies />
       <div className="container">
         <div className="row mb-5 mt-5">
-          <AboutTitle title={"Planificación"} />
+          <AboutTitle title={"PLANIFICACIÓN"} />
           <AboutStep1 />
           <AboutStep2 />
           <AboutStep3 />
