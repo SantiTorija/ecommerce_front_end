@@ -39,11 +39,6 @@ function FooterWeb() {
                     Sobre este proyecto
                   </Link>
                 </li>
-                <li className="nav-item ">
-                  <Link className="navbar-link footerLinks" to={"/contacto"}>
-                    Contacto
-                  </Link>
-                </li>
               </ul>
             </div>
 

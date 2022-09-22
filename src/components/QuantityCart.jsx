@@ -8,18 +8,6 @@ function CantidadCart({ wine }) {
   const dispatch = useDispatch();
   const cartState = useSelector((state) => state.cart);
 
-  /*  const handleAddCart = (value) => {
-    if (value >= 0) {
-      const isWine = cartState.find((element) => element._id === wine._id);
-      if (isWine) {
-        dispatch(setNumber({ id: isWine._id, quantity: value }));
-      } else {
-        wine.cartQuantity = value;
-        dispatch(addFirstTime(wine));
-      }
-    }
-  }; */
-
   function addCart() {
     if (wine.cartQuantity >= 0 && wine.cartQuantity < 100) {
       const isWine = cartState.find((element) => element._id === wine._id);

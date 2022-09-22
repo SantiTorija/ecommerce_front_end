@@ -1,10 +1,9 @@
 import winePhoto from "../assets/images/wine-about-us.png";
 import "../styles/aboutThisProyectHome.css";
-import { AiOutlineLine } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import backPhoto from "../assets/images/about-us-home-background2.jpg";
-import HomeSecondTitle from "../components/HomeSecondTitle";
+import AboutTitle from "../components/AboutTitle";
 
 function AboutThisProyectHome() {
   return (
@@ -16,8 +15,8 @@ function AboutThisProyectHome() {
         marginTop: "4rem",
       }}
     >
-      <Container>
-        <HomeSecondTitle />
+      <Container className="pt-2">
+        <AboutTitle title={"SOBRE ESTE PROYECTO"} />
         <div className="d-flex justify-content-between w-100 pb-5 align-items-center">
           <div>
             <div style={{ width: "80%" }}>

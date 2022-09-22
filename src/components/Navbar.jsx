@@ -1,11 +1,9 @@
-import handleAlert from "./Alert";
 import "../styles/navbar.css";
 import Container from "react-bootstrap/Container";
 import newHackWinesLogo from "../assets/images/newHackWinesLogo.png";
 import OffCanvasCart from "./OffCanvasCart";
 import { Link } from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar";
-import { Search } from "react-bootstrap-icons";
 import LoginModal from "./LoginModal";
 import { useState, useEffect } from "react";
 import RegisterModal from "./RegisterModal";
@@ -57,14 +55,6 @@ function NavBarV2({ setShowCart, showCart, modalLoginShow, setModalLoginShow }) 
           <h5 className="m-0 navbar-responsive">·</h5>
           <Link className="navbar-link navbar-responsive" to="/aboutThisProyect">
             Sobre este Proyecto
-          </Link>
-          <h5 className="m-0 navbar-responsive ">·</h5>
-          <Link
-            className="navbar-link navbar-responsive"
-            to={""}
-            onClick={() => handleAlert("Estamos trabajando en esta página, gracias por entender ")}
-          >
-            Contacto
           </Link>
           <div className="d-flex align-items-center d-md-none  ">
             <MenuModal className="hamburguerIcon" />

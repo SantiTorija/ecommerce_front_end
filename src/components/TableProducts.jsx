@@ -9,17 +9,6 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 function BasicExample() {
   const dispatch = useDispatch();
   const cartState = useSelector((state) => state.cart);
-  const handleAddCart = (value, wine) => {
-    if (value >= 0) {
-      const isWine = cartState.find((element) => element._id === wine._id);
-      if (isWine) {
-        dispatch(setNumber({ id: isWine._id, quantity: value }));
-      } else {
-        wine.cartQuantity = value;
-        dispatch(addFirstTime(wine));
-      }
-    }
-  };
 
   function addCart(wine) {
     if (wine.cartQuantity >= 0 && wine.cartQuantity < 100) {

@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
-import "../styles/formulario.css";
+import "../styles/form.css";
 
-function Formulario() {
+function PaymentForm() {
   const userState = useSelector((state) => state.user);
 
   return (
@@ -81,4 +81,4 @@ function Formulario() {
   );
 }
 
-export default Formulario;
+export default PaymentForm;

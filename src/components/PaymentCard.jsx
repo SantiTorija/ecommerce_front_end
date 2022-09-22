@@ -2,7 +2,6 @@ import axios from "axios";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import "../styles/mycart.css";
-
 import { deleteAllItems } from "../redux/cartSlice";
 import { useDispatch } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";

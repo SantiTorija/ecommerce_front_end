@@ -1,12 +1,11 @@
 import { useSelector } from "react-redux";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
 import PaymentCard from "../components/PaymentCard";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import BasicExample from "../components/TableProducts";
 import "../styles/Wine.css";
 import { useNavigate } from "react-router";
 import { useState } from "react";
-import Formulario from "../components/Formulario";
+import Form from "../components/PaymentForm";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -102,7 +101,7 @@ const Cart = (props) => {
           </div>
           <div style={{ display: `${tokenOk ? "block" : "none"}` }}>
             <div className="d-flex justify-content-center mt-4 flex-wrap">
-              <Formulario />
+              <Form />
               <PaymentCard />
             </div>
           </div>

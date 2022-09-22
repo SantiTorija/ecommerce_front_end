@@ -43,14 +43,6 @@ function MyVerticallyCenteredModal(props) {
               >
                 Sobre este Proyecto
               </Link>
-
-              <Link
-                className="navbar-link"
-                to={"/contacto"}
-                onClick={() => props.setShowMenuModal(false)}
-              >
-                Contacto
-              </Link>
             </Nav>
           </div>
         </Modal.Body>
