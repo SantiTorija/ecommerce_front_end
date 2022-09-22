@@ -44,9 +44,7 @@ function Highlighted(props) {
     wines && (
       <>
         <div className="d-none d-lg-block container">
-          <span className="recommended__title ">
-            <AboutTitle title={"PRODUCTOS DESTACADOS"} />
-          </span>
+          <AboutTitle title={"PRODUCTOS DESTACADOS"} />
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={0}
@@ -86,10 +84,7 @@ function Highlighted(props) {
           </Swiper>
         </div>
         <div className="d-block d-md-none container">
-          <span className="recommended__title mt-5">
-            <AiOutlineLine className="text-white me-2" /> <h4>PRODUCTOS DESTACADOS</h4>
-            <AiOutlineLine className="text-white ms-2" />
-          </span>
+          <AboutTitle title={"PRODUCTOS DESTACADOS"} />
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={0}

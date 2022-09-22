@@ -93,13 +93,19 @@
   /* background-image: linear-gradient(rgba(19, 19, 19, 0.3) 10%, rgba(19, 19, 19, 0.3) 100%); */
 }
 
-.cuadrant__container{
+.cuadrant__container {
   height: 100%;
 }
 
 @media (max-width: 768px) {
   .cuadrantColumn {
     min-width: 100%;
+  }
+
+  #aboutHome {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
