@@ -1,5 +1,6 @@
 import AboutTitle from "../components/AboutTitle";
 import Container from "react-bootstrap/Container";
+import "../styles/aboutThisProyect.css";
 
 function AboutHero() {
   return (
