@@ -53,7 +53,7 @@ function NavBarV2({ setShowCart, showCart, modalLoginShow, setModalLoginShow }) 
             Tienda
           </Link>
           <h5 className="m-0 navbar-responsive">·</h5>
-          <Link className="navbar-link navbar-responsive" to="/aboutThisProyect">
+          <Link className="navbar-link navbar-responsive pe-5" to="/aboutThisProyect">
             Sobre este Proyecto
           </Link>
           <div className="d-flex align-items-center d-md-none  ">
@@ -77,18 +77,6 @@ function NavBarV2({ setShowCart, showCart, modalLoginShow, setModalLoginShow }) 
         </div>
 
         <div className="d-none d-md-flex align-items-center justify-content-between  headerIcons ">
-          {/* <Link to={""}>
-            <Search
-              onClick={() => handleAlert("Esta funcionalidad esta fuera del alcance del proyecto")}
-              color="#F0F0F0"
-              className="me-4"
-              size={19}
-              style={{
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
-              }}
-            />
-          </Link> */}
           <RegisterModal
             modalRegisterShow={modalRegisterShow}
             setModalRegisterShow={setModalRegisterShow}

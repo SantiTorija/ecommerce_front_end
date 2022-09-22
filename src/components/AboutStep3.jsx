@@ -8,7 +8,7 @@ function AboutStep3() {
         <img src={mer2} alt="imagen mer " className="col-6 w-100" />
       </Col>
       <Col className="right ps-5">
-        <div className="d-flex align-items-center gap-3 mt-3">
+        <div className="d-flex align-items-center gap-3 mt-3 justify-content-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"

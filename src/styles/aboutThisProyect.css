@@ -130,9 +130,13 @@
 
   .left {
     min-width: 100%;
+    padding-right: 0px !important;
+    text-align: center;
   }
   .right {
     min-width: 100%;
+    padding: 0px !important;
+    text-align: center;
   }
 
   .reverse {
@@ -149,6 +153,11 @@
     min-width: 100%;
     padding-left: 3rem;
     padding-right: 3rem;
+    text-align: center;
+  }
+
+  .aboutTextBody {
+    text-align: center;
   }
 }
 

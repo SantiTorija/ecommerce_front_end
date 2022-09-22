@@ -23,7 +23,7 @@ function AboutThisProyect() {
       </div>
       <AboutTechnologies />
       <div className="container">
-        <div className="row mb-5 mt-5">
+        <div className="row mb-5 mt-5 justify-content-center">
           <AboutTitle title={"Planificación"} />
           <AboutStep1 />
           <AboutStep2 />
