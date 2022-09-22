@@ -63,7 +63,9 @@ function FooterWeb() {
                   <button
                     className=" goldenButton"
                     type="button"
-                    onClick={() => handleAlert("Esta función esta fuera del alcance del proyecto.")}
+                    onClick={() =>
+                      handleAlert("Esta funcionalidad está fuera del alcance del proyecto.")
+                    }
                   >
                     Subscribite
                   </button>
