@@ -47,10 +47,11 @@
 
 .paragraph__hero {
   /* line-height: 1.8rem;
-  font-size: 19px;
+  
   margin-bottom: 1rem;
   font-weight: 200; */
   color: rgb(238, 238, 238);
+  font-size: 1.2rem;
 }
 
 .image__mern {
