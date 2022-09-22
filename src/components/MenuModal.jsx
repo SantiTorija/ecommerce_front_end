@@ -56,7 +56,7 @@ function MenuModal() {
   return (
     <>
       <button className="btn hamburguerIcon" onClick={() => setShowMenuModal(true)}>
-        <List color="#F0F0F0" size={20} className="hamburguerIcon" />
+        <List color="#F0F0F0" size={25} className="hamburguerIcon" />
       </button>
 
       <MyVerticallyCenteredModal

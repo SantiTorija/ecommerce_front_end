@@ -30,6 +30,15 @@ function OffCanvasCart({ name, ...props }) {
       progress: undefined,
     });
   }
+  function calcularItems() {
+    let resultado = 0;
+    for (let i = 0; i < cartState.length; i++) {
+      if (cartState[i]) {
+        resultado += parseInt(cartState[i].cartQuantity);
+      }
+    }
+    return resultado;
+  }
 
   function calcularTotal() {
     let resultado = 0;
@@ -55,8 +64,14 @@ function OffCanvasCart({ name, ...props }) {
   return (
     <>
       <ToastContainer />
-      <button onClick={handleShow} className="off-canvas-navbar-button p-0">
+      <button onClick={handleShow} className="off-canvas-navbar-button p-0 position-relative">
         <AiOutlineShoppingCart style={{ color: "#F0F0F0", fontSize: "1.5rem" }} />
+        <span
+          className="rounded-circle bg-warning px-2 text-dark position-absolute"
+          id="badge_cart"
+        >
+          {calcularItems() === 0 ? "" : calcularItems()}
+        </span>
       </button>
       <Offcanvas
         show={props.showCart}
