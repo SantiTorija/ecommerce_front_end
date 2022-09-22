@@ -37,7 +37,7 @@ function App() {
         <Route path="/" element={<Home setShowCart={setShowCart} />} />
         <Route path="/tienda/:type" element={<Shop setShowCart={setShowCart} />} />
         <Route path="/cart" element={<Cart setModalLoginShow={setModalLoginShow} />} />
-        <Route path="/aboutThisProyect" element={<AboutThisProyect />} />
+        <Route path="/sobreEsteProyecto" element={<AboutThisProyect />} />
 
         <Route element={<ProtectedRoute />}>
           <Route path="/miPerfil/:seccion" element={<Perfil />} />

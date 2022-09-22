@@ -26,7 +26,7 @@ function AboutThisProyectHome() {
                 instituto especializado en forjar talentos para el rubro tecnológico.
               </p>
               <hr style={{ color: "#F0A202" }} />
-              <Link to={"/aboutThisProyect"}>
+              <Link to={"/sobreEsteProyecto"}>
                 {" "}
                 <button className="mt-4 button">Ver más información</button>
               </Link>

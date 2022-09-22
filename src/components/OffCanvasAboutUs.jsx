@@ -84,7 +84,7 @@ function OffCanvasAboutUs({ ...props }) {
             Hackwines es un e-commerce creado como proyecto final del Bootcamp de HackAcademy Fue
             desarrolado durante 3 semanas por 3 estudiantes. Haz click para más información!
           </p>
-          <Link to="/aboutThisProyect" className="button__aboutUS" onClick={handleClose}>
+          <Link to="/sobreEsteProyecto" className="button__aboutUS" onClick={handleClose}>
             Sobre Nosotros
           </Link>
           <hr className="my-4" />
