@@ -5,21 +5,11 @@ import DeleteModal from "./Deletemodal";
 import "../styles/Wine.css";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import { Link } from "react-router-dom";
 
 function BasicExample() {
   const dispatch = useDispatch();
   const cartState = useSelector((state) => state.cart);
-  const handleAddCart = (value, wine) => {
-    if (value >= 0) {
-      const isWine = cartState.find((element) => element._id === wine._id);
-      if (isWine) {
-        dispatch(setNumber({ id: isWine._id, quantity: value }));
-      } else {
-        wine.cartQuantity = value;
-        dispatch(addFirstTime(wine));
-      }
-    }
-  };
 
   function addCart(wine) {
     if (wine.cartQuantity >= 0 && wine.cartQuantity < 100) {
@@ -62,16 +52,22 @@ function BasicExample() {
                 <DeleteModal wine={wine} />
               </td>
               <td className=" text-center">
-                <img
-                  src={
-                    wine.picture ||
-                    "https://cdn.shopify.com/s/files/1/0042/8477/6517/products/19Crimes-CabSauv-VDM_2000x.jpg"
-                  }
-                  alt="wine_photo"
-                  className="table__picture"
-                />
+                <Link to={`/product/${wine.slug}`}>
+                  <img
+                    src={
+                      wine.picture ||
+                      "https://cdn.shopify.com/s/files/1/0042/8477/6517/products/19Crimes-CabSauv-VDM_2000x.jpg"
+                    }
+                    alt="wine_photo"
+                    className="table__picture"
+                  />
+                </Link>
               </td>
-              <td>{wine.name}</td>
+              <td>
+                <Link to={`/product/${wine.slug}`} className="text-white">
+                  {wine.name}
+                </Link>
+              </td>
               <td className=" text-center">{wine.price}</td>
               <td className="text-center w-25">
                 <button className="button_flecha_cantidad" onClick={() => removeCart(wine)}>

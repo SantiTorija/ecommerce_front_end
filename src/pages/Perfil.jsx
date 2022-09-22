@@ -4,11 +4,10 @@ import { Link, useNavigate } from "react-router-dom";
 import "../styles/miPerfil.css";
 import EditIcon from "@mui/icons-material/Edit";
 import axios from "axios";
-import { updateUser, logout } from "../redux/userSlice";
+import { logout } from "../redux/userSlice";
 import { useEffect } from "react";
 import Table from "react-bootstrap/Table";
 import WarningAmberIcon from "@mui/icons-material/WarningAmber";
-import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import EditProfileModal from "../components/EditProfileModal";
 
@@ -16,62 +15,10 @@ function Perfil() {
   const userState = useSelector((state) => state.user);
   const [modalShow, setModalShow] = useState(false);
   const [selected, setSelected] = useState(true);
-  const [firstname, setFirstname] = useState("");
-  const [lastname, setLastname] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [address, setAddress] = useState("");
-  const [phone, setPhone] = useState("");
   const [user, setUser] = useState({});
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  function notify() {
-    toast.warn("Deber estar logeado", {
-      position: "top-right",
-      autoClose: 4000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
-  }
-
-  async function EditarPerfil() {
-    try {
-      const response = await axios({
-        method: "patch",
-        url: `${process.env.REACT_APP_API_URL}users/${userState.id}`,
-        data: { email, password, firstname, lastname, phone, address },
-        headers: {
-          Authorization: `Bearer ${userState.token}`,
-          "Content-Type": "application/json",
-        },
-      });
-      dispatch(
-        updateUser({
-          email: response.data.email,
-          firstname: response.data.firstname,
-          lastname: response.data.lastname,
-          phone: response.data.phone,
-          address: response.data.address,
-        }),
-      );
-      toast.success("Sus datos fueron actualizados con éxito", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
-      return response.data;
-    } catch (error) {
-      notify(error.response.data.error);
-    }
-  }
   useEffect(() => {
     async function InfoUser() {
       try {

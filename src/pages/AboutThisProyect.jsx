@@ -1,8 +1,5 @@
-import { Link } from "react-router-dom";
 import "../styles/aboutThisProyect.css";
-import { Container } from "react-bootstrap";
 import AboutTitle from "../components/AboutTitle";
-import AboutTitle2 from "../components/AboutTitle2";
 import AboutStep1 from "../components/AboutStep1";
 import AboutStep2 from "../components/AboutStep2";
 import AboutStep3 from "../components/AboutStep3";
@@ -26,8 +23,8 @@ function AboutThisProyect() {
       </div>
       <AboutTechnologies />
       <div className="container">
-        <div className="row mb-5 mt-5">
-          <AboutTitle2 />
+        <div className="row mb-5 mt-5 justify-content-center">
+          <AboutTitle title={"Planificación"} />
           <AboutStep1 />
           <AboutStep2 />
           <AboutStep3 />

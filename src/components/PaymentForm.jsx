@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
-import "../styles/formulario.css";
+import "../styles/form.css";
 
-function Formulario() {
+function PaymentForm() {
   const userState = useSelector((state) => state.user);
 
   return (
@@ -34,26 +34,21 @@ function Formulario() {
           className="form-control"
           id="inputAddress"
           defaultValue={userState?.address}
-          placeholder="1234 Main St"
+          placeholder="Avenida Italia 2821"
         />
       </div>
       <div className="form-group pt-2 col-md-12 ms-4 pe-4">
         <label htmlFor="inputAddress2">Dirección 2</label>
-        <input
-          type="text"
-          className="form-control"
-          id="inputAddress2"
-          placeholder="Apartmento, studio, or piso"
-        />
+        <input type="text" className="form-control" id="inputAddress2" placeholder="Apartmento" />
       </div>
       <div className="form-group pt-2 col-md-12 ms-4 pe-4">
-        <label htmlFor="inputAddress2">Phone</label>
+        <label htmlFor="inputAddress2">Teléfono</label>
         <input
           defaultValue={userState?.phone}
           type="text"
           className="form-control"
           id="inputAddress2"
-          placeholder="+1 390-598-2226"
+          placeholder="+598 985 843"
         />
       </div>
       <div className="form-group pt-2 col-md-12 ms-4 pe-4">
@@ -61,24 +56,26 @@ function Formulario() {
         <input type="text" className="form-control" id="inputAddress2" placeholder="Uruguay" />
       </div>
       <div className="form-row d-flex pt-2">
-        <div className="form-group col-md-6 ps-4">
-          <label htmlFor="inputCity">Ciudad</label>
-          <input type="text" className="form-control" id="inputCity" />
-        </div>
-        <div className="form-group col-md-4 px-2">
-          <label htmlFor="inputState">Estado</label>
+        <div className="form-group col-md-4 ps-4">
+          <label htmlFor="inputState">Departamento</label>
           <select id="inputState" className="form-control">
-            <option>Elige...</option>
-            <option>...</option>
+            <option>Departamento...</option>
+            <option>Montevideo</option>
+            <option>Maldonado</option>
+            <option>Otro departamento</option>
           </select>
+        </div>
+        <div className="form-group col-md-6  px-2">
+          <label htmlFor="inputCity">Ciudad</label>
+          <input type="text" className="form-control" id="inputCity" placeholder="Barrio" />
         </div>
         <div className="form-group col-md-2">
           <label htmlFor="inputZip">Zip</label>
-          <input type="text" className="form-control" id="inputZip" />
+          <input type="text" className="form-control" id="inputZip" placeholder="CP" />
         </div>
       </div>
     </form>
   );
 }
 
-export default Formulario;
+export default PaymentForm;

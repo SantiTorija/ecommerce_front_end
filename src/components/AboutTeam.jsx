@@ -7,7 +7,7 @@ function AboutTeam() {
   return (
     <Container>
       <div className="row d-flex justify-content-around text-white mb-5" id="teamRow">
-        <AboutTitle title={"El Equipo"} />
+        <AboutTitle title={"NUESTRO EQUIPO"} />
         <div
           className="col-4 card__linkdin d-flex flex-column align-items-center p-2 mb-3"
           id="guilleCard"

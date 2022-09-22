@@ -10,7 +10,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Cart from "./pages/Cart";
 import { useState } from "react";
 import AboutThisProyect from "./pages/AboutThisProyect";
-import { Contact } from "./pages/Contact";
 import Perfil from "./pages/Perfil";
 import ProtectedRoute from "./components/PrivateRoutes";
 import OffCanvasAboutUs from "./components/OffCanvasAboutUs";
@@ -39,7 +38,7 @@ function App() {
         <Route path="/tienda/:type" element={<Shop setShowCart={setShowCart} />} />
         <Route path="/cart" element={<Cart setModalLoginShow={setModalLoginShow} />} />
         <Route path="/aboutThisProyect" element={<AboutThisProyect />} />
-        <Route path="/contacto" element={<Contact />} />
+
         <Route element={<ProtectedRoute />}>
           <Route path="/miPerfil/:seccion" element={<Perfil />} />
         </Route>

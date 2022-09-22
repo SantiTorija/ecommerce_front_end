@@ -24,3 +24,12 @@
   background-color: transparent !important;
   border: 1px solid #f0f0f0 !important;
 }
+
+@media (max-width: 990px) {
+  .App {
+    background-image: linear-gradient(rgba(19, 19, 19, 0.3) 10%, rgba(19, 19, 19, 0.4) 100%),
+      url("https://res.cloudinary.com/dazcipdps/image/upload/v1663862812/ecommerce/u3segoehr2jpr1cj97iz.jpg") !important;
+    background-size: cover !important;
+    /*  background-repeat: repeat !important; */
+  }
+}

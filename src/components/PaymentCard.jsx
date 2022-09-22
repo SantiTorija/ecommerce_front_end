@@ -2,7 +2,6 @@ import axios from "axios";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import "../styles/mycart.css";
-
 import { deleteAllItems } from "../redux/cartSlice";
 import { useDispatch } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
@@ -88,13 +87,13 @@ function PaymentCard() {
             <label htmlFor="inputEmail4">Total</label>
           </div>
           <div className="form-group col-md-6 d-flex justify-content-end">
-            <label htmlFor="inputPassword4">
-              {Math.round(calculateTotal() * 1.32 * 100) / 100}
+            <label htmlFor="inputPassword4" style={{ color: "#F0A202" }}>
+              US$ {Math.round(calculateTotal() * 1.32 * 100) / 100}
             </label>
           </div>
         </div>
         <div className="form-group col-md-12 pt-2">
-          <label htmlFor="inputAddress">Nro Tarjeta</label>
+          <label htmlFor="inputAddress">Número de Tarjeta</label>
           <input
             type="number"
             className="form-control"
@@ -104,7 +103,7 @@ function PaymentCard() {
         </div>
         <div className="d-flex">
           <div className="form-group pt-2 col-md-6 me-3">
-            <label htmlFor="inputAddress2">Fecha de expiracion</label>
+            <label htmlFor="inputAddress2">Fecha de expiración</label>
             <input type="text" className="form-control" id="inputAddress2" placeholder="12/02" />
           </div>
           <div className="form-group pt-2 col-md-6 pe-3">
@@ -126,13 +125,13 @@ function PaymentCard() {
           <div className="form-check pt-3">
             <input className="form-check-input" type="checkbox" id="gridCheck" />
             <label className="form-check-label " htmlFor="gridCheck">
-              He leido y acepto los terminos de uso
+              He leído y acepto los terminos de uso
             </label>
           </div>
         </div>
         <div className="d-flex justify-content-center">
           <button type="submit" className="mt-3 button__pagar__final ">
-            COMPRAR
+            FINALIZAR COMPRA
           </button>
         </div>
       </form>

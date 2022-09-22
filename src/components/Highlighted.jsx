@@ -1,5 +1,3 @@
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ProductCard from "./ProductCard";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -11,6 +9,7 @@ import "swiper/css/bundle";
 import "swiper/css/pagination";
 import React from "react";
 import "../styles/highlighted.css";
+import AboutTitle from "../components/AboutTitle";
 
 SwiperCore.use([Pagination, Navigation, Autoplay]);
 
@@ -45,10 +44,7 @@ function Highlighted(props) {
     wines && (
       <>
         <div className="d-none d-lg-block container">
-          <span className="recommended__title mt-5">
-            <AiOutlineLine className="text-white me-2" /> <h4>PRODUCTOS DESTACADOS</h4>
-            <AiOutlineLine className="text-white ms-2" />
-          </span>
+          <AboutTitle title={"PRODUCTOS DESTACADOS"} />
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={0}
@@ -67,7 +63,8 @@ function Highlighted(props) {
         </div>
         <div className="d-none d-md-block d-lg-none container">
           <span className="recommended__title mt-5">
-            <AiOutlineLine className="text-white me-2" /> <h4>PRODUCTOS DESTACADOS</h4>
+            <AiOutlineLine className="text-white me-2" />{" "}
+            <AboutTitle title={"PRODUCTOS DESTACADOS"} />
             <AiOutlineLine className="text-white ms-2" />
           </span>
           <Swiper
@@ -87,10 +84,7 @@ function Highlighted(props) {
           </Swiper>
         </div>
         <div className="d-block d-md-none container">
-          <span className="recommended__title mt-5">
-            <AiOutlineLine className="text-white me-2" /> <h4>PRODUCTOS DESTACADOS</h4>
-            <AiOutlineLine className="text-white ms-2" />
-          </span>
+          <AboutTitle title={"PRODUCTOS DESTACADOS"} />
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={0}
