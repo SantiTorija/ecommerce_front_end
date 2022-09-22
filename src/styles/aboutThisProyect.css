@@ -4,7 +4,7 @@
   background-size: cover;
   background-position: center;
   height: 95vh;
-  /*  margin-top: -4rem; */
+  margin-top: -8rem;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-blend-mode: darken;
@@ -13,8 +13,21 @@
 @media (max-width: 568px) {
   .about__us__hero {
     margin-top: -10rem;
+    height: 100%;
   }
-  .text-hero {
+}
+
+@media (max-width: 768px) {
+  #aboutHome {
+    margin: auto;
+    text-align: center;
+  }
+}
+
+@media (min-width: 568px) {
+  .about__us__hero {
+    margin-top: -10rem;
+    height: 80vh;
   }
 }
 
@@ -33,11 +46,11 @@
 }
 
 .paragraph__hero {
-  line-height: 1.8rem;
+  /* line-height: 1.8rem;
   font-size: 19px;
   margin-bottom: 1rem;
-  font-weight: 200;
-  color: #f0f0f0;
+  font-weight: 200; */
+  color: rgb(238, 238, 238);
 }
 
 .image__mern {

@@ -19,8 +19,8 @@ function AboutThisProyectHome() {
         <AboutTitle title={"SOBRE ESTE PROYECTO"} />
         <div className="d-flex justify-content-between w-100 pb-5 align-items-center">
           <div>
-            <div style={{ width: "80%" }}>
-              <p style={{ lineHeight: "2rem" }} className="fs-5 ">
+            <div style={{ width: "80%" }} className="mx-auto" id="aboutHome">
+              <p style={{ lineHeight: "2rem" }} className="fs-5 w-100 ">
                 Hack Wines logra ser un e-commerce 100% funcional (sin fines comerciales), impulsado
                 como proyecto integrador del web developer bootcamp, dictado por Hack Academy,
                 instituto especializado en forjar talentos para el rubro tecnológico.
