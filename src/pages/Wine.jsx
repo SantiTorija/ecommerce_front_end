@@ -14,6 +14,7 @@ import React from "react";
 import "../styles/highlighted.css";
 import { Container, Card, Row, Col } from "react-bootstrap";
 import backImage from "../assets/images/cellar3.webp";
+import AboutTitle from "../components/AboutTitle";
 
 SwiperCore.use([Pagination, Navigation, Autoplay]);
 
@@ -109,13 +110,28 @@ function Wine(props) {
                       {wine.name}
                     </Card.Title>
                     <Card.Text>
-                      <h5 className="wine__description d-none d-md-block">{wine.description}</h5>
-                      <h5 className="wine__ul text-capitalize fs-5">Tipo: {wine.type.name}</h5>
-                      <h5 className="wine__ul fs-5">Pais: {wine.country}</h5>
-                      <h5 className="wine__ul fs-5">Cosecha: {wine.harvest}</h5>
-                      <h5 className="wine__ul fs-5">Bodega: {wine.cellar}</h5>
-                      <h5 className="wine__ul fs-5">Capacidad: {wine.capacity}</h5>
-                      <h5 className="wine__price">Precio: ${wine.price}</h5>
+                      <h5 className="wine__description d-none d-md-block fs-6">
+                        {wine.description}
+                      </h5>
+                      <h5 className="wine__ul text-capitalize fs-5">
+                        <strong>Tipo:</strong>{" "}
+                        <span className="text-capitalize">{wine.type.name}</span>
+                      </h5>
+                      <h5 className="wine__ul fs-5">
+                        <strong>País:</strong> {wine.country}
+                      </h5>
+                      <h5 className="wine__ul fs-5">
+                        <strong>Cosecha:</strong> {wine.harvest}
+                      </h5>
+                      <h5 className="wine__ul fs-5">
+                        <strong>Bodega:</strong> {wine.cellar}
+                      </h5>
+                      <h5 className="wine__ul fs-5">
+                        <strong>Capacidad:</strong> {wine.capacity}
+                      </h5>
+                      <h5 className="wine__price">
+                        <strong>Precio:</strong> US$ {wine.price}
+                      </h5>
                       <div className="text-center w-100">
                         <Quantity wine={wine} setShowCart={props.setShowCart} />
                       </div>
@@ -127,11 +143,8 @@ function Wine(props) {
           </Container>
         </div>
         <Container>
-          <div className="d-none d-lg-block">
-            <span className="recommended__title">
-              <AiOutlineLine className="text-white me-2" /> PRODUCTOS RELACIONADOS
-              <AiOutlineLine className="text-white ms-2" />
-            </span>
+          <div className="d-none d-lg-block pt-4">
+            <AboutTitle title={"PRODUCTOS RELACIONADOS"} />
             <Swiper
               modules={[Navigation, Pagination, Autoplay]}
               spaceBetween={0}

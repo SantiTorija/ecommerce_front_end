@@ -82,9 +82,9 @@ function OffCanvasCart({ name, ...props }) {
               <span className="#F0A202">
                 <LocalShippingIcon />
               </span>{" "}
-              {calcularTotal() * 1.32 < 500
+              {calcularTotal() * 1.32 < 100
                 ? "Estás a " +
-                  (500 - Math.round((calcularTotal() || 0) * 1.32)) +
+                  (100 - Math.round((calcularTotal() || 0) * 1.32)) +
                   " dólares del envio gratis"
                 : "Envio incluido"}
             </p>
@@ -114,19 +114,19 @@ function OffCanvasCart({ name, ...props }) {
           <h6 className="d-flex justify-content-center text-white">RESUMEN</h6>
           <div className="d-flex justify-content-between mx-3">
             <p className="text-white">Mercaderia</p>
-            <p className="text-white">${Math.round((calcularTotal() || 0) * 10) / 10}</p>
+            <p className="text-white">US${Math.round((calcularTotal() || 0) * 10) / 10}</p>
           </div>
           <div className="d-flex justify-content-between mx-3">
             <p className="text-white">IVA</p>
-            <p className="text-white">${Math.round((calcularTotal() * 0.22 || 0) * 10) / 10}</p>
+            <p className="text-white">US${Math.round((calcularTotal() * 0.22 || 0) * 10) / 10}</p>
           </div>
           <div className="d-flex justify-content-between mx-3">
             <p className="text-white">Envio</p>
-            <p className="text-white">${Math.round((calcularTotal() * 0.1 || 0) * 10) / 10}</p>
+            <p className="text-white">US${Math.round((calcularTotal() * 0.1 || 0) * 10) / 10}</p>
           </div>
           <div className="d-flex justify-content-between border-top border-bottom align-items-center pt-3 mx-3">
             <p className="text-white">A pagar</p>
-            <p className="text-white">${Math.round((calcularTotal() || 0) * 1.32 * 10) / 10}</p>
+            <p className="text-white">US${Math.round((calcularTotal() || 0) * 1.32 * 10) / 10}</p>
           </div>
           <div className="d-flex justify-content-center mt-2">
             <button className="Cart__button__buy btn" onClick={() => goToCart()}>
