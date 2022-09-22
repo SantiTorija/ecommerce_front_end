@@ -156,9 +156,9 @@ function EditProfileModal(props) {
           </div>
           <hr className="hr__misDatos"></hr>
           <div className="w-100 d-flex justify-content-end">
-            <Button type="submit" className="mt-3 me-3 btn__editar">
+            <button type="submit" className="mt-3 me-3 btn__editar">
               GUARDAR
-            </Button>
+            </button>
             <Button className="mt-3 btn btn-light fw-bold" onClick={props.onHide}>
               CERRAR
             </Button>
