@@ -53,7 +53,7 @@ function NavBarV2({ setShowCart, showCart, modalLoginShow, setModalLoginShow }) 
             Tienda
           </Link>
           <h5 className="m-0 navbar-responsive">·</h5>
-          <Link className="navbar-link navbar-responsive pe-5" to="/aboutThisProyect">
+          <Link className="navbar-link navbar-responsive pe-5" to="/sobreEsteProyecto">
             Sobre este Proyecto
           </Link>
           <div className="d-flex align-items-center d-md-none  ">

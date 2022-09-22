@@ -14,6 +14,7 @@ export const Home = (props) => {
       <div className="py-5 d-flex justify-content-center">
         <AboutTitle title={"UN MUNDO DE VINOS"} />
       </div>
+
       <CuadrantsHome />
       <Highlighted setShowCart={props.setShowCart} />
       <AboutThisProyectHome />

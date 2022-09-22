@@ -22,7 +22,7 @@ function FooterWeb() {
             </div>
 
             <div className=" footerColumn col" id="menuColumn">
-              <h3 className="titleFooter navbar-link">MENU</h3>
+              <h3 className="titleFooter ">MENU</h3>
               <ul className="nav flex-column">
                 <li className="nav-item">
                   <Link className="navbar-link footerLinks " to={"/"}>
@@ -30,12 +30,12 @@ function FooterWeb() {
                   </Link>
                 </li>
                 <li className="nav-item ">
-                  <Link className="navbar-link footerLinks" to={"/tienda"}>
+                  <Link className="navbar-link footerLinks" to={"/tienda/todos"}>
                     Tienda
                   </Link>
                 </li>
                 <li className="nav-item ">
-                  <Link className="navbar-link footerLinks" to={"/sobre-este-proyecto"}>
+                  <Link className="navbar-link footerLinks" to={"/sobreEsteProyecto"}>
                     Sobre este proyecto
                   </Link>
                 </li>
