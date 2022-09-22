@@ -111,7 +111,7 @@ function ShowShop(props) {
   if (wines) {
     return (
       <>
-        <div className="text-white w-100 text-center mb-4 wine__title ">
+        <div className="text-white w-100 text-center mb-4 wine__title mt-5">
           <div className="d-flex align-items-center justify-content-center w-100 mb-3">
             <AiOutlineLine className="text-white me-2" />
             <span className="wine__title">SELECCIONAR TIPO</span>
@@ -186,10 +186,10 @@ function ShowShop(props) {
             </Link>
           </div>
           <div className="d-flex justify-content-center mt-3">
-            <SearchIcon className="searchicon" />
+            <SearchIcon className="searchicon mt-3" />
             <input
               type="text"
-              className="input__search"
+              className="input__search mt-2"
               placeholder="Search"
               value={search ? search : ""}
               onChange={(e) => (e.target.value ? setSearch(e.target.value) : setSearch(""))}
@@ -201,7 +201,7 @@ function ShowShop(props) {
             </div>
           ) : null}
         </div>
-        <Container className="mb-5 ">
+        <Container className="mb-5 mt-5">
           <Row className="justify-content-start gx-4">
             {wines.map((wine, index) => {
               return <ProductCard setShowCart={props.setShowCart} wine={wine} key={wine._id} />;

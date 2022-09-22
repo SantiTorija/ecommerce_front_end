@@ -50,7 +50,7 @@ function CantidadCart({ wine }) {
         </div>
 
         <p className="ms-3 text-white precio__subproducto">
-          ${wine.price * (wine.cartQuantity || 0)}
+          US${wine.price * (wine.cartQuantity || 0)}
         </p>
       </div>
     </>

@@ -75,17 +75,18 @@ const Cart = (props) => {
                 <h3>RESUMEN</h3>
                 <div className="d-flex justify-content-between">
                   <p>Sub-Total ({calcularItems() || 0} items)</p>{" "}
-                  <p> ${Math.round(calcularTotal() * 10) / 10}</p>
+                  <p> US$ {Math.round(calcularTotal() * 10) / 10}</p>
                 </div>
                 <div className="d-flex justify-content-between">
-                  <p>Envio:</p> <p> ${Math.round(calcularTotal() * 0.1 * 10) / 10}</p>
+                  <p>Envio:</p> <p> US$ {Math.round(calcularTotal() * 0.1 * 10) / 10}</p>
                 </div>
                 <div className="d-flex justify-content-between">
-                  <p>IVA:</p> <p> ${Math.round(calcularTotal() * 0.22 * 10) / 10}</p>
+                  <p>IVA:</p> <p> US$ {Math.round(calcularTotal() * 0.22 * 10) / 10}</p>
                 </div>
 
                 <div className="d-flex justify-content-between">
-                  <p>Total Estimado:</p> <p> ${Math.round(calcularTotal() * 1.32 * 100) / 100}</p>
+                  <p>Total Estimado:</p>{" "}
+                  <p> US$ {Math.round(calcularTotal() * 1.32 * 100) / 100}</p>
                 </div>
 
                 <div className=" mt-2 d-flex justify-content-center w-100">
@@ -93,7 +94,7 @@ const Cart = (props) => {
                     className="cart__finalizar__compra d-flex justify-content-center"
                     onClick={handleCheckout}
                   >
-                    A PAGAR
+                    IR A PAGAR
                   </button>
                 </div>
               </div>
