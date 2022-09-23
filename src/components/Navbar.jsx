@@ -57,7 +57,7 @@ function NavBarV2({ setShowCart, showCart, modalLoginShow, setModalLoginShow }) 
             Sobre este Proyecto
           </Link>
           <div className="d-flex align-items-center d-md-none  ">
-            <MenuModal className="hamburguerIcon" size={25} />
+            <MenuModal className="hamburguerIcon" />
             {userState.token ? (
               <Link className="button__person me-4 ps-2" to="/miPerfil/misDatos">
                 <Person color="#F0F0F0" size={25} />
