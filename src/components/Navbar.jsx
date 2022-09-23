@@ -42,7 +42,7 @@ function NavBarV2({ setShowCart, showCart, modalLoginShow, setModalLoginShow }) 
       }}
     >
       <Container id="header" className="container w-100 d-flex justify-content-between">
-        <img alt="hackWinesLogo" src={newHackWinesLogo} />
+        <img id="hack-logo-nav" alt="hackWinesLogo" src={newHackWinesLogo} />
 
         <div className="menu-section align-items-center justify-content-center gap-2 linkSection d-flex">
           <Link className="navbar-link navbar-responsive" to={"/"}>

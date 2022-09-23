@@ -127,7 +127,8 @@ function EditProfileModal(props) {
           </div>
           <hr className="hr__misDatos"></hr>
           <div className="d-flex justify-content-center">
-            <h6 className="w-25 text-white">Contraseña</h6>
+            <h6 className="w-25 text-white d-none d-md-inline">Contraseña</h6>
+            <h6 className="w-25 text-white d-inline d-md-none">Contr.</h6>
             <input
               type="password"
               className="input__editar__perfil border rounded"
@@ -137,7 +138,8 @@ function EditProfileModal(props) {
           </div>
           <hr className="hr__misDatos"></hr>
           <div className="d-flex justify-content-center">
-            <h6 className="w-25 text-white">Telefono</h6>
+            <h6 className="w-25 text-white d-none d-md-inline">Telefono</h6>
+            <h6 className="w-25 text-white d-inline d-md-none">Tel.</h6>
             <input
               type="number"
               className="input__editar__perfil border rounded"
@@ -147,7 +149,8 @@ function EditProfileModal(props) {
           </div>
           <hr className="hr__misDatos"></hr>
           <div className="d-flex justify-content-center">
-            <h6 className="w-25 text-white">Dirección</h6>
+            <h6 className="w-25 text-white d-none d-md-inline">Dirección</h6>
+            <h6 className="w-25 text-white d-inline d-md-none">Dir.</h6>
             <input
               type="text"
               className="input__editar__perfil border rounded"
@@ -160,7 +163,7 @@ function EditProfileModal(props) {
             <button type="submit" className="mt-3 me-2 btn-guardar-info ">
               GUARDAR
             </button>
-            <button className="mt-3 ms-2 close-button-modal" onClick={props.onHide}>
+            <button type="button" className="mt-3 ms-2 close-button-modal" onClick={props.onHide}>
               CERRAR
             </button>
           </div>

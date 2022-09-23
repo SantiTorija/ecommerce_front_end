@@ -17,6 +17,7 @@ export const Home = (props) => {
 
       <CuadrantsHome />
       <Highlighted setShowCart={props.setShowCart} />
+
       <AboutThisProyectHome />
       <ScrollToTop smooth component={<ScrollSVG />} className="scrollIcon" />
     </>
