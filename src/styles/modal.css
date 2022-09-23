@@ -74,33 +74,34 @@
   outline: none;
 }
 
-.input__name{
+.input__name {
   margin-left: 5%;
   margin-right: -5%;
 }
 
-.input__lastname{
+.input__lastname {
   margin-right: 5%;
   margin-left: 7%;
 }
 
-.input__checkbox{
+.input__checkbox {
   width: 80%;
   padding-left: 10px;
 }
 
-#flexCheckDefault, #flexCheckDefault:focus{
+#flexCheckDefault,
+#flexCheckDefault:focus {
   background-color: #f0a202;
-  border:none;
-  outline:none;
+  border: none;
+  outline: none;
   box-shadow: none;
 }
 
-.parrafo__modal__welcome{
+.parrafo__modal__welcome {
   margin-top: -1rem;
 }
 
-.input__modal__welcome{
+.input__modal__welcome {
   height: 2.3rem;
   width: 40%;
   margin-bottom: 0.8rem;
@@ -111,7 +112,7 @@
   display: inline;
 }
 
-.button__welcome{
+.button__welcome {
   height: 2.5rem;
   width: 40%;
   margin-bottom: 0.8rem;
@@ -125,7 +126,7 @@
 
 .modal__body__welcome {
   background-image: linear-gradient(rgba(23, 23, 23, 0.5) 10%, rgba(23, 23, 23, 0.5) 100%),
-    url("../assets/images/fondonegrotexturado.jpg");
+    url("https://res.cloudinary.com/dazcipdps/image/upload/v1663952432/ecommerce/bhgsdfq27bs852dwglvx.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 3px;
@@ -134,5 +135,3 @@
   display: flex;
   justify-items: center;
 }
-
-

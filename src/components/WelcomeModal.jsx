@@ -99,7 +99,7 @@ function WelcomeModal(props) {
                 </form>
               </div>
 
-              <p className="mt-3">Beba con moderación, es su responsabilidad</p>
+              <p className="mt-3">Beba con moderación, es su responsabilidad.</p>
             </div>
           </Modal.Body>
         </div>
