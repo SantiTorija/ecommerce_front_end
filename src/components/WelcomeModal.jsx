@@ -12,7 +12,7 @@ function WelcomeModal(props) {
   function checkAge() {
     const currentTime = new Date();
     const currentYear = currentTime.getFullYear();
-    if (parseInt(currentYear) - parseInt(year) > 110) {
+    if (parseInt(currentYear) - parseInt(year) > 118) {
       toast.warn("Ingresa una año válido", {
         position: "top-right",
         autoClose: 4000,
