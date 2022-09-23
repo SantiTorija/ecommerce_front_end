@@ -6,8 +6,12 @@ import AboutTitle from "../components/AboutTitle";
 import AboutThisProyectHome from "../components/AboutThisProyectHome";
 import ScrollToTop from "react-scroll-to-top";
 import { ReactComponent as ScrollSVG } from "./scroll.svg";
+import { useEffect } from "react";
 
 export const Home = (props) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <HeroVideo />

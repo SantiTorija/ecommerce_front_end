@@ -27,7 +27,7 @@
 
 @media (max-width: 990px) {
   .App {
-    background-image: linear-gradient(rgba(19, 19, 19, 0.3) 10%, rgba(19, 19, 19, 0.4) 100%),
+    background-image: linear-gradient(rgba(19,19,19,0.5) 10%, rgba(19,19,19,0.9) 100%),
       url("https://res.cloudinary.com/dazcipdps/image/upload/v1663942926/ecommerce/f49j4mo5akf3ttxp9did.jpg") !important;
     background-size: cover !important;
     /*  background-repeat: repeat !important; */

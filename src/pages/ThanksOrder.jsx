@@ -1,8 +1,12 @@
 import "../styles/thanksOrder.css";
 import { BsCheck2Circle } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 function ThanksOrder() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div
       className="container text-center d-flex flex-column justify-content-center align-items-center w-100"

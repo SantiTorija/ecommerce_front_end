@@ -8,11 +8,15 @@ import { useState } from "react";
 import Form from "../components/PaymentForm";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useEffect } from "react";
 
 const Cart = (props) => {
   const cartState = useSelector((state) => state.cart);
   const userState = useSelector((state) => state.user);
   const [tokenOk, setTokenOk] = useState(false);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   function notify() {
     toast.warn("Deber estar logeado", {
       position: "top-right",

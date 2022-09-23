@@ -15,8 +15,11 @@ function Perfil() {
   const [modalShow, setModalShow] = useState(false);
   const [selected, setSelected] = useState(true);
   const [user, setUser] = useState({});
-
   const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     async function InfoUser() {

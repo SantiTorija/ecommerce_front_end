@@ -1,7 +1,6 @@
 import ProductCard from "./ProductCard";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { AiOutlineLine } from "react-icons/ai";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
 import "swiper/css";
@@ -44,7 +43,7 @@ function Highlighted(props) {
     wines && (
       <>
         <div className="d-none d-lg-block container">
-          <div className="py-5">
+          <div className="pt-5 pb-3">
             <AboutTitle title={"PRODUCTOS DESTACADOS"} />
           </div>
           <Swiper
@@ -64,7 +63,7 @@ function Highlighted(props) {
           </Swiper>
         </div>
         <div className="d-none d-md-block d-lg-none container">
-          <div className="py-5">
+          <div className="pt-5 pb-3">
             <AboutTitle title={"PRODUCTOS DESTACADOS"} />
           </div>
 
@@ -85,7 +84,7 @@ function Highlighted(props) {
           </Swiper>
         </div>
         <div className="d-block d-md-none container">
-          <div className="py-5">
+          <div className="pt-5 pb-3">
             <AboutTitle title={"PRODUCTOS DESTACADOS"} />
           </div>
           <Swiper
