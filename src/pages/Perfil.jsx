@@ -118,10 +118,14 @@ function Perfil() {
                           return (
                             <tr key={order._id}>
                               <td className=" text-center">{order.Date.split("T")[0]}</td>
-                              <td className="d-none d-lg-block text-center">{1 + i}</td>
+                              <td className="d-none d-lg-block text-center">
+                                {order._id.substring(1, 8)}
+                              </td>
                               <td className=" text-center">{order.state || "recibida"}</td>
 
-                              <td className=" text-center">{order.total || 34} US$</td>
+                              <td className=" text-center">
+                                {Math.round((order.total || 34) * 10) / 10} US$
+                              </td>
                             </tr>
                           );
                         })}
