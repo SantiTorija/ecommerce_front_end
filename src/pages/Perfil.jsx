@@ -35,7 +35,7 @@ function Perfil() {
       } catch (error) {}
     }
     InfoUser();
-  }, []);
+  }, [userState.id, userState.token]);
   return (
     <div style={{ minHeight: "55vh" }}>
       {userState.token ? (

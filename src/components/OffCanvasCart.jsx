@@ -5,7 +5,7 @@ import "../styles/offCanvasNav.css";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
 import { useSelector } from "react-redux";
-import CantidadCart from "./QuantityCart";
+import QuantityCart from "./QuantityCart";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -132,7 +132,7 @@ function OffCanvasCart({ name, ...props }) {
                   </Link>
 
                   <div className="mt-2 d-flex justify-content-end">
-                    <CantidadCart wine={wine} />
+                    <QuantityCart wine={wine} />
                   </div>
                 </div>
               </div>
