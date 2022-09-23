@@ -14,6 +14,7 @@ import ProtectedRoute from "./components/PrivateRoutes";
 import OffCanvasAboutUs from "./components/OffCanvasAboutUs";
 import WelcomeModal from "./components/WelcomeModal";
 import { useEffect, useRef, useState } from "react";
+import ThanksOrder from "./pages/ThanksOrder";
 
 function App() {
   const [showCart, setShowCart] = useState(false);
@@ -58,6 +59,7 @@ function App() {
           <Route path="/miPerfil/:seccion" element={<Perfil />} />
         </Route>
         <Route path="/product/:slug" element={<Wine setShowCart={setShowCart} />} />
+        <Route path="/orderComplete" element={<ThanksOrder />} />
         <Route path="*" element={<Home setShowCart={setShowCart} />} />
       </Routes>
       <Footer />
