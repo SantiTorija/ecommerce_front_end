@@ -71,3 +71,15 @@ a:hover,
   font-size: 35px !important;
   margin-bottom: 5px;
 }
+
+.button__confirm{
+  margin-top: 2rem;
+
+}
+
+.button__confirm__content{
+  background-color: #191919;
+  color:#f0a202;
+  border:#f0a202 1px solid;
+
+}

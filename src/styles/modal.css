@@ -89,9 +89,11 @@
   padding-left: 10px;
 }
 
-#flexCheckDefault{
+#flexCheckDefault, #flexCheckDefault:focus{
   background-color: #f0a202;
   border:none;
+  outline:none;
+  box-shadow: none;
 }
 
 .parrafo__modal__welcome{
