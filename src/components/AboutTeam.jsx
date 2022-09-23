@@ -57,7 +57,7 @@ function AboutTeam() {
             </div>
           </div>
         </div>
-        <div className="col-12 col-md-4  mt-3">
+        <div className="col-12 col-md-4 ">
           <div className=" card__linkdin d-flex flex-column align-items-center p-2 " id="alanCard">
             <img
               src="https://media-exp1.licdn.com/dms/image/C4D03AQF6giCFp2NWXg/profile-displayphoto-shrink_200_200/0/1648464031374?e=1668643200&v=beta&t=PkN39jeL0QYJjlIfqqLPksHJpa0lcx-mb5QexekQ2ck"
