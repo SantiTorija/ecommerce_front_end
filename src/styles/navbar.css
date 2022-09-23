@@ -58,7 +58,10 @@ img {
   }
 }
 
-@media (min-width: 576px) {
+@media (max-width: 576px) {
+  #hack-logo-nav{
+    width: 6rem;
+  }
 }
 
 @media (max-width: 992px) {

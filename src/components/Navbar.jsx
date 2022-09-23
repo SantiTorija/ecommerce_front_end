@@ -42,7 +42,7 @@ function NavBarV2({ setShowCart, showCart, modalLoginShow, setModalLoginShow }) 
       }}
     >
       <Container id="header" className="container w-100 d-flex justify-content-between">
-        <img alt="hackWinesLogo" src={newHackWinesLogo} />
+        <img id="hack-logo-nav" alt="hackWinesLogo" src={newHackWinesLogo} />
 
         <div className="menu-section align-items-center justify-content-center gap-2 linkSection d-flex">
           <Link className="navbar-link navbar-responsive" to={"/"}>
@@ -57,7 +57,7 @@ function NavBarV2({ setShowCart, showCart, modalLoginShow, setModalLoginShow }) 
             Sobre este Proyecto
           </Link>
           <div className="d-flex align-items-center d-md-none  ">
-            <MenuModal className="hamburguerIcon" size={25} />
+            <MenuModal className="hamburguerIcon" />
             {userState.token ? (
               <Link className="button__person me-4 ps-2" to="/miPerfil/misDatos">
                 <Person color="#F0F0F0" size={25} />

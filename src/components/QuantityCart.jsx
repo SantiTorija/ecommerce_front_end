@@ -4,7 +4,7 @@ import { addFirstTime, setNumber } from "../redux/cartSlice";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 
-function CantidadCart({ wine }) {
+function QuantityCart({ wine }) {
   const dispatch = useDispatch();
   const cartState = useSelector((state) => state.cart);
 
@@ -57,4 +57,4 @@ function CantidadCart({ wine }) {
   );
 }
 
-export default CantidadCart;
+export default QuantityCart;

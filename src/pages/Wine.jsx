@@ -43,13 +43,13 @@ function Wine(props) {
     const dataWine = async () => {
       const response = await axios({
         method: "GET",
-        url: `${process.env.REACT_APP_API_URL}wines`,
+        url: `${process.env.REACT_APP_API_URL}wines/filter/${wine?.type?.name}`,
       });
       setWines(response.data.sort((a, b) => 0.5 - Math.random()));
       return response;
     };
     dataWine();
-  }, []);
+  }, [wine?.type?.name]);
 
   const slides = [];
   for (const wine of wines) {
@@ -77,7 +77,7 @@ function Wine(props) {
         >
           <Container>
             <Row className="justify-content-between">
-              <Col className="d-none d-md-block">
+              <Col className="d-none d-lg-block">
                 <Card
                   id="card-image-solo"
                   style={{
@@ -100,7 +100,7 @@ function Wine(props) {
                   }}
                 >
                   <Card.Img
-                    className="d-block d-md-none"
+                    className="d-block d-lg-none"
                     variant="top"
                     src={wine.picture}
                     alt="imagen vino"
@@ -109,7 +109,7 @@ function Wine(props) {
                     <Card.Title className="Wine__title fs-4 mb-3 text-center">
                       {wine.name}
                     </Card.Title>
-                    <Card.Text>
+                    <div className="card-text">
                       <h5 className="wine__description d-none d-md-block fs-6">
                         {wine.description}
                       </h5>
@@ -135,7 +135,7 @@ function Wine(props) {
                       <div className="text-center w-100">
                         <Quantity wine={wine} setShowCart={props.setShowCart} />
                       </div>
-                    </Card.Text>
+                    </div>
                   </Card.Body>
                 </Card>
               </Col>
@@ -153,7 +153,7 @@ function Wine(props) {
               className="contenedor_style"
               navigation
               autoplay={{
-                delay: 1500,
+                delay: 3500,
                 disableOnInteraction: false,
               }}
             >
@@ -174,7 +174,7 @@ function Wine(props) {
                 navigation
                 loop={true}
                 autoplay={{
-                  delay: 1500,
+                  delay: 3500,
                   disableOnInteraction: false,
                 }}
               >
@@ -195,7 +195,7 @@ function Wine(props) {
               navigation
               loop={true}
               autoplay={{
-                delay: 1500,
+                delay: 3500,
                 disableOnInteraction: false,
               }}
             >

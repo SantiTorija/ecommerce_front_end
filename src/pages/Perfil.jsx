@@ -35,7 +35,7 @@ function Perfil() {
       } catch (error) {}
     }
     InfoUser();
-  }, []);
+  }, [userState.id, userState.token]);
   return (
     <div style={{ minHeight: "55vh" }}>
       {userState.token ? (
@@ -67,7 +67,7 @@ function Perfil() {
                       onClick={() => setModalShow(true)} /* onClick={EditarPerfil} */
                     >
                       <EditIcon className="me-1 edit__icon" />
-                      EDITAR
+                      <span className="d-none d-md-inline">EDITAR</span>
                     </button>
                     <EditProfileModal show={modalShow} onHide={() => setModalShow(false)} />
                   </div>

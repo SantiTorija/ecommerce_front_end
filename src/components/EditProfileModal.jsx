@@ -1,4 +1,3 @@
-import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -78,6 +77,7 @@ function EditProfileModal(props) {
       centered
     >
       <Modal.Body
+        className="d-flex flex-column align-items-center py-5"
         style={{
           padding: "1.5rem",
           backgroundImage: `linear-gradient(rgba(19,19,19,0.5) 10%, rgba(19,19,19,0.9) 100%),url(${texturadoNegro})`,
@@ -95,7 +95,7 @@ function EditProfileModal(props) {
             props.onHide();
           }}
         >
-          <div className="d-flex">
+          <div className="d-flex  justify-content-center">
             <h6 className="w-25 text-white">Nombre</h6>
             <input
               type="text"
@@ -105,7 +105,7 @@ function EditProfileModal(props) {
             ></input>
           </div>
           <hr className="hr__misDatos"></hr>
-          <div className="d-flex">
+          <div className="d-flex justify-content-center">
             <h6 className="w-25 text-white">Apellido</h6>
             <input
               type="text"
@@ -115,7 +115,7 @@ function EditProfileModal(props) {
             ></input>
           </div>
           <hr className="hr__misDatos"></hr>
-          <div className="d-flex">
+          <div className="d-flex justify-content-center">
             <h6 className="w-25 text-white">E-mail</h6>
             <input
               type="text"
@@ -125,8 +125,9 @@ function EditProfileModal(props) {
             ></input>
           </div>
           <hr className="hr__misDatos"></hr>
-          <div className="d-flex">
-            <h6 className="w-25 text-white">Contraseña</h6>
+          <div className="d-flex justify-content-center">
+            <h6 className="w-25 text-white d-none d-md-inline">Contraseña</h6>
+            <h6 className="w-25 text-white d-inline d-md-none">Contr.</h6>
             <input
               type="password"
               className="input__editar__perfil border rounded"
@@ -135,8 +136,9 @@ function EditProfileModal(props) {
             ></input>
           </div>
           <hr className="hr__misDatos"></hr>
-          <div className="d-flex">
-            <h6 className="w-25 text-white">Telefono</h6>
+          <div className="d-flex justify-content-center">
+            <h6 className="w-25 text-white d-none d-md-inline">Telefono</h6>
+            <h6 className="w-25 text-white d-inline d-md-none">Tel.</h6>
             <input
               type="number"
               className="input__editar__perfil border rounded"
@@ -145,8 +147,9 @@ function EditProfileModal(props) {
             ></input>
           </div>
           <hr className="hr__misDatos"></hr>
-          <div className="d-flex">
-            <h6 className="w-25 text-white">Dirección</h6>
+          <div className="d-flex justify-content-center">
+            <h6 className="w-25 text-white d-none d-md-inline">Dirección</h6>
+            <h6 className="w-25 text-white d-inline d-md-none">Dir.</h6>
             <input
               type="text"
               className="input__editar__perfil border rounded"
@@ -155,13 +158,13 @@ function EditProfileModal(props) {
             ></input>
           </div>
           <hr className="hr__misDatos"></hr>
-          <div className="w-100 d-flex justify-content-end">
-            <button type="submit" className="mt-3 me-3 btn__editar">
+          <div className="w-100 d-flex justify-content-center">
+            <button type="submit" className="mt-3 me-2 btn-guardar-info ">
               GUARDAR
             </button>
-            <Button className="mt-3 btn btn-light fw-bold" onClick={props.onHide}>
+            <button type="button" className="mt-3 ms-2 close-button-modal" onClick={props.onHide}>
               CERRAR
-            </Button>
+            </button>
           </div>
         </form>
       </Modal.Body>

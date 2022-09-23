@@ -72,6 +72,24 @@ a:hover,
   margin-bottom: 5px;
 }
 
+.close-button-modal {
+  width: 6rem;  
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: 1px solid #f0a202;
+  color: #f0a202;
+  font-weight: 700;
+  margin-left: 0.3rem;
+}
+.btn-guardar-info {
+  width: 6rem;  
+ 
+  background-color: #f0a202;
+  border: none; 
+  color: #191919;
+  font-weight: 700;
+  
+}
 .button__confirm{
   margin-top: 2rem;
 

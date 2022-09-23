@@ -4,7 +4,7 @@ import BottlesShopHeader from "./BottlesShopHeader";
 
 function ShopHeader() {
   return (
-    <Row sty className="hero-section">
+    <Row className="hero-section">
       <Col className="col-6 welcome-store-col">
         <h2 className="d-none d-lg-block wine-title">Bienvenido a nuestra tienda</h2>
         <p className="mt-4 d-none d-lg-block shop-header-paragraph pb-3">

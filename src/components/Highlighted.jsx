@@ -43,18 +43,18 @@ function Highlighted(props) {
   return (
     wines && (
       <>
-        <div className="d-none d-lg-block container">
+        <div className="d-none d-lg-block container py-5">
           <AboutTitle title={"PRODUCTOS DESTACADOS"} />
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={0}
             slidesPerView={3}
-            className="contenedor_style"
+            className="contenedor_style pt-4"
             pagination={{ clickable: true, className: "pagination" }}
             navigation
             loop={true}
             autoplay={{
-              delay: 3000,
+              delay: 3500,
               disableOnInteraction: false,
             }}
           >
@@ -76,7 +76,7 @@ function Highlighted(props) {
             navigation
             loop={true}
             autoplay={{
-              delay: 3000,
+              delay: 3500,
               disableOnInteraction: false,
             }}
           >
@@ -93,7 +93,7 @@ function Highlighted(props) {
             navigation
             loop={true}
             autoplay={{
-              delay: 3000,
+              delay: 3500,
               disableOnInteraction: false,
             }}
           >
