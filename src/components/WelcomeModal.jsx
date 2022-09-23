@@ -81,16 +81,24 @@ function WelcomeModal(props) {
                 Por favor, introduce tu año de nacimiento.
               </p>
               <div className="d-flex justify-content-center align-items-center mt-2">
-                <input
-                  type="number"
-                  placeholder="YYYY"
-                  className="input__modal__welcome me-2"
-                  value={year || ""}
-                  onChange={(e) => setYear(e.target.value)}
-                ></input>
-                <button className="d-inline ms-2 button__welcome" onClick={checkAge}>
-                  Acceder
-                </button>
+                <form
+                  action=""
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    checkAge();
+                  }}
+                >
+                  <input
+                    type="number"
+                    placeholder="YYYY"
+                    className="input__modal__welcome me-2"
+                    value={year || ""}
+                    onChange={(e) => setYear(e.target.value)}
+                  ></input>
+                  <button type="submit" className="d-inline ms-2 button__welcome">
+                    Acceder
+                  </button>
+                </form>
               </div>
 
               <p className="mt-3">Beba con moderación, es su responsabilidad</p>

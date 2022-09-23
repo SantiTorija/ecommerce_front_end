@@ -11,6 +11,12 @@
   height: 100%;
 }
 
+@media (max-width: 956px) {
+  .card__payment{
+    margin-left: 0;
+  }
+}
+
 .button__pagar__final {
   background-color: #f0a202;
   padding: 20px;
@@ -22,5 +28,5 @@
   margin-top: 20px;
   border-radius: 0px;
   height: 60px;
-  width: 70%;
+  width: 100%;
 }

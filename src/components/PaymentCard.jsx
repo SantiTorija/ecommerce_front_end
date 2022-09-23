@@ -101,9 +101,11 @@ function PaymentCard() {
             placeholder="1234 5678 9101 1121"
           />
         </div>
-        <div className="d-flex">
+        <div className="d-flex align-items-center">
           <div className="form-group pt-2 col-md-6 me-3">
-            <label htmlFor="inputAddress2">Fecha de expiración</label>
+            <label htmlFor="inputAddress2">
+              <span className="d-none d-md-inline">Fecha de</span> expiración
+            </label>
             <input type="text" className="form-control" id="inputAddress2" placeholder="12/02" />
           </div>
           <div className="form-group pt-2 col-md-6 pe-3">

@@ -100,7 +100,7 @@ const Cart = (props) => {
               </div>
             </div>
           </div>
-          <div style={{ display: `${tokenOk ? "block" : "none"}` }}>
+          <div className="container" style={{ display: `${tokenOk ? "block" : "none"}` }}>
             <div className="d-flex justify-content-center mt-4 flex-wrap">
               <Form />
               <PaymentCard />
