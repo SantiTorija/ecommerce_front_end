@@ -43,13 +43,15 @@ function Highlighted(props) {
   return (
     wines && (
       <>
-        <div className="d-none d-lg-block container py-5">
-          <AboutTitle title={"PRODUCTOS DESTACADOS"} />
+        <div className="d-none d-lg-block container">
+          <div className="py-5">
+            <AboutTitle title={"PRODUCTOS DESTACADOS"} />
+          </div>
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={0}
             slidesPerView={3}
-            className="contenedor_style pt-4"
+            className="contenedor_style"
             pagination={{ clickable: true, className: "pagination" }}
             navigation
             loop={true}
@@ -62,11 +64,10 @@ function Highlighted(props) {
           </Swiper>
         </div>
         <div className="d-none d-md-block d-lg-none container">
-          <span className="recommended__title mt-5">
-            <AiOutlineLine className="text-white me-2" />{" "}
+          <div className="py-5">
             <AboutTitle title={"PRODUCTOS DESTACADOS"} />
-            <AiOutlineLine className="text-white ms-2" />
-          </span>
+          </div>
+
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={0}
@@ -84,7 +85,9 @@ function Highlighted(props) {
           </Swiper>
         </div>
         <div className="d-block d-md-none container">
-          <AboutTitle title={"PRODUCTOS DESTACADOS"} />
+          <div className="py-5">
+            <AboutTitle title={"PRODUCTOS DESTACADOS"} />
+          </div>
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={0}

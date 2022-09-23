@@ -16,6 +16,7 @@ export const Home = (props) => {
       </div>
 
       <CuadrantsHome />
+
       <Highlighted setShowCart={props.setShowCart} />
 
       <AboutThisProyectHome />

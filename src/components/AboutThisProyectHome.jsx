@@ -12,7 +12,7 @@ function AboutThisProyectHome() {
         backgroundImage: `linear-gradient(rgba(19,19,19,0.8) 10%, rgba(19,19,19,0.9) 100%),url(${backPhoto})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        marginTop: "4rem",
+        marginTop: "6rem",
       }}
     >
       <Container className="pt-3">

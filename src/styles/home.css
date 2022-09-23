@@ -123,6 +123,7 @@
 
   #aboutTitle {
     padding-top: 3rem;
+    
   }
 }
 
@@ -130,11 +131,22 @@
   .cuadrantColumn {
     min-width: 50%;
   }
+  #aboutTitle {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin: 0 !important;
+  }
 }
 
 @media (max-width: 576px) {
   .cuadrantColumn {
     min-width: 100%;
+    
+  }
+  
+  #aboutTitle {
+    padding-top: 3rem;
+    margin: 0 !important;
   }
 }
 
