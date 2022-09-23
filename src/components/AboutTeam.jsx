@@ -13,12 +13,12 @@ function AboutTeam() {
           id="guilleCard"
         >
           <img
-            src="https://media-exp1.licdn.com/dms/image/C4E03AQFb0YlGuLybsg/profile-displayphoto-shrink_200_200/0/1567624582077?e=1668643200&v=beta&t=KW1PoGDIZtciWrajdnP07eYSgRi_tqx3uy0xYJ1vz0w"
+            src="https://media-exp1.licdn.com/dms/image/C4D03AQF-msF-2pryAg/profile-displayphoto-shrink_200_200/0/1663943860370?e=1669248000&v=beta&t=7461S0bRLPeNP0RiHlmvOtnCdvX318bi-ZYxi4lRjoo"
             alt="profile_logo"
             className="profile_logo_linkedin"
           ></img>
           <h5>Guillermo Galain</h5>
-          <h5 className="jobPosition">Full Stack Developer</h5>
+          <h5 className="jobPosition">Full Stack Developer JR</h5>
           <div className="d-flex mt-1 gap-1">
             <a href="https://www.linkedin.com/in/guillermogalain/" target="_blank" rel="noreferrer">
               <AiFillLinkedin style={{ fontSize: "2.2rem" }} className="lkdnLogo iconHover" />
@@ -35,7 +35,7 @@ function AboutTeam() {
             className="profile_logo_linkedin"
           ></img>
           <h5>Santiago Torija</h5>
-          <h5 className="jobPosition">Full Stack Developer</h5>
+          <h5 className="jobPosition">Full Stack Developer JR</h5>
           <div className="d-flex mt-1 gap-1">
             <a
               href="https://www.linkedin.com/in/santiago-torija-31951113b/"
@@ -59,7 +59,7 @@ function AboutTeam() {
             className="profile_logo_linkedin"
           ></img>
           <h5>Alan Katz</h5>
-          <h5 className="jobPosition">Full Stack Developer</h5>
+          <h5 className="jobPosition">Full Stack Developer JR</h5>
           <div className="d-flex mt-1 gap-1">
             <a
               href="https://www.linkedin.com/in/alan-katz-401468101/"
