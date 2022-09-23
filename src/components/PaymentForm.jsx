@@ -5,7 +5,7 @@ function PaymentForm() {
   const userState = useSelector((state) => state.user);
 
   return (
-    <form className="col-10 col-lg-6 col-xl-5 col-xxl-4  mb-3 ">
+    <form className="col-10 col-lg-6 col-xl-5 col-xxl-4 text-white mb-3 ">
       <div className="form-row d-flex">
         <div className="form-group col-md-6 me-2 ">
           <label htmlFor="inputEmail4">Email</label>
