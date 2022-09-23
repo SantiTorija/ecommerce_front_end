@@ -56,7 +56,7 @@ function OffCanvasAboutUs({ ...props }) {
     <>
       <ToastContainer />
       <button onClick={handleShow} className="button__about__this__proyect">
-        ABOUT THIS PROYECT
+        SOBRE ESTE PROYECTO
       </button>
       <Offcanvas
         show={show}
@@ -75,7 +75,7 @@ function OffCanvasAboutUs({ ...props }) {
           closeVariant="white"
           className="text-white mt-3 offcanvas_header"
         >
-          <Offcanvas.Title className="title__offcanvasaboutus">About this proyect</Offcanvas.Title>
+          <Offcanvas.Title className="title__offcanvasaboutus">SOBRE ESTE PROYECTO</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body className="text-white">
           <hr></hr>
