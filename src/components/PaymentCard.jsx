@@ -79,7 +79,7 @@ function PaymentCard() {
         className="col-10 col-md-8 col-lg-4 col-xxl-3 flex-column card__payment "
         onSubmit={(e) => {
           storeOrder();
-          navigate("/miPerfil/misCompras");
+          navigate("/orderComplete");
         }}
       >
         <div className="form-row d-flex">
