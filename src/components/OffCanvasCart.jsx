@@ -5,10 +5,9 @@ import "../styles/offCanvasNav.css";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
 import { useSelector } from "react-redux";
-import CantidadCart from "./QuantityCart";
+import QuantityCart from "./QuantityCart";
 import { useNavigate } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 import texturadoNegro from "../assets/images/fondonegrotexturado.jpg";
 import { Link } from "react-router-dom";
 
@@ -63,7 +62,6 @@ function OffCanvasCart({ name, ...props }) {
 
   return (
     <>
-      <ToastContainer />
       <button onClick={handleShow} className="off-canvas-navbar-button p-0 position-relative">
         <AiOutlineShoppingCart style={{ color: "#F0F0F0", fontSize: "1.5rem" }} />
         <span
@@ -132,7 +130,7 @@ function OffCanvasCart({ name, ...props }) {
                   </Link>
 
                   <div className="mt-2 d-flex justify-content-end">
-                    <CantidadCart wine={wine} />
+                    <QuantityCart wine={wine} />
                   </div>
                 </div>
               </div>

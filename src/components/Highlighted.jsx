@@ -54,7 +54,7 @@ function Highlighted(props) {
             navigation
             loop={true}
             autoplay={{
-              delay: 3000,
+              delay: 3500,
               disableOnInteraction: false,
             }}
           >
@@ -76,7 +76,7 @@ function Highlighted(props) {
             navigation
             loop={true}
             autoplay={{
-              delay: 3000,
+              delay: 3500,
               disableOnInteraction: false,
             }}
           >
@@ -93,7 +93,7 @@ function Highlighted(props) {
             navigation
             loop={true}
             autoplay={{
-              delay: 3000,
+              delay: 3500,
               disableOnInteraction: false,
             }}
           >

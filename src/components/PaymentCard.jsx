@@ -4,8 +4,7 @@ import { useNavigate } from "react-router";
 import "../styles/mycart.css";
 import { deleteAllItems } from "../redux/cartSlice";
 import { useDispatch } from "react-redux";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 
 function PaymentCard() {
   const cartState = useSelector((state) => state.cart);
@@ -74,7 +73,6 @@ function PaymentCard() {
 
   return (
     <>
-      <ToastContainer />
       <form
         className="col-10 col-md-8 col-lg-4 col-xxl-3 flex-column card__payment "
         onSubmit={(e) => {

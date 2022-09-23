@@ -58,7 +58,6 @@ const Cart = (props) => {
   if (cartState.length) {
     return (
       <>
-        <ToastContainer />
         <div className="pt-5 cart__main">
           <h3 className="cart__title text-white pt-5 pb-3 d-flex justify-content-center">
             MI CARRITO

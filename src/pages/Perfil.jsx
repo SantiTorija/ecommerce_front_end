@@ -7,7 +7,6 @@ import axios from "axios";
 import { useEffect } from "react";
 import Table from "react-bootstrap/Table";
 import WarningAmberIcon from "@mui/icons-material/WarningAmber";
-import "react-toastify/dist/ReactToastify.css";
 import EditProfileModal from "../components/EditProfileModal";
 import LogoutModal from "../components/LogoutModal";
 
@@ -35,7 +34,7 @@ function Perfil() {
       } catch (error) {}
     }
     InfoUser();
-  }, []);
+  }, [userState.id, userState.token]);
   return (
     <div style={{ minHeight: "55vh" }}>
       {userState.token ? (
@@ -119,10 +118,14 @@ function Perfil() {
                           return (
                             <tr key={order._id}>
                               <td className=" text-center">{order.Date.split("T")[0]}</td>
-                              <td className="d-none d-lg-block text-center">{1 + i}</td>
+                              <td className="d-none d-lg-block text-center">
+                                {order._id.substring(1, 8)}
+                              </td>
                               <td className=" text-center">{order.state || "recibida"}</td>
 
-                              <td className=" text-center">{order.total || 34} US$</td>
+                              <td className=" text-center">
+                                {Math.round((order.total || 34) * 10) / 10} US$
+                              </td>
                             </tr>
                           );
                         })}

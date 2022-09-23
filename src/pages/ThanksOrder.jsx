@@ -1,35 +1,8 @@
 import "../styles/thanksOrder.css";
 import { BsCheck2Circle } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { useState } from "react";
-import axios from "axios";
-import { useEffect } from "react";
 
 function ThanksOrder() {
-  const userState = useSelector((state) => state.user);
-  const [user, setUser] = useState({});
-
-  useEffect(() => {
-    async function InfoUser() {
-      try {
-        const response = await axios({
-          method: "get",
-          url: `${process.env.REACT_APP_API_URL}users/${userState.id}`,
-          headers: {
-            Authorization: `Bearer ${userState.token}`,
-            "Content-Type": "application/json",
-          },
-        });
-        setUser(response.data);
-        console.log("separador2");
-        console.log(response.data);
-        return response.data;
-      } catch (error) {}
-    }
-    InfoUser();
-  }, []);
-
   return (
     user && (
       <div

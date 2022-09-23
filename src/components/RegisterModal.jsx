@@ -5,8 +5,7 @@ import GoogleIcon from "@mui/icons-material/Google";
 import AppleIcon from "@mui/icons-material/Apple";
 import newHackWinesLogo from "../assets/images/newHackWinesLogo.png";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 
 function MyVerticallyCenteredModal(props) {
   const [firstname, setFirstname] = useState("");
@@ -51,7 +50,6 @@ function MyVerticallyCenteredModal(props) {
 
   return (
     <>
-      <ToastContainer />
       <Modal
         {...modalProps}
         size="md"

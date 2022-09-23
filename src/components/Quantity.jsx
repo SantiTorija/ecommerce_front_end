@@ -2,7 +2,7 @@ import "../styles/Wine.css";
 import { useDispatch, useSelector } from "react-redux";
 import { addFirstTime, add } from "../redux/cartSlice";
 
-function Cantidad({ wine, setShowCart }) {
+function Quantity({ wine, setShowCart }) {
   const dispatch = useDispatch();
   const cartState = useSelector((state) => state.cart);
   const handleAddCart = () => {
@@ -27,4 +27,4 @@ function Cantidad({ wine, setShowCart }) {
   );
 }
 
-export default Cantidad;
+export default Quantity;

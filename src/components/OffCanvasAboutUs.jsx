@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import "../styles/offCanvasNav.css";
 import "../styles/offCanvasAbout.css";
-import "react-toastify/dist/ReactToastify.css";
 import texturadoNegro from "../assets/images/fondonegrotexturado.jpg";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
+
 import axios from "axios";
 
 function OffCanvasAboutUs({ ...props }) {
@@ -54,7 +53,6 @@ function OffCanvasAboutUs({ ...props }) {
 
   return (
     <>
-      <ToastContainer />
       <button onClick={handleShow} className="button__about__this__proyect">
         SOBRE ESTE PROYECTO
       </button>

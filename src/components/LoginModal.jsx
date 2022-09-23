@@ -8,7 +8,7 @@ import newHackWinesLogo from "../assets/images/newHackWinesLogo.png";
 import axios from "axios";
 import { login } from "../redux/userSlice";
 import { useDispatch } from "react-redux";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function LoginModal(props) {
@@ -80,7 +80,6 @@ function LoginModal(props) {
   const { modalRegisterShow, setModalRegisterShow, setModalLoginShow, ...modalProps } = props;
   return (
     <>
-      <ToastContainer />
       <Modal
         {...modalProps}
         size="md"
