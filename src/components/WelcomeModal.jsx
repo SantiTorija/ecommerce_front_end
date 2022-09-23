@@ -3,8 +3,7 @@ import React, { useState } from "react";
 
 import "../styles/modal.css";
 import newHackWinesLogo from "../assets/images/newHackWinesLogo.png";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 
 function WelcomeModal(props) {
   const [year, setYear] = useState("");
@@ -61,7 +60,6 @@ function WelcomeModal(props) {
   const { setShow, ...modalWelcomeProps } = props;
   return (
     <>
-      <ToastContainer />
       <Modal
         {...modalWelcomeProps}
         size="md"

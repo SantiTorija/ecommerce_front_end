@@ -15,6 +15,8 @@ import OffCanvasAboutUs from "./components/OffCanvasAboutUs";
 import WelcomeModal from "./components/WelcomeModal";
 import { useEffect, useRef, useState } from "react";
 import ThanksOrder from "./pages/ThanksOrder";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   const [showCart, setShowCart] = useState(false);
@@ -63,6 +65,7 @@ function App() {
         <Route path="*" element={<Home setShowCart={setShowCart} />} />
       </Routes>
       <Footer />
+      <ToastContainer />
     </div>
   );
 }

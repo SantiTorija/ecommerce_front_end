@@ -7,7 +7,6 @@ import axios from "axios";
 import { useEffect } from "react";
 import Table from "react-bootstrap/Table";
 import WarningAmberIcon from "@mui/icons-material/WarningAmber";
-import "react-toastify/dist/ReactToastify.css";
 import EditProfileModal from "../components/EditProfileModal";
 import LogoutModal from "../components/LogoutModal";
 
