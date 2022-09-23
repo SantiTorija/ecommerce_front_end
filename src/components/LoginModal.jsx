@@ -17,6 +17,16 @@ function LoginModal(props) {
 
   const dispatch = useDispatch();
 
+  function loadFakeData(checked) {
+    if (!checked) {
+      setEmail("");
+      setPassword("");
+    } else {
+      setEmail("username@gmail.com");
+      setPassword("password");
+    }
+  }
+
   function notify(text) {
     toast.warn(text, {
       position: "top-right",
@@ -107,7 +117,18 @@ function LoginModal(props) {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               ></input>
-
+              <div className="form-check input__checkbox ">
+                <input
+                  className="form-check-input"
+                  type="checkbox"
+                  id="flexCheckDefault"
+                  defaultChecked={true}
+                  onChange={(e) => loadFakeData(e.target.checked)}
+                />
+                <label className="form-check-label" htmlFor="flexCheckDefault">
+                  Cargar datos de prueba
+                </label>
+              </div>
               <button className="btn__login border" onClick={getToken}>
                 Login
               </button>
