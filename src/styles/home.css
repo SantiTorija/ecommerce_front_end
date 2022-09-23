@@ -107,6 +107,23 @@
     margin-left: auto;
     margin-right: auto;
   }
+
+  .about__us__hero {
+    padding-top: 3rem;
+  }
+
+  #teamRow {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .title {
+    padding-bottom: 3rem;
+  }
+
+  #aboutTitle {
+    padding-top: 3rem;
+  }
 }
 
 @media (max-width: 962px) {
