@@ -84,4 +84,55 @@
   margin-left: 7%;
 }
 
+.input__checkbox{
+  width: 80%;
+  padding-left: 10px;
+}
+
+#flexCheckDefault, #flexCheckDefault:focus{
+  background-color: #f0a202;
+  border:none;
+  outline:none;
+  box-shadow: none;
+}
+
+.parrafo__modal__welcome{
+  margin-top: -1rem;
+}
+
+.input__modal__welcome{
+  height: 2.3rem;
+  width: 40%;
+  margin-bottom: 0.8rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  display: inline;
+}
+
+.button__welcome{
+  height: 2.5rem;
+  width: 40%;
+  margin-bottom: 0.8rem;
+  border-radius: 5px;
+  border: solid 1px rgb(19, 19, 19) !important;
+  outline: none;
+  background-color: #f0a202;
+  color: rgb(19, 19, 19);
+  font-weight: 700;
+}
+
+.modal__body__welcome {
+  background-image: linear-gradient(rgba(23, 23, 23, 0.5) 10%, rgba(23, 23, 23, 0.5) 100%),
+    url("../assets/images/fondonegrotexturado.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 3px;
+  border: solid #484848 1px;
+  color: #f0f0f0;
+  display: flex;
+  justify-items: center;
+}
+
 

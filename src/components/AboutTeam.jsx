@@ -19,7 +19,7 @@ function AboutTeam() {
           ></img>
           <h5>Guillermo Galain</h5>
           <h5 className="jobPosition">Full Stack Developer</h5>
-          <div className="d-flex mt-1">
+          <div className="d-flex mt-1 gap-1">
             <a href="https://www.linkedin.com/in/guillermogalain/" target="_blank" rel="noreferrer">
               <AiFillLinkedin style={{ fontSize: "2.2rem" }} className="lkdnLogo iconHover" />
             </a>
@@ -36,7 +36,7 @@ function AboutTeam() {
           ></img>
           <h5>Santiago Torija</h5>
           <h5 className="jobPosition">Full Stack Developer</h5>
-          <div className="d-flex mt-1">
+          <div className="d-flex mt-1 gap-1">
             <a
               href="https://www.linkedin.com/in/santiago-torija-31951113b/"
               target="_blank"
@@ -60,7 +60,7 @@ function AboutTeam() {
           ></img>
           <h5>Alan Katz</h5>
           <h5 className="jobPosition">Full Stack Developer</h5>
-          <div className="d-flex mt-1">
+          <div className="d-flex mt-1 gap-1">
             <a
               href="https://www.linkedin.com/in/alan-katz-401468101/"
               target="_blank"

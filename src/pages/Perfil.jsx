@@ -1,22 +1,22 @@
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import "../styles/miPerfil.css";
 import EditIcon from "@mui/icons-material/Edit";
 import axios from "axios";
-import { logout } from "../redux/userSlice";
 import { useEffect } from "react";
 import Table from "react-bootstrap/Table";
 import WarningAmberIcon from "@mui/icons-material/WarningAmber";
 import "react-toastify/dist/ReactToastify.css";
 import EditProfileModal from "../components/EditProfileModal";
+import LogoutModal from "../components/LogoutModal";
 
 function Perfil() {
   const userState = useSelector((state) => state.user);
   const [modalShow, setModalShow] = useState(false);
   const [selected, setSelected] = useState(true);
   const [user, setUser] = useState({});
-  const dispatch = useDispatch();
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -54,9 +54,7 @@ function Perfil() {
                 <h6 className={!selected ? "text__yellow" : "texto-white"}>MIS COMPRAS</h6>
               </Link>
               <hr></hr>
-              <Link to="#" className="salir">
-                <h6 onClick={() => dispatch(logout())}>SALIR</h6>
-              </Link>
+              <LogoutModal />
               <hr></hr>
             </div>
             <div className="col-9 ps-5 pt-4 text-white">
@@ -111,19 +109,17 @@ function Perfil() {
                       <thead>
                         <tr>
                           <th className=" text-center">Fecha</th>
-                          <th className=" text-center">Orden</th>
+                          <th className="d-none d-lg-block text-center">Orden</th>
                           <th className=" text-center">Estado</th>
                           <th className=" text-center">Importe</th>
                         </tr>
                       </thead>
                       <tbody>
-                        {user?.orders?.map((order) => {
+                        {user?.orders?.map((order, i) => {
                           return (
                             <tr key={order._id}>
                               <td className=" text-center">{order.Date.split("T")[0]}</td>
-                              <td className=" text-center">
-                                {order._id || "6321f7c9282a57a72de54a76"}
-                              </td>
+                              <td className="d-none d-lg-block text-center">{1 + i}</td>
                               <td className=" text-center">{order.state || "recibida"}</td>
 
                               <td className=" text-center">{order.total || 34} US$</td>

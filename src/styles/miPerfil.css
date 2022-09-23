@@ -90,3 +90,14 @@ a:hover,
   font-weight: 700;
   
 }
+.button__confirm{
+  margin-top: 2rem;
+
+}
+
+.button__confirm__content{
+  background-color: #191919;
+  color:#f0a202;
+  border:#f0a202 1px solid;
+
+}

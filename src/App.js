@@ -8,15 +8,30 @@ import Footer from "./components/Footer";
 import texturadoNegro from "./assets/images/fondonegrotexturado.jpg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Cart from "./pages/Cart";
-import { useState } from "react";
 import AboutThisProyect from "./pages/AboutThisProyect";
 import Perfil from "./pages/Perfil";
 import ProtectedRoute from "./components/PrivateRoutes";
 import OffCanvasAboutUs from "./components/OffCanvasAboutUs";
+import WelcomeModal from "./components/WelcomeModal";
+import { useEffect, useRef, useState } from "react";
+import ThanksOrder from "./pages/ThanksOrder";
 
 function App() {
   const [showCart, setShowCart] = useState(false);
   const [modalLoginShow, setModalLoginShow] = useState(false);
+
+  const [show, setShow] = useState(false);
+
+  function useDidMountEffect(func) {
+    const didMount = useRef(true);
+
+    useEffect(() => {
+      if (didMount.current) setShow(true);
+      else didMount.current = false;
+    }, []);
+  }
+
+  useDidMountEffect();
   return (
     <div
       className="App"
@@ -26,6 +41,7 @@ function App() {
         backgroundRepeat: "no-repeat",
       }}
     >
+      <WelcomeModal show={show} onHide={() => setShow(true)} setShow={setShow} />
       <NavBar
         showCart={showCart}
         setShowCart={setShowCart}
@@ -43,6 +59,7 @@ function App() {
           <Route path="/miPerfil/:seccion" element={<Perfil />} />
         </Route>
         <Route path="/product/:slug" element={<Wine setShowCart={setShowCart} />} />
+        <Route path="/orderComplete" element={<ThanksOrder />} />
         <Route path="*" element={<Home setShowCart={setShowCart} />} />
       </Routes>
       <Footer />
