@@ -106,9 +106,7 @@ function Wine(props) {
                     alt="imagen vino"
                   />
                   <Card.Body>
-                    <Card.Title className="Wine__title fs-4 mb-3 text-center">
-                      {wine.name}
-                    </Card.Title>
+                    <Card.Title className="Wine__title fs-4 mb-3">{wine.name}</Card.Title>
                     <div className="card-text">
                       <h5 className="wine__description d-none d-md-block fs-6">
                         {wine.description}
